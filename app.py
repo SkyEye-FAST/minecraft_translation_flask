@@ -77,7 +77,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     keys = translation = selected_translation = {}
-    selected_option = source_str = None
+    selected_option = source_str = ""
     query_str = ""
 
     if request.method == "POST":

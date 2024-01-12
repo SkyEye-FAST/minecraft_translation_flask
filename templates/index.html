@@ -11,13 +11,14 @@
 <body>
     <form class="container" action="/" method="post">
         <div>
-            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" placeholder="输入英语名称"
-                autocomplete="off" required>
+            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" placeholder="输入源字符串的一部分……"
+                autocomplete="off">
             <input type="submit" value="查询">
         </div>
         <div>
             <label for="options">选择需要查询的项：</label>
             <select name="options" id="options">
+                {% if not selected_option %} <option value="" selected> </option> {% endif %}
                 {% for option in keys %}
                 <option value="{{ option }}">{{ option }}</option>
                 {% endfor %}
@@ -29,8 +30,9 @@
     <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
         <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
     </a>
-    {% if translation %}
+
     <div class="table-container">
+        {% if translation %}
         <div class="title">
             {{ source }}
         </div>
@@ -59,11 +61,12 @@
                 <td class="string">{{ translation["lzh"] }}</td>
             </tr>
         </table>
+        {% endif %}
         <div class="minecraft-title">
             Minecraft中文标准译名
         </div>
     </div>
-    {% endif %}
+
 </body>
 
 </html>
