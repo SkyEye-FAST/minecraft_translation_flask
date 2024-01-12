@@ -48,7 +48,7 @@ input[type="submit"]:hover {
 
 .title {
     text-align: center;
-    font-family: "Noto Serif CJK SC Medium", SimSun, 'Times New Roman', Times, serif;
+    font-family: "Noto Serif CJK SC Medium", "思源宋体 SemiBold", SimSun, 'Times New Roman', Times, serif;
     font-size: 48px;
     position: absolute;
     top: 5%;
@@ -88,7 +88,7 @@ table th {
 }
 
 .table-header {
-    font-family: 'Noto Serif CJK SC', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC', "思源宋体", SimSun, 'Times New Roman', Times, serif;
     font-size: 36px;
 }
 
@@ -97,15 +97,15 @@ table th {
 }
 
 .zh-cn {
-    font-family: "Noto Serif CJK SC", SimSun, 'Times New Roman', Times, serif;
+    font-family: "Noto Serif CJK SC", "思源宋体", SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-hk {
-    font-family: "Noto Serif CJK HK", SimSun, 'Times New Roman', Times, serif;
+    font-family: "Noto Serif CJK HK", "思源宋體 香港", SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-tw {
-    font-family: "Noto Serif CJK TC", SimSun, 'Times New Roman', Times, serif;
+    font-family: "Noto Serif CJK TC", "思源宋體", SimSun, 'Times New Roman', Times, serif;
 }
 
 .lzh {
@@ -114,11 +114,22 @@ table th {
 
 .minecraft-title {
     text-align: center;
-    font-family: "Noto Serif CJK SC Black", SimSun, 'Times New Roman', Times, serif;
+    font-family: "Noto Serif CJK SC Black", "思源宋体 Heavy", SimSun, 'Times New Roman', Times, serif;
     font-size: 36px;
     color: #bfbfbf;
     position: absolute;
     top: 85%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.github-link {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+.github-icon {
+    width: 40px;
+    height: auto;
 }
