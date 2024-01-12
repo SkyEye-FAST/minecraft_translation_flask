@@ -1,0 +1,118 @@
+body {
+    background-color: #f9f2e0;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 400px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4472c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1b4896;
+}
+
+.container {
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f9f2e0;
+}
+
+.title {
+    text-align: center;
+    font-family: "Noto Serif CJK SC Medium", SimSun, 'Times New Roman', Times, serif;
+    font-size: 48px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subtitle {
+    text-align: center;
+    font-family: "Fira Code", monospace;
+    font-size: 27px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+table {
+    border-collapse: collapse;
+    position: absolute;
+    top: 25%;
+    left: calc(50% - 409px);
+    width: 818px;
+    height: 383px;
+}
+
+table td,
+table th {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #5b9bd5;
+    font-size: 24px;
+}
+
+.highlight {
+    background-color: #d9e1de;
+}
+
+.table-header {
+    font-family: 'Noto Serif CJK SC', SimSun, 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+.string {
+    font-size: 30px;
+}
+
+.zh-cn {
+    font-family: "Noto Serif CJK SC", SimSun, 'Times New Roman', Times, serif;
+}
+
+.zh-hk {
+    font-family: "Noto Serif CJK HK", SimSun, 'Times New Roman', Times, serif;
+}
+
+.zh-tw {
+    font-family: "Noto Serif CJK TC", SimSun, 'Times New Roman', Times, serif;
+}
+
+.lzh {
+    font-family: "一点明体", SimSun, 'Times New Roman', Times, serif;
+}
+
+.minecraft-title {
+    text-align: center;
+    font-family: "Noto Serif CJK SC Black", SimSun, 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: #bfbfbf;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}

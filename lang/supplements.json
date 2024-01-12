@@ -1,0 +1,30 @@
+{
+    "zh_cn": {
+        "entity.minecraft.armadillo": "犰狳",
+        "item.minecraft.armadillo_scute": "犰狳鳞甲",
+        "item.minecraft.armadillo_spawn_egg": "犰狳刷怪蛋",
+        "item.minecraft.wolf_armor": "狼铠",
+        "item.minecraft.turtle_scute": "海龟鳞甲"
+    },
+    "zh_hk": {
+        "entity.minecraft.armadillo": "犰狳",
+        "item.minecraft.armadillo_scute": "犰狳鱗甲",
+        "item.minecraft.armadillo_spawn_egg": "犰狳 生成蛋",
+        "item.minecraft.wolf_armor": "狼甲",
+        "item.minecraft.turtle_scute": "海龜鱗甲"
+    },
+    "zh_tw": {
+        "entity.minecraft.armadillo": "犰狳",
+        "item.minecraft.armadillo_scute": "犰狳鱗甲",
+        "item.minecraft.armadillo_spawn_egg": "犰狳 生怪蛋",
+        "item.minecraft.wolf_armor": "狼鎧",
+        "item.minecraft.turtle_scute": "海龜鱗甲"
+    },
+    "lzh": {
+        "entity.minecraft.armadillo": "犰狳",
+        "item.minecraft.armadillo_scute": "犰狳鱗",
+        "item.minecraft.armadillo_spawn_egg": "孳犰狳之卵",
+        "item.minecraft.wolf_armor": "狼甲",
+        "item.minecraft.turtle_scute": "海龜鱗"
+    }
+}

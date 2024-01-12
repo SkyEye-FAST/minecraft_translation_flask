@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft中文标准译名查询</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+
+<body>
+    <form action="/" method="post">
+        <input type="text" name="item" placeholder="输入英语名称" autocomplete="off" required>
+        <input type="submit" value="查询">
+    </form>
+    <div class="container">
+        <div class="title">
+            {{ source }}
+        </div>
+        <div class="subtitle">
+            {{ key }}
+        </div>
+        <table>
+            <tr>
+                <th class="table-header" style="width: 30%;">语言名称</th>
+                <th class="table-header" style="width: 40%;">译名</th>
+            </tr>
+            <tr lang="zh-Hans-CN" class="zh-cn highlight">
+                <td>简体中文（中国大陆）</td>
+                <td class="string">{{ translation["zh_cn"] }}</td>
+            </tr>
+            <tr lang="zh-Hant-HK" class="zh-hk">
+                <td>繁體中文（香港特別行政區）</td>
+                <td class="string">{{ translation["zh_hk"] }}</td>
+            </tr>
+            <tr lang="zh-Hant-TW" class="zh-tw highlight">
+                <td>繁體中文（台灣）</td>
+                <td class="string">{{ translation["zh_tw"] }}</td>
+            </tr>
+            <tr lang="lzh" class="lzh">
+                <td>文言（華夏）</td>
+                <td class="string">{{ translation["lzh"] }}</td>
+            </tr>
+        </table>
+        <div class="minecraft-title">
+            Minecraft中文标准译名
+        </div>
+    </div>
+</body>
+
+</html>
