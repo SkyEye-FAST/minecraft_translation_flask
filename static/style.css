@@ -4,6 +4,12 @@ body {
     margin: 0;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 form {
     display: flex;
     justify-content: center;

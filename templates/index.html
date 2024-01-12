@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <form action="/" method="post">
-        <input type="text" name="item" placeholder="输入英语名称" autocomplete="off" required>
-        <input type="submit" value="查询">
-    </form>
+    <div class="form-container">
+        <form action="/" method="post">
+            <input type="text" name="item" placeholder="输入英语名称" autocomplete="off" required>
+            <input type="submit" value="查询">
+        </form>
+    </div>
     <div class="container">
         <div class="title">
             {{ source }}
