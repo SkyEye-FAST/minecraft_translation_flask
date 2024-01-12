@@ -4,8 +4,9 @@ body {
     margin: 0;
 }
 
-.form-container {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -38,7 +39,7 @@ input[type="submit"]:hover {
     background-color: #1b4896;
 }
 
-.container {
+.table-container {
     width: 1280px;
     height: 720px;
     margin: 0 auto;

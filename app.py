@@ -1,7 +1,7 @@
 import json
 import re
 from pathlib import Path
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 P = Path(__file__).resolve().parent
 LANG_DIR = P / "lang"
@@ -76,32 +76,32 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    source_str = "Source String"
-    key = "Translation Key"
-    translation={
-        "zh_cn":"？",
-        "zh_hk":"？",
-        "zh_tw":"？",
-        "lzh":"？",
-    }
+    keys = translation = selected_translation = {}
+    selected_option = None
+    query_str = ""
+
     if request.method == "POST":
-        query_str = request.form.get("item")
+        query_str = request.form.get("query-input")
+        if not query_str:
+            query_str = ""
+        selected_option = request.form.get("options")
 
         for k, v in data["en_us"].items():
-            if v == query_str:
-                key = k
-                source_str = query_str
-                break
+            if query_str.lower() in v.lower():
+                element = {lang: content.get(k, "？") for lang, content in data.items()}
+                translation.update({k: element})
 
-        if key:
-            translation = {
-                lang: content.get(key, "？") for lang, content in data.items()
-            }
+        keys = list(translation.keys())
+        if selected_option:
+            selected_translation = translation.get(selected_option)
+
     return render_template(
         "index.html",
-        source=source_str,
-        key=key,
-        translation=translation,
+        source=data["en_us"][selected_option],
+        key=selected_option,
+        input_value=query_str,
+        keys=keys,
+        translation=selected_translation,
     )
 
 
