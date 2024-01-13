@@ -4,7 +4,7 @@
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
-网页样式参考[SkyEye-FAST/minecraft_translation_ppt](SkyEye-FAST/minecraft_translation_ppt)。
+网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
 
 ## 需求
 
@@ -18,7 +18,7 @@ pip install flask -U
 
 ### 语言文件
 
-Java版语言文件请使用[SkyEye-FAST/minecraft_translation](SkyEye-FAST/minecraft_translation)获取。
+Java版语言文件请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
 请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`和`lzh.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
