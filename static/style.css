@@ -82,6 +82,7 @@ table tr:nth-child(even) {
 
 .minecraft-title {
     font-family: 'Noto Serif CJK SC Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
+    text-align: center;
     font-size: 2.25em;
     color: #bfbfbf;
 }

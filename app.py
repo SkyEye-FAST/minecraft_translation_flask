@@ -32,8 +32,7 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def index():
     translation = selected_translation = {}
-    selected_option = source_str = ""
-    query_str = ""
+    selected_option = source_str = query_str = ""
 
     if request.method == "POST":
         query_str = request.form.get("query-input")

@@ -9,30 +9,31 @@
 </head>
 
 <body>
-<a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
-    <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
-</a>
+    <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
+        <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
+    </a>
 
-<form class="form" action="/" method="post">
-    <div class="container">
-        <label for="query-input">以翻译键的一部分进行筛选：</label>
-        <input type="text" name="query-input" id="query-input" value="{{ input_value }}"
-               autocomplete="off">
-        <label for="options">以翻译键查询：</label>
-        <select name="options" id="options">
-            {% for option in keys %}
+    <form class="form" action="/" method="post">
+        <div class="container">
+            <label for="query-input">查询的源字符串内容：</label>
+            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" autocomplete="off">
+            {% if input_value %}
+            <label for="options">选择本地化键名：</label>
+            <select name="options" id="options">
+                {% for option in keys %}
                 {% if option == key %}
                 <option value="{{ option }}" selected>{{ option }}</option>
                 {% else %}
                 <option value="{{ option }}">{{ option }}</option>
                 {% endif %}
-            {% endfor %}
-        </select>
-    </div>
-    <input class="submit" type="submit" value="查询">
-</form>
+                {% endfor %}
+            </select>
+            {% endif %}
+        </div>
+        <input class="submit" type="submit" value="查询">
+    </form>
 
-{% if translation %}
+    {% if translation %}
     <div class="title">
         {{ source }}
     </div>
@@ -61,11 +62,11 @@
             <td class="string">{{ translation["lzh"] }}</td>
         </tr>
     </table>
-{% endif %}
+    {% endif %}
 
-<div class="minecraft-title">
-    Minecraft中文标准译名
-</div>
+    <div class="minecraft-title">
+        Minecraft中文标准译名<br><span style="font-size: smaller;">（2024年1月13日）</span>
+    </div>
 
 </body>
 
