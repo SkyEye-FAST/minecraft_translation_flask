@@ -1,136 +1,202 @@
-body {
-    background-color: #f9f2e0;
-    padding: 0;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 400px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4472c4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #1b4896;
-}
-
-.table-container {
-    width: 1280px;
-    height: 720px;
-    margin: 0 auto;
-    position: relative;
-    background-color: #f9f2e0;
-}
-
-.title {
-    text-align: center;
-    font-family: "Noto Serif CJK SC Medium", "思源宋体 SemiBold", SimSun, 'Times New Roman', Times, serif;
-    font-size: 48px;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.subtitle {
-    text-align: center;
-    font-family: "Fira Code", monospace;
-    font-size: 27px;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-table {
-    border-collapse: collapse;
-    position: absolute;
-    top: 25%;
-    left: calc(50% - 409px);
-    width: 818px;
-    height: 383px;
-}
-
-table td,
-table th {
-    padding: 10px;
-    text-align: center;
-    border: 2px solid #5b9bd5;
-    font-size: 24px;
-}
-
-.highlight {
-    background-color: #d9e1de;
-}
-
-.table-header {
-    font-family: 'Noto Serif CJK SC', "思源宋体", SimSun, 'Times New Roman', Times, serif;
-    font-size: 36px;
-}
-
-.string {
-    font-size: 30px;
-}
-
-.zh-cn {
-    font-family: "Noto Serif CJK SC", "思源宋体", SimSun, 'Times New Roman', Times, serif;
-}
-
-.zh-hk {
-    font-family: "Noto Serif CJK HK", "思源宋體 香港", SimSun, 'Times New Roman', Times, serif;
-}
-
-.zh-tw {
-    font-family: "Noto Serif CJK TC", "思源宋體", SimSun, 'Times New Roman', Times, serif;
-}
-
-.lzh {
-    font-family: "一点明体", SimSun, 'Times New Roman', Times, serif;
-}
-
-.minecraft-title {
-    text-align: center;
-    font-family: "Noto Serif CJK SC Black", "思源宋体 Heavy", SimSun, 'Times New Roman', Times, serif;
-    font-size: 36px;
-    color: #bfbfbf;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.github-link {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-}
-
-.github-icon {
-    width: 40px;
-    height: auto;
-}
+/* noto-serif-sc - chinese-simplified_latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif SC Medium';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif SC Black';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* noto-serif-hk - chinese-hongkong */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif HK';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/noto-serif-hk-v2-chinese-hongkong-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* noto-serif-tc - chinese-traditional */
+  @font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/noto-serif-tc-v23-chinese-traditional-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap; 
+    font-family: 'Noto Serif TC Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/noto-serif-tc-v23-chinese-traditional-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  body {
+      background-color: #f9f2e0;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+  }
+  
+  input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 400px;
+  }
+  
+  input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4472c4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+      background-color: #1b4896;
+  }
+  
+  .table-container {
+      width: 1280px;
+      min-height: 720px;
+      margin: 0 auto;
+      position: relative;
+      background-color: #f9f2e0;
+  }
+  
+  .title {
+      text-align: center;
+      font-family: "Noto Serif CJK SC Medium", "思源宋体 SemiBold", 'Cambria', SimSun, 'Times New Roman', Times, serif;
+      font-size: 48px;
+      /* position: absolute; */
+      /* top: 5%; */
+      /* left: 50%; */
+      /* transform: translateX(-50%); */
+      padding: 20px 250px 10px 250px;
+  }
+  
+  .subtitle {
+      margin: 0 250px 20px 250px;
+      text-align: center;
+      font-family: "Fira Code", monospace;
+      font-size: 27px;
+      /* position: absolute; */
+      top: 15%;
+      left: 50%;
+      /* transform: translateX(-50%); */
+      overflow: auto;
+  }
+  
+  .subtitle::-webkit-scrollbar-track {
+      background: transparent;
+  }
+  
+  .subtitle::-webkit-scrollbar {
+      background-color: transparent;
+      height: 7px;
+  }
+  
+  .subtitle::-webkit-scrollbar-thumb {
+      border-radius: 7px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #998d6d;
+  }
+  
+  table {
+      margin: auto;
+      border-collapse: collapse;
+      /* position: absolute; */
+      top: 25%;
+      left: calc(50% - 409px);
+      width: 818px;
+      height: 383px;
+  }
+  
+  table td,
+  table th {
+      padding: 10px;
+      text-align: center;
+      border: 2px solid #de9900;
+      font-size: 24px;
+  }
+  
+  .highlight {
+      background-color: #fff2cc;
+  }
+  
+  .table-header {
+      font-family: 'Noto Serif CJK SC', "思源宋体", "华文中宋", SimSun, 'Times New Roman', Times, serif;
+      font-size: 36px;
+  }
+  
+  .string {
+      font-size: 30px;
+  }
+  
+  .zh-cn {
+      font-family: "Noto Serif CJK SC", "思源宋体", SimSun, 'Times New Roman', Times, serif;
+  }
+  
+  .zh-hk {
+      font-family: "Noto Serif CJK HK", "思源宋體 香港", SimSun, 'Times New Roman', Times, serif;
+  }
+  
+  .zh-tw {
+      font-family: "Noto Serif CJK TC", "思源宋體", SimSun, 'Times New Roman', Times, serif;
+  }
+  
+  .lzh {
+      font-family: "一点明体", "Noto Serif CJK TC Light", SimSun, 'Times New Roman', Times, serif;
+  }
+  
+  .minecraft-title {
+      margin: 10px 0 10px 0;
+      text-align: center;
+      font-family: "Noto Serif CJK SC Black", "思源宋体 Heavy", "华文中宋", SimSun, 'Times New Roman', Times, serif;
+      font-size: 36px;
+      color: #bfbfbf;
+      /* position: absolute; */
+      top: 85%;
+      left: 50%;
+      /* transform: translateX(-50%); */
+  }
+  
+  .github-link {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+  }
+  
+  .github-icon {
+      width: 40px;
+      height: auto;
+  }
