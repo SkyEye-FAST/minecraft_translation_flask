@@ -1,10 +1,12 @@
+# -*- encoding: utf-8 -*-
+"""Minecraft中文标准译名查询网页，使用Flask编写的后端框架"""
+
 import json
 import re
 from pathlib import Path
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 
-P = Path(__file__).resolve().parent
-LANG_DIR = P / "lang"
+LANG_DIR = Path(__file__).resolve().parent / "lang"
 
 # 读取语言文件
 print("开始读取语言文件。")
@@ -20,50 +22,6 @@ for file in file_list:
     with open(LANG_DIR / file, "r", encoding="utf-8") as f:
         data[file.split(".", maxsplit=1)[0]] = json.load(f)
 
-# 修正语言文件
-updated_data = data
-
-for lang in ["en_us", "zh_cn", "zh_hk", "zh_tw", "lzh"]:
-    netherite_upgrade_str = data[lang]["upgrade.minecraft.netherite_upgrade"]
-    smithing_template_str = data[lang]["item.minecraft.smithing_template"]
-    music_disc_str = data[lang]["item.minecraft.music_disc_5"]
-    banner_pattern_str = data[lang]["item.minecraft.mojang_banner_pattern"]
-    updated_data[lang]["item.minecraft.netherite_upgrade_smithing_template"] = (
-        netherite_upgrade_str + " " + smithing_template_str
-        if lang == "en_us"
-        else netherite_upgrade_str + smithing_template_str
-    )
-    trim_keys = [key for key in data[lang].keys() if "trim_smithing_template" in key]
-    keys_to_add = {
-        key: data[lang][
-            f"trim_pattern.minecraft.{key.split('.')[2].split('_', maxsplit=1)[0]}"
-        ]
-        + " "
-        + smithing_template_str
-        if lang == "en_us"
-        else data[lang][
-            f"trim_pattern.minecraft.{key.split('.')[2].split('_', maxsplit=1)[0]}"
-        ]
-        + smithing_template_str
-        for key in trim_keys
-    }
-    updated_data[lang].update(keys_to_add)
-
-    keys_to_delete = [
-        key
-        for key in data[lang].keys()
-        if key.startswith("item.minecraft.music_disc")
-        or re.match(r"item\.minecraft\.(.*)_banner_pattern", key)
-    ]
-    for key in keys_to_delete:
-        del updated_data[lang][key]
-    del updated_data[lang]["item.minecraft.smithing_template"]
-
-    updated_data[lang]["item.minecraft.music_disc_*"] = music_disc_str
-    updated_data[lang]["item.minecraft.*_banner_pattern"] = banner_pattern_str
-
-data = updated_data
-
 # 读取补充字符串
 with open(LANG_DIR / "supplements.json", "r", encoding="utf-8") as f:
     supplements = json.load(f)
@@ -71,30 +29,69 @@ for lang in ["zh_cn", "zh_hk", "zh_tw", "lzh"]:
     data[lang].update(supplements[lang])
 print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
+
 app = Flask(__name__)
+
+
+def is_valid_key(translation_key: str):
+    """判断是否为有效键名"""
+
+    prefixes = (
+        "block.",
+        "item.minecraft.",
+        "entity.minecraft.",
+        "biome.",
+        "effect.minecraft.",
+        "enchantment.minecraft.",
+        "trim_pattern.",
+        "upgrade.",
+    )
+
+    if (
+        translation_key.startswith(prefixes)
+        and not re.match(
+            r"(block\.minecraft\.|item\.minecraft\.|entity\.minecraft\.)[^.]*\.",
+            translation_key,
+        )
+        and translation_key
+        not in ["block.minecraft.set_spawn", "entity.minecraft.falling_block_type"]
+        and "pottery_shard" not in translation_key
+    ):
+        return True
+
+    # 匹配进度键名
+    if re.match(r"advancements\.(.*)\.title", translation_key):
+        return True
+
+    return False
+
+
+def get_translation(query_str: str):
+    """在语言文件中匹配含有输入内容的源字符串"""
+    translation = {}
+    for k, v in data["en_us"].items():
+        if query_str.lower() in v.lower():
+            element = {lang: content.get(k, "？") for lang, content in data.items()}
+            translation[k] = element
+    return translation
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    keys = translation = selected_translation = {}
-    selected_option = source_str = ""
-    query_str = ""
+    selected_option = request.form.get("options", "")
+    query_str = request.form.get("query-input", "")
+    if not query_str:
+        selected_option = ""  # 清空下拉列表选择项
 
     if request.method == "POST":
-        query_str = request.form.get("query-input")
-        if not query_str:
-            query_str = ""
-        selected_option = request.form.get("options")
-
-        for k, v in data["en_us"].items():
-            if query_str.lower() in v.lower():
-                element = {lang: content.get(k, "？") for lang, content in data.items()}
-                translation.update({k: element})
-
-        keys = list(translation.keys())
-        if selected_option:
-            selected_translation = translation.get(selected_option)
-            source_str = data["en_us"][selected_option]
+        translation = get_translation(query_str)
+        keys = [k for k in translation.keys() if is_valid_key(k)]
+        selected_translation = translation.get(selected_option, {})
+        source_str = data["en_us"].get(selected_option, "")
+    else:
+        keys = [k for k in data["en_us"].keys() if is_valid_key(k)]
+        selected_translation = {}
+        source_str = ""
 
     return render_template(
         "index.html",

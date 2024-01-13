@@ -9,62 +9,63 @@
 </head>
 
 <body>
-    <form class="container" action="/" method="post">
-        <div>
-            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" placeholder="输入源字符串的一部分……"
-                autocomplete="off">
-            <input type="submit" value="查询">
-        </div>
-        <div>
-            <label for="options">选择需要查询的项：</label>
-            <select name="options" id="options">
-                {% if not selected_option %} <option value="" selected> </option> {% endif %}
-                {% for option in keys %}
-                <option value="{{ option }}">{{ option }}</option>
-                {% endfor %}
-            </select>
-            <input type="submit" value="查询">
-        </div>
-    </form>
-
     <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
         <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
     </a>
 
-    <div class="table-container">
-        {% if translation %}
-        <div class="title">
-            {{ source }}
+    <form class="form" action="/" method="post">
+        <div class="container">
+            <label for="query-input">查询的源字符串内容：</label>
+            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" autocomplete="off">
+            {% if input_value %}
+            <label for="options">选择本地化键名：</label>
+            <select name="options" id="options">
+                {% for option in keys %}
+                {% if option == key %}
+                <option value="{{ option }}" selected>{{ option }}</option>
+                {% else %}
+                <option value="{{ option }}">{{ option }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            {% endif %}
         </div>
-        <div class="subtitle">
-            {{ key }}
-        </div>
-        <table>
-            <tr>
-                <th class="table-header" style="width: 30%;">语言名称</th>
-                <th class="table-header" style="width: 40%;">译名</th>
-            </tr>
-            <tr lang="zh-Hans-CN" class="zh-cn highlight">
-                <td>简体中文（中国大陆）</td>
-                <td class="string">{{ translation["zh_cn"] }}</td>
-            </tr>
-            <tr lang="zh-Hant-HK" class="zh-hk">
-                <td>繁體中文（香港特別行政區）</td>
-                <td class="string">{{ translation["zh_hk"] }}</td>
-            </tr>
-            <tr lang="zh-Hant-TW" class="zh-tw highlight">
-                <td>繁體中文（台灣）</td>
-                <td class="string">{{ translation["zh_tw"] }}</td>
-            </tr>
-            <tr lang="lzh" class="lzh">
-                <td>文言（華夏）</td>
-                <td class="string">{{ translation["lzh"] }}</td>
-            </tr>
-        </table>
-        {% endif %}
-        <div class="minecraft-title">
-            Minecraft中文标准译名
-        </div>
+        <input class="submit" type="submit" value="查询">
+    </form>
+
+    {% if translation %}
+    <div class="title">
+        {{ source }}
+    </div>
+    <div class="subtitle">
+        {{ key }}
+    </div>
+    <table>
+        <tr>
+            <th class="table-header">语言名称</th>
+            <th class="table-header">译名</th>
+        </tr>
+        <tr lang="zh-Hans-CN" class="zh-cn">
+            <td class="lang-name">简体中文（中国大陆）</td>
+            <td class="string">{{ translation["zh_cn"] }}</td>
+        </tr>
+        <tr lang="zh-Hant-HK" class="zh-hk">
+            <td class="lang-name">繁體中文（香港特別行政區）</td>
+            <td class="string">{{ translation["zh_hk"] }}</td>
+        </tr>
+        <tr lang="zh-Hant-TW" class="zh-tw">
+            <td class="lang-name">繁體中文（台灣）</td>
+            <td class="string">{{ translation["zh_tw"] }}</td>
+        </tr>
+        <tr lang="lzh" class="lzh">
+            <td class="lang-name">文言（華夏）</td>
+            <td class="string">{{ translation["lzh"] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+
+    <div class="minecraft-title">
+        Minecraft中文标准译名<br><span style="font-size: smaller;">（2024年1月13日）</span>
     </div>
 
 </body>
