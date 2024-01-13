@@ -20,50 +20,6 @@ for file in file_list:
     with open(LANG_DIR / file, "r", encoding="utf-8") as f:
         data[file.split(".", maxsplit=1)[0]] = json.load(f)
 
-# 修正语言文件
-updated_data = data
-
-for lang in ["en_us", "zh_cn", "zh_hk", "zh_tw", "lzh"]:
-    netherite_upgrade_str = data[lang]["upgrade.minecraft.netherite_upgrade"]
-    smithing_template_str = data[lang]["item.minecraft.smithing_template"]
-    music_disc_str = data[lang]["item.minecraft.music_disc_5"]
-    banner_pattern_str = data[lang]["item.minecraft.mojang_banner_pattern"]
-    updated_data[lang]["item.minecraft.netherite_upgrade_smithing_template"] = (
-        netherite_upgrade_str + " " + smithing_template_str
-        if lang == "en_us"
-        else netherite_upgrade_str + smithing_template_str
-    )
-    trim_keys = [key for key in data[lang].keys() if "trim_smithing_template" in key]
-    keys_to_add = {
-        key: data[lang][
-            f"trim_pattern.minecraft.{key.split('.')[2].split('_', maxsplit=1)[0]}"
-        ]
-        + " "
-        + smithing_template_str
-        if lang == "en_us"
-        else data[lang][
-            f"trim_pattern.minecraft.{key.split('.')[2].split('_', maxsplit=1)[0]}"
-        ]
-        + smithing_template_str
-        for key in trim_keys
-    }
-    updated_data[lang].update(keys_to_add)
-
-    keys_to_delete = [
-        key
-        for key in data[lang].keys()
-        if key.startswith("item.minecraft.music_disc")
-        or re.match(r"item\.minecraft\.(.*)_banner_pattern", key)
-    ]
-    for key in keys_to_delete:
-        del updated_data[lang][key]
-    del updated_data[lang]["item.minecraft.smithing_template"]
-
-    updated_data[lang]["item.minecraft.music_disc_*"] = music_disc_str
-    updated_data[lang]["item.minecraft.*_banner_pattern"] = banner_pattern_str
-
-data = updated_data
-
 # 读取补充字符串
 with open(LANG_DIR / "supplements.json", "r", encoding="utf-8") as f:
     supplements = json.load(f)
