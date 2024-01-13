@@ -1,87 +1,47 @@
 body {
     background-color: #f9f2e0;
-    padding: 0;
-    margin: 0;
-}
 
-.container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    width: 400px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4472c4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #1b4896;
-}
-
-.table-container {
-    width: 1280px;
-    height: 720px;
-    margin: 0 auto;
-    position: relative;
-    background-color: #f9f2e0;
-}
-
-.title {
-    text-align: center;
-    font-family: "Noto Serif CJK SC Medium", "思源宋体 SemiBold", SimSun, 'Times New Roman', Times, serif;
-    font-size: 48px;
+/* github link */
+.github-link {
     position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 15px;
+    right: 15px;
+}
+
+.github-icon {
+    width: 40px;
+    height: auto;
+}
+
+/* display title*/
+.title {
+    font-family: 'Noto Serif CJK SC Medium', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
+    max-width: 40vw;
+    font-size: 3em;
 }
 
 .subtitle {
-    text-align: center;
-    font-family: "Fira Code", monospace;
-    font-size: 27px;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.75em;
 }
 
+/* display table */
 table {
     border-collapse: collapse;
-    position: absolute;
-    top: 25%;
-    left: calc(50% - 409px);
-    width: 818px;
-    height: 383px;
 }
 
 table td,
 table th {
-    padding: 10px;
     text-align: center;
+    padding: .5em 2em;
     border: 2px solid #5b9bd5;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .highlight {
@@ -90,47 +50,86 @@ table th {
 
 .table-header {
     font-family: 'Noto Serif CJK SC', "思源宋体", SimSun, 'Times New Roman', Times, serif;
-    font-size: 36px;
+    font-size: 2.25em;
+    white-space: nowrap;
 }
 
 .string {
-    font-size: 30px;
+    font-size: 2em;
+    min-width: 20vw;
+    max-width: 40vw;
+}
+
+.lang-name {
+    white-space: nowrap;
 }
 
 .zh-cn {
-    font-family: "Noto Serif CJK SC", "思源宋体", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC', '思源宋体', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-hk {
-    font-family: "Noto Serif CJK HK", "思源宋體 香港", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-tw {
-    font-family: "Noto Serif CJK TC", "思源宋體", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK TC', '思源宋體', SimSun, 'Times New Roman', Times, serif;
 }
 
 .lzh {
-    font-family: "一点明体", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', SimSun, 'Times New Roman', Times, serif;
 }
 
 .minecraft-title {
-    text-align: center;
-    font-family: "Noto Serif CJK SC Black", "思源宋体 Heavy", SimSun, 'Times New Roman', Times, serif;
-    font-size: 36px;
+    font-family: 'Noto Serif CJK SC Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
+    font-size: 2.25em;
     color: #bfbfbf;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
-.github-link {
-    position: fixed;
-    top: 15px;
-    right: 15px;
+/* form */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
-.github-icon {
-    width: 40px;
-    height: auto;
+.form .container {
+    margin-top: 1em;
+
+    display: grid;
+    grid-row-gap: 1em;
+    grid-template-columns: max-content max-content;
+}
+
+.form .container label {
+    text-align: right;
+}
+
+.form .container input {
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - .5em);
+}
+
+.form .container select {
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form .submit {
+    padding: 10px 20px;
+    background-color: #7aa2ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form .submit:hover {
+    background-color: #6493e7;
 }

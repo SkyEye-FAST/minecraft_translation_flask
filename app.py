@@ -76,7 +76,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    keys = translation = selected_translation = {}
+    translation = selected_translation = {}
     selected_option = source_str = ""
     query_str = ""
 
@@ -95,6 +95,10 @@ def index():
         if selected_option:
             selected_translation = translation.get(selected_option)
             source_str = data["en_us"][selected_option]
+
+        keys.remove(selected_option)
+    else:
+        keys = list(data["en_us"].keys())
 
     return render_template(
         "index.html",
