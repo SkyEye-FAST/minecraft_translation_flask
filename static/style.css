@@ -44,7 +44,7 @@ table th {
     font-size: 1.5em;
 }
 
-.highlight {
+table tr:nth-child(even) {
     background-color: #d9e1de;
 }
 
@@ -111,7 +111,6 @@ table th {
     padding-bottom: .25em;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(100% - .5em);
 }
 
 .form .container select {

@@ -20,11 +20,12 @@
                autocomplete="off">
         <label for="options">以翻译键查询：</label>
         <select name="options" id="options">
-            {% if key %}
-            <option value="{{ key }}" selected>{{ key }}</option>
-            {% endif %}
             {% for option in keys %}
-            <option value="{{ option }}">{{ option }}</option>
+                {% if option == key %}
+                <option value="{{ option }}" selected>{{ option }}</option>
+                {% else %}
+                <option value="{{ option }}">{{ option }}</option>
+                {% endif %}
             {% endfor %}
         </select>
     </div>
@@ -32,35 +33,36 @@
 </form>
 
 {% if translation %}
-<div class="title">
-    {{ source }}
-</div>
-<div class="subtitle">
-    {{ key }}
-</div>
-<table>
-    <tr>
-        <th class="table-header">语言名称</th>
-        <th class="table-header">译名</th>
-    </tr>
-    <tr lang="zh-Hans-CN" class="zh-cn highlight">
-        <td class="lang-name">简体中文（中国大陆）</td>
-        <td class="string">{{ translation["zh_cn"] }}</td>
-    </tr>
-    <tr lang="zh-Hant-HK" class="zh-hk">
-        <td class="lang-name">繁體中文（香港特別行政區）</td>
-        <td class="string">{{ translation["zh_hk"] }}</td>
-    </tr>
-    <tr lang="zh-Hant-TW" class="zh-tw highlight">
-        <td class="lang-name">繁體中文（台灣）</td>
-        <td class="string">{{ translation["zh_tw"] }}</td>
-    </tr>
-    <tr lang="lzh" class="lzh">
-        <td class="lang-name">文言（華夏）</td>
-        <td class="string">{{ translation["lzh"] }}</td>
-    </tr>
-</table>
+    <div class="title">
+        {{ source }}
+    </div>
+    <div class="subtitle">
+        {{ key }}
+    </div>
+    <table>
+        <tr>
+            <th class="table-header">语言名称</th>
+            <th class="table-header">译名</th>
+        </tr>
+        <tr lang="zh-Hans-CN" class="zh-cn">
+            <td class="lang-name">简体中文（中国大陆）</td>
+            <td class="string">{{ translation["zh_cn"] }}</td>
+        </tr>
+        <tr lang="zh-Hant-HK" class="zh-hk">
+            <td class="lang-name">繁體中文（香港特別行政區）</td>
+            <td class="string">{{ translation["zh_hk"] }}</td>
+        </tr>
+        <tr lang="zh-Hant-TW" class="zh-tw">
+            <td class="lang-name">繁體中文（台灣）</td>
+            <td class="string">{{ translation["zh_tw"] }}</td>
+        </tr>
+        <tr lang="lzh" class="lzh">
+            <td class="lang-name">文言（華夏）</td>
+            <td class="string">{{ translation["lzh"] }}</td>
+        </tr>
+    </table>
 {% endif %}
+
 <div class="minecraft-title">
     Minecraft中文标准译名
 </div>

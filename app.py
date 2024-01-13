@@ -95,8 +95,6 @@ def index():
         if selected_option:
             selected_translation = translation.get(selected_option)
             source_str = data["en_us"][selected_option]
-
-        keys.remove(selected_option)
     else:
         keys = list(data["en_us"].keys())
 
