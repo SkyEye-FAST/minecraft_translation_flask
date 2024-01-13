@@ -26,6 +26,7 @@ for lang in ["zh_cn", "zh_hk", "zh_tw", "lzh"]:
     data[lang].update(supplements[lang])
 print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
+
 app = Flask(__name__)
 
 
@@ -36,16 +37,23 @@ def index():
 
     if request.method == "POST":
         query_str = request.form.get("query-input")
+        selected_option = request.form.get("options")
         if not query_str:
             query_str = ""
-        selected_option = request.form.get("options")
+            selected_option = ""
+        if not selected_option:
+            selected_option = ""
 
+        # 在语言文件中匹配含有输入内容的源字符串
         for k, v in data["en_us"].items():
             if query_str.lower() in v.lower():
                 element = {lang: content.get(k, "？") for lang, content in data.items()}
-                translation.update({k: element})
+                translation.update({k: element})  # 匹配到的键
 
+        # 匹配到的键
         keys = list(translation.keys())
+
+        # 下拉列表选择的键
         if selected_option:
             selected_translation = translation.get(selected_option)
             source_str = data["en_us"][selected_option]
