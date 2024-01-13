@@ -4,6 +4,8 @@
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
+目前网页的演示可在[skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)查看。
+
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
 
 ## 需求
@@ -36,4 +38,4 @@ Java版语言文件请使用[SkyEye-FAST/minecraft_translation](https://github.c
 
 ## 感谢
 
-[Favicon](/static/favicon.ico)来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
+[Favicon](/static/favicon.ico)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
