@@ -1,46 +1,46 @@
 /* noto-serif-sc - chinese-simplified_latin */
 @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif SC';
+    font-family: 'Noto Serif CJK SC';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif SC Medium';
+    font-family: 'Noto Serif CJK SC Medium';
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif SC Black';
+    font-family: 'Noto Serif CJK SC Black';
     font-style: normal;
-    font-weight: 900;
+    font-weight: normal;
     src: url('fonts/noto-serif-sc-v22-chinese-simplified_latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* noto-serif-hk - chinese-hongkong */
 @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif HK';
+    font-family: 'Noto Serif CJK HK';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url('fonts/noto-serif-hk-v2-chinese-hongkong-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* noto-serif-tc - chinese-traditional */
   @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif TC';
+    font-family: 'Noto Serif CJK TC';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal;
     src: url('fonts/noto-serif-tc-v23-chinese-traditional-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
     font-display: swap; 
-    font-family: 'Noto Serif TC Light';
+    font-family: 'Noto Serif CJK TC Light';
     font-style: normal;
-    font-weight: 300;
+    font-weight: normal;
     src: url('fonts/noto-serif-tc-v23-chinese-traditional-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 body {
