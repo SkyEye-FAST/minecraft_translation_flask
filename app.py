@@ -2,6 +2,7 @@
 """Minecraft中文标准译名查询网页，使用Flask编写的后端框架"""
 
 import json
+import re
 from pathlib import Path
 from flask import Flask, render_template, request
 
@@ -32,6 +33,39 @@ print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 app = Flask(__name__)
 
 
+def is_valid_key(translation_key: str):
+    """判断是否为有效键名"""
+
+    prefixes = (
+        "block.",
+        "item.minecraft.",
+        "entity.minecraft.",
+        "biome.",
+        "effect.minecraft.",
+        "enchantment.minecraft.",
+        "trim_pattern.",
+        "upgrade.",
+    )
+
+    if (
+        translation_key.startswith(prefixes)
+        and not re.match(
+            r"(block\.minecraft\.|item\.minecraft\.|entity\.minecraft\.)[^.]*\.",
+            translation_key,
+        )
+        and translation_key
+        not in ["block.minecraft.set_spawn", "entity.minecraft.falling_block_type"]
+        and "pottery_shard" not in translation_key
+    ):
+        return True
+
+    # 匹配进度键名
+    if re.match(r"advancements\.(.*)\.title", translation_key):
+        return True
+
+    return False
+
+
 def get_translation(query_str: str):
     """在语言文件中匹配含有输入内容的源字符串"""
     translation = {}
@@ -51,11 +85,11 @@ def index():
 
     if request.method == "POST":
         translation = get_translation(query_str)
-        keys = list(translation.keys())
+        keys = [k for k in translation.keys() if is_valid_key(k)]
         selected_translation = translation.get(selected_option, {})
         source_str = data["en_us"].get(selected_option, "")
     else:
-        keys = list(data["en_us"].keys())
+        keys = [k for k in data["en_us"].keys() if is_valid_key(k)]
         selected_translation = {}
         source_str = ""
 
