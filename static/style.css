@@ -67,13 +67,12 @@ body {
 /* display title*/
 .title {
     font-family: 'Noto Serif CJK SC Medium', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
-    max-width: 40vw;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .subtitle {
     font-family: 'Fira Code', monospace;
-    font-size: 1.75em;
+    font-size: 1.25em;
 }
 
 /* display table */
@@ -100,7 +99,7 @@ table tr:nth-child(even) {
 }
 
 .string {
-    font-size: 2em;
+    font-size: 1.75em;
     min-width: 20vw;
     max-width: 40vw;
 }
