@@ -1,6 +1,6 @@
 # Minecraft中文标准译名查询
 
-注：**此项目仍在开发中，网页样式亟需完善。**
+注：**此项目仍在开发中，网页样式仍需完善，尤其是移动端适配的问题。**
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
@@ -33,3 +33,7 @@ Java版语言文件请使用[SkyEye-FAST/minecraft_translation](https://github.c
 遇到的问题和功能建议等可以提出议题（Issue）。
 
 欢迎创建拉取请求（Pull request）。
+
+## 感谢
+
+[Favicon](/static/favicon.ico)来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
