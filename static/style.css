@@ -55,6 +55,14 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+@font-face {
+    font-display: swap;
+    font-family: '一点明体';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/I.Ming-8.00.ttf') format('truetype');
+}
+
 body {
     background-color: #f9f2e0;
 
@@ -133,7 +141,7 @@ table tr:nth-child(even) {
 }
 
 .lzh {
-    font-family: '一点明体', "Noto Serif CJK TC Light", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', "Noto Serif CJK TC Light", "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
 }
 
 .minecraft-title {
