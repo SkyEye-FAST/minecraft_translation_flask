@@ -33,6 +33,9 @@ print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
 app = Flask(__name__)
 
+# Favicon
+app.add_url_rule("/favicon.ico", redirect_to=url_for("static", filename="favicon.ico"))
+
 
 def is_valid_key(translation_key: str):
     """判断是否为有效键名"""
@@ -79,10 +82,6 @@ def get_translation(query_str: str):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    app.add_url_rule(
-        "/favicon.ico", redirect_to=url_for("static", filename="favicon.ico")
-    )
-
     selected_option = request.form.get("options", "")
     query_str = request.form.get("query-input", "")
     if not query_str:
