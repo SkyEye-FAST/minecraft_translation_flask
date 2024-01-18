@@ -5,7 +5,7 @@ import json
 import re
 from pathlib import Path
 from datetime import date
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 
 LANG_DIR = Path(__file__).resolve().parent / "lang"
 
@@ -79,6 +79,10 @@ def get_translation(query_str: str):
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    app.add_url_rule(
+        "/favicon.ico", redirect_to=url_for("static", filename="favicon.ico")
+    )
+
     selected_option = request.form.get("options", "")
     query_str = request.form.get("query-input", "")
     if not query_str:
