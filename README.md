@@ -20,11 +20,13 @@ pip install flask -U
 
 ### 语言文件
 
-Java版语言文件请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
+本仓库会在每天00:00（UTC+8，即UTC 16:00）自动检查语言文件更新。
+
+如果希望使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
 请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`和`lzh.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
-[`supplements.json`](/lang/supplements.json)中存有目前（2024年1月13日）游戏内语言文件缺失，而Crowdin上已更新的内容。
+[`supplements.json`](/lang/supplements.json)中存有目前（2024年1月18日）游戏内语言文件缺失，而Crowdin上已更新的内容（目前为空）。
 
 ## 运行
 
@@ -38,4 +40,4 @@ Java版语言文件请使用[SkyEye-FAST/minecraft_translation](https://github.c
 
 ## 感谢
 
-[Favicon](/static/favicon.ico)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
+[Favicon](/static/favicon.ico)和[apple-touch-icon.png](/static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。

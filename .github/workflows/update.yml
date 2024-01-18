@@ -2,7 +2,7 @@ name: Update Language Files
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 16 * * *"
 
 jobs:
   build:
