@@ -1,0 +1,27 @@
+name: Update Language Files
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Update Language Files
+      run: |
+        python update.py
+    - name: Commit
+    - uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        message: 'Update Language Files'
+            
