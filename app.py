@@ -4,6 +4,7 @@
 import json
 import re
 from pathlib import Path
+from datetime import date
 from flask import Flask, render_template, request
 
 LANG_DIR = Path(__file__).resolve().parent / "lang"
@@ -100,6 +101,8 @@ def index():
         input_value=query_str,
         keys=keys,
         translation=selected_translation,
+        date_str=date.today(),
+        date_str_zh=date.today().strftime("%Y年%#m月%#d日（UTC）"),
     )
 
 
