@@ -4,7 +4,7 @@
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
-目前网页的演示可在[skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)和[minecraft-translation-flask.vercel.app](https://minecraft-translation-flask.vercel.app/)查看。
+目前网页的演示可在[skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)和[mczhst.vercel.app](https://mczhst.vercel.app/)查看。
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
 
