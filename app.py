@@ -5,7 +5,7 @@ import json
 import re
 from pathlib import Path
 from datetime import date
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, send_from_directory
 
 LANG_DIR = Path(__file__).resolve().parent / "lang"
 
@@ -32,9 +32,6 @@ print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
 
 app = Flask(__name__)
-
-# Favicon
-app.add_url_rule("/favicon.ico", redirect_to=url_for("static", filename="favicon.ico"))
 
 
 def is_valid_key(translation_key: str):
@@ -106,6 +103,13 @@ def index():
         translation=selected_translation,
         date_str=date.today(),
         date_str_zh=date.today().strftime("%Y年%#m月%#d日（UTC）"),
+    )
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(
+        "static", "favicon.ico", mimetype="image/vnd.microsoft.icon"
     )
 
 
