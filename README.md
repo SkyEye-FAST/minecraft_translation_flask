@@ -41,5 +41,3 @@ pip install flask -U
 ## 感谢
 
 [Favicon](/static/favicon.ico)和[apple-touch-icon.png](/static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
-
-文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，按照[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。

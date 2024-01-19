@@ -108,9 +108,7 @@ def index():
 
 @app.route("/favicon.ico")
 def favicon():
-    return send_from_directory(
-        "static", "favicon.ico", mimetype="image/vnd.microsoft.icon"
-    )
+    return send_from_directory("static", "favicon.ico")
 
 
 if __name__ == "__main__":
