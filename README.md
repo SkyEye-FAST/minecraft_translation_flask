@@ -28,6 +28,12 @@ pip install flask -U
 
 [`supplements.json`](/lang/supplements.json)中存有目前（2024年1月18日）游戏内语言文件缺失，而Crowdin上已更新的内容（目前为空）。
 
+### 字体
+
+本项目使用思源宋体和[一点明体](https://github.com/ichitenfont/I.Ming)的自动构建子集。
+
+本仓库会在每周日00:00（UTC+8，即UTC 16:00）自动检查一点明体的子集是否需要根据文言更新。
+
 ## 运行
 
 参见[Flask文档](https://flask.palletsprojects.com/en/3.0.x/)。
