@@ -60,7 +60,8 @@
     font-family: '一点明体';
     font-style: normal;
     font-weight: normal;
-    src: url('fonts/I.Ming-8.00.ttf') format('truetype');
+    src: url('fonts/I.Ming-8.00.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 body {
