@@ -11,10 +11,10 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK SC Medium';
+    font-family: 'Noto Serif CJK SC SemiBold';
     font-style: normal;
     font-weight: normal;
-    src: local('Noto Serif CJK SC Medium'),
+    src: local('Noto Serif CJK SC SemiBold'),
         url('fonts/noto-serif-sc-v22-chinese-simplified_latin-600.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -71,16 +71,26 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* fira-code-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/fira-code-v22-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* 基础样式 */
 body {
     background-color: #f9f2e0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
 }
 
-/* github link */
+/* GitHub链接样式 */
 .github-link {
     position: absolute;
     top: 15px;
@@ -92,18 +102,20 @@ body {
     height: auto;
 }
 
-/* display title*/
+/* 标题样式 */
 .title {
-    font-family: 'Noto Serif CJK SC Medium', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC SemiBold', 'Source Han Serif SC SemiBold', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
     font-size: 2.5em;
+    text-align: center;
 }
 
 .subtitle {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
     font-size: 1.25em;
+    text-align: center;
 }
 
-/* display table */
+/* 表格样式 */
 table {
     border-collapse: collapse;
 }
@@ -121,7 +133,7 @@ table tr:nth-child(even) {
 }
 
 .table-header {
-    font-family: 'Noto Serif CJK SC', "思源宋体", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", SimSun, 'Times New Roman', Times, serif;
     font-size: 2.25em;
     white-space: nowrap;
 }
@@ -137,23 +149,23 @@ table tr:nth-child(even) {
 }
 
 .zh-cn {
-    font-family: 'Noto Serif CJK SC', '思源宋体', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-hk {
-    font-family: 'Noto Serif CJK HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-tw {
-    font-family: 'Noto Serif CJK TC', '思源宋體', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', SimSun, 'Times New Roman', Times, serif;
 }
 
 .lzh {
-    font-family: '一点明体', "Noto Serif CJK TC Light", "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', "Noto Serif CJK TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
 }
 
 .minecraft-title {
-    font-family: 'Noto Serif CJK SC Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif CJK SC Black', 'Source Han Serif SC Black', 'Source Han Serif CN Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2.25em;
     color: #bfbfbf;
@@ -169,9 +181,8 @@ table tr:nth-child(even) {
 
 .form .container {
     margin-top: 1em;
-
     display: grid;
-    grid-row-gap: 1em;
+    grid-row-gap: 0.5em;
     grid-template-columns: max-content max-content;
 }
 
@@ -194,6 +205,7 @@ table tr:nth-child(even) {
 }
 
 .form .submit {
+    width: 50%;
     padding: 10px 20px;
     background-color: #7aa2ea;
     color: white;
@@ -204,4 +216,72 @@ table tr:nth-child(even) {
 
 .form .submit:hover {
     background-color: #6493e7;
+    transform: translateY(2px);
+
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .github-icon {
+        width: 30px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.75em;
+    }
+
+    .table-header {
+        font-size: 1em;
+    }
+
+    .string {
+        font-size: 1em;
+    }
+
+    .lang-name {
+        white-space: pre;
+        font-size: 0.6em;
+    }
+
+    .minecraft-title {
+        font-size: 1.25em;
+        padding: 0 10px;
+    }
+
+    table td,
+    table th {
+        border: 1px solid #5b9bd5;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .form .container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .form .container label,
+    .form .container input,
+    .form .container select {
+        width: 100%;
+    }
+
+    .form .container label {
+        text-align: left;
+    }
+
+    .form .submit {
+        width: 60%;
+        font-size: 1em;
+    }
 }
