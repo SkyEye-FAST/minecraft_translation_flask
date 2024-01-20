@@ -77,7 +77,8 @@
     font-family: 'Fira Code';
     font-style: normal;
     font-weight: normal;
-    src: url('fonts/fira-code-v22-latin-regular.woff2') format('woff2');
+    src: local('Fira Code'),
+        url('fonts/fira-code-v22-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -217,7 +218,6 @@ table tr:nth-child(even) {
 .form .submit:hover {
     background-color: #6493e7;
     transform: translateY(2px);
-
 }
 
 /* 响应式设计 */
