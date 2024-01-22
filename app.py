@@ -31,7 +31,7 @@ for lang in ["zh_cn", "zh_hk", "zh_tw", "lzh"]:
 print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
 
-app = Flask(__name__)
+flask_app = Flask(__name__)
 
 
 def is_valid_key(translation_key: str):
@@ -77,8 +77,9 @@ def get_translation(query_str: str):
     return translation
 
 
-@app.route("/", methods=["GET", "POST"])
+@flask_app.route("/", methods=["GET", "POST"])
 def index():
+    """主页面"""
     selected_option = request.form.get("options", "")
     query_str = request.form.get("query-input", "")
     if not query_str:
@@ -86,7 +87,7 @@ def index():
 
     if request.method == "POST":
         translation = get_translation(query_str)
-        keys = [k for k in translation.keys() if is_valid_key(k)]
+        keys = [k for k in translation if is_valid_key(k)]
         selected_translation = translation.get(selected_option, {})
         source_str = data["en_us"].get(selected_option, "")
     else:
@@ -106,10 +107,11 @@ def index():
     )
 
 
-@app.route("/favicon.ico")
+@flask_app.route("/favicon.ico")
 def favicon():
+    """favcion.ico重定向"""
     return send_from_directory("static", "favicon.ico")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    flask_app.run(debug=True)

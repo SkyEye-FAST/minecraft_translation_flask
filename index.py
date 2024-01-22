@@ -1,10 +1,10 @@
+# -*- encoding: utf-8 -*-
+"""供Vercel使用的索引文件"""
+
 import sys
-import os
+from pathlib import Path
+from app import flask_app
 
-current_dir = os.path.dirname(__file__)
-parent_dir = os.path.join(current_dir, "..")
-sys.path.append(parent_dir)
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from app import app
-
-app = app
+app = flask_app
