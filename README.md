@@ -20,7 +20,7 @@ pip install flask -U
 
 ### 语言文件
 
-本仓库会在每天00:00（UTC+8，即UTC 16:00）自动检查语言文件更新。
+本仓库会在每天00:00（UTC+8，即UTC 16:00）自动检查语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
 
 如果希望使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
@@ -33,6 +33,8 @@ pip install flask -U
 本项目使用思源宋体和[一点明体](https://github.com/ichitenfont/I.Ming)的自动构建子集。
 
 本仓库会在每周日00:00（UTC+8，即UTC 16:00）自动检查一点明体的子集是否需要根据文言更新。
+
+使用脚本为[`extract_font.py`](/extract_font.py)，需要安装库`fonttools`。
 
 ## 运行
 
