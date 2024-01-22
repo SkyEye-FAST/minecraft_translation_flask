@@ -74,10 +74,10 @@
 /* fira-code-regular - latin */
 @font-face {
     font-display: swap;
-    font-family: 'Fira Code';
+    font-family: 'Fira Code Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Fira Code'),
+    src: local('Fira Code Regular'),
         url('fonts/fira-code-v22-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -111,7 +111,7 @@ body {
 }
 
 .subtitle {
-    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
+    font-family: 'Fira Code Regular', 'Source Code Pro', Consolas, Monaco, monospace;
     font-size: 1.25em;
     text-align: center;
 }
