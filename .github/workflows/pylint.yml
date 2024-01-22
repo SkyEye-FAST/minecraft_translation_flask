@@ -20,4 +20,4 @@ jobs:
         pip install pylint flask requests fonttools
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py') -d W1309
+        pylint $(git ls-files '*.py')

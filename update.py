@@ -78,7 +78,7 @@ except r.exceptions.RequestException as e:
 with ZipFile(client_path) as client:
     with client.open("assets/minecraft/lang/en_us.json") as content:
         with open(LANG_DIR / "en_us.json", "wb") as f:
-            print(f"正在从client.jar解压语言文件“en_us.json”……")
+            print("正在从client.jar解压语言文件“en_us.json”……")
             f.write(content.read())
 
 # 删除客户端JAR
