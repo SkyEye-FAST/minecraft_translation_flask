@@ -34,7 +34,7 @@ pip install flask -U
 
 本项目使用思源宋体和[一点明体](https://github.com/ichitenfont/I.Ming)的自动构建子集。
 
-本仓库会在每周四🕧00:30（UTC+8，即🕟UTC 16:30）自动检查一点明体的子集是否需要根据文言更新。
+本仓库会在每周四🕐01:00（UTC+8，即UTC每周三🕔17:00）自动检查一点明体的子集是否需要根据文言更新。
 
 使用脚本为[`extract_font.py`](/extract_font.py)，需要安装库`fonttools`。
 
