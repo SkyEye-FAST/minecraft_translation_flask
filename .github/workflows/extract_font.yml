@@ -2,7 +2,7 @@ name: Generate font subset (I.Ming)
 
 on:
   schedule:
-    - cron: "0 16 * * 0"
+    - cron: "30 16 * * 4"
 
 jobs:
   build:
