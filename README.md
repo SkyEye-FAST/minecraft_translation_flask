@@ -2,7 +2,7 @@
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
-注：**此项目仍在开发中，网页样式仍需完善，尤其是移动端适配的问题。**
+注：**⚠️此项目仍在开发中，网页样式仍需完善，尤其是移动端适配的问题。**
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
@@ -22,7 +22,7 @@ pip install flask -U
 
 ### 语言文件
 
-本仓库会在每天00:00（UTC+8，即UTC 16:00）自动检查语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
+本仓库会在每天🕛00:00（UTC+8，即🕓UTC 16:00）自动检查语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
 
 如果希望使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
@@ -34,7 +34,7 @@ pip install flask -U
 
 本项目使用思源宋体和[一点明体](https://github.com/ichitenfont/I.Ming)的自动构建子集。
 
-本仓库会在每周日00:00（UTC+8，即UTC 16:00）自动检查一点明体的子集是否需要根据文言更新。
+本仓库会在每周四🕐01:00（UTC+8，即UTC每周三🕔17:00）自动检查一点明体的子集是否需要根据文言更新。
 
 使用脚本为[`extract_font.py`](/extract_font.py)，需要安装库`fonttools`。
 
