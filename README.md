@@ -2,20 +2,24 @@
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
-注：**⚠️此项目仍在开发中，网页样式仍需完善，尤其是移动端适配的问题。**
+注：**⚠️此项目仍在开发中，网页样式仍需完善，欢迎提交Issue和Pull Request。**
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用Flask。
 
-目前网页的演示可在[skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)和[mczhst.vercel.app](https://mczhst.vercel.app/)查看。
+目前网页的演示可在以下网址查看：
+
+1. [mcst.teahouse.team](https://mcst.teahouse.team)
+2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) （更新可能较慢）
+3. [mczhst.vercel.app](https://mczhst.vercel.app/)（国内网络可能无法访问）
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
 
 ## 需求
 
-需要库[flask](https://github.com/pallets/flask/)（`flask`），请使用下面的命令安装：
+请使用下面的命令安装依赖项：
 
 ``` shell
-pip install flask -U
+pip install -r requirements.txt
 ```
 
 ## 前期准备
@@ -28,7 +32,7 @@ pip install flask -U
 
 请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`和`lzh.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
-[`supplements.json`](/lang/supplements.json)中存有目前（2024年1月18日）游戏内语言文件缺失，而Crowdin上已更新的内容（目前为空）。
+[`supplements.json`](/lang/supplements.json)中存有目前（2024年1月28日）游戏内语言文件缺失，而Crowdin上已更新的内容（目前为空）。目前项目默认配置为关闭读取此项。
 
 ### 字体
 
@@ -53,3 +57,5 @@ pip install flask -U
 [Favicon](/static/favicon.ico)和[apple-touch-icon.png](/static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
 
 文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，按照[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。
+
+[`GeoLite2-City.mmdb`]来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。
