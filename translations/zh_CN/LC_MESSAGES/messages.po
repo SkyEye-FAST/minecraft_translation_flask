@@ -1,0 +1,32 @@
+# Chinese (Simplified, China) translations for Minecraft Chinese Standard Translations.
+# Copyright (C) 2024 SkyEye_FAST
+# This file is distributed under the same license as the Minecraft Chinese Standard Translations project.
+# SkyEye_FAST <skyeyefast@outlook.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Minecraft Chinese Standard Translations\n"
+"Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
+"POT-Creation-Date: 2024-01-27 20:32+0800\n"
+"PO-Revision-Date: 2024-01-27 20:32+0800\n"
+"Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: app.py:22
+msgid "Source string content to be queried: "
+msgstr "查询的源字符串内容："
+
+#: app.py:23
+msgid "QUERY"
+msgstr "查询"
+
+#: templates/index.html:23
+msgid "Select translation key："
+msgstr "选择本地化键名："
+

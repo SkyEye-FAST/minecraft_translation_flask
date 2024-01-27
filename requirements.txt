@@ -1,4 +1,5 @@
 Flask==3.0.1
+flask_babel==4.0.0
 flask_wtf==1.2.1
 fonttools==4.47.2
 python-dotenv==1.0.1

@@ -20,7 +20,7 @@
             {{ form.hidden_tag() }}
             {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
             {% if input_value %}
-            <label for="options">选择本地化键名：</label>
+            <label for="options">{{ _("Select translation key：") }}</label>
             <select name="options" id="options">
                 {% for option in keys %}
                 {% if option == key %}
@@ -67,8 +67,10 @@
     {% endif %}
 
     <div class="minecraft-title">
-        Minecraft中文标准译名<br><span style="font-size: smaller;"><time datetime="{{ date_str }}">{{ date_str_zh
-                }}</time></span>
+        Minecraft中文标准译名<br>
+        <span style="font-size: smaller;">
+            <time datetime="{{ date_str }}">{{ date_str_t }}</time> - {{ timezone_str }}
+        </span>
     </div>
 
 </body>

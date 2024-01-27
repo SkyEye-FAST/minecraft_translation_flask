@@ -4,39 +4,35 @@
 from os import getenv
 from datetime import date
 
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, g, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from flask_babel import Babel, gettext
+
+from flask_babel import Babel, lazy_gettext, format_date
+from babel.dates import get_timezone_name, get_timezone
 
 from base import data, is_valid_key, get_translation
 
 flask_app = Flask(__name__)
 flask_app.config["SECRET_KEY"] = getenv("SECRET_KEY", "dev")
 
-babel = Babel(flask_app)
 
-page_lang = {
-    "zh_cn": {
-        "lang_name": "简体中文（中国大陆）",
-        "query_input_label": "查询的源字符串内容：",
-        "translation_key_select_label": "选择本地化键名：",
-        "query_button": "查询",
-    },
-    "en_us": {
-        "lang_name": "English (United States)",
-        "query_input_label": "Source string content to be queried: ",
-        "translation_key_select_label": "Select translation key：",
-        "query_button": "QUERY",
-    },
-}
+def get_locale():
+    """语言选择器"""
+    user = getattr(g, "user", None)
+    if user is not None:
+        return user.locale
+    return request.accept_languages.best_match(["zh", "en"])
+
+
+babel = Babel(flask_app, locale_selector=get_locale, timezone_selector=get_timezone)
 
 
 class QueryForm(FlaskForm):
     """查询表单"""
 
-    source_string = StringField(gettext("query_input_label"))
-    submit = SubmitField(gettext("query_button"))
+    source_string = StringField(lazy_gettext("Source string content to be queried: "))
+    submit = SubmitField(lazy_gettext("QUERY"))
 
 
 @flask_app.route("/", methods=["GET", "POST"])
@@ -68,7 +64,8 @@ def index():
         keys=keys,
         translation=selected_translation,
         date_str=date.today(),
-        date_str_zh=date.today().strftime("%Y年%#m月%#d日（UTC）"),
+        date_str_t=format_date(date.today()),
+        timezone_str=get_timezone_name(get_timezone(), locale=get_locale()),
     )
 
 
@@ -79,4 +76,4 @@ def favicon():
 
 
 if __name__ == "__main__":
-    flask_app.run()
+    flask_app.run(debug=True)
