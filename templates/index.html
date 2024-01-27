@@ -17,8 +17,8 @@
 
     <form class="form" action="/" method="post">
         <div class="container">
-            <label for="query-input">查询的源字符串内容：</label>
-            <input type="text" name="query-input" id="query-input" value="{{ input_value }}" autocomplete="off">
+            {{ form.hidden_tag() }}
+            {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
             {% if input_value %}
             <label for="options">选择本地化键名：</label>
             <select name="options" id="options">
@@ -32,7 +32,7 @@
             </select>
             {% endif %}
         </div>
-        <input class="submit" type="submit" value="查询">
+        {{ form.submit(class="submit") }}
     </form>
 
     {% if translation %}
