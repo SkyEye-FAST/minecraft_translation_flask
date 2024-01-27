@@ -5,8 +5,11 @@ import re
 import json
 from pathlib import Path
 
+# 当前绝对路径
+P = Path(__file__).resolve().parent
+
 # 语言文件文件夹
-LANG_DIR = Path(__file__).resolve().parent / "lang"
+LANG_DIR = P / "lang"
 
 # 是否忽略补充字符串
 IGNORE_SUPPLEMENTS = True
