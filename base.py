@@ -3,23 +3,13 @@
 
 import re
 import json
-import sys
-import tomllib as tl
 from pathlib import Path
 
-# 当前绝对路径
-P = Path(__file__).resolve().parent
+# 语言文件文件夹
+LANG_DIR = Path(__file__).resolve().parent / "lang"
 
-# 加载配置
-CONFIG_DIR = P / "configuration.toml"
-if not CONFIG_DIR.exists():
-    print("\n无法找到配置文件，请将配置文件放置在与此脚本同级的目录下。")
-    sys.exit()
-with open(CONFIG_DIR, "rb") as f:
-    config = tl.load(f)
-
-LANG_DIR = P / config["language_folder"]
-IGNORE_SUPPLEMENTS = config["ignore_supplements"]
+# 是否忽略补充字符串
+IGNORE_SUPPLEMENTS = True
 
 # 读取语言文件
 print("开始读取语言文件。")
