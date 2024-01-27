@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-27 20:32+0800\n"
+"POT-Creation-Date: 2024-01-27 23:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:22
-msgid "Source string content to be queried:"
+#: app.py:49
+msgid "Source string content to be queried: "
 msgstr ""
 
-#: app.py:23
+#: app.py:50
 msgid "QUERY"
 msgstr ""
 
 #: templates/index.html:23
 msgid "Select translation key："
+msgstr ""
+
+#: templates/index.html:47
+msgid "Language Names"
+msgstr ""
+
+#: templates/index.html:48
+msgid "Translations"
+msgstr ""
+
+#: templates/index.html:70
+msgid "Minecraft Chinese Standard Translations"
 msgstr ""
 

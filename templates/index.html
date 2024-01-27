@@ -44,8 +44,8 @@
     </div>
     <table>
         <tr>
-            <th class="table-header">语言名称</th>
-            <th class="table-header">译名</th>
+            <th class="table-header">{{ _("Language Names") }}</th>
+            <th class="table-header">{{ _("Translations") }}</th>
         </tr>
         <tr lang="zh-Hans-CN" class="zh-cn">
             <td class="lang-name">简体中文&#10;（中国大陆）</td>
@@ -67,7 +67,7 @@
     {% endif %}
 
     <div class="minecraft-title">
-        Minecraft中文标准译名<br>
+        {{ _("Minecraft Chinese Standard Translations") }}<br>
         <span style="font-size: smaller;">
             <time datetime="{{ date_str }}">{{ date_str_t }}</time> - {{ timezone_str }}
         </span>

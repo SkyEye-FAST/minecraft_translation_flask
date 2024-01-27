@@ -8,7 +8,8 @@ from flask import Flask, session, g, render_template, request, send_from_directo
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-from flask_babel import Babel, lazy_gettext, format_date
+from flask_babel import Babel, format_date
+from flask_babel import lazy_gettext as _l
 from babel.dates import get_timezone_name
 import geoip2.database
 import geoip2.errors
@@ -29,9 +30,10 @@ def get_locale():
 
 babel = Babel(flask_app, locale_selector=get_locale)
 
+
 @flask_app.before_request
 def determine_timezone():
-    """根据IP获取时间"""
+    """根据IP获取时区"""
     ip = request.remote_addr
     try:
         with geoip2.database.Reader(P / "GeoLite2-City.mmdb") as reader:
@@ -45,18 +47,21 @@ def determine_timezone():
 class QueryForm(FlaskForm):
     """查询表单"""
 
-    source_string = StringField(lazy_gettext("Source string content to be queried: "))
-    submit = SubmitField(lazy_gettext("QUERY"))
+    source_string = StringField(_l("Source string content to be queried: "))
+    submit = SubmitField(_l("QUERY"))
 
 
 @flask_app.route("/", methods=["GET", "POST"])
 def index():
     """主页面"""
-    if 'timezone' in session:
-        timezone = session['timezone']
-        timezone_str = get_timezone_name(timezone, locale=get_locale())
+
+    # 时区
+    if "timezone" in session:
+        timezone = session["timezone"]
     else:
-        timezone_str = "UTC"
+        timezone = request.headers.get("Time-Zone")
+    timezone_str = get_timezone_name(timezone, locale=get_locale())
+
     form = QueryForm()
 
     query_str = form.source_string.data
