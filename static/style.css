@@ -103,6 +103,27 @@ body {
     height: auto;
 }
 
+/* 语言选单样式 */
+
+.page-lang-selector {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.page-lang-selector label{
+    text-align: right;
+}
+
+.page-lang-selector select {
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* 标题样式 */
 .title {
     font-family: 'Noto Serif CJK SC SemiBold', 'Source Han Serif SC SemiBold', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;

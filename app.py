@@ -7,11 +7,14 @@ from datetime import date
 from flask import Flask, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
+from flask_babel import Babel, gettext
 
 from base import data, is_valid_key, get_translation
 
 flask_app = Flask(__name__)
 flask_app.config["SECRET_KEY"] = getenv("SECRET_KEY", "dev")
+
+babel = Babel(flask_app)
 
 page_lang = {
     "zh_cn": {
@@ -32,8 +35,8 @@ page_lang = {
 class QueryForm(FlaskForm):
     """查询表单"""
 
-    source_string = StringField("查询的源字符串内容：")
-    submit = SubmitField("查询")
+    source_string = StringField(gettext("query_input_label"))
+    submit = SubmitField(gettext("query_button"))
 
 
 @flask_app.route("/", methods=["GET", "POST"])
