@@ -9,7 +9,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
 from flask_babel import Babel, lazy_gettext, format_date
-from babel.dates import get_timezone_name, get_timezone
+from babel.dates import get_timezone_name
 
 from base import data, is_valid_key, get_translation
 
@@ -25,7 +25,7 @@ def get_locale():
     return request.accept_languages.best_match(["zh", "en"])
 
 
-babel = Babel(flask_app, locale_selector=get_locale, timezone_selector=get_timezone)
+babel = Babel(flask_app, locale_selector=get_locale)
 
 
 class QueryForm(FlaskForm):
@@ -38,6 +38,8 @@ class QueryForm(FlaskForm):
 @flask_app.route("/", methods=["GET", "POST"])
 def index():
     """主页面"""
+    timezone = request.headers.get("Time-Zone")
+
     form = QueryForm()
 
     query_str = form.source_string.data
@@ -64,8 +66,8 @@ def index():
         keys=keys,
         translation=selected_translation,
         date_str=date.today(),
-        date_str_t=format_date(date.today()),
-        timezone_str=get_timezone_name(get_timezone(), locale=get_locale()),
+        date_str_t=format_date(date.today(), "long"),
+        timezone_str=get_timezone_name(timezone, locale=get_locale()),
     )
 
 
