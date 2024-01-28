@@ -32,7 +32,7 @@ def get_timezone_from_ip():
             response = reader.city(ip)
         return response.location.time_zone
     except geoip2.errors.AddressNotFoundError:
-        return request.headers.get("Time-Zone") or "UTC"
+        return request.headers.get("Time-Zone")
 
 
 babel = Babel(
