@@ -14,7 +14,11 @@
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
 
-## 需求
+## 运行
+
+参见[Flask文档](https://flask.palletsprojects.com/en/3.0.x/)。
+
+### 依赖项
 
 请使用下面的命令安装依赖项：
 
@@ -22,13 +26,21 @@
 pip install -r requirements.txt
 ```
 
+### 环境变量
+
+需要在`.env`或者系统中设置`SECRET_KEY`环境变量，可以使用以下命令生成：
+
+``` shell
+python -c 'import secrets; print(secrets.token_hex())'
+```
+
 ## 说明
 
-### 语言文件
+### Minecraft语言文件
 
-本仓库会在每天🕛00:00（UTC+8，即🕓UTC 16:00）自动检查语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
+本仓库会在每天🕛00:00（UTC+8，即🕓UTC 16:00）自动检查Minecraft Java版语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
 
-如果希望使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
+如果希望在自己搭建的实例中使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
 请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`和`lzh.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
@@ -42,19 +54,11 @@ pip install -r requirements.txt
 
 使用脚本为[`extract_font.py`](/extract_font.py)，需要库[`fonttools`](https://github.com/fonttools/fonttools)。
 
-### 时间
+### 日期与时区
 
-网页上显示的日期和时区根据用户的IP决定，相关数据从GeoIP2 GeoLite2数据库获取，本地化由[`babel`](https://github.com/python-babel/babel)和[`flask-babel`](https://github.com/python-babel/flask-babel)完成。
+网页上显示的日期和时区根据用户的IP决定，相关数据从GeoIP2 GeoLite2数据库获取。
 
-## 运行
-
-参见[Flask文档](https://flask.palletsprojects.com/en/3.0.x/)。
-
-需要在`.env`或者系统中设置`SECRET_KEY`环境变量，可以使用以下命令生成：
-
-``` bash
-python -c 'import secrets; print(secrets.token_hex())'
-```
+日期和时区的本地化由[`babel`](https://github.com/python-babel/babel)和[`flask-babel`](https://github.com/python-babel/flask-babel)完成。
 
 ## 反馈
 
@@ -66,6 +70,6 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 [Favicon](/static/favicon.ico)和[apple-touch-icon.png](/static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
 
-文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，按照[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。
+文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，以[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。
 
-[`GeoLite2-City.mmdb`]来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。
+[`GeoLite2-City.mmdb`](/GeoLite2-City.mmdb)来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。
