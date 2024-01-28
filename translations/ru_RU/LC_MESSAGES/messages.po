@@ -1,14 +1,15 @@
 # Russian (Russia) translations for Minecraft Chinese Standard Translations.
 # Copyright (C) 2024 SkyEye_FAST
-# This file is distributed under the same license as the Minecraft Chinese Standard Translations project.
+# This file is distributed under the same license as the Minecraft Chinese
+# Standard Translations project.
 # SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Demo\n"
+"Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-01-27 23:25+0800\n"
-"PO-Revision-Date: 2024-01-28 13:51+0800\n"
+"POT-Creation-Date: 2024-01-28 14:38+0800\n"
+"PO-Revision-Date: 2024-01-28 14:39+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: ru_RU\n"
 "Language-Team: ru_RU <LL@li.org>\n"
@@ -19,13 +20,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:49
+#: app.py:56
 msgid "Source string content to be queried: "
 msgstr "Содержание исходной строки для запроса:"
 
-#: app.py:50
+#: app.py:57
 msgid "QUERY"
 msgstr "ЗАПРОС"
+
+#: templates/index.html:7 templates/index.html:70
+msgid "Minecraft Chinese Standard Translations"
+msgstr "Стандартные китайские переводы Minecraft"
 
 #: templates/index.html:23
 msgid "Select translation key："
@@ -38,8 +43,4 @@ msgstr "Названия языков"
 #: templates/index.html:48
 msgid "Translations"
 msgstr "Переводы"
-
-#: templates/index.html:70
-msgid "Minecraft Chinese Standard Translations"
-msgstr "Стандартные китайские переводы Minecraft"
 

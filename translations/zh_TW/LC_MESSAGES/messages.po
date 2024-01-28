@@ -1,14 +1,16 @@
-# Chinese (Traditional, Taiwan) translations for Minecraft Chinese Standard Translations.
+# Chinese (Traditional, Taiwan) translations for Minecraft Chinese Standard
+# Translations.
 # Copyright (C) 2024 SkyEye_FAST
-# This file is distributed under the same license as the Minecraft Chinese Standard Translations project.
+# This file is distributed under the same license as the Minecraft Chinese
+# Standard Translations project.
 # SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Demo\n"
+"Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-01-27 23:25+0800\n"
-"PO-Revision-Date: 2024-01-27 23:27+0800\n"
+"POT-Creation-Date: 2024-01-28 14:38+0800\n"
+"PO-Revision-Date: 2024-01-28 14:39+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hant_TW\n"
 "Language-Team: zh_Hant_TW <LL@li.org>\n"
@@ -18,13 +20,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:49
+#: app.py:56
 msgid "Source string content to be queried: "
 msgstr "需要查詢的來源字串內容："
 
-#: app.py:50
+#: app.py:57
 msgid "QUERY"
 msgstr "查詢"
+
+#: templates/index.html:7 templates/index.html:70
+msgid "Minecraft Chinese Standard Translations"
+msgstr "Minecraft 中文標準翻譯"
 
 #: templates/index.html:23
 msgid "Select translation key："
@@ -37,8 +43,4 @@ msgstr "語言名稱"
 #: templates/index.html:48
 msgid "翻譯"
 msgstr ""
-
-#: templates/index.html:70
-msgid "Minecraft Chinese Standard Translations"
-msgstr "Minecraft 中文標準翻譯"
 

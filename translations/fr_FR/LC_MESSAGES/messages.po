@@ -1,15 +1,16 @@
-# French (France) translations for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# French (France) translations for Minecraft Chinese Standard Translations.
+# Copyright (C) 2024 SkyEye_FAST
+# This file is distributed under the same license as the Minecraft Chinese
+# Standard Translations project.
+# SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-27 23:25+0800\n"
-"PO-Revision-Date: 2024-01-28 13:55+0800\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version:  Demo\n"
+"Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
+"POT-Creation-Date: 2024-01-28 14:38+0800\n"
+"PO-Revision-Date: 2024-01-28 14:39+0800\n"
+"Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -18,13 +19,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: app.py:49
+#: app.py:56
 msgid "Source string content to be queried: "
 msgstr "Contenu de la chaîne source à requêter : "
 
-#: app.py:50
+#: app.py:57
 msgid "QUERY"
 msgstr "REQUÊTE"
+
+#: templates/index.html:7 templates/index.html:70
+msgid "Minecraft Chinese Standard Translations"
+msgstr "Traductions standard chinoises de Minecraft"
 
 #: templates/index.html:23
 msgid "Select translation key："
@@ -37,8 +42,4 @@ msgstr "Noms de langues"
 #: templates/index.html:48
 msgid "Translations"
 msgstr "Traductions"
-
-#: templates/index.html:70
-msgid "Minecraft Chinese Standard Translations"
-msgstr "Traductions standard chinoises de Minecraft"
 
