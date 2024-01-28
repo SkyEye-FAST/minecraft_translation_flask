@@ -2,15 +2,15 @@
 """Minecraft中文标准译名查询网页，使用Flask编写的后端框架"""
 
 from os import getenv
-from datetime import date
+from datetime import datetime
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-from flask_babel import Babel, format_date
+from flask_babel import Babel
 from flask_babel import lazy_gettext as _l
-from babel.dates import get_timezone_name
+from babel.dates import format_date, get_timezone, get_timezone_name
 import geoip2.database
 import geoip2.errors
 
@@ -42,8 +42,9 @@ babel = Babel(
 
 
 @flask_app.before_request
-def determine_timezone():
+def determine_locale_and_timezone():
     """根据IP获取时区"""
+    session["locale"] = get_locale()
     session["timezone"] = get_timezone_from_ip()
 
 
@@ -59,7 +60,10 @@ def index():
     """主页面"""
 
     # 时区
-    timezone_str = get_timezone_name(session["timezone"], locale=get_locale())
+    tzinfo = get_timezone(session["timezone"])
+    timezone_str = get_timezone_name(session["timezone"], locale=session["locale"])
+    date_tz = datetime.now(tz=tzinfo).date()
+    date_str_t = format_date(date_tz, "long", locale=session["locale"])
 
     form = QueryForm()
 
@@ -86,8 +90,8 @@ def index():
         input_value=query_str,
         keys=keys,
         translation=selected_translation,
-        date_str=date.today(),
-        date_str_t=format_date(date.today(), "long"),
+        date_str=date_tz,
+        date_str_t=date_str_t,
         timezone_str=timezone_str,
     )
 
