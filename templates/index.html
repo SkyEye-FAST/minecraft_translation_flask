@@ -20,7 +20,7 @@
             {{ form.hidden_tag() }}
             {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
             {% if input_value %}
-            <label for="options">{{ _("Select translation key：") }}</label>
+            <label for="options">{{ _("Select translation key: ") }}</label>
             <select name="options" id="options">
                 {% for option in keys %}
                 {% if option == key %}

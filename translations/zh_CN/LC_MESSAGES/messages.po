@@ -33,7 +33,7 @@ msgid "Minecraft Chinese Standard Translations"
 msgstr "Minecraft中文标准译名"
 
 #: templates/index.html:23
-msgid "Select translation key："
+msgid "Select translation key: "
 msgstr "选择本地化键名："
 
 #: templates/index.html:47
