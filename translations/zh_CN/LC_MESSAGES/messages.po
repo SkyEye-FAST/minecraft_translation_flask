@@ -31,7 +31,7 @@ msgid "Select translation key："
 msgstr "选择本地化键名："
 
 #: templates/index.html:47
-msgid "Language Names"
+msgid "Language names"
 msgstr "语言名称"
 
 #: templates/index.html:48
