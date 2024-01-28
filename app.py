@@ -4,7 +4,7 @@
 from os import getenv
 from datetime import date
 
-from flask import Flask, session, g, render_template, request, send_from_directory
+from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
@@ -22,26 +22,29 @@ flask_app.config["SECRET_KEY"] = getenv("SECRET_KEY", "dev")
 
 def get_locale():
     """语言选择器"""
-    user = getattr(g, "user", None)
-    if user is not None:
-        return user.locale
     return request.accept_languages.best_match(["zh", "en"])
 
 
-babel = Babel(flask_app, locale_selector=get_locale)
-
-
-@flask_app.before_request
-def determine_timezone():
+def get_timezone_from_ip():
     """根据IP获取时区"""
     ip = request.remote_addr
     try:
         with geoip2.database.Reader(P / "GeoLite2-City.mmdb") as reader:
             response = reader.city(ip)
-        timezone = response.location.time_zone
-        session["timezone"] = timezone
+        return response.location.time_zone
     except geoip2.errors.AddressNotFoundError:
-        pass
+        return request.headers.get("Time-Zone")
+
+
+babel = Babel(
+    flask_app, locale_selector=get_locale, timezone_selector=get_timezone_from_ip
+)
+
+
+@flask_app.before_request
+def determine_timezone():
+    """根据IP获取时区"""
+    session["timezone"] = get_timezone_from_ip()
 
 
 class QueryForm(FlaskForm):
@@ -56,11 +59,7 @@ def index():
     """主页面"""
 
     # 时区
-    if "timezone" in session:
-        timezone = session["timezone"]
-    else:
-        timezone = request.headers.get("Time-Zone")
-    timezone_str = get_timezone_name(timezone, locale=get_locale())
+    timezone_str = get_timezone_name(session["timezone"], locale=get_locale())
 
     form = QueryForm()
 
