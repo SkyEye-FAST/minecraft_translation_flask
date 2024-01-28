@@ -8,8 +8,7 @@ from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 
-from flask_babel import Babel
-from flask_babel import lazy_gettext as _l
+from flask_babel import Babel, lazy_gettext as _l
 from babel.dates import format_date, get_timezone, get_timezone_name
 import geoip2.database
 import geoip2.errors
@@ -33,7 +32,7 @@ def get_timezone_from_ip():
             response = reader.city(ip)
         return response.location.time_zone
     except geoip2.errors.AddressNotFoundError:
-        return request.headers.get("Time-Zone")
+        return request.headers.get("Time-Zone") or "UTC"
 
 
 babel = Babel(
@@ -43,7 +42,7 @@ babel = Babel(
 
 @flask_app.before_request
 def determine_locale_and_timezone():
-    """根据IP获取时区"""
+    """将语言和时区存入会话"""
     session["locale"] = get_locale()
     session["timezone"] = get_timezone_from_ip()
 
@@ -72,6 +71,7 @@ def index():
     if not query_str:
         selected_option = ""  # 清空下拉列表选择项
 
+    # 获取翻译
     if form.validate_on_submit():
         translation = get_translation(query_str)
         keys = [k for k in translation if is_valid_key(k)]
