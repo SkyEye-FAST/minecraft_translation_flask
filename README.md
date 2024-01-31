@@ -38,7 +38,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ### Minecraft语言文件
 
-本仓库会在每天🕛00:00（UTC+8，即🕓UTC 16:00）自动检查Minecraft Java版语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
+本仓库会在每天🕧00:30（UTC+8，即🕟UTC 16:30）自动检查Minecraft Java版语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
 
 如果希望在自己搭建的实例中使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
