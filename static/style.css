@@ -1,7 +1,9 @@
+@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;900&family=Noto+Serif+TC:wght@300;400&display=swap');
+
 /* noto-serif-sc - chinese-simplified_latin */
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK SC';
+    font-family: 'Noto Serif SC';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK SC'),
@@ -11,7 +13,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK SC SemiBold';
+    font-family: 'Noto Serif SC SemiBold';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK SC SemiBold'),
@@ -21,7 +23,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK SC Black';
+    font-family: 'Noto Serif SC Black';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK SC Black'),
@@ -32,7 +34,7 @@
 /* noto-serif-hk - chinese-hongkong */
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK HK';
+    font-family: 'Noto Serif HK';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK HK'),
@@ -43,7 +45,7 @@
 /* noto-serif-tc - chinese-traditional */
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK TC';
+    font-family: 'Noto Serif TC';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK TC'),
@@ -53,7 +55,7 @@
 
 @font-face {
     font-display: swap;
-    font-family: 'Noto Serif CJK TC Light';
+    font-family: 'Noto Serif TC Light';
     font-style: normal;
     font-weight: normal;
     src: local('Noto Serif CJK TC Light'),
@@ -74,7 +76,7 @@
 /* fira-code-regular - latin */
 @font-face {
     font-display: swap;
-    font-family: 'Fira Code Regular';
+    font-family: 'Fira Code';
     font-style: normal;
     font-weight: normal;
     src: local('Fira Code Regular'),
@@ -113,7 +115,7 @@ body {
     align-items: center;
 }
 
-.page-lang-selector label{
+.page-lang-selector label {
     text-align: right;
 }
 
@@ -126,13 +128,13 @@ body {
 
 /* 标题样式 */
 .title {
-    font-family: 'Noto Serif CJK SC SemiBold', 'Source Han Serif SC SemiBold', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC SemiBold', 'Source Han Serif SC SemiBold', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
     font-size: 2.5em;
     text-align: center;
 }
 
 .subtitle {
-    font-family: 'Fira Code Regular', 'Source Code Pro', Consolas, Monaco, monospace;
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
     font-size: 1.25em;
     text-align: center;
 }
@@ -155,7 +157,7 @@ table tr:nth-child(even) {
 }
 
 .table-header {
-    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", SimSun, 'Times New Roman', Times, serif;
     font-size: 2.25em;
     white-space: nowrap;
 }
@@ -171,23 +173,23 @@ table tr:nth-child(even) {
 }
 
 .zh-cn {
-    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-hk {
-    font-family: 'Noto Serif CJK HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
 }
 
 .zh-tw {
-    font-family: 'Noto Serif CJK TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', SimSun, 'Times New Roman', Times, serif;
 }
 
 .lzh {
-    font-family: '一点明体', "Noto Serif CJK TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
 }
 
 .minecraft-title {
-    font-family: 'Noto Serif CJK SC Black', 'Source Han Serif SC Black', 'Source Han Serif CN Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC Black', 'Source Han Serif SC Black', 'Source Han Serif CN Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2.25em;
     color: #bfbfbf;
