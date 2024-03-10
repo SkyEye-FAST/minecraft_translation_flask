@@ -12,7 +12,9 @@
 2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) （更新可能较慢）
 3. [mczhst.vercel.app](https://mczhst.vercel.app/)（国内网络可能无法访问）
 
-网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)。
+网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)：
+
+![Sample](/sample/1.png)
 
 ## 运行
 
