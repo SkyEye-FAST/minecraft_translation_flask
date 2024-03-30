@@ -16,7 +16,7 @@
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)：
 
-![Sample](/sample/1.png)
+![Sample](/sample/sample.png)
 
 ## 运行
 

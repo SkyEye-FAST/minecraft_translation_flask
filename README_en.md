@@ -16,7 +16,7 @@ Demonstrations of the web page are available at the following URLs:
 
 The style used on the web page is referenced from [SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt):
 
-![Sample](/sample/1.png)
+![Sample](/sample/sample_en.png)
 
 ## Running
 
