@@ -2,7 +2,9 @@
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
-注：**⚠️此项目仍在开发中，网页样式仍需完善，欢迎提交Issue和Pull Request。**
+- **[English](/README_en.md) | [中文](/README.md)**
+
+----
 
 可查询Minecraft中文标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)。
 
