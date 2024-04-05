@@ -21,7 +21,7 @@ flask_app.config["SECRET_KEY"] = getenv("SECRET_KEY", "dev")
 
 def get_locale():
     """语言选择器"""
-    locale = request.accept_languages.best_match(["zh", "en", "ja", "ru", "fr"])
+    locale = request.accept_languages.best_match(["zh", "en"])
     if locale:
         return locale
     return "en"
