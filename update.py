@@ -100,7 +100,10 @@ print("正在删除client.jar……\n")
 client_path.unlink()
 
 # 获取语言文件
-for lang in lang_list:
+lang_list.remove("en_us")
+language_files_list = [f"{_}.json" for _ in lang_list]
+
+for lang in language_files_list:
     lang_asset = asset_index.get(f"minecraft/lang/{lang}")
     if lang_asset:
         file_hash = lang_asset["hash"]
