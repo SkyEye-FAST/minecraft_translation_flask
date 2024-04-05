@@ -16,17 +16,20 @@ IGNORE_SUPPLEMENTS = True
 
 # 读取语言文件
 print("开始读取语言文件。")
-file_list = [
-    "en_us.json",
-    "zh_cn.json",
-    "zh_hk.json",
-    "zh_tw.json",
-    "lzh.json",
-]
 data = {}
-for file in file_list:
-    with open(LANG_DIR / file, "r", encoding="utf-8") as f:
-        data[file.split(".", maxsplit=1)[0]] = json.load(f)
+language_list = [
+    "en_us",
+    "zh_cn",
+    "zh_hk",
+    "zh_tw",
+    "lzh",
+    "ja_jp",
+    "ko_kr",
+    "vi_vn",
+]
+for lang_name in language_list:
+    with open(LANG_DIR / f"{lang_name}.json", "r", encoding="utf-8") as f:
+        data[lang_name] = json.load(f)
 print("语言文件读取成功。")
 
 # 读取补充字符串

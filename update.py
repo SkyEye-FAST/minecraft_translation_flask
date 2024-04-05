@@ -36,12 +36,16 @@ def get_file(url: str, file_name: str, file_path: str, sha1: str):
     else:
         print(f"无法下载文件“{file_name}”。\n")
 
-# 语言文件列表
+# 语言列表
 lang_list = [
-    "zh_cn.json",
-    "zh_tw.json",
-    "zh_hk.json",
-    "lzh.json",
+    "en_us",
+    "zh_cn",
+    "zh_hk",
+    "zh_tw",
+    "lzh",
+    "ja_jp",
+    "ko_kr",
+    "vi_vn",
 ]
 
 # 文件夹
