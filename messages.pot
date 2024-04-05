@@ -1,6 +1,6 @@
-# Translations template for Minecraft Chinese Standard Translations.
+# Translations template for Minecraft Standard Translations.
 # Copyright (C) 2024 SkyEye_FAST
-# This file is distributed under the same license as the Minecraft Chinese Standard Translations project.
+# This file is distributed under the same license as the Minecraft Standard Translations project.
 # SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-01-28 14:38+0800\n"
+"POT-Creation-Date: 2024-04-05 22:50+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
+
+#: app.py:55
+msgid "Enable additional languages"
+msgstr ""
 
 #: app.py:56
 msgid "Source string content to be queried: "
@@ -25,19 +29,23 @@ msgstr ""
 msgid "QUERY"
 msgstr ""
 
-#: templates/index.html:7 templates/index.html:70
-msgid "Minecraft Chinese Standard Translations"
+#: templates/index.html:7
+msgid "Minecraft Standard Translations"
 msgstr ""
 
-#: templates/index.html:23
-msgid "Select translation key："
+#: templates/index.html:19
+msgid "SETTINGS"
 msgstr ""
 
-#: templates/index.html:47
+#: templates/index.html:25
+msgid "Select translation key: "
+msgstr ""
+
+#: templates/index.html:51
 msgid "Language names"
 msgstr ""
 
-#: templates/index.html:48
+#: templates/index.html:52
 msgid "Translations"
 msgstr ""
 
