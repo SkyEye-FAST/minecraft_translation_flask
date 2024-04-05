@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-"""Minecraft中文标准译名查询网页，使用Flask编写的后端框架"""
+"""Minecraft标准译名查询网页，使用Flask编写的后端框架"""
 
 from os import getenv
 from datetime import datetime

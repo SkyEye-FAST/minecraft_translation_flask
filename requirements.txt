@@ -1,8 +1,8 @@
 Babel==2.14.0
-Flask==3.0.1
+Flask==3.0.2
 flask_babel==4.0.0
 flask_wtf==1.2.1
-fonttools==4.47.2
+fonttools==4.50.0
 geoip2==4.8.0
 python-dotenv==1.0.1
 Requests==2.31.0
