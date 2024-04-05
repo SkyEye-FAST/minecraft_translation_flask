@@ -13,7 +13,8 @@ from babel.dates import format_date, get_timezone, get_timezone_name
 import geoip2.database
 import geoip2.errors
 
-from base import P, data, is_valid_key, get_translation
+from base import P
+from init import data, is_valid_key, get_translation
 
 flask_app = Flask(__name__)
 flask_app.config["SECRET_KEY"] = getenv("SECRET_KEY", "dev")

@@ -6,7 +6,7 @@ import sys
 from zipfile import ZipFile
 from pathlib import Path
 import requests as r
-
+from base import language_list as lang_list
 
 def get_response(url: str):
     """获取响应"""
@@ -35,18 +35,6 @@ def get_file(url: str, file_name: str, file_path: str, sha1: str):
             print("文件SHA1校验不一致，重新尝试下载。\n")
     else:
         print(f"无法下载文件“{file_name}”。\n")
-
-# 语言列表
-lang_list = [
-    "en_us",
-    "zh_cn",
-    "zh_hk",
-    "zh_tw",
-    "lzh",
-    "ja_jp",
-    "ko_kr",
-    "vi_vn",
-]
 
 # 文件夹
 P = Path(__file__).resolve().parent
