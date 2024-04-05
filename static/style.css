@@ -1,4 +1,4 @@
-@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Serif+TC:wght@300;400&display=swap');
+@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif:wght@100..900&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Serif+TC:wght@300;400&display=swap');
 
 @font-face {
     font-display: swap;
@@ -29,27 +29,6 @@ body {
 .github-icon {
     width: 40px;
     height: auto;
-}
-
-/* 语言选单样式 */
-
-.page-lang-selector {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.page-lang-selector label {
-    text-align: right;
-}
-
-.page-lang-selector select {
-    padding-top: .25em;
-    padding-bottom: .25em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 /* 标题样式 */
@@ -115,8 +94,20 @@ table tr:nth-child(even) {
     font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
 }
 
+.ja {
+    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', SimSun, 'Times New Roman', Times, serif;
+}
+
+.ko {
+    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', SimSun, 'Times New Roman', Times, serif;
+}
+
+.vi {
+    font-family: 'Noto Serif', 'Source Han Serif', SimSun, 'Times New Roman', Times, serif;
+}
+
 .minecraft-title {
-    font-family: 'Noto Serif SC', 'Noto Serif SC Black', 'Source Han Serif SC Black', 'Source Han Serif CN Black', '思源宋体 Heavy', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Source Han Serif', SimSun, 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 2.25em;
     font-weight: 900;
@@ -128,7 +119,7 @@ table tr:nth-child(even) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .form .container {
@@ -142,13 +133,7 @@ table tr:nth-child(even) {
     text-align: right;
 }
 
-.form .container input {
-    padding-top: .25em;
-    padding-bottom: .25em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
+.form .container input,
 .form .container select {
     padding-top: .25em;
     padding-bottom: .25em;
@@ -169,6 +154,11 @@ table tr:nth-child(even) {
 .form .submit:hover {
     background-color: #6493e7;
     transform: translateY(2px);
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
 }
 
 /* 响应式设计 */

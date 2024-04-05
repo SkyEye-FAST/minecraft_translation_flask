@@ -6,7 +6,7 @@ from datetime import datetime
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, BooleanField
 
 from flask_babel import Babel, lazy_gettext as _l
 from babel.dates import format_date, get_timezone, get_timezone_name
@@ -52,7 +52,7 @@ def determine_locale_and_timezone():
 
 class QueryForm(FlaskForm):
     """查询表单"""
-
+    jkv_check = BooleanField(_l("Enable additional languages"))
     source_string = StringField(_l("Source string content to be queried: "))
     submit = SubmitField(_l("QUERY"))
 
@@ -70,6 +70,7 @@ def index():
     form = QueryForm()
 
     query_str = form.source_string.data
+    enable_jkv = form.jkv_check.data
     selected_option = request.form.get("options", "")
     if not query_str:
         selected_option = ""  # 清空下拉列表选择项
@@ -96,6 +97,7 @@ def index():
         date_str=date_tz,
         date_str_t=date_str_t,
         timezone_str=timezone_str,
+        enable_jkv=enable_jkv
     )
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ _("Minecraft Chinese Standard Translations") }}</title>
+    <title>{{ _("Minecraft Standard Translations") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
@@ -15,25 +15,29 @@
         <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
     </a>
 
-    <form class="form" action="/" method="post">
-        <div class="container">
-            {{ form.hidden_tag() }}
-            {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
-            {% if input_value %}
-            <label for="options">{{ _("Select translation key: ") }}</label>
-            <select name="options" id="options">
-                {% for option in keys %}
-                {% if option == key %}
-                <option value="{{ option }}" selected>{{ option }}</option>
-                {% else %}
-                <option value="{{ option }}">{{ option }}</option>
+    <fieldset>
+        <legend>{{ _("SETTINGS") }}</legend>
+        <form class="form" action="/" method="post">
+            <div class="container">
+                {{ form.hidden_tag() }}
+                {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
+                {% if input_value %}
+                <label for="options">{{ _("Select translation key: ") }}</label>
+                <select name="options" id="options">
+                    {% for option in keys %}
+                    {% if option == key %}
+                    <option value="{{ option }}" selected>{{ option }}</option>
+                    {% else %}
+                    <option value="{{ option }}">{{ option }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
                 {% endif %}
-                {% endfor %}
-            </select>
-            {% endif %}
-        </div>
-        {{ form.submit(class="submit") }}
-    </form>
+            </div>
+            <div class="form-item">{{ form.jkv_check }}{{ form.jkv_check.label }}</div>
+            {{ form.submit(class="submit") }}
+        </form>
+    </fieldset>
 
     {% if translation %}
     <div class="title">
@@ -63,11 +67,25 @@
             <td class="lang-name">文言&#10;(華夏)</td>
             <td class="string">{{ translation["lzh"] }}</td>
         </tr>
+        {% if enable_jkv %}
+        <tr lang="ja" class="ja">
+            <td class="lang-name">日本語&#10;(日本)</td>
+            <td class="string">{{ translation["ja_jp"] }}</td>
+        </tr>
+        <tr lang="ko" class="ko">
+            <td class="lang-name">한국어&#10;(대한민국)</td>
+            <td class="string">{{ translation["ko_kr"] }}</td>
+        </tr>
+        <tr lang="vi" class="vi">
+            <td class="lang-name">Tiếng Việt&#10;(Việt Nam)</td>
+            <td class="string">{{ translation["vi_vn"] }}</td>
+        </tr>
+        {% endif %}
     </table>
     {% endif %}
 
     <div class="minecraft-title">
-        {{ _("Minecraft Chinese Standard Translations") }}<br>
+        Minecraft Standard Translations<br>
         <span style="font-size: smaller;">
             <time datetime="{{ date_str }}">{{ date_str_t }}</time> - {{ timezone_str }}
         </span>
