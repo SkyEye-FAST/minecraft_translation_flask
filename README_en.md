@@ -1,4 +1,4 @@
-# Query Minecraft Chinese Standard Translations
+# Query Minecraft Standard Translations
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
@@ -6,7 +6,7 @@
 
 ----
 
-A simple web page for querying Chinese standard translations of Minecraft, using [Flask](https://github.com/pallets/flask) as the backend framework.
+A simple web page for querying Minecraft standard translations of , using [Flask](https://github.com/pallets/flask) as the backend framework.
 
 Demonstrations of the web page are available at the following URLs:
 
@@ -46,7 +46,7 @@ This repository automatically checks for updates to Minecraft: Java edition lang
 
 If you want to use language files from other versions of Minecraft: Java Edition in your own instance, use [SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation) to obtain them.
 
-Obtained `en_us.json`, `zh_cn.json`, `zh_hk.json`, `zh_tw.json`, and `lzh.json` files should be placed in the language files folder (by default, it's the lang folder at the same level as the script, but you can adjust this in the configuration file).
+Obtained `en_us.json`, `zh_cn.json`, `zh_hk.json`, `zh_tw.json`, `lzh.json`, `ja_jp.json`, `ko_kr.json`, and `vi_vn.json` files should be placed in the language files folder (by default, it's the lang folder at the same level as the script, but you can adjust this in the configuration file).
 
 [`supplements.json`](/lang/supplements.json) contains currently (as of January 28, 2024) missing translations from the in-game language files that have been updated on Crowdin (currently empty). By default, this feature is disabled in the project configuration.
 

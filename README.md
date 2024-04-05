@@ -1,4 +1,4 @@
-# Minecraft中文标准译名查询
+# Minecraft标准译名查询
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
@@ -6,7 +6,7 @@
 
 ----
 
-可查询Minecraft中文标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)。
+可查询Minecraft标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)。
 
 目前网页的演示可在以下网址查看：
 
@@ -46,9 +46,9 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 如果希望在自己搭建的实例中使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
-请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`和`lzh.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
+请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`、`lzh.json`、`ja_jp.json`、`ko_kr.json`和`vi_vn.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
-[`supplements.json`](/lang/supplements.json)中存有目前（2024年1月28日）游戏内语言文件缺失，而Crowdin上已更新的内容（目前为空）。目前项目默认配置为关闭读取此项。
+[`supplements.json`](/lang/supplements.json)中存有游戏内语言文件缺失，而Crowdin上已更新的内容。目前项目默认配置为关闭读取此项。
 
 ### 字体
 
