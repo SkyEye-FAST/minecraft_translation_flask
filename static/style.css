@@ -33,7 +33,7 @@ body {
 
 /* 标题样式 */
 .title {
-    font-family: 'Noto Serif SC', 'Noto Serif SC SemiBold', 'Source Han Serif SC SemiBold', '思源宋体 SemiBold', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
     font-size: 2.5em;
     font-weight: 600;
     text-align: center;
@@ -103,7 +103,7 @@ table tr:nth-child(even) {
 }
 
 .vi {
-    font-family: 'Noto Serif', 'Source Han Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
 }
 
 .minecraft-title {
