@@ -4,9 +4,10 @@
 import hashlib
 import sys
 from zipfile import ZipFile
-from pathlib import Path
 import requests as r
 from base import language_list as lang_list
+from base import P, LANG_DIR
+
 
 def get_response(url: str):
     """获取响应"""
@@ -17,6 +18,7 @@ def get_response(url: str):
     except r.exceptions.RequestException as ex:
         print(f"请求发生错误: {ex}")
         sys.exit()
+
 
 def get_file(url: str, file_name: str, file_path: str, sha1: str):
     """下载文件"""
@@ -36,9 +38,8 @@ def get_file(url: str, file_name: str, file_path: str, sha1: str):
     else:
         print(f"无法下载文件“{file_name}”。\n")
 
+
 # 文件夹
-P = Path(__file__).resolve().parent
-LANG_DIR = P / "lang"
 LANG_DIR.mkdir(exist_ok=True)
 
 # 获取version_manifest_v2.json
