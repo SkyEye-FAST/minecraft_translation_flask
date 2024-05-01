@@ -19,7 +19,7 @@ body {
     gap: 1em;
 }
 
-/* GitHub链接样式 */
+/* 链接样式 */
 .github-link {
     position: absolute;
     top: 15px;
@@ -27,8 +27,18 @@ body {
 }
 
 .github-icon {
-    width: 40px;
+    width: 48px;
     height: auto;
+}
+
+.table-link {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.material-symbols-outlined.md-48 {
+    font-size: 48px;
 }
 
 /* 标题样式 */

@@ -16,11 +16,18 @@ HTML = """
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
-    <div style="text-align: center; font-weight: bold; font-size: larger;">Minecraft Standard Translation Table. Latest
-        Update: {{ date_str }}</div>
+    <div class="header">
+        Minecraft Standard Translation Table. Latest Update: {{ date_str }}<br>Made by SkyEye_FAST.&emsp;
+        <a href="../"><span class="material-symbols-outlined b">home</span>Main Page</a>&emsp;
+        <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
+            <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
+            GitHub
+        </a>
+    </div>
     <table>
         <thead>
             <tr>

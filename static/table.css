@@ -14,6 +14,28 @@ body {
     background-color: #f9f2e0;
 }
 
+.header {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.github-icon {
+    width: 2ex;
+    height: inherit;
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+}
+
+.material-symbols-outlined.b {
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+}
+
 table {
     border-collapse: collapse;
 }
