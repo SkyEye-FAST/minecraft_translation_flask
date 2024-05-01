@@ -1,5 +1,6 @@
 Babel==2.14.0
-Flask==3.0.2
+beautifulsoup4==4.12.3
+Flask==3.0.3
 flask_babel==4.0.0
 flask_wtf==1.2.1
 fonttools==4.50.0

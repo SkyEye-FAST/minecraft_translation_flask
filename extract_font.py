@@ -15,10 +15,10 @@ all_char = {char for value in data.values() for char in str(value)}
 all_char.discard("\n")  # 去除换行符
 
 # 输出路径
-OUTPUT_PATH = str(P / "static" / "fonts" / "I.Ming-8.00.subset.woff2")
+OUTPUT_PATH = str(P / "static" / "fonts" / "I.Ming-8.10.subset.woff2")
 # 命令参数
 args = [
-    "I.Ming-8.00.ttf",
+    "I.Ming-8.10.ttf",
     f"--text={" ".join(all_char)}",
     f"--output-file={OUTPUT_PATH}",
     "--flavor=woff2",
