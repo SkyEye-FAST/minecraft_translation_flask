@@ -40,6 +40,8 @@ Demonstrations of the translation table page are available at the following URLs
 2. [skyeyefast.pythonanywhere.com/table](https://skyeyefast.pythonanywhere.com/table) (Updates may be slower)
 3. [mczhst.vercel.app/table](https://mczhst.vercel.app/table) (May not be accessible from Chinese mainland)
 
+![Sample](/sample/sample_table.png)
+
 ## Running
 
 See [Flask documentation](https://flask.palletsprojects.com/en/3.0.x/)。

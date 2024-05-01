@@ -40,6 +40,8 @@
 2. [skyeyefast.pythonanywhere.com/table](https://skyeyefast.pythonanywhere.com/table)（更新可能较慢）
 3. [mczhst.vercel.app/table](https://mczhst.vercel.app/table)（国内网络可能无法访问）
 
+![Sample](/sample/sample_table.png)
+
 ## 运行
 
 参见[Flask文档](https://flask.palletsprojects.com/en/3.0.x/)。
