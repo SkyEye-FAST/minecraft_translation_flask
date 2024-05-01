@@ -8,15 +8,37 @@
 
 可查询Minecraft标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)。
 
-目前网页的演示可在以下网址查看：
+## 用途
 
-1. [mcst.teahouse.team](https://mcst.teahouse.team)
-2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) （更新可能较慢）
+### 主页面
+
+在主页面的输入框内输入需要查询的源字符串内容（即英文原文），点击“查询”按钮，在出现的列表中选择需要查询的字符串键名，再次点击“查询”按钮即可。
+
+默认只显示中文变种，可以通过“启用其他语言”来切换是否显示日韩越的译名。
+
+目前主页面的演示可在以下网址查看：
+
+1. [mcst.teahouse.team](https://mcst.teahouse.team/)
+2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)（更新可能较慢）
 3. [mczhst.vercel.app](https://mczhst.vercel.app/)（国内网络可能无法访问）
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)：
 
 ![Sample](/sample/sample.png)
+
+### 翻译表
+
+可以在网站的`/table`子页面找到自动生成的翻译表，包括键名、原文和支持的7种语言。
+
+在浏览器中使用自带的页面内搜索功能（快捷键：`Ctrl + F`或`⌘ Command + F`）可以快速检索译名。
+
+此页面在快速检索时非常有用，但并不适合将结果向他人展示。建议使用主页面的截图向他人展示译名情况。
+
+目前翻译表的演示可在以下网址查看：
+
+1. [mcst.teahouse.team/table](https://mcst.teahouse.team/table)
+2. [skyeyefast.pythonanywhere.com/table](https://skyeyefast.pythonanywhere.com/table)（更新可能较慢）
+3. [mczhst.vercel.app/table](https://mczhst.vercel.app/table)（国内网络可能无法访问）
 
 ## 运行
 

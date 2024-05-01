@@ -8,7 +8,15 @@
 
 A simple web page for querying Minecraft standard translations of , using [Flask](https://github.com/pallets/flask) as the backend framework.
 
-Demonstrations of the web page are available at the following URLs:
+## Usage
+
+### Main page
+
+Enter the source string content that needs to be queried (i.e. the original English text) in the input box on the main page, click the "Query" button, select the string key name that needs to be queried in the list that appears, and click the "Query" button again.
+
+By default, only the Chinese variants are displayed. You can switch whether to display Japanese, Korean, and Vietnamese translations by checking "Enable additional languages".
+
+Demonstrations of the main page are available at the following URLs:
 
 1. [mcst.teahouse.team](https://mcst.teahouse.team)
 2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) (Updates may be slower)
@@ -17,6 +25,20 @@ Demonstrations of the web page are available at the following URLs:
 The style used on the web page is referenced from [SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt):
 
 ![Sample](/sample/sample_en.png)
+
+### Translation table page
+
+The automatically generated translation table can be found in the `/table` subpage of the website, including key name, original text and 7 supported languages.
+
+Use the built-in page search function in the browser (shortcut key: `Ctrl + F` or `⌘ Command + F`) to quickly search for translations.
+
+This page is useful for quick searches, but is not suitable for showing results to others. It is recommended to use a screenshot of the main page to show others the translation status.
+
+Demonstrations of the translation table page are available at the following URLs:
+
+1. [mcst.teahouse.team/table](https://mcst.teahouse.team/table)
+2. [skyeyefast.pythonanywhere.com/table](https://skyeyefast.pythonanywhere.com/table) (Updates may be slower)
+3. [mczhst.vercel.app/table](https://mczhst.vercel.app/table) (May not be accessible from Chinese mainland)
 
 ## Running
 
