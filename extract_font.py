@@ -4,10 +4,10 @@
 import json
 from fontTools import subset
 
-from base import P, LANG_DIR
+from base import P, LANG_DIR_VALID
 
 # 读取语言文件
-with open(LANG_DIR / "lzh.json", "r", encoding="utf-8") as file:
+with open(LANG_DIR_VALID / "lzh.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 # 提取字符串中包含的所有字符

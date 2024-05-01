@@ -6,7 +6,7 @@ import sys
 from zipfile import ZipFile
 import requests as r
 from base import language_list as lang_list
-from base import P, LANG_DIR
+from base import P, LANG_DIR_FULL
 
 
 def get_response(url: str):
@@ -40,7 +40,7 @@ def get_file(url: str, file_name: str, file_path: str, sha1: str):
 
 
 # 文件夹
-LANG_DIR.mkdir(exist_ok=True)
+LANG_DIR_FULL.mkdir(exist_ok=True)
 
 # 获取version_manifest_v2.json
 version_manifest_path = P / "version_manifest_v2.json"
@@ -73,14 +73,14 @@ asset_index = get_response(asset_index_url).json()["objects"]
 # 获取客户端JAR
 client_url = client_manifest["downloads"]["client"]["url"]
 client_sha1 = client_manifest["downloads"]["client"]["sha1"]
-client_path = LANG_DIR / "client.jar"
+client_path = LANG_DIR_FULL / "client.jar"
 print(f"正在下载客户端Java归档“client.jar”（{client_sha1}）……")
 get_file(client_url, "client.jar", client_path, client_sha1)
 
 # 解压English (United States)语言文件
 with ZipFile(client_path) as client:
     with client.open("assets/minecraft/lang/en_us.json") as content:
-        with open(LANG_DIR / "en_us.json", "wb") as en:
+        with open(LANG_DIR_FULL / "en_us.json", "wb") as en:
             print("正在从client.jar解压语言文件“en_us.json”……")
             en.write(content.read())
 
@@ -100,7 +100,7 @@ for lang in language_files_list:
         get_file(
             f"https://resources.download.minecraft.net/{file_hash[:2]}/{file_hash}",
             lang,
-            LANG_DIR / lang,
+            LANG_DIR_FULL / lang,
             file_hash,
         )
     else:
