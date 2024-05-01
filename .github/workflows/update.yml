@@ -24,8 +24,10 @@ jobs:
           pip install requests
 
       - name: Update language files
-        run: |
-          python update.py
+        run: python update.py
+
+      - name: Validate language files
+        run: python validate.py
 
       - name: Commit
         uses: EndBug/add-and-commit@v9

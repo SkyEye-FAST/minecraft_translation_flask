@@ -24,16 +24,13 @@ jobs:
           pip install fonttools brotli
 
       - name: Get font source
-        run: |
-          wget https://github.com/ichitenfont/I.Ming/raw/master/8.00/I.Ming-8.00.ttf
+        run: wget https://github.com/ichitenfont/I.Ming/raw/master/8.10/I.Ming-8.10.ttf
 
       - name: Generate font subset
-        run: |
-          python extract_font.py
+        run: python extract_font.py
 
       - name: Remove font source
-        run: |
-          rm I.Ming-8.00.ttf
+        run: rm I.Ming-8.10.ttf
 
       - name: Commit
         uses: EndBug/add-and-commit@v9
