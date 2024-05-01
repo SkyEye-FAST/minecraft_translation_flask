@@ -53,6 +53,7 @@ def determine_locale_and_timezone():
 
 class QueryForm(FlaskForm):
     """查询表单"""
+
     jkv_check = BooleanField(_l("Enable additional languages"))
     source_string = StringField(_l("Source string content to be queried: "))
     submit = SubmitField(_l("QUERY"))
@@ -98,8 +99,18 @@ def index():
         date_str=date_tz,
         date_str_t=date_str_t,
         timezone_str=timezone_str,
-        enable_jkv=enable_jkv
+        enable_jkv=enable_jkv,
     )
+
+
+@flask_app.route("/table")
+def table():
+    """表格界面"""
+    # 时区
+    tzinfo = get_timezone(session["timezone"])
+    date_tz = datetime.now(tz=tzinfo).date()
+
+    return render_template("table.html", date_str=date_tz)
 
 
 @flask_app.route("/favicon.ico")
