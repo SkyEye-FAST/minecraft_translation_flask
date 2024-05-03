@@ -23,7 +23,7 @@ if not IGNORE_SUPPLEMENTS:
     print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
 
-def get_translation(query_str: str):
+def get_translation(query_str: str) -> dict[str, str]:
     """在语言文件中匹配含有输入内容的源字符串"""
     translation = {}
     for k, v in data["en_us"].items():
