@@ -59,7 +59,7 @@ for key in data["en_us"]:
     key_cell.string = key
     new_row.append(key_cell)
     for lang, lang_data in data.items():
-        value = lang_data[key]
+        value = lang_data.get(key, "？")
         new_cell = soup.new_tag("td")
         new_cell.string = value
         new_row.append(new_cell)
