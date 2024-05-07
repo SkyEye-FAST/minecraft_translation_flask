@@ -8,7 +8,7 @@ from base import LANG_DIR, LANG_DIR_VALID, language_list
 IGNORE_SUPPLEMENTS = True
 
 # 读取语言文件
-data = {}
+data: dict[str, dict[str, str]] = {}
 for lang_name in language_list:
     with open(LANG_DIR_VALID / f"{lang_name}.json", "r", encoding="utf-8") as f:
         data[lang_name] = json.load(f)
@@ -25,7 +25,7 @@ if not IGNORE_SUPPLEMENTS:
 
 def get_translation(query_str: str) -> dict[str, str]:
     """在语言文件中匹配含有输入内容的源字符串"""
-    translation = {}
+    translation: dict[str, str] = {}
     for k, v in data["en_us"].items():
         if query_str.lower() in v.lower():
             element = {lang: content.get(k, "？") for lang, content in data.items()}
