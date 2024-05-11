@@ -2,7 +2,7 @@
 
 [![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
 
-- **[English](/README_en.md) | [中文](/README.md)**
+- **[English](README_en.md) | [中文](README.md)**
 
 ----
 
@@ -24,7 +24,7 @@
 
 网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)：
 
-![Sample](/sample/sample.png)
+![Sample](sample/sample.png)
 
 ### 翻译表
 
@@ -40,7 +40,7 @@
 2. [skyeyefast.pythonanywhere.com/table](https://skyeyefast.pythonanywhere.com/table)（更新可能较慢）
 3. [mczhst.vercel.app/table](https://mczhst.vercel.app/table)（国内网络可能无法访问）
 
-![Sample](/sample/sample_table.png)
+![Sample](sample/sample_table.png)
 
 ## 运行
 
@@ -66,13 +66,13 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ### Minecraft语言文件
 
-本仓库会在每天🕧00:30（UTC+8，即🕟UTC 16:30）自动检查Minecraft Java版语言文件更新。使用脚本为[`update.py`](/update.py)，需要安装库`requests`。
+本仓库会在每天🕧00:30（UTC+8，即🕟UTC 16:30）自动检查Minecraft Java版语言文件更新。使用脚本为[`update.py`](update.py)，需要安装库`requests`。
 
 如果希望在自己搭建的实例中使用其他版本的Java版语言文件，请使用[SkyEye-FAST/minecraft_translation](https://github.com/SkyEye-FAST/minecraft_translation)获取。
 
 请将获取到的`en_us.json`、`zh_cn.json`、`zh_hk.json`、`zh_tw.json`、`lzh.json`、`ja_jp.json`、`ko_kr.json`和`vi_vn.json`放置在语言文件文件夹下（默认为与脚本同级的`lang`文件夹，可以在配置文件中调整）。
 
-[`supplements.json`](/lang/supplements.json)中存有游戏内语言文件缺失，而Crowdin上已更新的内容。目前项目默认配置为关闭读取此项。
+[`supplements.json`](lang/supplements.json)中存有游戏内语言文件缺失，而Crowdin上已更新的内容。目前项目默认配置为关闭读取此项。
 
 ### 字体
 
@@ -80,7 +80,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 本仓库会在每周四🕐01:00（UTC+8，即UTC每周三🕔17:00）自动检查一点明体的子集文件是否需要根据文言的内容而更新。
 
-使用脚本为[`extract_font.py`](/extract_font.py)，需要库[`fonttools`](https://github.com/fonttools/fonttools)。
+使用脚本为[`extract_font.py`](extract_font.py)，需要库[`fonttools`](https://github.com/fonttools/fonttools)。
 
 ### 日期与时区
 
@@ -96,8 +96,8 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ## 感谢
 
-[Favicon](/static/favicon.ico)和[apple-touch-icon.png](/static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
+[Favicon](static/favicon.ico)和[apple-touch-icon.png](static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
 
 文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，以[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。
 
-[`GeoLite2-City.mmdb`](/GeoLite2-City.mmdb)来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。
+[`GeoLite2-City.mmdb`](GeoLite2-City.mmdb)来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。
