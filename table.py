@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from app_base import P
 from app_init import data
 
-HTML = """
+HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
 
@@ -51,20 +51,30 @@ HTML = """
 </html>
 """
 
-soup = BeautifulSoup(HTML, "html.parser")
-tbody = soup.find("tbody")
 
-for key in data["en_us"]:
-    new_row = soup.new_tag("tr")
-    key_cell = soup.new_tag("td")
-    key_cell.string = key
-    new_row.append(key_cell)
-    for lang, lang_data in data.items():
-        value = lang_data.get(key, "？")
-        new_cell = soup.new_tag("td")
-        new_cell.string = value
-        new_row.append(new_cell)
-    tbody.append(new_row)
+def main() -> None:
+    """主函数"""
 
-with open(P / "templates" / "table.html", "w", encoding="utf-8") as f:
-    f.write(str(soup))
+    soup = BeautifulSoup(HTML_TEMPLATE, "html.parser")
+    tbody = soup.find("tbody")
+
+    for key in data["en_us"]:
+        new_row = soup.new_tag("tr")
+        key_cell = soup.new_tag("td")
+        key_cell.string = key
+        new_row.append(key_cell)
+
+        for lang_data in data.values():
+            value = lang_data.get(key, "？")
+            new_cell = soup.new_tag("td")
+            new_cell.string = value
+            new_row.append(new_cell)
+
+        tbody.append(new_row)
+
+    with open(P / "templates" / "table.html", "w", encoding="utf-8") as f:
+        f.write(str(soup))
+
+
+if __name__ == "__main__":
+    main()
