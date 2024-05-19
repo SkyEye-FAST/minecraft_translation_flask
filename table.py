@@ -2,8 +2,8 @@
 """生成表格"""
 
 from bs4 import BeautifulSoup
-from base import P
-from init import data
+from app_base import P
+from app_init import data
 
 HTML = """
 <!DOCTYPE html>

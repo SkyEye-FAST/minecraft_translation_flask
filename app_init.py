@@ -2,7 +2,7 @@
 """初始化文件"""
 
 import json
-from base import LANG_DIR, LANG_DIR_VALID, language_list
+from app_base import LANG_DIR, LANG_DIR_VALID, language_list
 
 # 是否忽略补充字符串
 IGNORE_SUPPLEMENTS = True

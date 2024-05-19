@@ -4,7 +4,7 @@
 import json
 from fontTools import subset
 
-from base import P, LANG_DIR_VALID
+from app_base import P, LANG_DIR_VALID
 
 # 读取语言文件
 with open(LANG_DIR_VALID / "lzh.json", "r", encoding="utf-8") as file:
