@@ -2,6 +2,7 @@
 """生成表格"""
 
 from bs4 import BeautifulSoup
+
 from app_base import P
 from app_init import data
 

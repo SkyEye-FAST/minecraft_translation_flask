@@ -2,13 +2,14 @@
 """初始化文件"""
 
 import json
+from typing import Dict
 from app_base import LANG_DIR, LANG_DIR_VALID, language_list
 
 # 是否忽略补充字符串
 IGNORE_SUPPLEMENTS = True
 
 # 读取语言文件
-data: dict[str, dict[str, str]] = {}
+data: Dict[str, Dict[str, str]] = {}
 for lang_name in language_list:
     with open(LANG_DIR_VALID / f"{lang_name}.json", "r", encoding="utf-8") as f:
         data[lang_name] = json.load(f)
@@ -23,9 +24,9 @@ if not IGNORE_SUPPLEMENTS:
     print(f"已补充{len(supplements['zh_cn'])}条字符串。")
 
 
-def get_translation(query_str: str) -> dict[str, str]:
+def get_translation(query_str: str) -> Dict[str, str]:
     """在语言文件中匹配含有输入内容的源字符串"""
-    translation: dict[str, str] = {}
+    translation: Dict[str, str] = {}
     for k, v in data["en_us"].items():
         if query_str.lower() in v.lower():
             element = {lang: content.get(k, "？") for lang, content in data.items()}

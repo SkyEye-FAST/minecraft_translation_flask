@@ -5,8 +5,8 @@ import hashlib
 import sys
 from zipfile import ZipFile
 import requests as r
-from minecraft_translation_flask.app_base import language_list as lang_list
-from minecraft_translation_flask.app_base import P, LANG_DIR_FULL
+from app_base import language_list as lang_list
+from app_base import P, LANG_DIR_FULL
 
 
 def get_response(url: str):
