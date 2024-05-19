@@ -31,6 +31,7 @@ body {
 }
 
 .material-symbols-outlined.b {
+    color: #000;
     display: inline-block;
     line-height: inherit;
     vertical-align: middle;
