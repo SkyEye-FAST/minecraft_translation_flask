@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
 """生成表格"""
 
+import csv
+
 from bs4 import BeautifulSoup
 
-from app_base import P
+from app_base import P, language_list
 from app_init import data
 
 HTML_TEMPLATE = """
@@ -27,7 +29,8 @@ HTML_TEMPLATE = """
         <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
             <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
             GitHub
-        </a>
+        </a>&emsp;
+        <a href="../table.csv"><span class="material-symbols-outlined b">download</span>Download CSV</a>
     </div>
     <table>
         <thead>
@@ -74,6 +77,17 @@ def main() -> None:
 
     with open(P / "templates" / "table.html", "w", encoding="utf-8") as f:
         f.write(str(soup))
+
+    with open(P / "static" / "table.csv", "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        headers = ["key"] + language_list
+        writer.writerow(headers)
+        for key in data["en_us"]:
+            line = [key]
+            for lang_data in data.values():
+                value = lang_data.get(key, "？")
+                line.append(value)
+            writer.writerow(line)
 
 
 if __name__ == "__main__":

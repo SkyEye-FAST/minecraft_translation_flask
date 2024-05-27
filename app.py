@@ -119,5 +119,11 @@ def favicon():
     return send_from_directory("static", "favicon.ico")
 
 
+@flask_app.route("/table.csv")
+def table_csv():
+    """table.csv重定向"""
+    return send_from_directory("static", "table.csv")
+
+
 if __name__ == "__main__":
     flask_app.run()
