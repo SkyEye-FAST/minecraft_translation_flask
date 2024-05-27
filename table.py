@@ -30,7 +30,7 @@ HTML_TEMPLATE = """
             <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
             GitHub
         </a>&emsp;
-        <a href="../table.csv"><span class="material-symbols-outlined b">download</span>Download CSV</a>
+        <a href="../table.tsv"><span class="material-symbols-outlined b">download</span>Download TSV</a>
     </div>
     <table>
         <thead>
@@ -78,8 +78,8 @@ def main() -> None:
     with open(P / "templates" / "table.html", "w", encoding="utf-8") as f:
         f.write(str(soup))
 
-    with open(P / "static" / "table.csv", "w", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f)
+    with open(P / "static" / "table.tsv", "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f, delimiter='\t')
         headers = ["key"] + language_list
         writer.writerow(headers)
         for key in data["en_us"]:
