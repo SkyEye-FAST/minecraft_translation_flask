@@ -11,10 +11,6 @@ LANG_DIR = P / "lang"
 LANG_DIR_FULL = LANG_DIR / "full"
 LANG_DIR_VALID = LANG_DIR / "valid"
 
-LANG_DIR.mkdir(exist_ok=True)
-LANG_DIR_FULL.mkdir(exist_ok=True)
-LANG_DIR_VALID.mkdir(exist_ok=True)
-
 # 语言列表
 language_list = [
     "en_us",
