@@ -45,7 +45,7 @@ advancements.adventure.who_needs_rockets.title	Who Needs Rockets?	还要啥火�
 advancements.adventure.whos_the_pillager_now.title	Who's the Pillager Now?	现在谁才是掠夺者？	乜嘢叫風水輪流轉？	現在誰才是掠奪者？	風水輪流轉	どっちが略奪者？	이제 누가 약탈자지?	Giờ ai mới là Kẻ cướp đây?
 advancements.end.dragon_breath.title	You Need a Mint	你需要来点薄荷糖	你需要飲碗涼茶	你需要降火氣	君須涼茶	口臭に気をつけよう	양치질이 필요해 보이는걸	Bạn cần một cây bạc hà
 advancements.end.dragon_egg.title	The Next Generation	下一世代	下一世代	銀河飛龍	生生不息	ザ・ネクストジェネレーション	그다음 세대	Thế hệ mới
-advancements.end.elytra.title	Sky's the Limit	天空即为极限	天空即為極限	天下無難事	不畏浮雲遮望眼	空はどこまでも高く	불가능은 없다	Giới hạn của bầu trời
+advancements.end.elytra.title	Sky's the Limit	天空即为极限	天下無難事	天下無難事	不畏浮雲遮望眼	空はどこまでも高く	불가능은 없다	Giới hạn của bầu trời
 advancements.end.enter_end_gateway.title	Remote Getaway	远程折跃	遠走高飛	逃向遠方	逍遙遊	遠方への逃走	머나먼 휴양지	Cao chạy xa bay
 advancements.end.find_end_city.title	The City at the End of the Game	在游戏尽头的城市	終末之城	終末都市	危樓高百尺	ゲームの果ての都市	게임의 끝에서 만난 도시	Thành phố ở cuối trò chơi
 advancements.end.kill_dragon.title	Free the End	解放末地	解放終界	解放終界	龍戰玄黃	エンドの解放	엔드 해방	Giải thoát the End
@@ -608,7 +608,7 @@ block.minecraft.green_wool	Green Wool	绿色羊毛	綠色羊毛	綠色羊毛	綠
 block.minecraft.grindstone	Grindstone	砂轮	砂輪	砂輪	礪	砥石	숫돌	Đá mài
 block.minecraft.hanging_roots	Hanging Roots	垂根	懸根	懸根	懸根	垂れ根	매달린 뿌리	Rễ treo
 block.minecraft.hay_block	Hay Bale	干草捆	乾草捆	乾草捆	芻束	干草の俵	건초 더미	Kiện rơm
-block.minecraft.heavy_core	Heavy Core	沉重核心	沉重核心	沉重核心	重芯	ヘビーコア	무거운 코어	Lõi nặng
+block.minecraft.heavy_core	Heavy Core	沉重核心	沉重核心	沉重核心	重核	ヘビーコア	무거운 코어	Lõi nặng
 block.minecraft.heavy_weighted_pressure_plate	Heavy Weighted Pressure Plate	重质测重压力板	重質測重壓力板	重質測重壓力板	重踏板	重量用感圧板	중형 무게 압력판	Đĩa cảm biến áp lực nặng
 block.minecraft.honey_block	Honey Block	蜂蜜块	蜜糖塊	蜂蜜塊	蜜塊	ハチミツブロック	꿀 블록	Khối mật ong
 block.minecraft.honeycomb_block	Honeycomb Block	蜜脾块	蜂巢蜜塊	蜂巢塊	蜜脾塊	ハニカムブロック	벌집 조각 블록	Khối sáp ong
@@ -1688,7 +1688,7 @@ item.minecraft.lingering_potion.effect.levitation	Lingering Potion of Levitation
 item.minecraft.lingering_potion.effect.luck	Lingering Potion of Luck	滞留型幸运药水	滯留型幸運藥水	滯留 幸運藥水	幸滯劑	幸運の残留ポーション	잔류형 행운의 물약	Thuốc may mắn kéo dài
 item.minecraft.lingering_potion.effect.mundane	Mundane Lingering Potion	滞留型平凡的药水	滯留型平凡藥水	滯留 平凡藥水	凡滯劑	ありふれた残留ポーション	잔류형 평범한 물약	Thuốc trần tục kéo dài
 item.minecraft.lingering_potion.effect.night_vision	Lingering Potion of Night Vision	滞留型夜视药水	滯留型夜視藥水	滯留 夜視藥水	夜視滯劑	暗視の残留ポーション	잔류형 야간 투시의 물약	Thuốc nhìn trong bóng tối kéo dài
-item.minecraft.lingering_potion.effect.oozing	Lingering Potion of Oozing	滞留型渗浆药水	滯留型滲漿藥水	滯留 滲漿藥水	滲汁滯劑	滲出の残留ポーション	잔류형 점액화 물약	Thuốc rò rỉ kéo dài
+item.minecraft.lingering_potion.effect.oozing	Lingering Potion of Oozing	滞留型渗浆药水	滯留型滲漿藥水	滯留 滲漿藥水	漉膠滯劑	滲出の残留ポーション	잔류형 점액화 물약	Thuốc rò rỉ kéo dài
 item.minecraft.lingering_potion.effect.poison	Lingering Potion of Poison	滞留型剧毒药水	滯留型劇毒藥水	滯留 劇毒藥水	毒滯劑	毒の残留ポーション	잔류형 독 물약	Thuốc độc kéo dài
 item.minecraft.lingering_potion.effect.regeneration	Lingering Potion of Regeneration	滞留型再生药水	滯留型回復藥水	滯留 回復藥水	甦滯劑	再生の残留ポーション	잔류형 재생의 물약	Thuốc hồi phục kéo dài
 item.minecraft.lingering_potion.effect.slow_falling	Lingering Potion of Slow Falling	滞留型缓降药水	滯留型緩降藥水	滯留 緩降藥水	輕滯劑	低速落下の残留ポーション	잔류형 느린 낙하의 물약	Thuốc rơi chậm kéo dài
@@ -1797,7 +1797,7 @@ item.minecraft.potion.effect.levitation	Potion of Levitation	飘浮药水	飄浮
 item.minecraft.potion.effect.luck	Potion of Luck	幸运药水	幸運藥水	幸運藥水	幸劑	幸運のポーション	행운의 물약	Thuốc may mắn
 item.minecraft.potion.effect.mundane	Mundane Potion	平凡的药水	平凡藥水	平凡藥水	凡劑	ありふれたポーション	평범한 물약	Thuốc trần tục
 item.minecraft.potion.effect.night_vision	Potion of Night Vision	夜视药水	夜視藥水	夜視藥水	夜視劑	暗視のポーション	야간 투시의 물약	Thuốc nhìn trong bóng tối
-item.minecraft.potion.effect.oozing	Potion of Oozing	渗浆药水	滲漿藥水	滲漿藥水	滲膠劑	滲出のポーション	점액화 물약	Thuốc rò rỉ
+item.minecraft.potion.effect.oozing	Potion of Oozing	渗浆药水	滲漿藥水	滲漿藥水	漉膠劑	滲出のポーション	점액화 물약	Thuốc rò rỉ
 item.minecraft.potion.effect.poison	Potion of Poison	剧毒药水	劇毒藥水	劇毒藥水	毒劑	毒のポーション	독 물약	Thuốc độc
 item.minecraft.potion.effect.regeneration	Potion of Regeneration	再生药水	回復藥水	回復藥水	甦劑	再生のポーション	재생의 물약	Thuốc hồi phục
 item.minecraft.potion.effect.slow_falling	Potion of Slow Falling	缓降药水	緩降藥水	緩降藥水	輕劑	低速落下のポーション	느린 낙하의 물약	Thuốc rơi chậm
@@ -1884,7 +1884,7 @@ item.minecraft.splash_potion.effect.levitation	Splash Potion of Levitation	喷�
 item.minecraft.splash_potion.effect.luck	Splash Potion of Luck	喷溅型幸运药水	飛濺型幸運藥水	飛濺 幸運藥水	幸噴劑	幸運のスプラッシュポーション	투척용 행운의 물약	Thuốc may mắn có thể ném được
 item.minecraft.splash_potion.effect.mundane	Mundane Splash Potion	喷溅型平凡的药水	飛濺型平凡藥水	飛濺 平凡藥水	凡噴劑	ありふれたスプラッシュポーション	투척용 평범한 물약	Thuốc trần tục có thể ném được
 item.minecraft.splash_potion.effect.night_vision	Splash Potion of Night Vision	喷溅型夜视药水	飛濺型夜視藥水	飛濺 夜視藥水	夜視噴劑	暗視のスプラッシュポーション	투척용 야간 투시의 물약	Thuốc nhìn trong bóng tối có thể ném được
-item.minecraft.splash_potion.effect.oozing	Splash Potion of Oozing	喷溅型渗浆药水	飛濺型滲漿藥水	飛濺 滲漿藥水	滲膠噴劑	滲出のスプラッシュポーション	투척용 점액화 물약	Thuốc rò rỉ có thể ném được
+item.minecraft.splash_potion.effect.oozing	Splash Potion of Oozing	喷溅型渗浆药水	飛濺型滲漿藥水	飛濺 滲漿藥水	漉膠噴劑	滲出のスプラッシュポーション	투척용 점액화 물약	Thuốc rò rỉ có thể ném được
 item.minecraft.splash_potion.effect.poison	Splash Potion of Poison	喷溅型剧毒药水	飛濺型劇毒藥水	飛濺 劇毒藥水	毒噴劑	毒のスプラッシュポーション	투척용 독 물약	Thuốc độc có thể ném được
 item.minecraft.splash_potion.effect.regeneration	Splash Potion of Regeneration	喷溅型再生药水	飛濺型回復藥水	飛濺 回復藥水	甦噴劑	再生のスプラッシュポーション	투척용 재생의 물약	Thuốc hồi phục có thể ném được
 item.minecraft.splash_potion.effect.slow_falling	Splash Potion of Slow Falling	喷溅型缓降药水	飛濺型緩降藥水	飛濺 緩降藥水	輕噴劑	低速落下のスプラッシュポーション	투척용 느린 낙하의 물약	Thuốc rơi chậm có thể ném được
