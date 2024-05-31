@@ -15,12 +15,12 @@ advancements.adventure.kill_all_mobs.title	Monsters Hunted	资深怪物猎人	�
 advancements.adventure.kill_mob_near_sculk_catalyst.title	It Spreads	它蔓延了	佢蔓延咗	它蔓延了	蠶食鯨吞	「それ」は侵食する	퍼져간다	Nó lan ra
 advancements.adventure.lighten_up.title	Lighten Up	铜光焕发	「銅」光煥發	銅光煥發	銅光煥發	明るくなーれ	불 좀 켜 줄래?	Sáng lên nào
 advancements.adventure.lightning_rod_with_villager_no_fire.title	Surge Protector	电涌保护器	突波保護裝置	突波保護器	驅雷掣電	危機一髪	번개 멈춰!	Thiết bị chống sốc điện
-advancements.adventure.minecraft_trials_edition.title	Minecraft: Trial(s) Edition	Minecraft：试炼版	Minecraft：試煉版	Minecraft: 試煉版	礦藝：煉武版	今度はMinecraftが君を試す	Minecraft: 시련판	Minecraft: Phiên bản thử thách
+advancements.adventure.minecraft_trials_edition.title	Minecraft: Trial(s) Edition	Minecraft：试炼版	Minecraft：試煉版	Minecraft: 試煉版	礦藝：煉武版	今度はMinecraftが君を試す	인생은 시련의 연속	Minecraft: Phiên bản thử thách
 advancements.adventure.ol_betsy.title	Ol' Betsy	扣下悬刀	扣下扳機	扣下扳機	一觸即發	おてんば	부러진 화살	Nỏ liên châu
-advancements.adventure.overoverkill.title	Over-Overkill	天赐良击	揼到七彩	天賜良擊	痛貫天靈	超・やり過ぎ	철퇴 나가신다!	Đồ đồ sát
+advancements.adventure.overoverkill.title	Over-Overkill	天赐良击	揼到七彩	天賜良擊	痛貫天靈	超・やり過ぎ	하늘에서 철퇴가 내린다면	Đồ đồ sát
 advancements.adventure.play_jukebox_in_meadows.title	Sound of Music	音乐之声	仙樂飄飄處處聞	真善美	此曲衹應天上有	サウンド・オブ・ミュージック	사운드 오브 뮤직	Giai điệu hạnh phúc
 advancements.adventure.read_power_from_chiseled_bookshelf.title	The Power of Books	知识就是力量	開卷有益	知書就是力量	學富五櫥	本は力なり	책의 힘	Sức mạnh của những quyển sách
-advancements.adventure.revaulting.title	Revaulting	宝经磨炼	逢凶化吉	逢凶化吉	礪煉呈華	怪錠	불길도 길이다	Lại mở hòm báu
+advancements.adventure.revaulting.title	Revaulting	宝经磨炼	逢凶化吉	逢凶化吉	礪煉呈華	怪錠	시련과의 실연	Lại mở hòm báu
 advancements.adventure.root.title	Adventure	冒险	冒險	冒險	歷險	冒険	모험	Phiêu lưu
 advancements.adventure.salvage_sherd.title	Respecting the Remnants	探古寻源	探古尋源	探古尋源	零珠斷璧	文明の面影に敬意を	소중한 잔해	Tôn trọng những tàn tích
 advancements.adventure.shoot_arrow.title	Take Aim	瞄准目标	瞄準目標	瞄準	審顧挽弦	狙いを定めて	정조준	Nhắm mục tiêu
@@ -406,7 +406,7 @@ block.minecraft.cornflower	Cornflower	矢车菊	矢車菊	矢車菊	矢車菊	�
 block.minecraft.cracked_deepslate_bricks	Cracked Deepslate Bricks	裂纹深板岩砖	裂紋深板岩磚	裂紋深板岩磚	裂板巖磚	ひび割れた深層岩レンガ	금 간 심층암 벽돌	Gạch đá bảng sâu nứt
 block.minecraft.cracked_deepslate_tiles	Cracked Deepslate Tiles	裂纹深板岩瓦	裂紋深板岩瓦	裂紋深板岩磚瓦	裂板巖瓦	ひび割れた深層岩タイル	금 간 심층암 타일	Đá lát bảng sâu nứt
 block.minecraft.cracked_nether_bricks	Cracked Nether Bricks	裂纹下界砖块	裂紋地獄磚	裂紋地獄磚	裂焱界磚	ひび割れたネザーレンガ	금 간 네더 벽돌	Gạch Nether nứt
-block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone Bricks	裂纹磨制黑石砖	裂紋拋光黑石磚	裂紋拋光黑石磚	裂鎣墨石磚	ひび割れたブラックストーンレンガ	금 간 윤나는 흑암 벽돌	Gạch đá đen được đánh bóng nứt
+block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone Bricks	裂纹磨制黑石砖	裂紋拋光黑石磚	裂紋拋光黑石磚	裂鎣墨石磚	ひび割れた磨かれたブラックストーンレンガ	금 간 윤나는 흑암 벽돌	Gạch đá đen được đánh bóng nứt
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
