@@ -7,7 +7,7 @@ from pathlib import Path
 P = Path(__file__).resolve().parent
 
 # 语言文件文件夹
-LANG_DIR = P / "lang"
+LANG_DIR = P / "mc_lang"
 LANG_DIR_FULL = LANG_DIR / "full"
 LANG_DIR_VALID = LANG_DIR / "valid"
 

@@ -1,0 +1,3 @@
+[submodule "mc_lang"]
+	path = mc_lang
+	url = https://github.com/SkyEye-FAST/mc_lang

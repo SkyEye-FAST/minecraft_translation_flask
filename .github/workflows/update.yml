@@ -24,10 +24,7 @@ jobs:
           pip install requests bs4
 
       - name: Update language files
-        run: python update.py
-
-      - name: Validate language files
-        run: python validate.py
+        run: git submodule foreach 'git pull origin master'
 
       - name: Generate translation table
         run: python table.py
