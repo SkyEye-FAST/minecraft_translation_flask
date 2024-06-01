@@ -2,7 +2,7 @@ name: Update language files
 
 on:
   schedule:
-    - cron: "50 16 * * *"
+    - cron: "15 17 * * *"
 
 jobs:
   build:
@@ -24,9 +24,7 @@ jobs:
           pip install requests bs4
 
       - name: Update language files
-        run: |
-          cd minecraft_translation_flask
-          git submodule foreach 'git pull origin master'
+        run: git submodule foreach 'git pull origin master'
 
       - name: Generate translation table
         run: python table.py

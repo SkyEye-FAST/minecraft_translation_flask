@@ -3,6 +3,7 @@
 
 import json
 from typing import Dict
+
 from app_base import LANG_DIR, LANG_DIR_VALID, language_list
 
 # 是否忽略补充字符串
