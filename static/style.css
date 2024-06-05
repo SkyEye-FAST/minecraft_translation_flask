@@ -67,12 +67,9 @@ table td,
 table th {
     text-align: center;
     padding: .5em 2em;
-    border: 2px solid #5b9bd5;
+    border-width: 2px;
+    border-style: solid;
     font-size: 1.5em;
-}
-
-table tr:nth-child(even) {
-    background-color: #5b9bd533;
 }
 
 .table-advancements td,
@@ -94,24 +91,12 @@ table tr:nth-child(even) {
 }
 
 .table-block td,
-.table-block th,
-.table-effect td,
-.table-effect th,
-.table-enchantment td,
-.table-enchantment th,
-.table-entity td,
-.table-entity th,
-.table-item td,
-.table-item th {
-    border-color: inherit;
+.table-block th {
+    border-color: #5b9bd5;
 }
 
-.table-block tr:nth-child(even),
-.table-effect tr:nth-child(even),
-.table-enchantment tr:nth-child(even),
-.table-entity tr:nth-child(even),
-.table-item tr:nth-child(even) {
-    background-color: inherit;
+.table-block tr:nth-child(even) {
+    background-color: #5b9bd533;
 }
 
 .table-effect td,

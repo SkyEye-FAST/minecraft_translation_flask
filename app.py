@@ -100,7 +100,9 @@ def index() -> str:
         source_str = data["en_us"].get(selected_option, "")
 
     keys = data["en_us"].keys() if not form.validate_on_submit() else translation.keys()
-    category = selected_option.split(".")[0].replace("filled_map", "item")
+    mappings = {"filled_map": "item", "trim_pattern": "item", "upgrade": "item"}
+    category = selected_option.split(".")[0]
+    category = mappings.get(category, category)
 
     tzinfo = get_timezone(session["timezone"])
     timezone_str = get_timezone_name(session["timezone"], locale=session["locale"])
