@@ -27,7 +27,9 @@ jobs:
           pip install requests bs4
 
       - name: Update language files
-        run: git submodule foreach 'git pull origin master'
+        run: |
+          git config pull.rebase false
+          git submodule foreach 'git pull origin master'
 
       - name: Generate translation table
         run: python table.py
