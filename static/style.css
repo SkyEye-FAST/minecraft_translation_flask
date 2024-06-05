@@ -20,21 +20,23 @@ body {
 }
 
 /* 链接样式 */
-.github-link {
+.github-link,
+.table-link {
     position: absolute;
     top: 15px;
+}
+
+.github-link {
     right: 15px;
+}
+
+.table-link {
+    left: 15px;
 }
 
 .github-icon {
     width: 48px;
     height: auto;
-}
-
-.table-link {
-    position: absolute;
-    top: 15px;
-    left: 15px;
 }
 
 .material-symbols-outlined.md-48 {
@@ -70,7 +72,82 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #d9e1de;
+    background-color: #5b9bd533;
+}
+
+.table-advancements td,
+.table-advancements th {
+    border-color: #a02b93;
+}
+
+.table-advancements tr:nth-child(even) {
+    background-color: #a02b9333;
+}
+
+.table-biome td,
+.table-biome th {
+    border-color: #4ab5c4;
+}
+
+.table-biome tr:nth-child(even) {
+    background-color: #4ab5c433;
+}
+
+.table-block td,
+.table-block th,
+.table-effect td,
+.table-effect th,
+.table-enchantment td,
+.table-enchantment th,
+.table-entity td,
+.table-entity th,
+.table-item td,
+.table-item th {
+    border-color: inherit;
+}
+
+.table-block tr:nth-child(even),
+.table-effect tr:nth-child(even),
+.table-enchantment tr:nth-child(even),
+.table-entity tr:nth-child(even),
+.table-item tr:nth-child(even) {
+    background-color: inherit;
+}
+
+.table-effect td,
+.table-effect th {
+    border-color: #ffc000;
+}
+
+.table-effect tr:nth-child(even) {
+    background-color: #ffc00033;
+}
+
+.table-enchantment td,
+.table-enchantment th {
+    border-color: #44546a;
+}
+
+.table-enchantment tr:nth-child(even) {
+    background-color: #44546a33;
+}
+
+.table-entity td,
+.table-entity th {
+    border-color: #ed7d31;
+}
+
+.table-entity tr:nth-child(even) {
+    background-color: #ed7d3133;
+}
+
+.table-item td,
+.table-item th {
+    border-color: #70ad47;
+}
+
+.table-item tr:nth-child(even) {
+    background-color: #70ad4733;
 }
 
 .table-header {
@@ -146,8 +223,7 @@ table tr:nth-child(even) {
 
 .form .container input,
 .form .container select {
-    padding-top: .25em;
-    padding-bottom: .25em;
+    padding: .25em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -206,7 +282,7 @@ table tr:nth-child(even) {
 
     table td,
     table th {
-        border: 1px solid #5b9bd5;
+        border-width: 1px;
     }
 
     .form {

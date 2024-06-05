@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ _('A web application for querying standard translations of Minecraft.') }}">
+    <meta property="og:title" content="{{ _('Minecraft Standard Translations') }}">
+    <meta property="og:description"
+        content="{{ _('A web application for querying standard translations of Minecraft.') }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/share_image.png') }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta name="twitter:card" content="summary_large_image">
     <title>{{ _("Minecraft Standard Translations") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=1) }}" type="text/css">
     <link rel="stylesheet"
         href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 </head>
@@ -25,16 +32,13 @@
         <form class="form" action="/" method="post">
             <div class="container">
                 {{ form.hidden_tag() }}
-                {{ form.source_string.label }}{{ form.source_string(autocomplete="off") }}
+                <label for="source_string">{{ form.source_string.label }}</label>
+                {{ form.source_string(autocomplete="off", id="source_string") }}
                 {% if input_value %}
                 <label for="options">{{ _("Select translation key: ") }}</label>
                 <select name="options" id="options">
                     {% for option in keys %}
-                    {% if option == key %}
-                    <option value="{{ option }}" selected>{{ option }}</option>
-                    {% else %}
-                    <option value="{{ option }}">{{ option }}</option>
-                    {% endif %}
+                    <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
                     {% endfor %}
                 </select>
                 {% endif %}
@@ -45,47 +49,47 @@
     </fieldset>
 
     {% if translation %}
-    <div class="title">
-        {{ source }}
-    </div>
-    <div class="subtitle">
-        {{ key }}
-    </div>
-    <table>
-        <tr>
-            <th class="table-header">{{ _("Language names") }}</th>
-            <th class="table-header">{{ _("Translations") }}</th>
-        </tr>
-        <tr lang="zh-Hans-CN" class="zh-cn">
-            <td class="lang-name">简体中文&#10;(中国大陆)</td>
-            <td class="string">{{ translation["zh_cn"] }}</td>
-        </tr>
-        <tr lang="zh-Hant-HK" class="zh-hk">
-            <td class="lang-name">繁體中文&#10;(香港特別行政區)</td>
-            <td class="string">{{ translation["zh_hk"] }}</td>
-        </tr>
-        <tr lang="zh-Hant-TW" class="zh-tw">
-            <td class="lang-name">繁體中文&#10;(台灣)</td>
-            <td class="string">{{ translation["zh_tw"] }}</td>
-        </tr>
-        <tr lang="lzh" class="lzh">
-            <td class="lang-name">文言&#10;(華夏)</td>
-            <td class="string">{{ translation["lzh"] }}</td>
-        </tr>
-        {% if enable_jkv %}
-        <tr lang="ja" class="ja">
-            <td class="lang-name">日本語&#10;(日本)</td>
-            <td class="string">{{ translation["ja_jp"] }}</td>
-        </tr>
-        <tr lang="ko" class="ko">
-            <td class="lang-name">한국어&#10;(대한민국)</td>
-            <td class="string">{{ translation["ko_kr"] }}</td>
-        </tr>
-        <tr lang="vi" class="vi">
-            <td class="lang-name">Tiếng Việt&#10;(Việt Nam)</td>
-            <td class="string">{{ translation["vi_vn"] }}</td>
-        </tr>
-        {% endif %}
+    <div class="title">{{ source }}</div>
+    <div class="subtitle">{{ key }}</div>
+    <table class="table-{{ category }}">
+        <thead>
+            <tr>
+                <th class="table-header">{{ _("Language names") }}</th>
+                <th class="table-header">{{ _("Translations") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr lang="zh-Hans-CN" class="zh-cn">
+                <td class="lang-name">简体中文&#10;(中国大陆)</td>
+                <td class="string">{{ translation["zh_cn"] }}</td>
+            </tr>
+            <tr lang="zh-Hant-HK" class="zh-hk">
+                <td class="lang-name">繁體中文&#10;(香港特別行政區)</td>
+                <td class="string">{{ translation["zh_hk"] }}</td>
+            </tr>
+            <tr lang="zh-Hant-TW" class="zh-tw">
+                <td class="lang-name">繁體中文&#10;(台灣)</td>
+                <td class="string">{{ translation["zh_tw"] }}</td>
+            </tr>
+            <tr lang="lzh" class="lzh">
+                <td class="lang-name">文言&#10;(華夏)</td>
+                <td class="string">{{ translation["lzh"] }}</td>
+            </tr>
+            {% if enable_jkv %}
+            <tr lang="ja" class="ja">
+                <td class="lang-name">日本語&#10;(日本)</td>
+                <td class="string">{{ translation["ja_jp"] }}</td>
+            </tr>
+            <tr lang="ko" class="ko">
+                <td class="lang-name">한국어&#10;(대한민국)</td>
+                <td class="string">{{ translation["ko_kr"] }}</td>
+            </tr>
+            <tr lang="vi" class="vi">
+                <td class="lang-name">Tiếng Việt&#10;(Việt Nam)</td>
+                <td class="string">{{ translation["vi_vn"] }}</td>
+            </tr>
+            {% endif %}
+        </tbody>
     </table>
     {% endif %}
 
