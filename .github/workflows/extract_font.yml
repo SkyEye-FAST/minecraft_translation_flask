@@ -2,7 +2,7 @@ name: Generate font subset (I.Ming)
 
 on:
   schedule:
-    - cron: "0 17 * * 3"
+    - cron: "18 17 * * 3"
 
 jobs:
   build:
@@ -11,7 +11,10 @@ jobs:
       matrix:
         python-version: ["3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
