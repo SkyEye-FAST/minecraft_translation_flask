@@ -92,35 +92,35 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ### 颜色
 
-主页面背景色为`#f9f2e0`，并针对不同类别的字符串使用了不同颜色的表格。
+主页面背景色为`${\color{#f9f2e0}\blacksquare}#f9f2e0``，并针对不同类别的字符串使用了不同颜色的表格。
 
 下方首先列出的颜色为表格边框颜色；表格背景颜色为20%透明度的边框颜色，叠加页面背景色后的等效颜色以括号在后加注。
 
-- 进度：`#a02b93`（`#e7cad1`）
+- 进度：${\color{#a02b93}\blacksquare}$ `#a02b93`（${\color{#e7cad1}\blacksquare}$ `#e7cad1`）
 
 ![Sample](sample/sample_advancements.png)
 
-- 生物群系：`#4ab5c4`（`#d6e6da`）
+- 生物群系：${\color{#4ab5c4}\blacksquare}$ `#4ab5c4`（${\color{#d6e6da}\blacksquare}$ `#d6e6da`）
 
 ![Sample](sample/sample_biome.png)
 
-- 方块：`#5b9bd5`（`#d9e1de`）
+- 方块：${\color{#5b9bd5}\blacksquare}$ `#5b9bd5`（${\color{#d9e1de}\blacksquare}$ `#d9e1de`）
 
 ![Sample](sample/sample_block.png)
 
-- 状态效果：`#ffc000`（`#fae8b3`）
+- 状态效果：${\color{#ffc000}\blacksquare}$ `#ffc000`（${\color{#fae8b3}\blacksquare}$ `#fae8b3`）
 
 ![Sample](sample/sample_effect.png)
 
-- 附魔：`#44546a`（`#d5d2c8`）
+- 附魔：${\color{#44546a}\blacksquare}$ `#44546a`（${\color{#d5d2c8}\blacksquare}$ `#d5d2c8`）
 
 ![Sample](sample/sample_enchantment.png)
 
-- 实体：`#ed7d31`（`#f7dbbd`）
+- 实体：${\color{#ed7d31}\blacksquare}$ `#ed7d31`（${\color{#f7dbbd}\blacksquare}$ `#f7dbbd`）
 
 ![Sample](sample/sample_entity.png)
 
-- 物品：`#70ad47`（`#dee4c1`）
+- 物品：${\color{#70ad47}\blacksquare}$ `#70ad47`（${\color{#dee4c1}\blacksquare}$ `#dee4c1`）
 
 ![Sample](sample/sample_item.png)
 

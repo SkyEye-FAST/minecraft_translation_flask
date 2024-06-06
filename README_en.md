@@ -90,35 +90,35 @@ Localization of date and timezone is handled by [`babel`](https://github.com/pyt
 
 ### Colors
 
-The main page background color is `#f9f2e0`, and tables with different colored strings for different categories are used.
+The main page background color is ${\color{#f9f2e0}\blacksquare}$ `#f9f2e0`, and tables with different colored strings for different categories are used.
 
 Below are the colors listed, first being the table border color; the table background color is the border color with 20% opacity, annotated with the equivalent color after overlaying the page background color in parentheses.
 
-- Advancements: `#a02b93` (`#e7cad1`)
+- Advancements: ${\color{#a02b93}\blacksquare}$ `#a02b93` (${\color{#e7cad1}\blacksquare}$ `#e7cad1`)
 
 ![Sample](sample/sample_advancements_en.png)
 
-- Biomes: `#4ab5c4` (`#d6e6da`)
+- Biomes: ${\color{#4ab5c4}\blacksquare}$ `#4ab5c4` (${\color{#d6e6da}\blacksquare}$ `#d6e6da`)
 
 ![Sample](sample/sample_biome_en.png)
 
-- Blocks: `#5b9bd5` (`#d9e1de`)
+- Blocks: ${\color{#5b9bd5}\blacksquare}$ `#5b9bd5` (${\color{#d9e1de}\blacksquare}$ `#d9e1de`)
 
 ![Sample](sample/sample_block_en.png)
 
-- Effects: `#ffc000` (`#fae8b3`)
+- Effects: ${\color{#ffc000}\blacksquare}$ `#ffc000` (${\color{#fae8b3}\blacksquare}$ `#fae8b3`)
 
 ![Sample](sample/sample_effect_en.png)
 
-- Enchantments: `#44546a` (`#d5d2c8`)
+- Enchantments: ${\color{#44546a}\blacksquare}$ `#44546a` (${\color{#d5d2c8}\blacksquare}$ `#d5d2c8`)
 
 ![Sample](sample/sample_enchantment_en.png)
 
-- Entities: `#ed7d31` (`#f7dbbd`)
+- Entities: ${\color{#ed7d31}\blacksquare}$ `#ed7d31` (${\color{#f7dbbd}\blacksquare}$ `#f7dbbd`)
 
 ![Sample](sample/sample_entity_en.png)
 
-- Items: `#70ad47` (`#dee4c1`)
+- Items: ${\color{#70ad47}\blacksquare}$ `#70ad47` (${\color{#dee4c1}\blacksquare}$ `#dee4c1`)
 
 ![Sample](sample/sample_item_en.png)
 
