@@ -22,9 +22,11 @@
 2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)（更新可能较慢）
 3. [mczhst.vercel.app](https://mczhst.vercel.app/)（国内网络可能无法访问）
 
-网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)：
+#### 样式
 
-![Sample](sample/sample.png)
+网页样式参考[SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt)，参见[#颜色](#颜色)一节。
+
+![Sample](sample/sample_advancements.png)
 
 ### 翻译表
 
@@ -87,6 +89,40 @@ python -c 'import secrets; print(secrets.token_hex())'
 网页上显示的日期和时区根据用户的IP决定，相关数据从GeoIP2 GeoLite2数据库获取。
 
 日期和时区的本地化由[`babel`](https://github.com/python-babel/babel)和[`flask-babel`](https://github.com/python-babel/flask-babel)完成。
+
+### 颜色
+
+主页面背景色为`#f9f2e0`，并针对不同类别的字符串使用了不同颜色的表格。
+
+下方首先列出的颜色为表格边框颜色；表格背景颜色为20%透明度的边框颜色，叠加页面背景色后的等效颜色以括号在后加注。
+
+- 进度：`#a02b93`（`#e7cad1`）
+
+![Sample](sample/sample_advancements.png)
+
+- 生物群系：`#4ab5c4`（`#d6e6da`）
+
+![Sample](sample/sample_biome.png)
+
+- 方块：`#5b9bd5`（`#d9e1de`）
+
+![Sample](sample/sample_block.png)
+
+- 状态效果：`#ffc000`（`#fae8b3`）
+
+![Sample](sample/sample_effect.png)
+
+- 附魔：`#44546a`（`#d5d2c8`）
+
+![Sample](sample/sample_enchantment.png)
+
+- 实体：`#ed7d31`（`#f7dbbd`）
+
+![Sample](sample/sample_entity.png)
+
+- 物品：`#70ad47`（`#dee4c1`）
+
+![Sample](sample/sample_item.png)
 
 ## 反馈
 

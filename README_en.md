@@ -22,15 +22,15 @@ Demonstrations of the main page are available at the following URLs:
 2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) (Updates may be slower)
 3. [mczhst.vercel.app](https://mczhst.vercel.app/) (May not be accessible from Chinese mainland)
 
-The style used on the web page is referenced from [SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt):
+The webpage style is referenced from [SkyEye-FAST/minecraft_translation_ppt](https://github.com/SkyEye-FAST/minecraft_translation_ppt), see section [#Colors](#colors).
 
-![Sample](sample/sample_en.png)
+![Sample](sample/sample_advancements_en.png)
 
 ### Translation table page
 
 The automatically generated translation table can be found in the `/table` subpage of the website, including key name, original text and 7 supported languages.
 
-Use the built-in page search function in the browser (shortcut key: `Ctrl + F` or `⌘ Command + F`) to quickly search for translations.
+Use the built-in page search function in browsers (shortcut key: `Ctrl + F` or `⌘ Command + F`) to quickly search for translations.
 
 This page is useful for quick searches, but is not suitable for showing results to others. It is recommended to use a screenshot of the main page to show others the translation status.
 
@@ -64,7 +64,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ## Instructions
 
-## Minecraft Language Files
+### Minecraft Language Files
 
 This repository automatically checks for updates to Minecraft: Java edition language files every day at 🕧00:30 (UTC+8, i.e., 🕟UTC 16:30). This process uses the script [`update.py`](update.py) and requires `requests`.
 
@@ -74,7 +74,7 @@ Obtained `en_us.json`, `zh_cn.json`, `zh_hk.json`, `zh_tw.json`, `lzh.json`, `ja
 
 [`supplements.json`](lang/supplements.json) contains currently (as of January 28, 2024) missing translations from the in-game language files that have been updated on Crowdin (currently empty). By default, this feature is disabled in the project configuration.
 
-## Fonts
+### Fonts
 
 This project uses Source Han Serif and an automatically constructed subset of [I.Ming](https://github.com/ichitenfont/I.Ming).
 
@@ -82,11 +82,45 @@ This repository automatically checks whether the subset files of I.Ming need to 
 
 This process uses the script [`extract_font.py`](extract_font.py) and requires [`fonttools`](https://github.com/fonttools/fonttools).
 
-## Date and Timezone
+### Date and Timezone
 
 The date and timezone displayed on the web page are determined based on the user's IP, using data obtained from the GeoIP2 GeoLite2 database.
 
 Localization of date and timezone is handled by [`babel`](https://github.com/python-babel/babel) and [`flask-babel`](https://github.com/python-babel/flask-babel).
+
+### Colors
+
+The main page background color is `#f9f2e0`, and tables with different colored strings for different categories are used.
+
+Below are the colors listed, first being the table border color; the table background color is the border color with 20% opacity, annotated with the equivalent color after overlaying the page background color in parentheses.
+
+- Advancements: `#a02b93` (`#e7cad1`)
+
+![Sample](sample/sample_advancements_en.png)
+
+- Biomes: `#4ab5c4` (`#d6e6da`)
+
+![Sample](sample/sample_biome_en.png)
+
+- Blocks: `#5b9bd5` (`#d9e1de`)
+
+![Sample](sample/sample_block_en.png)
+
+- Effects: `#ffc000` (`#fae8b3`)
+
+![Sample](sample/sample_effect_en.png)
+
+- Enchantments: `#44546a` (`#d5d2c8`)
+
+![Sample](sample/sample_enchantment_en.png)
+
+- Entities: `#ed7d31` (`#f7dbbd`)
+
+![Sample](sample/sample_entity_en.png)
+
+- Items: `#70ad47` (`#dee4c1`)
+
+![Sample](sample/sample_item_en.png)
 
 ## Feedback
 
