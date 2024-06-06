@@ -46,7 +46,7 @@ body {
 
 /* 标题样式 */
 .title {
-    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
     font-size: 2.5em;
     font-weight: 600;
     text-align: center;
@@ -136,7 +136,7 @@ table th {
 }
 
 .table-header {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", 'Times New Roman', SimSun, Times, serif;
     font-size: 2.25em;
     white-space: nowrap;
 }
@@ -152,35 +152,35 @@ table th {
 }
 
 .zh-cn {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
 }
 
 .zh-hk {
-    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', 'Times New Roman', SimSun, Times, serif;
 }
 
 .zh-tw {
-    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', 'Times New Roman', SimSun, Times, serif;
 }
 
 .lzh {
-    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", 'Times New Roman', SimSun, Times, serif;
 }
 
 .ja {
-    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', 'Times New Roman', SimSun, Times, serif;
 }
 
 .ko {
-    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', 'Times New Roman', Times, serif;
 }
 
 .vi {
-    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
 }
 
 .minecraft-title {
-    font-family: 'Noto Serif', 'Source Han Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Source Han Serif', 'Times New Roman', SimSun, Times, serif;
     text-align: center;
     font-size: 2.25em;
     font-weight: 900;

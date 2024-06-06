@@ -48,7 +48,7 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: #d9e1de;
+    background-color: #5b9bd533;
 }
 
 table thead,
@@ -56,34 +56,42 @@ table tr td:nth-child(1) {
     font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
 }
 
+table thead {
+    font-size: larger;
+}
+
+table tr td:nth-child(1) {
+    font-size: smaller;
+}
+
 table tr td:nth-child(2) {
-    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Times New Roman', Simsun, Times, serif;
 }
 
 table tr td:nth-child(3) {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(4) {
-    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(5) {
-    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(6) {
-    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", SimSun, 'Times New Roman', Times, serif;
+    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(7) {
-    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(8) {
-    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', 'Times New Roman', SimSun, Times, serif;
 }
 
 table tr td:nth-child(9) {
-    font-family: 'Noto Serif', SimSun, 'Times New Roman', Times, serif;
+    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
 }
