@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-06-07 18:29+0800\n"
-"PO-Revision-Date: 2024-06-07 18:30+0800\n"
+"POT-Creation-Date: 2024-06-07 20:35+0800\n"
+"PO-Revision-Date: 2024-06-07 20:37+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hans_CN\n"
 "Language-Team: zh_Hans_CN <LL@li.org>\n"
@@ -48,19 +48,31 @@ msgstr "设置"
 msgid "Query mode: "
 msgstr "查询模式："
 
-#: templates/index.html:52
+#: templates/index.html:48
+msgid "Query by source string"
+msgstr "按源字符串查询"
+
+#: templates/index.html:51
+msgid "Query by translated string"
+msgstr "按翻译后字符串查询"
+
+#: templates/index.html:54
+msgid "Query by translation key"
+msgstr "按本地化键名查询"
+
+#: templates/index.html:59
 msgid "Language to be queried: "
 msgstr "查询的语言："
 
-#: templates/index.html:64
+#: templates/index.html:72
 msgid "Select a translation key: "
 msgstr "选择本地化键名："
 
-#: templates/index.html:84
+#: templates/index.html:92
 msgid "Language names"
 msgstr "语言名称"
 
-#: templates/index.html:85
+#: templates/index.html:93
 msgid "Translations"
 msgstr "译名"
 
