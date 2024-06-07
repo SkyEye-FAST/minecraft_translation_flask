@@ -1,3 +1,4 @@
+// 判断是否需要显示查询语言
 document.getElementById('query-mode').addEventListener('change', function () {
     var queryLangLabel = document.querySelector('label[for="query-lang"]');
     var queryLangSelect = document.querySelector('select[name="query-lang"]');
@@ -11,11 +12,35 @@ document.getElementById('query-mode').addEventListener('change', function () {
     }
 });
 
+// 折叠 fieldset
+document.addEventListener("DOMContentLoaded", function () {
+    const fieldsets = document.querySelectorAll(".collapsible");
+
+    fieldsets.forEach(fieldset => {
+        const button = fieldset.querySelector(".toggle-button");
+        const fieldsetId = fieldset.id;
+        const isCollapsed = localStorage.getItem(fieldsetId) === "true";
+
+        if (isCollapsed) {
+            fieldset.classList.add("collapsed");
+        } else {
+            fieldset.classList.remove("collapsed");
+        }
+
+        button.addEventListener("click", () => {
+            fieldset.classList.toggle("collapsed");
+            const state = fieldset.classList.contains("collapsed");
+            localStorage.setItem(fieldsetId, state);
+        });
+    });
+});
+
+// 切换亮暗模式
 function applyMode(mode) {
     document.body.style.display = 'flex';  // 显示页面
     const icon = document.getElementById('mode-icon');
     const button = document.getElementById('mode-switch');
-    const links = document.querySelectorAll('.table-link');
+    const links = document.querySelectorAll('.table-link, .toggle-button');
     const svgContainer = document.getElementById('svg-container');
 
     if (mode === 'dark') {

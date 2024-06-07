@@ -36,51 +36,56 @@
         </button>
     </div>
 
-    <fieldset>
+    <fieldset class="collapsible">
         <legend>{{ _("SETTINGS") }}</legend>
-        <form class="form" action="/" method="post">
-            <div class="container">
-                {{ form.hidden_tag() }}
+        <button class="toggle-button">
+            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </button>
+        <div class="content">
+            <form class="form" action="/" method="post">
+                <div class="container">
+                    {{ form.hidden_tag() }}
 
-                <label for="query-mode">{{ _("Query mode: ") }}</label>
-                <select name="query-mode" id="query-mode">
-                    <option value="source" {% if mode=="source" %}selected{% endif %}>
-                        {{ _("Query by source string") }}
-                    </option>
-                    <option value="transl" {% if mode=="transl" %}selected{% endif %}>
-                        {{ _("Query by translated string")}}
-                    </option>
-                    <option value="key" {% if mode=="key" %}selected{% endif %}>
-                        {{ _("Query by translation key") }}
-                    </option>
-                </select>
+                    <label for="query-mode">{{ _("Query mode: ") }}</label>
+                    <select name="query-mode" id="query-mode">
+                        <option value="source" {% if mode=="source" %}selected{% endif %}>
+                            {{ _("Query by source string") }}
+                        </option>
+                        <option value="transl" {% if mode=="transl" %}selected{% endif %}>
+                            {{ _("Query by translated string")}}
+                        </option>
+                        <option value="key" {% if mode=="key" %}selected{% endif %}>
+                            {{ _("Query by translation key") }}
+                        </option>
+                    </select>
 
-                <label for="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
-                    {{ _("Language to be queried: ") }}
-                </label>
-                <select name="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
-                    <option value="zh_cn" {% if lang=="zh_cn" %}selected{% endif %}>zh_cn</option>
-                    <option value="zh_hk" {% if lang=="zh_hk" %}selected{% endif %}>zh_hk</option>
-                    <option value="zh_tw" {% if lang=="zh_tw" %}selected{% endif %}>zh_tw</option>
-                    <option value="lzh" {% if lang=="lzh" %}selected{% endif %}>lzh</option>
-                </select>
+                    <label for="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
+                        {{ _("Language to be queried: ") }}
+                    </label>
+                    <select name="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
+                        <option value="zh_cn" {% if lang=="zh_cn" %}selected{% endif %}>zh_cn</option>
+                        <option value="zh_hk" {% if lang=="zh_hk" %}selected{% endif %}>zh_hk</option>
+                        <option value="zh_tw" {% if lang=="zh_tw" %}selected{% endif %}>zh_tw</option>
+                        <option value="lzh" {% if lang=="lzh" %}selected{% endif %}>lzh</option>
+                    </select>
 
-                <label for="input_string">{{ form.input_string.label }}</label>
-                {{ form.input_string(autocomplete="off", id="input_string") }}
-                {% if input_value %}
+                    <label for="input_string">{{ form.input_string.label }}</label>
+                    {{ form.input_string(autocomplete="off", id="input_string") }}
+                    {% if input_value %}
 
-                <label for="options">{{ _("Select a translation key: ") }}</label>
-                <select name="options" id="options">
-                    {% for option in keys %}
-                    <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
-                    {% endfor %}
-                </select>
+                    <label for="options">{{ _("Select a translation key: ") }}</label>
+                    <select name="options" id="options">
+                        {% for option in keys %}
+                        <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
+                        {% endfor %}
+                    </select>
 
-                {% endif %}
-            </div>
-            <div class="form-item">{{ form.jkv_check }}{{ form.jkv_check.label }}</div>
-            {{ form.submit(class="submit") }}
-        </form>
+                    {% endif %}
+                </div>
+                <div class="form-item">{{ form.jkv_check }}{{ form.jkv_check.label }}</div>
+                {{ form.submit(class="submit") }}
+            </form>
+        </div>
     </fieldset>
 
     {% if translation %}

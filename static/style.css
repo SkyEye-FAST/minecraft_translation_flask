@@ -276,6 +276,44 @@ body.dark-mode {
     color: inherit;
 }
 
+/* collapse */
+.collapsible {
+    position: relative;
+    padding: 10px;
+}
+
+.collapsible .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.collapsible.collapsed .content {
+    max-height: 1000px;
+}
+
+legend {
+    cursor: default;
+}
+
+.toggle-button {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.toggle-button .material-symbols-outlined {
+    transition: transform 0.3s ease;
+}
+
+.collapsed .toggle-button .material-symbols-outlined {
+    transform: rotate(180deg);
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .github-icon {
