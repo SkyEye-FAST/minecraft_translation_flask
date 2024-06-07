@@ -5,14 +5,14 @@ import json
 from typing import Dict
 from fontTools import subset
 
-from app_base import P, LANG_DIR_FULL
+from app_base import P, LANG_DIR_VALID
 
 
 def main() -> None:
     """主函数"""
 
     # 读取语言文件
-    with open(LANG_DIR_FULL / "lzh.json", "r", encoding="utf-8") as file:
+    with open(LANG_DIR_VALID / "lzh.json", "r", encoding="utf-8") as file:
         data: Dict[str, str] = json.load(file)
 
     # 提取字符串中包含的所有字符
@@ -24,10 +24,11 @@ def main() -> None:
 
     # 命令参数
     args = [
-        "I.Ming-8.10.ttf",
-        f"--text={" ".join(all_char)}",
+        str(P / "I.Ming-8.10.ttf"),
+        f"--text=夏{"".join(all_char)}",
         f"--output-file={output_path}",
         "--flavor=woff2",
+        "--no-subset-tables+=meta",
     ]
 
     # 生成字体子集文件
