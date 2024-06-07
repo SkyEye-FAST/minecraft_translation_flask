@@ -25,7 +25,7 @@
 
 <body>
     <a class="table-link" href="/table">
-        <span class="material-symbols-outlined md-48">table</span>
+        <span id="table-icon" class="material-symbols-outlined md-48">table</span>
     </a>
     <a class="github-link" id="svg-container" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
         <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
@@ -36,9 +36,9 @@
         </button>
     </div>
 
-    <fieldset class="collapsible">
+    <fieldset id="settings" class="collapsible">
         <legend>{{ _("SETTINGS") }}</legend>
-        <button class="toggle-button">
+        <button id="toggle-button" class="toggle-button">
             <span class="material-symbols-outlined">keyboard_arrow_down</span>
         </button>
         <div class="content">

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 切换亮暗模式
+// 应用亮暗模式
 function applyMode(mode) {
     document.body.style.display = 'flex';  // 显示页面
     const icon = document.getElementById('mode-icon');
@@ -58,10 +58,11 @@ function applyMode(mode) {
     }
 }
 
+// 切换亮暗模式
 function toggleMode() {
     const icon = document.getElementById('mode-icon');
     const button = document.getElementById('mode-switch');
-    const links = document.querySelectorAll('.table-link');
+    const links = document.querySelectorAll('.table-link, .toggle-button');
     const svgContainer = document.getElementById('svg-container');
     document.body.classList.toggle('dark-mode');
     svgContainer.classList.toggle('invert');

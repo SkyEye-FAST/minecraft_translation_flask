@@ -316,8 +316,16 @@ legend {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .github-icon {
+
+    .github-icon,
+    #table-icon,
+    #mode-icon {
         width: 30px;
+        font-size: 30px;
+    }
+
+    .mode-toggle {
+        right: 50px
     }
 
     .title {
@@ -330,6 +338,10 @@ legend {
 
     .table-header {
         font-size: 1em;
+    }
+
+    #settings {
+        margin-top: 40px;
     }
 
     .string {
