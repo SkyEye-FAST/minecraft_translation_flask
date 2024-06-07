@@ -7,7 +7,7 @@ from typing import Optional
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, BooleanField, SelectField
+from wtforms import StringField, SubmitField, BooleanField
 from flask_babel import Babel, lazy_gettext as _l
 from babel.dates import format_date, get_timezone, get_timezone_name
 import geoip2.database
@@ -107,6 +107,8 @@ def index() -> str:
             elif query_mode == "transl":
                 query_lang = request.form.get("query-lang", "zh_cn")
                 results = get_translation(query_str, query_lang)
+            elif query_mode == "key":
+                results = get_translation(query_str, "key")
         else:
             selected_option = ""  # 清空下拉列表选择项
 

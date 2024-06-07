@@ -39,8 +39,14 @@ def get_translation(
     """
 
     translation: Dict[str, Dict[str, str]] = {}
-    for k, v in data[query_lang].items():
-        if query_str.lower() in v.lower():
-            element = {lang: content.get(k, "？") for lang, content in data.items()}
-            translation[k] = element
+    if query_lang == "key":
+        for k in data["en_us"]:
+            if query_str.lower() in k:
+                element = {lang: content.get(k, "？") for lang, content in data.items()}
+                translation[k] = element
+    else:
+        for k, v in data[query_lang].items():
+            if query_str.lower() in v.lower():
+                element = {lang: content.get(k, "？") for lang, content in data.items()}
+                translation[k] = element
     return translation
