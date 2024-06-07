@@ -88,22 +88,27 @@ def index() -> str:
     """
 
     form = QueryForm()
-    query_mode: str = request.form.get("query-mode", "source")
-    query_str: Optional[str] = form.input_string.data
-    enable_jkv: bool = form.jkv_check.data
-    selected_option: str = request.form.get("options", "")
+    results = {}
+    query_mode: str = request.args.get("mode", "source")
+    query_lang: str = request.args.get("lang", "zh_cn")
+    source_str: Optional[str] = request.args.get("source", "")
+    query_str: Optional[str] = request.args.get("input_value", "")
+    enable_jkv: bool = request.args.get("enable_jkv", False)
+    selected_option: Optional[str] = request.args.get("key", "")
 
-    if not query_str:
-        selected_option = ""  # 清空下拉列表选择项
-
-    results, source_str, query_lang = {}, "", ""
-    if query_mode == "source":
-        if form.validate_on_submit() and query_str:
-            results = get_translation(query_str)
-    elif query_mode == "transl":
-        query_lang: str = request.form.get("query_lang", "zh_cn")
-        if form.validate_on_submit() and query_str:
-            results = get_translation(query_str, query_lang)
+    if form.validate_on_submit():
+        query_str = form.input_string.data
+        query_mode = request.form.get("query-mode", "source")
+        enable_jkv = form.jkv_check.data
+        selected_option = request.form.get("options", "")
+        if query_str:
+            if query_mode == "source":
+                results = get_translation(query_str)
+            elif query_mode == "transl":
+                query_lang = request.form.get("query-lang", "zh_cn")
+                results = get_translation(query_str, query_lang)
+        else:
+            selected_option = ""  # 清空下拉列表选择项
 
     source_str = data["en_us"].get(selected_option, "")
     keys = data["en_us"].keys() if not form.validate_on_submit() else results.keys()
