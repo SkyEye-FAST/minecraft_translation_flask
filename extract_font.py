@@ -5,14 +5,14 @@ import json
 from typing import Dict
 from fontTools import subset
 
-from app_base import P, LANG_DIR_VALID
+from app_base import P, LANG_DIR_FULL
 
 
 def main() -> None:
     """主函数"""
 
     # 读取语言文件
-    with open(LANG_DIR_VALID / "lzh.json", "r", encoding="utf-8") as file:
+    with open(LANG_DIR_FULL / "lzh.json", "r", encoding="utf-8") as file:
         data: Dict[str, str] = json.load(file)
 
     # 提取字符串中包含的所有字符
