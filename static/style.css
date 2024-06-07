@@ -28,10 +28,14 @@ body {
 
 .github-link {
     right: 15px;
+    transition: filter 0.3s ease;
 }
 
 .table-link {
     left: 15px;
+    font-size: 48px;
+    color: #000;
+    transition: color 0.3s ease;
 }
 
 .github-icon {
@@ -40,7 +44,7 @@ body {
 }
 
 .material-symbols-outlined.md-48 {
-    color: #000;
+    position: absolute;
     font-size: 48px;
 }
 
@@ -231,6 +235,41 @@ table th {
 .form-item {
     display: flex;
     align-items: center;
+}
+
+/* light */
+body {
+    background-color: #f9f2e0;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* dark */
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #f9f2e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 75px;
+}
+
+#mode-switch {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#mode-icon {
+    font-size: 48px;
+    color: inherit;
 }
 
 /* 响应式设计 */
