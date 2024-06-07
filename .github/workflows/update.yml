@@ -2,7 +2,7 @@ name: Update language files
 
 on:
   schedule:
-    - cron: "30 16 * * *"
+    - cron: "12 17 * * *"
 
 jobs:
   build:
@@ -28,8 +28,8 @@ jobs:
 
       - name: Update language files
         run: |
-          git config pull.rebase false
-          git submodule foreach 'git pull origin master'
+          git submodule sync
+          git submodule update --init --recursive --force
 
       - name: Generate translation table
         run: python table.py
