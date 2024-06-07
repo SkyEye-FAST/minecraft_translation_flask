@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-06-05 23:09+0800\n"
+"POT-Creation-Date: 2024-06-07 18:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:73
+msgid "Content to be queried: "
+msgstr ""
+
+#: app.py:74
 msgid "Enable additional languages"
 msgstr ""
 
 #: app.py:75
-msgid "Source string content to be queried: "
-msgstr ""
-
-#: app.py:77
 msgid "QUERY"
 msgstr ""
 
@@ -33,23 +33,31 @@ msgstr ""
 msgid "A web application for querying standard translations of Minecraft."
 msgstr ""
 
-#: templates/index.html:8 templates/index.html:14
+#: templates/index.html:8 templates/index.html:12
 msgid "Minecraft Standard Translations"
 msgstr ""
 
-#: templates/index.html:31
+#: templates/index.html:40
 msgid "SETTINGS"
 msgstr ""
 
-#: templates/index.html:38
-msgid "Select translation key: "
+#: templates/index.html:45
+msgid "Query mode: "
 msgstr ""
 
-#: templates/index.html:57
+#: templates/index.html:52
+msgid "Language to be queried: "
+msgstr ""
+
+#: templates/index.html:64
+msgid "Select a translation key: "
+msgstr ""
+
+#: templates/index.html:84
 msgid "Language names"
 msgstr ""
 
-#: templates/index.html:58
+#: templates/index.html:85
 msgid "Translations"
 msgstr ""
 

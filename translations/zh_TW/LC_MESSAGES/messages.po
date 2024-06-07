@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-06-05 23:09+0800\n"
-"PO-Revision-Date: 2024-06-05 23:10+0800\n"
+"POT-Creation-Date: 2024-06-07 18:29+0800\n"
+"PO-Revision-Date: 2024-06-07 18:30+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hant_TW\n"
 "Language-Team: zh_Hant_TW <LL@li.org>\n"
@@ -21,14 +21,14 @@ msgstr ""
 "Generated-By: Babel 2.15.0\n"
 
 #: app.py:73
+msgid "Content to be queried: "
+msgstr "查詢的內容："
+
+#: app.py:74
 msgid "Enable additional languages"
 msgstr "啟用其他語言"
 
 #: app.py:75
-msgid "Source string content to be queried: "
-msgstr "需要查詢的來源字串內容："
-
-#: app.py:77
 msgid "QUERY"
 msgstr "查詢"
 
@@ -36,23 +36,31 @@ msgstr "查詢"
 msgid "A web application for querying standard translations of Minecraft."
 msgstr "用於查詢 Minecraft 標準翻譯的 Web 應用程式。"
 
-#: templates/index.html:8 templates/index.html:14
+#: templates/index.html:8 templates/index.html:12
 msgid "Minecraft Standard Translations"
 msgstr "Minecraft 標準翻譯"
 
-#: templates/index.html:31
+#: templates/index.html:40
 msgid "SETTINGS"
 msgstr "設置"
 
-#: templates/index.html:38
-msgid "Select translation key: "
+#: templates/index.html:45
+msgid "Query mode: "
+msgstr "查詢方式："
+
+#: templates/index.html:52
+msgid "Language to be queried: "
+msgstr "查詢語言："
+
+#: templates/index.html:64
+msgid "Select a translation key: "
 msgstr "選擇本地化鍵名："
 
-#: templates/index.html:57
+#: templates/index.html:84
 msgid "Language names"
 msgstr "語言名稱"
 
-#: templates/index.html:58
+#: templates/index.html:85
 msgid "Translations"
 msgstr "翻譯"
 
