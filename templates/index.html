@@ -41,15 +41,33 @@
         <form class="form" action="/" method="post">
             <div class="container">
                 {{ form.hidden_tag() }}
-                <label for="source_string">{{ form.source_string.label }}</label>
-                {{ form.source_string(autocomplete="off", id="source_string") }}
+
+                <label for="query-mode">{{ _("Query mode: ") }}</label>
+                <select name="query-mode" id="query-mode">
+                    <option value="source" {% if mode=="source" %}selected{% endif %}>通过源字符串查询</option>
+                    <option value="transl" {% if mode=="transl" %}selected{% endif %}>通过翻译后字符串查询</option>
+                    <option value="key" {% if mode=="key" %}selected{% endif %}>通过本地化键名查询</option>
+                </select>
+
+                <label for="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>{{ _("Language to be queried: ") }}</label>
+                <select name="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
+                    <option value="zh_cn" {% if lang=="zh_cn" %}selected{% endif %}>zh_cn</option>
+                    <option value="zh_hk" {% if lang=="zh_hk" %}selected{% endif %}>zh_hk</option>
+                    <option value="zh_tw" {% if lang=="zh_tw" %}selected{% endif %}>zh_tw</option>
+                    <option value="lzh" {% if lang=="lzh" %}selected{% endif %}>lzh</option>
+                </select>
+
+                <label for="input_string">{{ form.input_string.label }}</label>
+                {{ form.input_string(autocomplete="off", id="input_string") }}
                 {% if input_value %}
-                <label for="options">{{ _("Select translation key: ") }}</label>
+
+                <label for="options">{{ _("Select a translation key: ") }}</label>
                 <select name="options" id="options">
                     {% for option in keys %}
                     <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
                     {% endfor %}
                 </select>
+
                 {% endif %}
             </div>
             <div class="form-item">{{ form.jkv_check }}{{ form.jkv_check.label }}</div>
@@ -110,6 +128,19 @@
     </div>
 
     <script>
+        document.getElementById('query-mode').addEventListener('change', function () {
+            var elements = document.querySelectorAll('.hidden');
+            if (this.value === 'transl') {
+                elements.forEach(function (element) {
+                    element.style.display = 'inherit';
+                });
+            } else {
+                elements.forEach(function (element) {
+                    element.style.display = 'none';
+                });
+            }
+        });
+
         function applyMode(mode) {
             document.body.style.display = 'flex';  // 显示页面
             const icon = document.getElementById('mode-icon');

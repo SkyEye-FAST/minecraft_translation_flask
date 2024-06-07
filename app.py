@@ -7,7 +7,7 @@ from typing import Optional
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, BooleanField
+from wtforms import StringField, SubmitField, BooleanField, SelectField
 from flask_babel import Babel, lazy_gettext as _l
 from babel.dates import format_date, get_timezone, get_timezone_name
 import geoip2.database
@@ -70,11 +70,12 @@ class QueryForm(FlaskForm):
     查询表单，用于获取用户输入的查询字符串和是否启用附加语言的选项。
     """
 
+    input_string: StringField = StringField(_l("Content to be queried: "))
     jkv_check: BooleanField = BooleanField(_l("Enable additional languages"))
-    source_string: StringField = StringField(
-        _l("Source string content to be queried: ")
-    )
     submit: SubmitField = SubmitField(_l("QUERY"))
+
+
+mappings = {"filled_map": "item", "trim_pattern": "item", "upgrade": "item"}
 
 
 @flask_app.route("/", methods=["GET", "POST"])
@@ -87,20 +88,26 @@ def index() -> str:
     """
 
     form = QueryForm()
-    query_str: Optional[str] = form.source_string.data
+    query_mode: str = request.form.get("query-mode", "source")
+    query_str: Optional[str] = form.input_string.data
     enable_jkv: bool = form.jkv_check.data
     selected_option: str = request.form.get("options", "")
 
     if not query_str:
         selected_option = ""  # 清空下拉列表选择项
 
-    translation, source_str = {}, ""
-    if form.validate_on_submit() and query_str:
-        translation = get_translation(query_str)
-        source_str = data["en_us"].get(selected_option, "")
+    results, source_str, query_lang = {}, "", ""
+    if query_mode == "source":
+        if form.validate_on_submit() and query_str:
+            results = get_translation(query_str)
+    elif query_mode == "transl":
+        query_lang: str = request.form.get("query_lang", "zh_cn")
+        if form.validate_on_submit() and query_str:
+            results = get_translation(query_str, query_lang)
 
-    keys = data["en_us"].keys() if not form.validate_on_submit() else translation.keys()
-    mappings = {"filled_map": "item", "trim_pattern": "item", "upgrade": "item"}
+    source_str = data["en_us"].get(selected_option, "")
+    keys = data["en_us"].keys() if not form.validate_on_submit() else results.keys()
+
     category = selected_option.split(".")[0]
     category = mappings.get(category, category)
 
@@ -111,11 +118,13 @@ def index() -> str:
 
     context = {
         "form": form,
+        "mode": query_mode,
+        "lang": query_lang,
         "source": source_str,
         "key": selected_option,
         "input_value": query_str,
         "keys": keys,
-        "translation": translation.get(selected_option, {}),
+        "translation": results.get(selected_option, {}),
         "date_str": date_tz,
         "date_str_t": date_str_t,
         "timezone_str": timezone_str,
