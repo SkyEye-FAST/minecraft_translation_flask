@@ -75,7 +75,22 @@ class QueryForm(FlaskForm):
     submit: SubmitField = SubmitField(_l("QUERY"))
 
 
-mappings = {"filled_map": "item", "trim_pattern": "item", "upgrade": "item"}
+def handle_category(selected_option: str) -> str:
+    """
+    处理字符串分类，以便显示表格。
+
+    Args:
+        selected_option (str): 字符串对应的键名
+
+    Returns:
+        str: 字符串所属的分类。
+    """
+
+    mappings = {"filled_map": "item", "trim_pattern": "item", "upgrade": "item"}
+    category = selected_option.split(".")[0]
+    category = mappings.get(category, category)
+
+    return category
 
 
 @flask_app.route("/", methods=["GET", "POST"])
@@ -115,13 +130,8 @@ def index() -> str:
     source_str = data["en_us"].get(selected_option, "")
     keys = data["en_us"].keys() if not form.validate_on_submit() else results.keys()
 
-    category = selected_option.split(".")[0]
-    category = mappings.get(category, category)
-
-    tzinfo = get_timezone(session["timezone"])
     timezone_str = get_timezone_name(session["timezone"], locale=session["locale"])
-    date_tz = datetime.now(tz=tzinfo).date()
-    date_str_t = format_date(date_tz, "long", locale=session["locale"])
+    date_tz = datetime.now(tz=get_timezone(session["timezone"])).date()
 
     context = {
         "form": form,
@@ -133,10 +143,10 @@ def index() -> str:
         "keys": keys,
         "translation": results.get(selected_option, {}),
         "date_str": date_tz,
-        "date_str_t": date_str_t,
+        "date_str_t": format_date(date_tz, "long", locale=session["locale"]),
         "timezone_str": timezone_str,
         "enable_jkv": enable_jkv,
-        "category": category,
+        "category": handle_category(selected_option),
     }
 
     return render_template("index.html", **context)

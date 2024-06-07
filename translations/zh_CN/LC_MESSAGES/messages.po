@@ -46,11 +46,11 @@ msgstr "设置"
 
 #: templates/index.html:45
 msgid "Query mode: "
-msgstr "查询模式"
+msgstr "查询模式："
 
 #: templates/index.html:52
 msgid "Language to be queried: "
-msgstr "查询的语言"
+msgstr "查询的语言："
 
 #: templates/index.html:64
 msgid "Select a translation key: "
