@@ -62,7 +62,7 @@ advancements.husbandry.complete_catalogue.title	A Complete Catalogue	百猫全�
 advancements.husbandry.feed_snifflet.title	Little Sniffs	小小嗅探兽	嗅探獸細路仔	小小嗅探獸	乳嗅未乾	可愛らしい鼻の音	조그만 킁킁이	Thú đánh hơi bé nhỏ
 advancements.husbandry.fishy_business.title	Fishy Business	腥味十足的生意	經營水產	關漁生意	初涉漁道	生臭い仕事	강태공이 세월을 낚듯	Công việc đầy mùi cá
 advancements.husbandry.froglights.title	With Our Powers Combined!	相映生辉！	相映生輝！	同心協力！	珠聯璧合！	僕たちの力を合わせて！	우리의 힘을 합친다면!	Hợp nhất sức mạnh!
-advancements.husbandry.kill_axolotl_target.title	The Healing Power of Friendship!	友谊的治愈力！	友誼嘅治療波動！	療癒力滿點的友情！	厚誼愈疾！	友情の癒しパワー！	우정의 치유력!	Sức mạnh của tình bạn!
+advancements.husbandry.kill_axolotl_target.title	The Healing Power of Friendship!	友谊的治愈力！	友誼嘅治療波動！	療癒力滿點的友情！	厚誼癒疾！	友情の癒しパワー！	우정의 치유력!	Sức mạnh của tình bạn!
 advancements.husbandry.leash_all_frog_variants.title	When the Squad Hops into Town	呱呱队出动	呱呱隊出動	蛙軍壓境	眾鼃躍集	みんなで町に跳び込もう	개구리 삼총사 출동!	Biệt đội ếch ộp
 advancements.husbandry.make_a_sign_glow.title	Glow and Behold!	眼前一亮！	螢光奪目！	光輝奪目！	熒熒爍目！	この輝きに驚くことなかれ！	밝은 말 고운 말	Sáng ơi là sáng!
 advancements.husbandry.netherite_hoe.title	Serious Dedication	终极奉献	敬業樂業	敬業樂業	躬耕不輟	真面目な献身	도를 넘은 전념	Sự cống hiến nghiêm túc
@@ -97,7 +97,7 @@ advancements.nether.loot_bastion.title	War Pigs	战猪	戰豬	戰豬	戰豕	ブ�
 advancements.nether.netherite_armor.title	Cover Me in Debris	残骸裹身	用殘骸包住我	以瓦礫為壁壘	覆軀以骸	残骸で私を覆って	잔해로 날 감싸줘	Che chắn tôi bằng mảnh vỡ
 advancements.nether.obtain_ancient_debris.title	Hidden in the Depths	深藏不露	深藏不露	深藏不露	巖棲谷隱	深淵に隠されしもの	깊이 파묻힌 잔해	Ẩn dưới vực thẳm
 advancements.nether.obtain_blaze_rod.title	Into Fire	与火共舞	與火共舞	與火共舞	赴湯蹈火	炎の中へ	포화 속으로	Chữa cháy
-advancements.nether.obtain_crying_obsidian.title	Who is Cutting Onions?	谁在切洋葱？	邊個切緊洋葱？	是誰在切洋蔥？	孰方切洋蔥歟？	玉ねぎを切っているのは誰？	누가 양파를 써나?	Ai đang cắt hành vậy?
+advancements.nether.obtain_crying_obsidian.title	Who is Cutting Onions?	谁在切洋葱？	邊個切緊洋葱？	是誰在切洋蔥？	孰方切胡蔥歟？	玉ねぎを切っているのは誰？	누가 양파를 써나?	Ai đang cắt hành vậy?
 advancements.nether.return_to_sender.title	Return to Sender	见鬼去吧	禮尚往來	以牙還牙	以牙還牙	差出人に返送	전해지지 않은 러브레터	Trả lại cho người gửi
 advancements.nether.ride_strider_in_overworld_lava.title	Feels Like Home	温暖如家	温暖如家	溫暖如家	賓至如歸	実家のような安心感	고향 같은 편안함	Cảm giác như ở nhà
 advancements.nether.ride_strider.title	This Boat Has Legs	画船添足	畫船添足	行舟	畫舟添足	足のついたボート	두 발 달린 보트	Chiếc thuyền có chân
@@ -1247,13 +1247,13 @@ effect.minecraft.infested	Infested	寄生	寄生	蛀蝕	蟫蝕	虫食い	벌레 
 effect.minecraft.instant_damage	Instant Damage	瞬间伤害	立即傷害	立即傷害	瞬傷	即時ダメージ	즉시 피해	Sát thương tức thì
 effect.minecraft.instant_health	Instant Health	瞬间治疗	立即治療	立即治療	瞬療	即時回復	즉시 치유	Sinh lực tức thì
 effect.minecraft.invisibility	Invisibility	隐身	隱形	隱形	隱	透明化	투명	Tàng hình
-effect.minecraft.jump_boost	Jump Boost	跳跃提升	跳躍提升	跳躍提升	躍升	跳躍力上昇	점프 강화	Tăng khả năng nhảy
+effect.minecraft.jump_boost	Jump Boost	跳跃提升	跳躍提升	跳躍提升	躍昇	跳躍力上昇	점프 강화	Tăng khả năng nhảy
 effect.minecraft.levitation	Levitation	飘浮	飄浮	懸浮	浮	浮遊	공중 부양	Bay lên
 effect.minecraft.luck	Luck	幸运	幸運	幸運	幸	幸運	행운	May mắn
 effect.minecraft.mining_fatigue	Mining Fatigue	挖掘疲劳	挖掘疲勞	挖掘疲勞	疲	採掘速度低下	채굴 피로	Đào chậm
 effect.minecraft.nausea	Nausea	反胃	嘔心	噁心	氣逆	吐き気	멀미	Choáng
 effect.minecraft.night_vision	Night Vision	夜视	夜視	夜視	夜視	暗視	야간 투시	Nhìn trong bóng tối
-effect.minecraft.oozing	Oozing	渗浆	滲漿	滲漿	漉膠	滲出	점액화	Rò rỉ
+effect.minecraft.oozing	Oozing	渗浆	滲漿	滲漿	渗膠	滲出	점액화	Rò rỉ
 effect.minecraft.poison	Poison	中毒	中毒	劇毒	毒	毒	독	Độc
 effect.minecraft.raid_omen	Raid Omen	袭击之兆	襲擊之兆	突襲之兆	襲祲	襲撃の予感	습격 징조	Điềm xâm lược
 effect.minecraft.regeneration	Regeneration	生命恢复	回復	回復	復甦	再生能力	재생	Hồi phục
@@ -1387,7 +1387,7 @@ entity.minecraft.minecart	Minecart	矿车	礦車	礦車	礦車	トロッコ	광�
 entity.minecraft.mooshroom	Mooshroom	哞菇	蘑菇牛	哞菇	牟蕈	ムーシュルーム	무시룸	Mooshroom
 entity.minecraft.mule	Mule	骡	騾	騾子	騾	ラバ	노새	Con la
 entity.minecraft.ocelot	Ocelot	豹猫	豹貓	山貓	虎貓	ヤマネコ	오실롯	Mèo rừng
-entity.minecraft.ominous_item_spawner	Ominous Item Spawner	不祥之物生成器	不祥物品生成器	不祥物品生成器	厄物源	不吉なアイテムスポナー	불길한 아이템 생성기	Lồng triệu hồi vật phẩm báo điềm
+entity.minecraft.ominous_item_spawner	Ominous Item Spawner	不祥之物生成器	不祥物品生成器	不祥物品生成器	厄源	不吉なアイテムスポナー	불길한 아이템 생성기	Lồng triệu hồi vật phẩm báo điềm
 entity.minecraft.painting	Painting	画	畫	繪畫	畫	絵画	그림	Bức họa
 entity.minecraft.panda	Panda	熊猫	熊貓	貓熊	貓熊	パンダ	판다	Gấu trúc
 entity.minecraft.parrot	Parrot	鹦鹉	鸚鵡	鸚鵡	鸚鵡	オウム	앵무새	Con vẹt
@@ -1422,7 +1422,7 @@ entity.minecraft.stray	Stray	流浪者	流浪者	流髑	流髑	ストレイ	스�
 entity.minecraft.strider	Strider	炽足兽	熾足獸	熾足獸	熾足獸	ストライダー	스트라이더	Kẻ sải bước
 entity.minecraft.tadpole	Tadpole	蝌蚪	蝌蚪	蝌蚪	蝌蚪	オタマジャクシ	올챙이	Nòng nọc
 entity.minecraft.text_display	Text Display	文本展示实体	文字展示實體	文字展示實體	文示	テキスト表示エンティティ	문자 표시	Hiển thị văn bản
-entity.minecraft.tnt	Primed TNT	被激活的TNT	點着嘅 TNT	點燃的 TNT	即燃炸藥	着火されたTNT	점화된 TNT	TNT đã châm ngòi
+entity.minecraft.tnt	Primed TNT	被激活的TNT	點着嘅 TNT	點燃的 TNT	既燃炸藥	着火されたTNT	점화된 TNT	TNT đã châm ngòi
 entity.minecraft.tnt_minecart	Minecart with TNT	TNT矿车	TNT 礦車	TNT 礦車	炸藥礦車	TNT付きのトロッコ	TNT가 실린 광산 수레	Xe mỏ có TNT
 entity.minecraft.trader_llama	Trader Llama	行商羊驼	商隊羊駝	商駝	商駝	商人のラマ	상인 라마	Lạc đà không bướu của thương nhân
 entity.minecraft.trident	Trident	三叉戟	三叉戟	三叉戟	三叉戟	トライデント	삼지창	Đinh ba
@@ -1688,7 +1688,7 @@ item.minecraft.lingering_potion.effect.levitation	Lingering Potion of Levitation
 item.minecraft.lingering_potion.effect.luck	Lingering Potion of Luck	滞留型幸运药水	滯留型幸運藥水	滯留 幸運藥水	幸滯劑	幸運の残留ポーション	잔류형 행운의 물약	Thuốc may mắn kéo dài
 item.minecraft.lingering_potion.effect.mundane	Mundane Lingering Potion	滞留型平凡的药水	滯留型平凡藥水	滯留 平凡藥水	凡滯劑	ありふれた残留ポーション	잔류형 평범한 물약	Thuốc trần tục kéo dài
 item.minecraft.lingering_potion.effect.night_vision	Lingering Potion of Night Vision	滞留型夜视药水	滯留型夜視藥水	滯留 夜視藥水	夜視滯劑	暗視の残留ポーション	잔류형 야간 투시의 물약	Thuốc nhìn trong bóng tối kéo dài
-item.minecraft.lingering_potion.effect.oozing	Lingering Potion of Oozing	滞留型渗浆药水	滯留型滲漿藥水	滯留 滲漿藥水	漉膠滯劑	滲出の残留ポーション	잔류형 점액화 물약	Thuốc rò rỉ kéo dài
+item.minecraft.lingering_potion.effect.oozing	Lingering Potion of Oozing	滞留型渗浆药水	滯留型滲漿藥水	滯留 滲漿藥水	滲膠滯劑	滲出の残留ポーション	잔류형 점액화 물약	Thuốc rò rỉ kéo dài
 item.minecraft.lingering_potion.effect.poison	Lingering Potion of Poison	滞留型剧毒药水	滯留型劇毒藥水	滯留 劇毒藥水	毒滯劑	毒の残留ポーション	잔류형 독 물약	Thuốc độc kéo dài
 item.minecraft.lingering_potion.effect.regeneration	Lingering Potion of Regeneration	滞留型再生药水	滯留型回復藥水	滯留 回復藥水	甦滯劑	再生の残留ポーション	잔류형 재생의 물약	Thuốc hồi phục kéo dài
 item.minecraft.lingering_potion.effect.slow_falling	Lingering Potion of Slow Falling	滞留型缓降药水	滯留型緩降藥水	滯留 緩降藥水	輕滯劑	低速落下の残留ポーション	잔류형 느린 낙하의 물약	Thuốc rơi chậm kéo dài
@@ -1797,7 +1797,7 @@ item.minecraft.potion.effect.levitation	Potion of Levitation	飘浮药水	飄浮
 item.minecraft.potion.effect.luck	Potion of Luck	幸运药水	幸運藥水	幸運藥水	幸劑	幸運のポーション	행운의 물약	Thuốc may mắn
 item.minecraft.potion.effect.mundane	Mundane Potion	平凡的药水	平凡藥水	平凡藥水	凡劑	ありふれたポーション	평범한 물약	Thuốc trần tục
 item.minecraft.potion.effect.night_vision	Potion of Night Vision	夜视药水	夜視藥水	夜視藥水	夜視劑	暗視のポーション	야간 투시의 물약	Thuốc nhìn trong bóng tối
-item.minecraft.potion.effect.oozing	Potion of Oozing	渗浆药水	滲漿藥水	滲漿藥水	漉膠劑	滲出のポーション	점액화 물약	Thuốc rò rỉ
+item.minecraft.potion.effect.oozing	Potion of Oozing	渗浆药水	滲漿藥水	滲漿藥水	滲膠劑	滲出のポーション	점액화 물약	Thuốc rò rỉ
 item.minecraft.potion.effect.poison	Potion of Poison	剧毒药水	劇毒藥水	劇毒藥水	毒劑	毒のポーション	독 물약	Thuốc độc
 item.minecraft.potion.effect.regeneration	Potion of Regeneration	再生药水	回復藥水	回復藥水	甦劑	再生のポーション	재생의 물약	Thuốc hồi phục
 item.minecraft.potion.effect.slow_falling	Potion of Slow Falling	缓降药水	緩降藥水	緩降藥水	輕劑	低速落下のポーション	느린 낙하의 물약	Thuốc rơi chậm
@@ -1884,7 +1884,7 @@ item.minecraft.splash_potion.effect.levitation	Splash Potion of Levitation	喷�
 item.minecraft.splash_potion.effect.luck	Splash Potion of Luck	喷溅型幸运药水	飛濺型幸運藥水	飛濺 幸運藥水	幸噴劑	幸運のスプラッシュポーション	투척용 행운의 물약	Thuốc may mắn có thể ném được
 item.minecraft.splash_potion.effect.mundane	Mundane Splash Potion	喷溅型平凡的药水	飛濺型平凡藥水	飛濺 平凡藥水	凡噴劑	ありふれたスプラッシュポーション	투척용 평범한 물약	Thuốc trần tục có thể ném được
 item.minecraft.splash_potion.effect.night_vision	Splash Potion of Night Vision	喷溅型夜视药水	飛濺型夜視藥水	飛濺 夜視藥水	夜視噴劑	暗視のスプラッシュポーション	투척용 야간 투시의 물약	Thuốc nhìn trong bóng tối có thể ném được
-item.minecraft.splash_potion.effect.oozing	Splash Potion of Oozing	喷溅型渗浆药水	飛濺型滲漿藥水	飛濺 滲漿藥水	漉膠噴劑	滲出のスプラッシュポーション	투척용 점액화 물약	Thuốc rò rỉ có thể ném được
+item.minecraft.splash_potion.effect.oozing	Splash Potion of Oozing	喷溅型渗浆药水	飛濺型滲漿藥水	飛濺 滲漿藥水	滲膠噴劑	滲出のスプラッシュポーション	투척용 점액화 물약	Thuốc rò rỉ có thể ném được
 item.minecraft.splash_potion.effect.poison	Splash Potion of Poison	喷溅型剧毒药水	飛濺型劇毒藥水	飛濺 劇毒藥水	毒噴劑	毒のスプラッシュポーション	투척용 독 물약	Thuốc độc có thể ném được
 item.minecraft.splash_potion.effect.regeneration	Splash Potion of Regeneration	喷溅型再生药水	飛濺型回復藥水	飛濺 回復藥水	甦噴劑	再生のスプラッシュポーション	투척용 재생의 물약	Thuốc hồi phục có thể ném được
 item.minecraft.splash_potion.effect.slow_falling	Splash Potion of Slow Falling	喷溅型缓降药水	飛濺型緩降藥水	飛濺 緩降藥水	輕噴劑	低速落下のスプラッシュポーション	투척용 느린 낙하의 물약	Thuốc rơi chậm có thể ném được
@@ -1930,7 +1930,7 @@ item.minecraft.tipped_arrow.effect.levitation	Arrow of Levitation	飘浮之箭	�
 item.minecraft.tipped_arrow.effect.luck	Arrow of Luck	幸运之箭	幸運之箭	幸運之箭	幸矢	幸運の矢	행운의 화살	Mũi tên may mắn
 item.minecraft.tipped_arrow.effect.mundane	Tipped Arrow	药箭	藥水箭	藥水箭	藥矢	ありふれた矢	물약이 묻은 화살	Mũi tên tẩm thuốc
 item.minecraft.tipped_arrow.effect.night_vision	Arrow of Night Vision	夜视之箭	夜視之箭	夜視之箭	夜視矢	暗視の矢	야간 투시의 화살	Mũi tên nhìn trong bóng tối
-item.minecraft.tipped_arrow.effect.oozing	Arrow of Oozing	渗浆之箭	滲漿之箭	滲漿之箭	漉膠矢	滲出の矢	점액화 화살	Mũi tên rò rỉ
+item.minecraft.tipped_arrow.effect.oozing	Arrow of Oozing	渗浆之箭	滲漿之箭	滲漿之箭	滲膠矢	滲出の矢	점액화 화살	Mũi tên rò rỉ
 item.minecraft.tipped_arrow.effect.poison	Arrow of Poison	剧毒之箭	劇毒之箭	劇毒之箭	毒矢	毒の矢	독 화살	Mũi tên độc
 item.minecraft.tipped_arrow.effect.regeneration	Arrow of Regeneration	再生之箭	回復之箭	回復之箭	甦矢	再生の矢	재생의 화살	Mũi tên hồi phục
 item.minecraft.tipped_arrow.effect.slow_falling	Arrow of Slow Falling	缓降之箭	緩降之箭	緩降之箭	輕矢	低速落下の矢	느린 낙하의 화살	Mũi tên rơi chậm
