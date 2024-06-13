@@ -20,7 +20,7 @@ advancements.adventure.ol_betsy.title	Ol' Betsy	扣下悬刀	扣下扳機	扣下
 advancements.adventure.overoverkill.title	Over-Overkill	天赐良击	揼到七彩	天賜良擊	痛貫天靈	超・やり過ぎ	하늘에서 철퇴가 내린다면	Đồ đồ sát
 advancements.adventure.play_jukebox_in_meadows.title	Sound of Music	音乐之声	仙樂飄飄處處聞	真善美	此曲衹應天上有	サウンド・オブ・ミュージック	사운드 오브 뮤직	Giai điệu hạnh phúc
 advancements.adventure.read_power_from_chiseled_bookshelf.title	The Power of Books	知识就是力量	開卷有益	知書就是力量	學富五櫥	本は力なり	책의 힘	Sức mạnh của những quyển sách
-advancements.adventure.revaulting.title	Revaulting	宝经磨炼	逢凶化吉	逢凶化吉	礪煉呈華	怪錠	불길도 길이다	Lại mở hòm báu
+advancements.adventure.revaulting.title	Revaulting	宝经磨炼	逢凶化吉	逢凶化吉	礪煉呈華	怪錠	불길에 뛰어드는 나	Lại mở hòm báu
 advancements.adventure.root.title	Adventure	冒险	冒險	冒險	歷險	冒険	모험	Phiêu lưu
 advancements.adventure.salvage_sherd.title	Respecting the Remnants	探古寻源	探古尋源	探古尋源	零珠斷璧	文明の面影に敬意を	소중한 잔해	Tôn trọng những tàn tích
 advancements.adventure.shoot_arrow.title	Take Aim	瞄准目标	瞄準目標	瞄準	審顧挽弦	狙いを定めて	정조준	Nhắm mục tiêu
@@ -37,7 +37,7 @@ advancements.adventure.trade.title	What a Deal!	成交！	單生意幾着數喎�
 advancements.adventure.trim_with_all_exclusive_armor_patterns.title	Smithing with Style	匠心独具	獨具一格	匠心獨具	珠圍翠繞	オシャレな鍛冶職人	형판 좋은 대장장이	Rèn phải có phong cách
 advancements.adventure.trim_with_any_armor_pattern.title	Crafting a New Look	旧貌锻新颜	搞搞新花臣	鍛然一新	妝點一新	おニューの衣装	유행의 선도자	Biến tấu vẻ ngoài
 advancements.adventure.two_birds_one_arrow.title	Two Birds, One Arrow	一箭双雕	一箭雙雕	一箭雙鵰	一箭雙鵰	一石二鳥	일전쌍조	Một mũi tên trúng hai đích
-advancements.adventure.under_lock_and_key.title	Under Lock and Key	珍藏密敛	鎖藏珍寶	妥善保管	金繩玉鎖	錠と鍵に隠されしもの	밀어서 잠금해제	Báu vật trong hòm khoá
+advancements.adventure.under_lock_and_key.title	Under Lock and Key	珍藏密敛	鎖藏珍寶	妥善保管	金繩玉鎖	錠と鍵に隠されしもの	열쇠로 잠금 해제	Báu vật trong hòm khoá
 advancements.adventure.very_very_frightening.title	Very Very Frightening	魔女审判	天打雷劈	非常驚世駭俗	一震之威	とてもとても恐ろしい	동에 번쩍 서에 번쩍	Rất rất kinh khủng
 advancements.adventure.voluntary_exile.title	Voluntary Exile	自我放逐	自我放逐	自我放逐	禍不單行	自主的な亡命	자진 유배	Tình nguyện bị lưu đày
 advancements.adventure.walk_on_powder_snow_with_leather_boots.title	Light as a Rabbit	轻功雪上飘	輕功雪上飄	輕功雪上飄	履雪無痕	ウサギのように軽く	토끼처럼 가볍게	Nhẹ tựa lông hồng
@@ -1106,7 +1106,7 @@ block.minecraft.torch	Torch	火把	火炬	火把	炬	松明	횃불	Đuốc
 block.minecraft.torchflower	Torchflower	火把花	火炬花	火把花	炬蓮	トーチフラワー	횃불꽃	Hoa đuốc
 block.minecraft.torchflower_crop	Torchflower Crop	火把花植株	火炬花植株	火把花植株	炬蓮株	トーチフラワー	횃불꽃 작물	Cây hoa đuốc
 block.minecraft.trapped_chest	Trapped Chest	陷阱箱	陷阱箱	陷阱儲物箱	機關箱	トラップチェスト	덫 상자	Rương bị kẹt
-block.minecraft.trial_spawner	Trial Spawner	试炼刷怪笼	試煉生怪籠	試煉生怪磚	煉孳衍籠	トライアルスポナー	시련 생성기	Lồng triệu hồi thử thách
+block.minecraft.trial_spawner	Trial Spawner	试炼刷怪笼	試煉生怪籠	試煉生怪磚	煉孳衍籠	試練のスポナー	시련 생성기	Lồng triệu hồi thử thách
 block.minecraft.tripwire	Tripwire	绊线	撠線	絆線	絆線	トリップワイヤー	철사 덫	Dây bẫy
 block.minecraft.tripwire_hook	Tripwire Hook	绊线钩	撠線鈎	絆線鉤	絆綫鉤	トリップワイヤーフック	철사 덫 갈고리	Móc dây bẫy
 block.minecraft.tube_coral	Tube Coral	管珊瑚	管珊瑚	管珊瑚	管珊瑚	クダサンゴ	관 산호	San hô ống tròn
@@ -1948,7 +1948,7 @@ item.minecraft.tnt_minecart	Minecart with TNT	TNT矿车	TNT 礦車	TNT 礦車	�
 item.minecraft.torchflower_seeds	Torchflower Seeds	火把花种子	火炬花種子	火把花種子	炬蓮種	トーチフラワーの種	횃불꽃 씨앗	Hạt hoa đuốc
 item.minecraft.totem_of_undying	Totem of Undying	不死图腾	不死圖騰	不死圖騰	保命符	不死のトーテム	불사의 토템	Vật tổ trường sinh
 item.minecraft.trader_llama_spawn_egg	Trader Llama Spawn Egg	行商羊驼刷怪蛋	商隊羊駝 生成蛋	商駝 生怪蛋	孳商駝之卵	商人のラマのスポーンエッグ	상인 라마 생성 알	Trứng sinh ra Lạc đà không bướu của thương nhân
-item.minecraft.trial_key	Trial Key	试炼钥匙	試煉鎖匙	試煉鑰匙	煉管	トライアルキー	시련 열쇠	Chìa khóa thử thách
+item.minecraft.trial_key	Trial Key	试炼钥匙	試煉鎖匙	試煉鑰匙	煉管	試練の鍵	시련 열쇠	Chìa khóa thử thách
 item.minecraft.trident	Trident	三叉戟	三叉戟	三叉戟	三叉戟	トライデント	삼지창	Đinh ba
 item.minecraft.tropical_fish	Tropical Fish	热带鱼	熱帶魚	熱帶魚	賞魚	熱帯魚	열대어	Cá nhiệt đới
 item.minecraft.tropical_fish_bucket	Bucket of Tropical Fish	热带鱼桶	熱帶魚桶	熱帶魚桶	賞魚桶	熱帯魚入りバケツ	열대어가 담긴 양동이	Xô cá nhiệt đới
