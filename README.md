@@ -94,7 +94,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 主页面背景色为 ${\color{#f9f2e0}\blacksquare}$ `#f9f2e0`，并针对不同类别的字符串使用了不同颜色的表格。
 
-下方首先列出的颜色为表格边框颜色；表格背景颜色为20%透明度的边框颜色，叠加页面背景色后的等效颜色以括号在后加注。
+下方首先列出的颜色为表格边框颜色；表格背景颜色为80%透明度的边框颜色，叠加页面背景色后的等效颜色以括号在后加注。
 
 - 进度： ${\color{#a02b93}\blacksquare}$ `#a02b93`（ ${\color{#e7cad1}\blacksquare}$ `#e7cad1`）
 
