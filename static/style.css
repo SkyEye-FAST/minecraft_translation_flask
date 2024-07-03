@@ -280,16 +280,16 @@ body.dark-mode {
 .collapsible {
     position: relative;
     padding: 10px;
-    transition: max-height 0.5s ease-in-out;
 }
 
 .collapsible .content {
     max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .collapsible.collapsed .content {
     max-height: 0;
-    overflow: hidden;
 }
 
 legend {
@@ -304,7 +304,7 @@ legend {
     background: none;
     border: none;
     outline: none;
-    transition: transform 0.5s ease-in-out; /* 统一 transition */
+    transition: transform 0.5s ease-in-out;
 }
 
 .collapsed .toggle-button .material-symbols-outlined {
