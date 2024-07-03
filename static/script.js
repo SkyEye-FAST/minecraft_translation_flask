@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fieldsets.forEach(fieldset => {
         const button = fieldset.querySelector(".toggle-button");
         const fieldsetId = fieldset.id;
-        const isCollapsed = localStorage.getItem(fieldsetId) === "false";
+        const isCollapsed = localStorage.getItem(fieldsetId) === "true";
 
         if (isCollapsed) {
             fieldset.classList.add("collapsed");
