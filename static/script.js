@@ -1,4 +1,4 @@
-t// 判断是否需要显示查询语言
+// 判断是否需要显示查询语言
 document.getElementById('query-mode').addEventListener('change', function () {
     var queryLangLabel = document.querySelector('label[for="query-lang"]');
     var queryLangSelect = document.querySelector('select[name="query-lang"]');
