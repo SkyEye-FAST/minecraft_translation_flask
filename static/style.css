@@ -283,13 +283,14 @@ body.dark-mode {
 }
 
 .collapsible .content {
-    max-height: 0;
-    overflow: hidden;
+    max-height: 1000px;
     transition: max-height 0.5s ease-out;
 }
 
 .collapsible.collapsed .content {
-    max-height: 1000px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
 }
 
 legend {
