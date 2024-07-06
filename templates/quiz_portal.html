@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft译名认知测验</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_portal.css', v=1) }}" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Minecraft译名认知测验</div>
+        <button class="btn-1" onclick="window.location.href='quiz/{{ random_code }}'">随机选择题组（刷新页面以重新选择）</button>
+        <div class="input-container">
+            <input type="text" id="inputText" placeholder="输入题组编号…">
+            <button class="btn-2" onclick="redirectToInput()">进入</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToInput() {
+            var inputContent = document.getElementById('inputText').value;
+            var redirectTo = 'quiz/' + inputContent;
+            window.location.href = redirectTo;
+        }
+    </script>
+</body>
+
+</html>

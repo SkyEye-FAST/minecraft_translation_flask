@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft译名认知测验</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css', v=1) }}" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <div id="sourceText" class="source"></div>
+            <div id="keyText" class="key"></div>
+        </div>
+        <div id="boxes" class="zh-cn"></div>
+        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…">
+    </div>
+    <script>
+        let currentQuestionIndex = 0;
+        let questions = {{ questions | tojson | safe }};
+        let questionKeys = Object.keys(questions);
+
+        function createBoxes(length) {
+            const boxesDiv = document.getElementById('boxes');
+            boxesDiv.innerHTML = '';
+            for (let i = 0; i < length; i++) {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.id = 'box' + (i + 1);
+                boxesDiv.appendChild(box);
+            }
+        }
+
+        function loadQuestion() {
+            const inputBox = document.getElementById('inputBox');
+            inputBox.value = '';
+
+            const currentKey = questionKeys[currentQuestionIndex];
+            const question = questions[currentKey];
+            const sourceText = question.source;
+            const translationText = question.translation;
+
+            document.getElementById('sourceText').innerText = question.source;
+            document.getElementById('keyText').innerText = currentKey;
+
+            const questionLength = translationText.length;
+            inputBox.maxLength = questionLength;
+            createBoxes(questionLength);
+            updateBoxes();
+        }
+
+        function updateBoxes() {
+            const input = document.getElementById('inputBox').value;
+            const currentKey = questionKeys[currentQuestionIndex];
+            const correctAnswer = questions[currentKey].translation;
+
+            for (let i = 0; i < correctAnswer.length; i++) {
+                const box = document.getElementById('box' + (i + 1));
+                box.textContent = input[i] || '';
+                if (input[i] === undefined) {
+                    box.style.backgroundColor = '#9ca3af25';
+                } else if (input[i] === correctAnswer[i]) {
+                    box.style.backgroundColor = '#79b851';
+                } else if (correctAnswer.includes(input[i])) {
+                    box.style.backgroundColor = '#f3c237';
+                } else {
+                    box.style.backgroundColor = '#9ca3af25';
+                }
+            }
+
+            if (input === correctAnswer) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questionKeys.length) {
+                    loadQuestion();
+                } else {
+                    alert('所有题目已完成!');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadQuestion);
+    </script>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
 from os import getenv
 from datetime import datetime
 from typing import Optional
+from random import sample
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
@@ -14,7 +15,7 @@ import geoip2.database
 import geoip2.errors
 
 from app_base import P
-from app_init import data, get_translation
+from app_init import data, id_map, get_translation
 
 # 初始化 Flask 应用
 flask_app = Flask(__name__)
@@ -165,6 +166,34 @@ def table() -> str:
     date_tz = datetime.now(tz=tzinfo).date()
 
     return render_template("table.html", date_str=date_tz)
+
+
+@flask_app.route("/quiz")
+def quiz_portal():
+    """测验门户页面路由"""
+    random_keys = sample(list(id_map.keys()), 10)
+    code = "".join(random_keys)
+    return render_template("quiz_portal.html", random_code=code)
+
+
+@flask_app.route("/quiz/<code>")
+def quiz_sub(code):
+    """测验子页面路由"""
+
+    if len(code) != 30:
+        return None
+
+    code_list = [code[i : i + 3] for i in range(0, 30, 3)]
+    if any(seg not in id_map for seg in code_list):
+        return None
+
+    keys = [id_map[seg] for seg in code_list]
+    questions = {
+        key: {"source": data["en_us"][key], "translation": data["zh_cn"][key]}
+        for key in keys
+    }
+
+    return render_template("quiz_sub.html", questions=questions)
 
 
 @flask_app.route("/favicon.ico")

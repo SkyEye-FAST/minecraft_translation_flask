@@ -1,0 +1,55 @@
+@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+SC:wght@900&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f2e0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    width: 600px;
+    border-radius: 8px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn-1 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0 20px 0;
+    padding: 9px;
+}
+
+.btn-2 {
+    margin-left: 10px;
+    padding: 9px 20px;
+}
+
+.title {
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
+    font-size: 2.25em;
+    font-weight: 900;
+    text-align: center;
+}
