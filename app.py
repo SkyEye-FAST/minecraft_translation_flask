@@ -4,6 +4,7 @@
 from os import getenv
 from datetime import datetime
 from typing import Optional
+from random import sample
 
 from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
@@ -167,9 +168,18 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
+@flask_app.route("/quiz")
+def quiz_portal():
+    """测验门户页面路由"""
+    random_keys = sample(list(id_map.keys()), 10)
+    code = "".join(random_keys)
+    return render_template("quiz_portal.html", random_code=code)
+
+
 @flask_app.route("/quiz/<code>")
-def quiz(code):
-    """测验页面路由"""
+def quiz_sub(code):
+    """测验子页面路由"""
+
     if len(code) != 30:
         return None
 
@@ -183,7 +193,7 @@ def quiz(code):
         for key in keys
     }
 
-    return render_template("quiz.html", questions=questions)
+    return render_template("quiz_sub.html", questions=questions)
 
 
 @flask_app.route("/favicon.ico")
