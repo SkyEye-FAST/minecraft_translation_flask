@@ -5,7 +5,7 @@ from os import getenv
 from datetime import datetime
 from typing import Optional
 
-from flask import Flask, session, render_template, request, send_from_directory, jsonify
+from flask import Flask, session, render_template, request, send_from_directory
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField
 from flask_babel import Babel, lazy_gettext as _l

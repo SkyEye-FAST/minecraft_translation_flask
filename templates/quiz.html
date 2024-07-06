@@ -4,69 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft 译名认知测验</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f9f2e0;
-            margin: 0;
-            color: #000;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .box {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            border: 2px solid transparent;
-            border-radius: 8px;
-            margin: 5px;
-            font-size: 44px;
-            text-align: center;
-            line-height: 100px;
-            vertical-align: top;
-            box-sizing: border-box;
-            background-color: #9ca3af25;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-        }
-
-        input[type="text"] {
-            margin-top: 20px;
-            width: 300px;
-            height: 60px;
-            font-size: 24px;
-            text-align: center;
-            border: 2px solid #9ca3af1a;
-            border-radius: 8px;
-            box-sizing: border-box;
-            background-color: transparent;
-            color: #000;
-            font-family: Arial, sans-serif;
-        }
-
-        .info {
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <title>Minecraft译名认知测验</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css', v=1) }}" type="text/css">
 </head>
 
 <body>
     <div class="container">
         <div class="info">
-            <div id="sourceText"></div>
-            <div id="keyText"></div>
+            <div id="sourceText" class="source"></div>
+            <div id="keyText" class="key"></div>
         </div>
-        <div id="boxes"></div>
-        <input type="text" id="inputBox" oninput="updateBoxes()" placeholder="在此输入译名…">
+        <div id="boxes" class="zh-cn"></div>
+        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…">
     </div>
     <script>
         let currentQuestionIndex = 0;
