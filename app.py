@@ -167,38 +167,23 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
-@flask_app.route("/id/<code>/")
-def id_test(code):
-    """测验界面路由"""
-
+@flask_app.route("/quiz/<code>")
+def quiz(code):
+    """测验页面路由"""
     if len(code) != 30:
-        return "404"
+        return None
 
     code_list = [code[i : i + 3] for i in range(0, 30, 3)]
-
     if any(seg not in id_map for seg in code_list):
-        return "404"
+        return None
 
-    output_keys = {seg: id_map[seg] for seg in code_list}
+    keys = [id_map[seg] for seg in code_list]
+    questions = {
+        key: {"source": data["en_us"][key], "translation": data["zh_cn"][key]}
+        for key in keys
+    }
 
-    return output_keys
-
-
-questions = {
-    "item.minecraft.apple": {"source": "Apple", "translation": "苹果"},
-    "item.minecraft.banana": {"source": "Banana", "translation": "香蕉"},
-    "item.minecraft.cherry": {"source": "Cherry", "translation": "樱桃"}
-}
-
-
-@flask_app.route("/quiz")
-def quiz():
     return render_template("quiz.html", questions=questions)
-
-
-@flask_app.route("/questions")
-def get_questions():
-    return jsonify({"questions": questions})
 
 
 @flask_app.route("/favicon.ico")
