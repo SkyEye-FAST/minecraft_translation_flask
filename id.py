@@ -5,39 +5,42 @@ import hashlib
 import json
 from typing import Dict
 
-from app_base import P
-from app_init import data
-
 BASE62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
 
 def sha256_to_base62(input_string: str, length: int = 3) -> str:
-    """生成SHA-256哈希值，并用Base62映射压缩"""
+    """
+    生成SHA-256哈希值，并用Base62映射压缩为指定长度的字符串。
 
-    # 计算SHA-256哈希值
+    Args:
+        input_string (str): 需要生成哈希值的输入字符串。
+        length (int): 生成的Base62字符串的长度，默认为3。
+
+    Returns:
+        str: 压缩后的Base62字符串。
+    """
+
     sha256_hash = hashlib.sha256(input_string.encode()).digest()
-
-    # 将哈希值转换为整数，并映射到较小范围内
     hash_int = int.from_bytes(sha256_hash, byteorder="big")
-    base62_length = len(BASE62)
     base62_string = ""
 
-    # 不断对base62_length取模，并将结果转换为相应字符
     while hash_int > 0:
-        remainder = hash_int % base62_length
+        hash_int, remainder = divmod(hash_int, len(BASE62))
         base62_string = BASE62[remainder] + base62_string
-        hash_int = hash_int // base62_length
 
-    # 确保字符串长度为指定的长度（不足则填充）
-    base62_string = base62_string.zfill(length)
-
-    return base62_string[:length]
+    return base62_string.zfill(length)[:length]
 
 
-code_to_key_map: Dict[str, str] = {sha256_to_base62(key): key for key in data["en_us"]}
+if __name__ == "__main__":
+    from app_base import P
+    from app_init import data
 
-for code, key in code_to_key_map.items():
-    print(f"编码: {code} -> 键: {key}")
+    code_to_key_map: Dict[str, str] = {
+        sha256_to_base62(key): key for key in data["en_us"]
+    }
 
-with open(P / "static" / "id.json", "w", encoding="utf-8") as f:
-    json.dump(code_to_key_map, f, ensure_ascii=False, indent=4)
+    for code, key in code_to_key_map.items():
+        print(f"编码: {code} -> 键: {key}")
+
+    with open(P / "static" / "id.json", "w", encoding="utf-8") as f:
+        json.dump(code_to_key_map, f, ensure_ascii=False, indent=4)
