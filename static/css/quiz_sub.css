@@ -64,3 +64,22 @@ input[type="text"] {
 .zh-cn {
     font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
 }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .source {
+        font-size: 1.5em;
+    }
+
+    .key {
+        font-size: 0.75em
+    }
+
+    .box {
+        width: 75px;
+        height: 75px;
+        margin: 3px;
+        font-size: 32px;
+        line-height: 75px;
+    }
+}

@@ -53,3 +53,16 @@ button {
     font-weight: 900;
     text-align: center;
 }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .btn-1,
+    .btn-2,
+    input[type="text"] {
+        font-size: 14px;
+    }
+}
