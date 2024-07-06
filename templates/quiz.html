@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft 译名认知测验</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f2e0;
+            margin: 0;
+            color: #000;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 44px;
+            text-align: center;
+            line-height: 100px;
+            vertical-align: top;
+            box-sizing: border-box;
+            background-color: #9ca3af25;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            margin-top: 20px;
+            width: 300px;
+            height: 60px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid #9ca3af1a;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: transparent;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .info {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <div id="sourceText"></div>
+            <div id="keyText"></div>
+        </div>
+        <div id="boxes"></div>
+        <input type="text" id="inputBox" oninput="updateBoxes()" placeholder="在此输入译名…">
+    </div>
+    <script>
+        let currentQuestionIndex = 0;
+        let questions = {{ questions | tojson | safe }};
+        let questionKeys = Object.keys(questions);
+
+        function createBoxes(length) {
+            const boxesDiv = document.getElementById('boxes');
+            boxesDiv.innerHTML = '';
+            for (let i = 0; i < length; i++) {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.id = 'box' + (i + 1);
+                boxesDiv.appendChild(box);
+            }
+        }
+
+        function loadQuestion() {
+            const inputBox = document.getElementById('inputBox');
+            inputBox.value = '';
+
+            const currentKey = questionKeys[currentQuestionIndex];
+            const question = questions[currentKey];
+            const sourceText = question.source;
+            const translationText = question.translation;
+
+            document.getElementById('sourceText').innerText = question.source;
+            document.getElementById('keyText').innerText = currentKey;
+
+            const questionLength = translationText.length;
+            inputBox.maxLength = questionLength;
+            createBoxes(questionLength);
+            updateBoxes();
+        }
+
+        function updateBoxes() {
+            const input = document.getElementById('inputBox').value;
+            const currentKey = questionKeys[currentQuestionIndex];
+            const correctAnswer = questions[currentKey].translation;
+
+            for (let i = 0; i < correctAnswer.length; i++) {
+                const box = document.getElementById('box' + (i + 1));
+                box.textContent = input[i] || '';
+                if (input[i] === undefined) {
+                    box.style.backgroundColor = '#9ca3af25';
+                } else if (input[i] === correctAnswer[i]) {
+                    box.style.backgroundColor = '#79b851';
+                } else if (correctAnswer.includes(input[i])) {
+                    box.style.backgroundColor = '#f3c237';
+                } else {
+                    box.style.backgroundColor = '#9ca3af25';
+                }
+            }
+
+            if (input === correctAnswer) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questionKeys.length) {
+                    loadQuestion();
+                } else {
+                    alert('所有题目已完成!');
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadQuestion);
+    </script>
+</body>
+
+</html>

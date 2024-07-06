@@ -21,7 +21,7 @@ def sha256_to_base62(input_string: str, length: int = 3) -> str:
     """
 
     sha256_hash = hashlib.sha256(input_string.encode()).digest()
-    hash_int = int.from_bytes(sha256_hash, byteorder="big")
+    hash_int = int.from_bytes(sha256_hash)
     base62_string = ""
 
     while hash_int > 0:
@@ -32,7 +32,7 @@ def sha256_to_base62(input_string: str, length: int = 3) -> str:
 
 
 if __name__ == "__main__":
-    from app_base import P
+    from app_base import ID_MAP_PATH
     from app_init import data
 
     code_to_key_map: Dict[str, str] = {
@@ -42,5 +42,5 @@ if __name__ == "__main__":
     for code, key in code_to_key_map.items():
         print(f"编码: {code} -> 键: {key}")
 
-    with open(P / "static" / "id.json", "w", encoding="utf-8") as f:
+    with open(ID_MAP_PATH, "w", encoding="utf-8") as f:
         json.dump(code_to_key_map, f, ensure_ascii=False, indent=4)

@@ -4,7 +4,7 @@
 import json
 from typing import Dict
 
-from app_base import LANG_DIR, LANG_DIR_VALID, language_list
+from app_base import LANG_DIR, LANG_DIR_VALID, ID_MAP_PATH, language_list
 
 # 是否忽略补充字符串
 IGNORE_SUPPLEMENTS: bool = True
@@ -14,6 +14,10 @@ data: Dict[str, Dict[str, str]] = {}
 for lang_name in language_list:
     with open(LANG_DIR_VALID / f"{lang_name}.json", "r", encoding="utf-8") as f:
         data[lang_name] = json.load(f)
+
+# 读取ID映射
+with open(ID_MAP_PATH, "r", encoding="utf-8") as f:
+    id_map = json.load(f)
 
 # 读取补充字符串
 if not IGNORE_SUPPLEMENTS:

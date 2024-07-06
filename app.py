@@ -5,7 +5,7 @@ from os import getenv
 from datetime import datetime
 from typing import Optional
 
-from flask import Flask, session, render_template, request, send_from_directory
+from flask import Flask, session, render_template, request, send_from_directory, jsonify
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField
 from flask_babel import Babel, lazy_gettext as _l
@@ -14,7 +14,7 @@ import geoip2.database
 import geoip2.errors
 
 from app_base import P
-from app_init import data, get_translation
+from app_init import data, id_map, get_translation
 
 # 初始化 Flask 应用
 flask_app = Flask(__name__)
@@ -165,6 +165,40 @@ def table() -> str:
     date_tz = datetime.now(tz=tzinfo).date()
 
     return render_template("table.html", date_str=date_tz)
+
+
+@flask_app.route("/id/<code>/")
+def id_test(code):
+    """测验界面路由"""
+
+    if len(code) != 30:
+        return "404"
+
+    code_list = [code[i : i + 3] for i in range(0, 30, 3)]
+
+    if any(seg not in id_map for seg in code_list):
+        return "404"
+
+    output_keys = {seg: id_map[seg] for seg in code_list}
+
+    return output_keys
+
+
+questions = {
+    "item.minecraft.apple": {"source": "Apple", "translation": "苹果"},
+    "item.minecraft.banana": {"source": "Banana", "translation": "香蕉"},
+    "item.minecraft.cherry": {"source": "Cherry", "translation": "樱桃"}
+}
+
+
+@flask_app.route("/quiz")
+def quiz():
+    return render_template("quiz.html", questions=questions)
+
+
+@flask_app.route("/questions")
+def get_questions():
+    return jsonify({"questions": questions})
 
 
 @flask_app.route("/favicon.ico")
