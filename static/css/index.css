@@ -13,15 +13,27 @@
 /* 基础样式 */
 body {
     background-color: #f9f2e0;
+    color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* 链接样式 */
 .github-link,
 .table-link {
+    position: absolute;
+    top: 15px;
+}
+
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #f9f2e0;
+}
+
+.github-link, .table-link {
     position: absolute;
     top: 15px;
 }
@@ -34,13 +46,7 @@ body {
 .table-link {
     left: 15px;
     font-size: 48px;
-    color: #000;
     transition: color 0.3s ease;
-}
-
-.github-icon {
-    width: 48px;
-    height: auto;
 }
 
 .material-symbols-outlined.md-48 {
@@ -241,23 +247,7 @@ table th {
     display: none;
 }
 
-/* light */
-body {
-    background-color: #f9f2e0;
-    color: #000;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* dark */
-body.dark-mode {
-    background-color: #2e2e2e;
-    color: #f9f2e0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.invert {
-    filter: invert(1);
-}
+/* light/dark mode */
 
 .mode-toggle {
     position: absolute;
@@ -274,6 +264,10 @@ body.dark-mode {
 #mode-icon {
     font-size: 48px;
     color: inherit;
+}
+
+.invert {
+    filter: invert(1);
 }
 
 /* collapse */
