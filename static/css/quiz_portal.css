@@ -17,6 +17,28 @@ body {
     border-radius: 8px;
 }
 
+a {
+    font-size: larger;
+    color: #000;
+}
+
+.github-icon {
+    width: 2.25ex;
+    height: inherit;
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+}
+
+.material-symbols-outlined.b {
+    color: #000;
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+}
+
 .input-container {
     display: flex;
     align-items: center;

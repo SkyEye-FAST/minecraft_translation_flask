@@ -75,16 +75,19 @@ input[type="text"] {
 
 .summary {
     display: none;
+    text-align: center;
+    background-color: white;
+    padding: 20px 10px;
+    width: 400px;
+    border-radius: 8px;
 }
 
 .summary button {
-    margin-top: 20px;
-    font-size: 32px;
-    padding: 10px 40px;
-    border: none;
-    border-radius: 8px;
-    background-color: #79b851;
-    color: #fff;
+    width: 60%;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 15px auto 0;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -139,5 +142,13 @@ table tr td:nth-child(2) {
 
     .zh-cn.title {
         font-size: 2em;
+    }
+
+    .summary {
+        padding: 20px 0 10px;
+    }
+
+    .summary button {
+        font-size: 16px;
     }
 }
