@@ -3,6 +3,7 @@ $(document).ready(function () {
     const questions = questionsData;
     const questionKeys = Object.keys(questions);
     const delayBetweenQuestions = 800;
+    const fadeDuration = 300;
 
     function createBoxes(length) {
         const boxesDiv = $('#boxes').empty();
@@ -21,7 +22,7 @@ $(document).ready(function () {
         const sourceText = question.source;
         const translationText = question.translation;
 
-        $('#info').fadeOut(300, function () {
+        $('#info').fadeOut(fadeDuration, function () {
             $('#sourceText').text(sourceText);
             $('#keyText').text(currentKey);
 
@@ -30,7 +31,7 @@ $(document).ready(function () {
             createBoxes(questionLength);
             updateBoxes();
 
-            $(this).fadeIn(300);
+            $(this).fadeIn(fadeDuration);
         });
     }
 
@@ -66,7 +67,7 @@ $(document).ready(function () {
     }
 
     function showSummary() {
-        $('#info, #inputBox').fadeOut(300, function () {
+        $('#info, #inputBox').fadeOut(fadeDuration, function () {
             $(this).hide();
             const summaryTableBody = $('#summaryBody').empty();
 
@@ -80,7 +81,7 @@ $(document).ready(function () {
                 $('<td>').text(translationText).appendTo(row);
             });
 
-            $('#summary').fadeIn(300);
+            $('#summary').fadeIn(fadeDuration);
         });
     }
 

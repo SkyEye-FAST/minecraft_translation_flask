@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft 译名认知测验</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
         const questionsData = {{ questions | tojson | safe }};
         const randomCode = "{{ random_code }}";
