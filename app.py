@@ -167,12 +167,12 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
-QUIZ_NUM = 2  # 测验题组含题目数量
+QUESTION_AMOUNT = 10  # 测验题组含题目数量
 
 
 def get_questions() -> str:
     """获取题目"""
-    random_keys = sample(list(id_map.keys()), QUIZ_NUM)
+    random_keys = sample(list(id_map.keys()), QUESTION_AMOUNT)
     code = "".join(random_keys)
     return code
 
@@ -187,10 +187,10 @@ def quiz_portal() -> str:
 def quiz_sub(code) -> str:
     """测验子页面路由"""
 
-    if len(code) != 3 * QUIZ_NUM:
+    if len(code) != 3 * QUESTION_AMOUNT:
         return None
 
-    code_list = [code[i : i + 3] for i in range(0, 3 * QUIZ_NUM, 3)]
+    code_list = [code[i : i + 3] for i in range(0, 3 * QUESTION_AMOUNT, 3)]
     if any(seg not in id_map for seg in code_list):
         return None
 
