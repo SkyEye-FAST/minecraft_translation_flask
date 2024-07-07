@@ -33,9 +33,9 @@ body.dark-mode {
     color: #f9f2e0;
 }
 
-.github-link, .table-link {
-    position: absolute;
-    top: 15px;
+.github-icon {
+    width: 48px;
+    height: auto;
 }
 
 .github-link {

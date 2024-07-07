@@ -9,6 +9,7 @@ $(document).ready(function () {
 
     // 更新亮暗模式相关的元素
     function updateModeElements(isDarkMode) {
+        $('body').css('display', 'flex');  // 显示页面
         const icon = $('#mode-icon');
         const button = $('#mode-switch');
         const links = $('.table-link, .toggle-button');
