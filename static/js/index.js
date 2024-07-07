@@ -12,7 +12,7 @@ $(document).ready(function () {
         $('body').css('display', 'flex');  // 显示页面
         const icon = $('#mode-icon');
         const button = $('#mode-switch');
-        const links = $('.table-link, .toggle-button');
+        const links = $('.table-link, .quiz-link, .toggle-button');
         const svgContainer = $('#svg-container');
 
         if (isDarkMode) {

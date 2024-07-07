@@ -23,7 +23,8 @@ body {
 
 /* 链接样式 */
 .github-link,
-.table-link {
+.table-link,
+.quiz-link {
     position: absolute;
     top: 15px;
 }
@@ -45,6 +46,12 @@ body.dark-mode {
 
 .table-link {
     left: 15px;
+    font-size: 48px;
+    transition: color 0.3s ease;
+}
+
+.quiz-link {
+    left: 75px;
     font-size: 48px;
     transition: color 0.3s ease;
 }
