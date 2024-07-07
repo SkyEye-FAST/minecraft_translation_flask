@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft译名认知测验</title>
+    <link href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
@@ -33,9 +35,39 @@
                 </thead>
                 <tbody id="summaryBody"></tbody>
             </table>
+            <div class="code-container">
+                <div class="code" id="last-segment"></div>
+                <span class="material-symbols-outlined btn" id="copy-button">content_copy</span>
+            </div>
             <button id="restartButton">再来一组</button>
             <button onclick="window.location.href='../quiz'">返回测验主页</button>
         </div>
+
+        <script>
+            var currentUrl = window.location.href;
+            var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
+            var lastSegment = match ? match[1] : '';
+            document.getElementById('last-segment').textContent = lastSegment;
+
+            $(document).ready(function () {
+                $('#copy-button').click(function () {
+                    var $copyButton = $(this);
+                    var $lastSegment = $('#last-segment');
+                    var lastSegmentContent = $lastSegment.text();
+
+                    var $tempTextarea = $('<textarea>');
+                    $('body').append($tempTextarea);
+                    $tempTextarea.val(lastSegmentContent).select();
+                    document.execCommand('copy');
+                    $tempTextarea.remove();
+
+                    $copyButton.text('check');
+                    setTimeout(function () {
+                        $copyButton.text('content_copy');
+                    }, 1500);
+                });
+            });
+        </script>
     </div>
 </body>
 

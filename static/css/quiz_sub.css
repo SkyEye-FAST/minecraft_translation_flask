@@ -91,6 +91,25 @@ input[type="text"] {
     cursor: pointer;
 }
 
+.code-container {
+    margin: 0 auto;
+    padding: 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.code {
+    padding: 0 5px;
+    font-size: 16px;
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
+}
+
+.material-symbols-outlined.btn {
+    cursor: pointer;
+}
+
 /* 表格 */
 
 table {
