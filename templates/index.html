@@ -12,9 +12,9 @@
     <title>{{ _("Minecraft Standard Translations") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet"
-        href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+        href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
     <style>
         /* 初始隐藏页面内容，避免闪烁 */
         body {
@@ -54,17 +54,17 @@
                             {{ _("Query by source string") }}
                         </option>
                         <option value="transl" {% if mode=="transl" %}selected{% endif %}>
-                            {{ _("Query by translated string")}}
+                            {{ _("Query by translated string") }}
                         </option>
                         <option value="key" {% if mode=="key" %}selected{% endif %}>
                             {{ _("Query by translation key") }}
                         </option>
                     </select>
 
-                    <label for="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
+                    <label for="query-lang" {% if mode !="transl" %}class="hidden" {% endif %}>
                         {{ _("Language to be queried: ") }}
                     </label>
-                    <select name="query-lang" {% if mode !="transl" %} class="hidden" {% endif %}>
+                    <select name="query-lang" id="query-lang" {% if mode !="transl" %}class="hidden" {% endif %}>
                         <option value="zh_cn" {% if lang=="zh_cn" %}selected{% endif %}>zh_cn</option>
                         <option value="zh_hk" {% if lang=="zh_hk" %}selected{% endif %}>zh_hk</option>
                         <option value="zh_tw" {% if lang=="zh_tw" %}selected{% endif %}>zh_tw</option>
@@ -73,18 +73,19 @@
 
                     <label for="input_string">{{ form.input_string.label }}</label>
                     {{ form.input_string(autocomplete="off", id="input_string") }}
-                    {% if input_value %}
 
+                    {% if input_value %}
                     <label for="options">{{ _("Select a translation key: ") }}</label>
                     <select name="options" id="options">
                         {% for option in keys %}
                         <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
                         {% endfor %}
                     </select>
-
                     {% endif %}
                 </div>
-                <div class="form-item">{{ form.jkv_check }}{{ form.jkv_check.label }}</div>
+                <div class="form-item">
+                    {{ form.jkv_check }}{{ form.jkv_check.label }}
+                </div>
                 {{ form.submit(class="submit") }}
             </form>
         </div>

@@ -105,12 +105,11 @@ def index() -> str:
 
     form = QueryForm()
     results = {}
-    query_mode: str = request.args.get("mode", "source")
-    query_lang: str = request.args.get("lang", "zh_cn")
-    source_str: Optional[str] = request.args.get("source", "")
-    query_str: Optional[str] = request.args.get("input_value", "")
-    enable_jkv: bool = request.args.get("enable_jkv", False)
-    selected_option: Optional[str] = request.args.get("key", "")
+    query_mode = request.args.get("mode", "source")
+    query_lang = request.args.get("lang", "zh_cn")
+    query_str = request.args.get("input_value", "")
+    enable_jkv = request.args.get("enable_jkv", False, type=bool)
+    selected_option = request.args.get("key", "")
 
     if form.validate_on_submit():
         query_str = form.input_string.data
@@ -201,7 +200,9 @@ def quiz_sub(code) -> str:
         for key in keys
     }
 
-    return render_template("quiz_sub.html", questions=questions, random_code=get_questions())
+    return render_template(
+        "quiz_sub.html", questions=questions, random_code=get_questions()
+    )
 
 
 @flask_app.route("/favicon.ico")
