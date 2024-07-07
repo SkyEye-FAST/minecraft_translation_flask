@@ -168,22 +168,30 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
-@flask_app.route("/quiz")
-def quiz_portal():
-    """测验门户页面路由"""
-    random_keys = sample(list(id_map.keys()), 10)
+QUIZ_NUM = 2  # 测验题组含题目数量
+
+
+def get_questions() -> str:
+    """获取题目"""
+    random_keys = sample(list(id_map.keys()), QUIZ_NUM)
     code = "".join(random_keys)
-    return render_template("quiz_portal.html", random_code=code)
+    return code
+
+
+@flask_app.route("/quiz")
+def quiz_portal() -> str:
+    """测验门户页面路由"""
+    return render_template("quiz_portal.html", random_code=get_questions())
 
 
 @flask_app.route("/quiz/<code>")
-def quiz_sub(code):
+def quiz_sub(code) -> str:
     """测验子页面路由"""
 
-    if len(code) != 30:
+    if len(code) != 3 * QUIZ_NUM:
         return None
 
-    code_list = [code[i : i + 3] for i in range(0, 30, 3)]
+    code_list = [code[i : i + 3] for i in range(0, 3 * QUIZ_NUM, 3)]
     if any(seg not in id_map for seg in code_list):
         return None
 
@@ -193,7 +201,7 @@ def quiz_sub(code):
         for key in keys
     }
 
-    return render_template("quiz_sub.html", questions=questions)
+    return render_template("quiz_sub.html", questions=questions, random_code=get_questions())
 
 
 @flask_app.route("/favicon.ico")

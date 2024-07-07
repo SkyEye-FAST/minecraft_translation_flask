@@ -15,12 +15,26 @@
             <div id="keyText" class="key"></div>
         </div>
         <div id="boxes" class="zh-cn"></div>
-        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…">
+        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…" autocomplete="off">
+        <div class="summary" id="summary">
+            <div class="zh-cn title">已完成所有题目!</div>
+            <table id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>原文</th>
+                        <th>译名</th>
+                    </tr>
+                </thead>
+                <tbody id="summaryBody"></tbody>
+            </table>
+            <button onclick="window.location.href='../quiz/{{ random_code }}'">再来一组</button>
+        </div>
     </div>
     <script>
         let currentQuestionIndex = 0;
         let questions = {{ questions | tojson | safe }};
         let questionKeys = Object.keys(questions);
+        const delayBetweenQuestions = 800;
 
         function createBoxes(length) {
             const boxesDiv = document.getElementById('boxes');
@@ -71,13 +85,38 @@
             }
 
             if (input === correctAnswer) {
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questionKeys.length) {
-                    loadQuestion();
-                } else {
-                    alert('所有题目已完成!');
-                }
+                setTimeout(() => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questionKeys.length) {
+                        loadQuestion();
+                    } else {
+                        showSummary();
+                    }
+                }, delayBetweenQuestions);
             }
+        }
+
+        function showSummary() {
+            const summaryTableBody = document.getElementById('summaryBody');
+            summaryTableBody.innerHTML = '';
+
+            questionKeys.forEach((key) => {
+                const question = questions[key];
+                const sourceText = question.source;
+                const translationText = question.translation;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${sourceText}</td>
+                    <td>${translationText}</td>
+                `;
+                summaryTableBody.appendChild(row);
+            });
+
+            document.querySelector('.info').style.display = 'none';
+            document.getElementById('boxes').style.display = 'none';
+            document.getElementById('inputBox').style.display = 'none';
+            document.getElementById('summary').style.display = 'block';
         }
 
         document.addEventListener('DOMContentLoaded', loadQuestion);
