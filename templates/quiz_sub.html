@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft译名认知测验</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css', v=1) }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
 </head>
 
 <body>
     <div class="container">
-        <div class="info">
+        <div class="info" id="info">
             <div id="sourceText" class="source"></div>
             <div id="keyText" class="key"></div>
+            <div id="boxes" class="zh-cn"></div>
         </div>
-        <div id="boxes" class="zh-cn"></div>
         <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…" autocomplete="off">
         <div class="summary" id="summary">
             <div class="zh-cn title">已完成所有题目!</div>
@@ -56,13 +56,20 @@
             const sourceText = question.source;
             const translationText = question.translation;
 
-            document.getElementById('sourceText').innerText = question.source;
-            document.getElementById('keyText').innerText = currentKey;
+            const infoDiv = document.getElementById('info');
+            infoDiv.classList.add('fade-out');
 
-            const questionLength = translationText.length;
-            inputBox.maxLength = questionLength;
-            createBoxes(questionLength);
-            updateBoxes();
+            setTimeout(() => {
+                document.getElementById('sourceText').innerText = sourceText;
+                document.getElementById('keyText').innerText = currentKey;
+
+                const questionLength = translationText.length;
+                inputBox.maxLength = questionLength;
+                createBoxes(questionLength);
+                updateBoxes();
+
+                infoDiv.classList.remove('fade-out');
+            }, 300);
         }
 
         function updateBoxes() {
@@ -97,26 +104,36 @@
         }
 
         function showSummary() {
-            const summaryTableBody = document.getElementById('summaryBody');
-            summaryTableBody.innerHTML = '';
+            const infoDiv = document.querySelector('.info');
+            const inputBox = document.getElementById('inputBox');
+            const summaryDiv = document.getElementById('summary');
 
-            questionKeys.forEach((key) => {
-                const question = questions[key];
-                const sourceText = question.source;
-                const translationText = question.translation;
+            infoDiv.classList.add('fade-out');
+            inputBox.classList.add('fade-out');
 
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${sourceText}</td>
-                    <td>${translationText}</td>
-                `;
-                summaryTableBody.appendChild(row);
-            });
+            setTimeout(() => {
+                infoDiv.style.display = 'none';
+                inputBox.style.display = 'none';
 
-            document.querySelector('.info').style.display = 'none';
-            document.getElementById('boxes').style.display = 'none';
-            document.getElementById('inputBox').style.display = 'none';
-            document.getElementById('summary').style.display = 'block';
+                const summaryTableBody = document.getElementById('summaryBody');
+                summaryTableBody.innerHTML = '';
+
+                questionKeys.forEach((key) => {
+                    const question = questions[key];
+                    const sourceText = question.source;
+                    const translationText = question.translation;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${sourceText}</td>
+                        <td>${translationText}</td>
+                    `;
+                    summaryTableBody.appendChild(row);
+                });
+
+                summaryDiv.style.display = 'block';
+                summaryDiv.classList.add('fade-in');
+            }, 500);
         }
 
         document.addEventListener('DOMContentLoaded', loadQuestion);

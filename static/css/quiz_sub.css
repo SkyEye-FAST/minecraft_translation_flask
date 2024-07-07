@@ -47,6 +47,12 @@ input[type="text"] {
 
 .info {
     margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.fade-out {
+    opacity: 0;
 }
 
 .source {
