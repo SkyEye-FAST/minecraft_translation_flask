@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft译名认知测验</title>
+    <title>Minecraft 译名认知测验</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const questionsData = {{ questions | tojson | safe }};
+        const randomCode = "{{ random_code }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
 </head>
 
 <body>
@@ -15,7 +21,7 @@
             <div id="keyText" class="key"></div>
             <div id="boxes" class="zh-cn"></div>
         </div>
-        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…" autocomplete="off">
+        <input type="text" id="inputBox" class="zh_cn" placeholder="在此输入译名…" autocomplete="off">
         <div class="summary" id="summary">
             <div class="zh-cn title">已完成所有题目!</div>
             <table id="summaryTable">
@@ -27,117 +33,9 @@
                 </thead>
                 <tbody id="summaryBody"></tbody>
             </table>
-            <button onclick="window.location.href='../quiz/{{ random_code }}'">再来一组</button>
+            <button id="restartButton">再来一组</button>
         </div>
     </div>
-    <script>
-        let currentQuestionIndex = 0;
-        let questions = {{ questions | tojson | safe }};
-        let questionKeys = Object.keys(questions);
-        const delayBetweenQuestions = 800;
-
-        function createBoxes(length) {
-            const boxesDiv = document.getElementById('boxes');
-            boxesDiv.innerHTML = '';
-            for (let i = 0; i < length; i++) {
-                const box = document.createElement('div');
-                box.classList.add('box');
-                box.id = 'box' + (i + 1);
-                boxesDiv.appendChild(box);
-            }
-        }
-
-        function loadQuestion() {
-            const inputBox = document.getElementById('inputBox');
-            inputBox.value = '';
-
-            const currentKey = questionKeys[currentQuestionIndex];
-            const question = questions[currentKey];
-            const sourceText = question.source;
-            const translationText = question.translation;
-
-            const infoDiv = document.getElementById('info');
-            infoDiv.classList.add('fade-out');
-
-            setTimeout(() => {
-                document.getElementById('sourceText').innerText = sourceText;
-                document.getElementById('keyText').innerText = currentKey;
-
-                const questionLength = translationText.length;
-                inputBox.maxLength = questionLength;
-                createBoxes(questionLength);
-                updateBoxes();
-
-                infoDiv.classList.remove('fade-out');
-            }, 300);
-        }
-
-        function updateBoxes() {
-            const input = document.getElementById('inputBox').value;
-            const currentKey = questionKeys[currentQuestionIndex];
-            const correctAnswer = questions[currentKey].translation;
-
-            for (let i = 0; i < correctAnswer.length; i++) {
-                const box = document.getElementById('box' + (i + 1));
-                box.textContent = input[i] || '';
-                if (input[i] === undefined) {
-                    box.style.backgroundColor = '#9ca3af25';
-                } else if (input[i] === correctAnswer[i]) {
-                    box.style.backgroundColor = '#79b851';
-                } else if (correctAnswer.includes(input[i])) {
-                    box.style.backgroundColor = '#f3c237';
-                } else {
-                    box.style.backgroundColor = '#9ca3af25';
-                }
-            }
-
-            if (input === correctAnswer) {
-                setTimeout(() => {
-                    currentQuestionIndex++;
-                    if (currentQuestionIndex < questionKeys.length) {
-                        loadQuestion();
-                    } else {
-                        showSummary();
-                    }
-                }, delayBetweenQuestions);
-            }
-        }
-
-        function showSummary() {
-            const infoDiv = document.querySelector('.info');
-            const inputBox = document.getElementById('inputBox');
-            const summaryDiv = document.getElementById('summary');
-
-            infoDiv.classList.add('fade-out');
-            inputBox.classList.add('fade-out');
-
-            setTimeout(() => {
-                infoDiv.style.display = 'none';
-                inputBox.style.display = 'none';
-
-                const summaryTableBody = document.getElementById('summaryBody');
-                summaryTableBody.innerHTML = '';
-
-                questionKeys.forEach((key) => {
-                    const question = questions[key];
-                    const sourceText = question.source;
-                    const translationText = question.translation;
-
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${sourceText}</td>
-                        <td>${translationText}</td>
-                    `;
-                    summaryTableBody.appendChild(row);
-                });
-
-                summaryDiv.style.display = 'block';
-                summaryDiv.classList.add('fade-in');
-            }, 500);
-        }
-
-        document.addEventListener('DOMContentLoaded', loadQuestion);
-    </script>
 </body>
 
 </html>
