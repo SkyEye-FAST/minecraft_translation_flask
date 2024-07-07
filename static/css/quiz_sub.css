@@ -77,8 +77,8 @@ input[type="text"] {
     display: none;
     text-align: center;
     background-color: white;
-    padding: 20px 10px;
-    width: 400px;
+    padding: 20px 30px;
+    width: max-content;
     border-radius: 8px;
 }
 
@@ -164,7 +164,9 @@ table tr td:nth-child(2) {
     }
 
     .summary {
-        padding: 20px 0 10px;
+        width: auto;
+        padding: 20px 20px;
+        font-size: smaller;
     }
 
     .summary button {
