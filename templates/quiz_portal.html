@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft译名认知测验</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_portal.css', v=1) }}" type="text/css">
+    <link href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_portal.css') }}" type="text/css">
 </head>
 
 <body>
@@ -15,6 +17,15 @@
         <div class="input-container">
             <input type="text" id="inputText" placeholder="输入题组编号…">
             <button class="btn-2" onclick="redirectToInput()">进入</button>
+        </div>
+        <div>
+            <a href="../"><span class="material-symbols-outlined b">manage_search</span>查询页面</a> 
+            <a href="../table"><span class="material-symbols-outlined b">table</span>表格页面</a> 
+            <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
+                <img alt="GitHub" class="github-icon"
+                    src="{{ url_for('static', filename='images/github-icon.svg') }}" />
+                GitHub
+            </a>
         </div>
     </div>
 

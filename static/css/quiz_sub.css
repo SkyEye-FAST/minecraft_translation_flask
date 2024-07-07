@@ -1,4 +1,4 @@
-@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif:wght@100..900&family=Noto+Serif+SC:wght@400;700&display=swap');
+@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif:wght@100..900&family=Noto+Serif+SC:wght@400;700;900&display=swap');
 
 body {
     display: flex;
@@ -28,6 +28,7 @@ body {
     box-sizing: border-box;
     background-color: #9ca3af25;
     font-weight: 700;
+    transition: all 0.2s ease;
 }
 
 input[type="text"] {
@@ -45,19 +46,19 @@ input[type="text"] {
 
 .info {
     margin-bottom: 20px;
-    font-size: 24px;
+    opacity: 1;
 }
 
 .source {
     font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 600;
     text-align: center;
 }
 
 .key {
     font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
-    font-size: 1.25em;
+    font-size: 1.75em;
     text-align: center;
 }
 
@@ -65,21 +66,110 @@ input[type="text"] {
     font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
 }
 
+.zh-cn.title {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+/* 总结页面 */
+
+.summary {
+    display: none;
+    text-align: center;
+    background-color: white;
+    padding: 20px 30px;
+    width: max-content;
+    border-radius: 8px;
+}
+
+.summary button {
+    width: 60%;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin: 15px auto 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.code-container {
+    margin: 0 auto;
+    padding: 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.code {
+    padding: 0 5px;
+    font-size: 16px;
+    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
+}
+
+.material-symbols-outlined.btn {
+    cursor: pointer;
+}
+
+/* 表格 */
+
+table {
+    margin: 15px auto 0 auto;
+    border-collapse: collapse;
+    font-size: larger;
+}
+
+table td,
+table th {
+    border: 2px solid #5b9bd5;
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: #5b9bd533;
+}
+
+table thead {
+    font-size: larger;
+}
+
+table tr td:nth-child(1) {
+    font-family: 'Noto Serif', 'Times New Roman', Simsun, Times, serif;
+}
+
+table thead,
+table tr td:nth-child(2) {
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .source {
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
 
     .key {
-        font-size: 0.75em
+        font-size: 0.85em
     }
 
     .box {
-        width: 75px;
-        height: 75px;
+        width: 72px;
+        height: 72px;
         margin: 3px;
-        font-size: 32px;
-        line-height: 75px;
+        font-size: 36px;
+        line-height: 72px;
+    }
+
+    .zh-cn.title {
+        font-size: 2em;
+    }
+
+    .summary {
+        width: auto;
+        padding: 20px 20px;
+        font-size: smaller;
+    }
+
+    .summary button {
+        font-size: 16px;
     }
 }

@@ -13,17 +13,30 @@
 /* 基础样式 */
 body {
     background-color: #f9f2e0;
+    color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* 链接样式 */
 .github-link,
-.table-link {
+.table-link,
+.quiz-link {
     position: absolute;
     top: 15px;
+}
+
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #f9f2e0;
+}
+
+.github-icon {
+    width: 48px;
+    height: auto;
 }
 
 .github-link {
@@ -34,13 +47,13 @@ body {
 .table-link {
     left: 15px;
     font-size: 48px;
-    color: #000;
     transition: color 0.3s ease;
 }
 
-.github-icon {
-    width: 48px;
-    height: auto;
+.quiz-link {
+    left: 75px;
+    font-size: 48px;
+    transition: color 0.3s ease;
 }
 
 .material-symbols-outlined.md-48 {
@@ -241,23 +254,7 @@ table th {
     display: none;
 }
 
-/* light */
-body {
-    background-color: #f9f2e0;
-    color: #000;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* dark */
-body.dark-mode {
-    background-color: #2e2e2e;
-    color: #f9f2e0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.invert {
-    filter: invert(1);
-}
+/* light/dark mode */
 
 .mode-toggle {
     position: absolute;
@@ -276,6 +273,10 @@ body.dark-mode {
     color: inherit;
 }
 
+.invert {
+    filter: invert(1);
+}
+
 /* collapse */
 .collapsible {
     position: relative;
@@ -290,10 +291,8 @@ body.dark-mode {
 
 .collapsible.collapsed .content {
     max-height: 0;
-}
-
-legend {
-    cursor: default;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .toggle-button {
@@ -315,10 +314,15 @@ legend {
 @media (max-width: 768px) {
 
     .github-icon,
+    #quiz-icon,
     #table-icon,
     #mode-icon {
         width: 30px;
         font-size: 30px;
+    }
+
+    .quiz-link {
+        left: 50px;
     }
 
     .mode-toggle {
@@ -364,7 +368,6 @@ legend {
         width: 100%;
         max-width: 550px;
         margin: 0 auto;
-        padding: 15px;
         box-sizing: border-box;
     }
 

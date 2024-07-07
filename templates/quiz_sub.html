@@ -5,83 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft译名认知测验</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css', v=1) }}" type="text/css">
+    <link href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        const questionsData = {{ questions | tojson | safe }};
+        const randomCode = "{{ random_code }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="info">
+        <div class="info" id="info">
             <div id="sourceText" class="source"></div>
             <div id="keyText" class="key"></div>
+            <div id="boxes" class="zh-cn"></div>
         </div>
-        <div id="boxes" class="zh-cn"></div>
-        <input type="text" id="inputBox" class="zh_cn" oninput="updateBoxes()" placeholder="在此输入译名…">
+        <input type="text" id="inputBox" class="zh_cn" placeholder="在此输入译名…" autocomplete="off">
+        <div class="summary" id="summary">
+            <div class="zh-cn title">已完成所有题目!</div>
+            <table id="summaryTable">
+                <thead>
+                    <tr>
+                        <th>原文</th>
+                        <th>译名</th>
+                    </tr>
+                </thead>
+                <tbody id="summaryBody"></tbody>
+            </table>
+            <div class="code-container">
+                <div class="code" id="last-segment"></div>
+                <span class="material-symbols-outlined btn" id="copy-button">content_copy</span>
+            </div>
+            <button id="restartButton">再来一组</button>
+            <button onclick="window.location.href='../quiz'">返回测验主页</button>
+        </div>
+
+        <script>
+            var currentUrl = window.location.href;
+            var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
+            var lastSegment = match ? match[1] : '';
+            document.getElementById('last-segment').textContent = lastSegment;
+
+            $(document).ready(function () {
+                $('#copy-button').click(function () {
+                    var $copyButton = $(this);
+                    var $lastSegment = $('#last-segment');
+                    var lastSegmentContent = $lastSegment.text();
+
+                    var $tempTextarea = $('<textarea>');
+                    $('body').append($tempTextarea);
+                    $tempTextarea.val(lastSegmentContent).select();
+                    document.execCommand('copy');
+                    $tempTextarea.remove();
+
+                    $copyButton.text('check');
+                    setTimeout(function () {
+                        $copyButton.text('content_copy');
+                    }, 1500);
+                });
+            });
+        </script>
     </div>
-    <script>
-        let currentQuestionIndex = 0;
-        let questions = {{ questions | tojson | safe }};
-        let questionKeys = Object.keys(questions);
-
-        function createBoxes(length) {
-            const boxesDiv = document.getElementById('boxes');
-            boxesDiv.innerHTML = '';
-            for (let i = 0; i < length; i++) {
-                const box = document.createElement('div');
-                box.classList.add('box');
-                box.id = 'box' + (i + 1);
-                boxesDiv.appendChild(box);
-            }
-        }
-
-        function loadQuestion() {
-            const inputBox = document.getElementById('inputBox');
-            inputBox.value = '';
-
-            const currentKey = questionKeys[currentQuestionIndex];
-            const question = questions[currentKey];
-            const sourceText = question.source;
-            const translationText = question.translation;
-
-            document.getElementById('sourceText').innerText = question.source;
-            document.getElementById('keyText').innerText = currentKey;
-
-            const questionLength = translationText.length;
-            inputBox.maxLength = questionLength;
-            createBoxes(questionLength);
-            updateBoxes();
-        }
-
-        function updateBoxes() {
-            const input = document.getElementById('inputBox').value;
-            const currentKey = questionKeys[currentQuestionIndex];
-            const correctAnswer = questions[currentKey].translation;
-
-            for (let i = 0; i < correctAnswer.length; i++) {
-                const box = document.getElementById('box' + (i + 1));
-                box.textContent = input[i] || '';
-                if (input[i] === undefined) {
-                    box.style.backgroundColor = '#9ca3af25';
-                } else if (input[i] === correctAnswer[i]) {
-                    box.style.backgroundColor = '#79b851';
-                } else if (correctAnswer.includes(input[i])) {
-                    box.style.backgroundColor = '#f3c237';
-                } else {
-                    box.style.backgroundColor = '#9ca3af25';
-                }
-            }
-
-            if (input === correctAnswer) {
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questionKeys.length) {
-                    loadQuestion();
-                } else {
-                    alert('所有题目已完成!');
-                }
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadQuestion);
-    </script>
 </body>
 
 </html>

@@ -25,7 +25,7 @@ HTML_TEMPLATE = """
 <body>
     <div class="header">
         Minecraft Standard Translation Table. Latest Update: {{ date_str }}<br>Made by SkyEye_FAST.&emsp;
-        <a href="../"><span class="material-symbols-outlined b">home</span>Main Page</a>&emsp;
+        <a href="../"><span class="material-symbols-outlined b">manage_search</span>Query Page</a>&emsp;
         <a class="github-link" href="https://github.com/SkyEye-FAST/minecraft_translation_flask">
             <img class="github-icon" src="{{ url_for('static', filename='images/github-icon.svg') }}" alt="GitHub">
             GitHub

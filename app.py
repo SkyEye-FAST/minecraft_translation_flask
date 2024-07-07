@@ -105,12 +105,11 @@ def index() -> str:
 
     form = QueryForm()
     results = {}
-    query_mode: str = request.args.get("mode", "source")
-    query_lang: str = request.args.get("lang", "zh_cn")
-    source_str: Optional[str] = request.args.get("source", "")
-    query_str: Optional[str] = request.args.get("input_value", "")
-    enable_jkv: bool = request.args.get("enable_jkv", False)
-    selected_option: Optional[str] = request.args.get("key", "")
+    query_mode = request.args.get("mode", "source")
+    query_lang = request.args.get("lang", "zh_cn")
+    query_str = request.args.get("input_value", "")
+    enable_jkv = request.args.get("enable_jkv", False, type=bool)
+    selected_option = request.args.get("key", "")
 
     if form.validate_on_submit():
         query_str = form.input_string.data
@@ -168,22 +167,30 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
-@flask_app.route("/quiz")
-def quiz_portal():
-    """测验门户页面路由"""
-    random_keys = sample(list(id_map.keys()), 10)
+QUESTION_AMOUNT = 10  # 测验题组含题目数量
+
+
+def get_questions() -> str:
+    """获取题目"""
+    random_keys = sample(list(id_map.keys()), QUESTION_AMOUNT)
     code = "".join(random_keys)
-    return render_template("quiz_portal.html", random_code=code)
+    return code
+
+
+@flask_app.route("/quiz")
+def quiz_portal() -> str:
+    """测验门户页面路由"""
+    return render_template("quiz_portal.html", random_code=get_questions())
 
 
 @flask_app.route("/quiz/<code>")
-def quiz_sub(code):
+def quiz_sub(code) -> str:
     """测验子页面路由"""
 
-    if len(code) != 30:
+    if len(code) != 3 * QUESTION_AMOUNT:
         return None
 
-    code_list = [code[i : i + 3] for i in range(0, 30, 3)]
+    code_list = [code[i : i + 3] for i in range(0, 3 * QUESTION_AMOUNT, 3)]
     if any(seg not in id_map for seg in code_list):
         return None
 
@@ -193,7 +200,9 @@ def quiz_sub(code):
         for key in keys
     }
 
-    return render_template("quiz_sub.html", questions=questions)
+    return render_template(
+        "quiz_sub.html", questions=questions, random_code=get_questions()
+    )
 
 
 @flask_app.route("/favicon.ico")
