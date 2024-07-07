@@ -290,10 +290,8 @@ body.dark-mode {
 
 .collapsible.collapsed .content {
     max-height: 0;
-}
-
-legend {
-    cursor: default;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .toggle-button {

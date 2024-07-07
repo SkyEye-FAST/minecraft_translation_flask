@@ -16,17 +16,9 @@ $(document).ready(function () {
     // 折叠 fieldset
     $('.collapsible').each(function () {
         var $fieldset = $(this);
-        var fieldsetId = $fieldset.attr('id');
-        var isCollapsed = localStorage.getItem(fieldsetId) === 'true';
-
-        if (isCollapsed) {
-            $fieldset.addClass('collapsed');
-        }
 
         $fieldset.find('.toggle-button').on('click', function () {
             $fieldset.toggleClass('collapsed');
-            var state = $fieldset.hasClass('collapsed');
-            localStorage.setItem(fieldsetId, state.toString());
         });
     });
 
