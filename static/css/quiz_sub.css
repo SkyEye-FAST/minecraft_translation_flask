@@ -71,6 +71,8 @@ input[type="text"] {
     font-weight: 900;
 }
 
+/* 总结页面 */
+
 .summary {
     display: none;
 }
@@ -86,6 +88,8 @@ input[type="text"] {
     cursor: pointer;
 }
 
+/* 表格 */
+
 table {
     margin: 15px auto 0 auto;
     border-collapse: collapse;
@@ -95,6 +99,7 @@ table {
 table td,
 table th {
     border: 2px solid #5b9bd5;
+    padding: 5px;
 }
 
 table tr:nth-child(even) {

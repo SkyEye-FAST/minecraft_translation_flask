@@ -12,7 +12,7 @@
     <title>{{ _("Minecraft Standard Translations") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" type="text/css">
     <link rel="stylesheet"
         href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <style>
@@ -21,6 +21,8 @@
             display: none;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </head>
 
 <body>
@@ -139,8 +141,6 @@
             <time datetime="{{ date_str }}">{{ date_str_t }}</time> - {{ timezone_str }}
         </span>
     </div>
-
-    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 
 </html>
