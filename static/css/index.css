@@ -311,7 +311,7 @@ table th {
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
+@media (orientation: portrait) {
 
     .github-icon,
     #quiz-icon,

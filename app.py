@@ -175,7 +175,7 @@ def table() -> str:
     return render_template("table.html", date_str=date_tz)
 
 
-QUESTION_AMOUNT = 10  # 测验题组含题目数量
+QUESTION_AMOUNT = 1  # 测验题组含题目数量
 
 
 def get_questions() -> str:

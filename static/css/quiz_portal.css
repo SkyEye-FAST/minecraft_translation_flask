@@ -10,6 +10,10 @@ body {
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     background-color: white;
     padding: 20px;
@@ -37,12 +41,14 @@ a {
     line-height: inherit;
     vertical-align: middle;
     transform: translateY(-.1em);
+    font-size: inherit;
 }
 
 .input-container {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 input[type="text"] {
@@ -55,18 +61,21 @@ input[type="text"] {
 button {
     cursor: pointer;
     font-size: 20px;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border: solid 1px;
 }
 
 .btn-1 {
     width: 100%;
     box-sizing: border-box;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     padding: 9px;
 }
 
 .btn-2 {
     margin-left: 10px;
-    padding: 9px 20px;
+    padding: 9px 30px;
 }
 
 .title {
@@ -77,7 +86,12 @@ button {
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
+@media (orientation: portrait) {
+    .container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
     .title {
         font-size: 1.5em;
     }
@@ -86,5 +100,15 @@ button {
     .btn-2,
     input[type="text"] {
         font-size: 14px;
+        padding: 7px;
+    }
+
+    .btn-1,
+    .input-container {
+        width: 90%;
+    }
+
+    .links {
+        font-size: smaller;
     }
 }
