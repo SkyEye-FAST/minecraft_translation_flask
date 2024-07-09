@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ _("Minecraft Standard Translations") }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}" />
+</head>
+
+<body>
+    <div class="title">
+        <span style="font-size: larger">404</span><br>Page Not Found
+    </div>
+    <a class="return" href="/">
+        <span class="material-symbols-outlined">arrow_back</span>Return to Main Page
+    </a>
+    <img class="teahouse-logo" src="{{ url_for('static', filename='images/teahouse-logo.svg') }}"
+        alt="Teahouse Studios" />
+</body>
+
+</html>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft译名认知测验</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_portal.css') }}" type="text/css">
@@ -15,7 +16,7 @@
         <div class="title">Minecraft译名认知测验</div>
         <button class="btn-1" onclick="window.location.href='quiz/{{ random_code }}'">随机选择题组（刷新页面以重新选择）</button>
         <div class="input-container">
-            <input type="text" id="inputText" placeholder="输入题组编号…">
+            <input type="text" id="inputText" placeholder="输入题组编号…" autocomplete="off">
             <button class="btn-2" onclick="redirectToInput()">进入</button>
         </div>
         <div>
