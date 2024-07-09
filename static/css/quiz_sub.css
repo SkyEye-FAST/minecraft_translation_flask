@@ -34,7 +34,7 @@ body {
 
 input[type="text"] {
     margin-top: 20px;
-    width: 60%;
+    width: 50%;
     height: 3em;
     font-size: 1.75em;
     text-align: center;
@@ -157,6 +157,13 @@ table tr td:nth-child(2) {
         height: clamp(2em, calc(2em + 0.4vw), 3em);
         line-height: clamp(2em, calc(2em + 0.4vw), 3em);
         font-size: clamp(1.5em, calc(1.5em + 0.4vw), 3em);
+        margin: 3px;
+    }
+
+    input[type="text"] {
+        width: 65%;
+        height: 2.5em;
+        font-size: 1.25em;
     }
 }
 
@@ -179,7 +186,7 @@ table tr td:nth-child(2) {
 
 @media (orientation: portrait) and (max-width: 768px) {
     .source {
-        font-size: clamp(1em, calc(1.4em + 0.8vw), 3em);
+        font-size: clamp(1em, calc(1em + 0.8vw), 3em);
     }
 
     .key {
@@ -191,10 +198,11 @@ table tr td:nth-child(2) {
         height: clamp(2em, calc(2em + 0.4vw), 3em);
         line-height: clamp(2em, calc(2em + 0.4vw), 3em);
         font-size: clamp(1.5em, calc(1.5em + 0.4vw), 3em);
+        margin: 3px;
     }
 }
 
-@media (orientation: portrait) {
+@media (orientation: portrait) and (min-width: 768px) {
     .source {
         font-size: clamp(2em, calc(2em + 0.8vw), 3.5em);
     }
@@ -209,7 +217,9 @@ table tr td:nth-child(2) {
         line-height: clamp(2em, calc(2em + 0.6vw), 3em);
         font-size: clamp(1.5em, calc(1.5em + 0.6vw), 3em);
     }
+}
 
+@media (orientation: portrait) {
     input[type="text"] {
         width: 80%;
         height: 2.5em;
