@@ -6,7 +6,15 @@ from datetime import datetime
 from typing import Optional
 from random import sample
 
-from flask import Flask, session, render_template, request, send_from_directory
+from flask import (
+    Flask,
+    session,
+    render_template,
+    request,
+    send_from_directory,
+    redirect,
+    url_for,
+)
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField
 from flask_babel import Babel, lazy_gettext as _l
@@ -183,16 +191,22 @@ def quiz_portal() -> str:
     return render_template("quiz_portal.html", random_code=get_questions())
 
 
+@flask_app.route("/quiz/")
+def quiz_redirect():
+    """重定向quiz"""
+    return redirect(url_for("quiz_portal"))
+
+
 @flask_app.route("/quiz/<code>")
 def quiz_sub(code) -> str:
     """测验子页面路由"""
 
     if len(code) != 3 * QUESTION_AMOUNT:
-        return None
+        return render_template("quiz_error.html")
 
     code_list = [code[i : i + 3] for i in range(0, 3 * QUESTION_AMOUNT, 3)]
     if any(seg not in id_map for seg in code_list):
-        return None
+        return render_template("quiz_error.html")
 
     keys = [id_map[seg] for seg in code_list]
     questions = {
@@ -227,6 +241,13 @@ def table_tsv() -> str:
     """
 
     return send_from_directory("static", "table.tsv")
+
+
+@flask_app.errorhandler(404)
+def error_404(e):
+    """404重定向路由"""
+    print(e)
+    return render_template("404.html"), 404
 
 
 if __name__ == "__main__":
