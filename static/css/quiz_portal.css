@@ -56,6 +56,7 @@ input[type="text"] {
     flex: 1;
     padding: 10px 20px;
     font-size: 20px;
+    border-radius: 8px;
 }
 
 button {
@@ -64,6 +65,7 @@ button {
     padding-block: 1px;
     padding-inline: 6px;
     border: solid 1px;
+    border-radius: 8px;
 }
 
 .btn-1 {
@@ -86,7 +88,7 @@ button {
 }
 
 /* 响应式设计 */
-@media (orientation: portrait) {
+@media (orientation: portrait) and (max-width: 760px) {
     .container {
         width: 95%;
         padding: 30px 0;
