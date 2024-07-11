@@ -25,10 +25,10 @@ $(document).ready(function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
-            $inputBox.val("").attr("maxlength", translation.length);
+            createBoxes(translation.length);
 
             $info.fadeIn(fadeDuration, function() {
-                createBoxes(translation.length);
+                $inputBox.val("").attr("maxlength", translation.length);
             });
         });
     }
