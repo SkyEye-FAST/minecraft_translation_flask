@@ -38,10 +38,10 @@ $(document).ready(function () {
 
             const questionLength = translationText.length;
             $("#inputBox").attr("maxlength", questionLength);
-            createBoxes(questionLength);
             updateBoxes();
-
             $(this).fadeIn(fadeDuration);
+
+            createBoxes(questionLength);
         });
     }
 
@@ -95,10 +95,6 @@ $(document).ready(function () {
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
-            for (let i = 0; i < correctAnswer.length; i++) {
-                const box = $("#box" + (i + 1));
-                box.css("background-color", "#79b851");
-            }
             if ((currentQuestionIndex + 1) === questionKeys.length) {
                 setTimeout(() => {
                     showSummary();
