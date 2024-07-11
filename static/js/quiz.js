@@ -21,17 +21,16 @@ $(document).ready(function () {
     }
 
     function loadQuestion() {
-        if (currentQuestionIndex >= questionKeys.length) {
-            showSummary();
-            return;
-        }
-
         $("#inputBox").val("");
 
         const currentKey = questionKeys[currentQuestionIndex];
         const question = questions[currentKey];
         const sourceText = question.source;
         const translationText = question.translation;
+
+        console.log("当前题目索引：", currentQuestionIndex);
+        console.log("当前键名：", currentKey);
+        Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
 
         $("#info").fadeOut(fadeDuration, function () {
             $("#sourceText").text(sourceText);
@@ -96,15 +95,16 @@ $(document).ready(function () {
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
-            currentQuestionIndex++;
-
-            console.log("当前题目索引：", currentQuestionIndex);
-            console.log("当前键名：", currentKey);
-            Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
-
-            setTimeout(() => {
-                loadQuestion();
-            }, delayBetweenQuestions);
+            if ((currentQuestionIndex + 1) === questionKeys.length) {
+                setTimeout(() => {
+                    showSummary();
+                }, delayBetweenQuestions);
+            } else {
+                currentQuestionIndex++;
+                setTimeout(() => {
+                    loadQuestion();
+                }, delayBetweenQuestions);
+            }
         }
     });
 
