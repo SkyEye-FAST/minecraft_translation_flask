@@ -64,6 +64,8 @@ $(document).ready(function () {
                 }
             }, delayBetweenQuestions);
         }
+
+        console.log("当前问题索引：", currentQuestionIndex);
     }
 
     function showSummary() {
