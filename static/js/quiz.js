@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let currentQuestionIndex = 0;
-    const questions = questionsData || {};
-    const questionKeys = Object.keys(questions);
+    const questionsData = questions || {}; // Assuming questions is defined elsewhere
+    const questionKeys = Object.keys(questionsData);
     const delayBetweenQuestions = 800;
     const fadeDuration = 300;
 
@@ -19,20 +19,17 @@ $(document).ready(function () {
     // Initialize question
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const { source, translation } = questions[currentKey];
-
-        console.log("当前题目索引：", currentQuestionIndex);
-        console.log("当前键名：", currentKey);
-        Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
+        const { source, translation } = questionsData[currentKey];
 
         $info.fadeOut(fadeDuration, function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
             $inputBox.val("").attr("maxlength", translation.length);
-            createBoxes(translation.length);
 
-            $info.fadeIn(fadeDuration);
+            $info.fadeIn(fadeDuration, function() {
+                createBoxes(translation.length);
+            });
         });
     }
 
@@ -51,7 +48,7 @@ $(document).ready(function () {
     function updateBoxes() {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const { translation } = questions[currentKey];
+        const { translation } = questionsData[currentKey];
 
         $(".box").each(function (index) {
             const $box = $(this);
@@ -78,7 +75,7 @@ $(document).ready(function () {
             const $summaryBody = $("#summaryBody").empty();
 
             questionKeys.forEach((key) => {
-                const { source, translation } = questions[key];
+                const { source, translation } = questionsData[key];
                 $("<tr>").append(
                     $("<td>").text(source),
                     $("<td>").text(translation)
@@ -95,7 +92,7 @@ $(document).ready(function () {
 
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const { translation } = questions[currentKey];
+        const { translation } = questionsData[currentKey];
 
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
@@ -104,7 +101,9 @@ $(document).ready(function () {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
                 currentQuestionIndex++;
-                setTimeout(initializeQuestion, delayBetweenQuestions);
+                setTimeout(() => {
+                    initializeQuestion();
+                }, delayBetweenQuestions);
             }
         }
     });
