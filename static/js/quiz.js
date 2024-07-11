@@ -24,9 +24,7 @@ $(document).ready(function () {
 
             createBoxes(translationLength);
 
-            $("#info").fadeIn(fadeDuration, function () {
-                updateBoxes();
-            });
+            $("#info").fadeIn(fadeDuration);
         });
     }
 
