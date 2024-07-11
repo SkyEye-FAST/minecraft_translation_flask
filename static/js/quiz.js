@@ -16,6 +16,11 @@ $(document).ready(function () {
     }
 
     function loadQuestion() {
+        if (currentQuestionIndex >= questionKeys.length) {
+            showSummary();
+            return;
+        }
+
         $("#inputBox").val("");
 
         const currentKey = questionKeys[currentQuestionIndex];
@@ -58,7 +63,6 @@ $(document).ready(function () {
 
     function showSummary() {
         $("#info, #inputBox").fadeOut(fadeDuration, function () {
-            $(this).hide();
             const summaryTableBody = $("#summaryBody").empty();
 
             questionKeys.forEach((key) => {
@@ -81,7 +85,7 @@ $(document).ready(function () {
 
     $("#inputBox").on("input", updateBoxes);
 
-    $("#inputBox").on("keyup", function () {
+    $("#inputBox").on("input", function () {
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
@@ -92,11 +96,7 @@ $(document).ready(function () {
                 console.log("当前题目索引：", currentQuestionIndex);
                 console.log("当前键名：", currentKey);
                 Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
-                if (currentQuestionIndex < questionKeys.length) {
-                    loadQuestion();
-                } else {
-                    showSummary();
-                }
+                loadQuestion();
             }, delayBetweenQuestions);
         }
     });
@@ -104,7 +104,6 @@ $(document).ready(function () {
     // 加载首个题目
     loadQuestion();
 });
-
 
 $(document).ready(function () {
     var currentUrl = window.location.href;
