@@ -62,8 +62,6 @@ input[type="text"] {
 button {
     cursor: pointer;
     font-size: 20px;
-    padding-block: 1px;
-    padding-inline: 6px;
     border: solid 1px;
     border-radius: 8px;
 }

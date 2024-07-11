@@ -45,32 +45,6 @@
             <button id="restartButton">再来一组</button>
             <button onclick="window.location.href='../quiz'">返回测验主页</button>
         </div>
-
-        <script>
-            var currentUrl = window.location.href;
-            var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
-            var lastSegment = match ? match[1] : '';
-            document.getElementById('last-segment').textContent = lastSegment;
-
-            $(document).ready(function () {
-                $('#copy-button').click(function () {
-                    var $copyButton = $(this);
-                    var $lastSegment = $('#last-segment');
-                    var lastSegmentContent = $lastSegment.text();
-
-                    var $tempTextarea = $('<textarea>');
-                    $('body').append($tempTextarea);
-                    $tempTextarea.val(lastSegmentContent).select();
-                    document.execCommand('copy');
-                    $tempTextarea.remove();
-
-                    $copyButton.text('check');
-                    setTimeout(function () {
-                        $copyButton.text('content_copy');
-                    }, 1500);
-                });
-            });
-        </script>
     </div>
 </body>
 
