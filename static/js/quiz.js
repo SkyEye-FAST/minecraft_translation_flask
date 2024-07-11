@@ -1,9 +1,14 @@
 $(document).ready(function () {
     let currentQuestionIndex = 0;
-    const questions = questionsData;
+    const questions = questionsData || {};
     const questionKeys = Object.keys(questions);
     const delayBetweenQuestions = 800;
     const fadeDuration = 300;
+
+    if (questionKeys.length === 0) {
+        console.error("No questions available.");
+        return;
+    }
 
     function createBoxes(length) {
         const boxesDiv = $("#boxes").empty();
@@ -16,11 +21,6 @@ $(document).ready(function () {
     }
 
     function loadQuestion() {
-        if (currentQuestionIndex >= questionKeys.length) {
-            showSummary();
-            return;
-        }
-
         $("#inputBox").val("");
 
         const currentKey = questionKeys[currentQuestionIndex];
@@ -91,12 +91,18 @@ $(document).ready(function () {
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
+            currentQuestionIndex++;
+
+            console.log("当前题目索引：", currentQuestionIndex);
+            console.log("当前键名：", currentKey);
+            Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
+
             setTimeout(() => {
-                currentQuestionIndex++;
-                console.log("当前题目索引：", currentQuestionIndex);
-                console.log("当前键名：", currentKey);
-                Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
-                loadQuestion();
+                if (currentQuestionIndex < questionKeys.length) {
+                    loadQuestion();
+                } else {
+                    showSummary();
+                }
             }, delayBetweenQuestions);
         }
     });
