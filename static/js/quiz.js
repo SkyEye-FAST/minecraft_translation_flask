@@ -10,6 +10,27 @@ $(document).ready(function () {
         return;
     }
 
+    // 初始化题目
+    function initializeQuestion() {
+        const currentKey = questionKeys[currentQuestionIndex];
+        const question = questions[currentKey];
+
+        $("#info").fadeOut(fadeDuration, function () {
+            $("#sourceText").text(question.source);
+            $("#keyText").text(currentKey);
+
+            const translationLength = question.translation.length;
+            $("#inputBox").val("").attr("maxlength", translationLength);
+
+            createBoxes(translationLength);
+
+            $("#info").fadeIn(fadeDuration, function () {
+                updateBoxes();
+            });
+        });
+    }
+
+    // 创建相应长度的 box
     function createBoxes(length) {
         const boxesDiv = $("#boxes").empty();
         for (let i = 0; i < length; i++) {
@@ -20,52 +41,32 @@ $(document).ready(function () {
         }
     }
 
-    function loadQuestion() {
-        $("#inputBox").val("");
-
-        const currentKey = questionKeys[currentQuestionIndex];
-        const question = questions[currentKey];
-        const sourceText = question.source;
-        const translationText = question.translation;
-
-        console.log("当前题目索引：", currentQuestionIndex);
-        console.log("当前键名：", currentKey);
-        Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
-
-        $("#info").fadeOut(fadeDuration, function () {
-            $("#sourceText").text(sourceText);
-            $("#keyText").text(currentKey);
-
-            const questionLength = translationText.length;
-            $("#inputBox").attr("maxlength", questionLength);
-
-            createBoxes(questionLength);
-            $(this).fadeIn(fadeDuration, function() {
-                updateBoxes();
-            });
-        });
-    }
-
+    // 更新 box 显示状态
     function updateBoxes() {
         const input = $("#inputBox").val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
 
-        for (let i = 0; i < correctAnswer.length; i++) {
-            const box = $("#box" + (i + 1));
-            box.text(input[i] || "");
-            if (input[i] === undefined) {
+        $(".box").each(function (index) {
+            const box = $(this);
+            const userInput = input[index];
+            const correctChar = correctAnswer[index];
+
+            box.text(userInput || "");
+
+            if (!userInput) {
                 box.css("background-color", "#9ca3af25");
-            } else if (input[i] === correctAnswer[i]) {
+            } else if (userInput === correctChar) {
                 box.css("background-color", "#79b851");
-            } else if (correctAnswer.includes(input[i])) {
+            } else if (correctAnswer.includes(userInput)) {
                 box.css("background-color", "#f3c237");
             } else {
                 box.css("background-color", "#9ca3af25");
             }
-        }
+        });
     }
 
+    // 显示总结信息
     function showSummary() {
         $("#info, #inputBox").fadeOut(fadeDuration, function () {
             const summaryTableBody = $("#summaryBody").empty();
@@ -84,56 +85,24 @@ $(document).ready(function () {
         });
     }
 
-    $("#restartButton").click(function () {
-        window.location.href = `../quiz/${randomCode}`;
-    });
-
-    $("#inputBox").on("input", updateBoxes);
-
+    // 处理输入框内容变化事件
     $("#inputBox").on("input", function () {
+        updateBoxes();
+
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
-            if ((currentQuestionIndex + 1) === questionKeys.length) {
-                setTimeout(() => {
-                    showSummary();
-                }, delayBetweenQuestions);
+            if (currentQuestionIndex === questionKeys.length - 1) {
+                setTimeout(showSummary, delayBetweenQuestions);
             } else {
                 currentQuestionIndex++;
-                setTimeout(() => {
-                    loadQuestion();
-                }, delayBetweenQuestions);
+                setTimeout(initializeQuestion, delayBetweenQuestions);
             }
         }
     });
 
-    // 加载首个题目
-    loadQuestion();
-});
-
-$(document).ready(function () {
-    var currentUrl = window.location.href;
-    var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
-    var lastSegment = match ? match[1] : "";
-    document.getElementById("last-segment").textContent = lastSegment;
-
-    $("#copy-button").click(function () {
-        var $copyButton = $(this);
-        var $lastSegment = $("#last-segment");
-        var lastSegmentContent = $lastSegment.text();
-
-        navigator.clipboard
-            .writeText(lastSegmentContent)
-            .then(function () {
-                $copyButton.text("check");
-                setTimeout(function () {
-                    $copyButton.text("content_copy");
-                }, 1500);
-            })
-            .catch(function (err) {
-                console.error("Failed to copy: ", err);
-            });
-    });
+    // 初始化第一个题目
+    initializeQuestion();
 });
