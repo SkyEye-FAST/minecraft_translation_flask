@@ -90,6 +90,8 @@ $(document).ready(function () {
     $("#inputBox").on("input", updateBoxes);
 
     $("#inputBox").on("input", function () {
+        updateBoxes();
+
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
