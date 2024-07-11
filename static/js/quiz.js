@@ -42,10 +42,14 @@ $(document).ready(function () {
 
         if (!question) {
             console.error('Question not found for key: ', currentKey);
-            return;
+            if (currentQuestionIndex < questionKeys.length) {
+                return;
+            } else {
+                showSummary();
+            }
         }
 
-        const correctAnswer = questions[currentKey].translation;
+        const correctAnswer = question.translation;
 
         for (let i = 0; i < correctAnswer.length; i++) {
             const box = $('#box' + (i + 1));
