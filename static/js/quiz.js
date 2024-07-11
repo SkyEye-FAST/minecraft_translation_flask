@@ -11,13 +11,16 @@ $(document).ready(function () {
     }
 
     function createBoxes(length) {
-        const boxesDiv = $("#boxes").empty();
-        for (let i = 0; i < length; i++) {
-            $("<div>", {
-                class: "box",
-                id: "box" + (i + 1),
-            }).appendTo(boxesDiv);
-        }
+        return new Promise((resolve, reject) => {
+            const boxesDiv = $("#boxes").empty();
+            for (let i = 0; i < length; i++) {
+                $("<div>", {
+                    class: "box",
+                    id: "box" + (i + 1),
+                }).appendTo(boxesDiv);
+            }
+            resolve();
+        });
     }
 
     function loadQuestion() {
@@ -38,10 +41,10 @@ $(document).ready(function () {
 
             const questionLength = translationText.length;
             $("#inputBox").attr("maxlength", questionLength);
-            updateBoxes();
-            $(this).fadeIn(fadeDuration);
-
-            createBoxes(questionLength);
+            createBoxes(questionLength).then(() => {
+                updateBoxes();
+                $(this).fadeIn(fadeDuration);
+            });
         });
     }
 
@@ -90,6 +93,8 @@ $(document).ready(function () {
     $("#inputBox").on("input", updateBoxes);
 
     $("#inputBox").on("input", function () {
+        updateBoxes();
+
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
