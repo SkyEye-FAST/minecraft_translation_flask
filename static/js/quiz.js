@@ -94,6 +94,8 @@ $(document).ready(function () {
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
+            $(".box").css("background-color", "#79b851");
+
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
