@@ -59,7 +59,7 @@ $(document).ready(function () {
                 currentQuestionIndex++;
                 console.log("当前问题索引：", currentQuestionIndex);
                 console.log("当前键名：", currentKey);
-                Sentry.captureMessage("Quiz");
+                Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
                 if (currentQuestionIndex < questionKeys.length) {
                     loadQuestion();
                 } else {
