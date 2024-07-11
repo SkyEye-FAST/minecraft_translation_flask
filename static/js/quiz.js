@@ -20,11 +20,13 @@ $(document).ready(function () {
             $("#keyText").text(currentKey);
 
             const translationLength = question.translation.length;
-            $("#inputBox").val("").attr("maxlength", translationLength);
+            $("#inputBox").attr("maxlength", translationLength);
 
             createBoxes(translationLength);
 
             $("#info").fadeIn(fadeDuration);
+
+            $("#inputBox").val("")
         });
     }
 
