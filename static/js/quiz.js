@@ -10,91 +10,95 @@ $(document).ready(function () {
         return;
     }
 
-    // 初始化题目
+    const $info = $("#info");
+    const $sourceText = $("#sourceText");
+    const $keyText = $("#keyText");
+    const $inputBox = $("#inputBox");
+    const $boxes = $("#boxes");
+
+    // Initialize question
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const question = questions[currentKey];
-        const translationLength = question.translation.length;
+        const { source, translation } = questions[currentKey];
 
-        $("#info").fadeOut(fadeDuration, function () {
-            $("#sourceText").text(question.source);
-            $("#keyText").text(currentKey);
+        console.log("当前题目索引：", currentQuestionIndex);
+        console.log("当前键名：", currentKey);
+        Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
 
-            $("#inputBox").val("").attr("maxlength", translationLength);
-            createBoxes(translationLength);
+        $info.fadeOut(fadeDuration, function () {
+            $sourceText.text(source);
+            $keyText.text(currentKey);
 
-            $("#info").fadeIn(fadeDuration);
+            $inputBox.val("").attr("maxlength", translation.length);
+            createBoxes(translation.length);
+
+            $info.fadeIn(fadeDuration);
         });
     }
 
-    // 创建相应长度的 box
+    // Create boxes based on length
     function createBoxes(length) {
-        const boxesDiv = $("#boxes").empty();
+        $boxes.empty();
         for (let i = 0; i < length; i++) {
             $("<div>", {
                 class: "box",
                 id: "box" + (i + 1),
-            }).appendTo(boxesDiv);
+            }).appendTo($boxes);
         }
     }
 
-    // 更新 box 显示状态
+    // Update box display based on user input
     function updateBoxes() {
-        const input = $("#inputBox").val();
+        const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const correctAnswer = questions[currentKey].translation;
+        const { translation } = questions[currentKey];
 
         $(".box").each(function (index) {
-            const box = $(this);
+            const $box = $(this);
             const userInput = input[index];
-            const correctChar = correctAnswer[index];
+            const correctChar = translation[index];
 
-            box.text(userInput || "");
+            $box.text(userInput || "");
 
             if (!userInput) {
-                box.css("background-color", "#9ca3af25");
+                $box.css("background-color", "#9ca3af25");
             } else if (userInput === correctChar) {
-                box.css("background-color", "#79b851");
-            } else if (correctAnswer.includes(userInput)) {
-                box.css("background-color", "#f3c237");
+                $box.css("background-color", "#79b851");
+            } else if (translation.includes(userInput)) {
+                $box.css("background-color", "#f3c237");
             } else {
-                box.css("background-color", "#9ca3af25");
+                $box.css("background-color", "#9ca3af25");
             }
         });
     }
 
-    // 显示总结信息
+    // Show summary after completing all questions
     function showSummary() {
-        $("#info, #inputBox").fadeOut(fadeDuration, function () {
-            const summaryTableBody = $("#summaryBody").empty();
+        $info.add($inputBox).fadeOut(fadeDuration, function () {
+            const $summaryBody = $("#summaryBody").empty();
 
             questionKeys.forEach((key) => {
-                const question = questions[key];
-                const sourceText = question.source;
-                const translationText = question.translation;
-
-                const row = $("<tr>").appendTo(summaryTableBody);
-                $("<td>").text(sourceText).appendTo(row);
-                $("<td>").text(translationText).appendTo(row);
+                const { source, translation } = questions[key];
+                $("<tr>").append(
+                    $("<td>").text(source),
+                    $("<td>").text(translation)
+                ).appendTo($summaryBody);
             });
 
             $("#summary").fadeIn(fadeDuration);
         });
     }
 
-    // 处理输入框内容变化事件
-    $("#inputBox").on("input", function () {
+    // Handle input change event
+    $inputBox.on("input", function () {
         updateBoxes();
 
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const correctAnswer = questions[currentKey].translation;
+        const { translation } = questions[currentKey];
 
-        if (input === correctAnswer) {
-            for (let i = 0; i < correctAnswer.length; i++) {
-                const box = $("#box" + (i + 1));
-                box.css("background-color", "#79b851");
-            }
+        if (input === translation) {
+            $(".box").css("background-color", "#79b851");
 
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
@@ -105,6 +109,6 @@ $(document).ready(function () {
         }
     });
 
-    // 初始化第一个题目
+    // Initialize first question
     initializeQuestion();
 });
