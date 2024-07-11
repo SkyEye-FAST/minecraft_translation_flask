@@ -20,11 +20,11 @@ $(document).ready(function () {
             $("#sourceText").text(question.source);
             $("#keyText").text(currentKey);
 
+            $("#inputBox").val("").attr("maxlength", translationLength);
+            createBoxes(translationLength);
+
             $("#info").fadeIn(fadeDuration);
         });
-
-        $("#inputBox").val("").attr("maxlength", translationLength);
-        createBoxes(translationLength);
     }
 
     // 创建相应长度的 box
@@ -91,7 +91,10 @@ $(document).ready(function () {
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
-            $(".box").css("background-color", "#79b851");
+            for (let i = 0; i < correctAnswer.length; i++) {
+                const box = $("#box" + (i + 1));
+                box.css("background-color", "#79b851");
+            }
 
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
