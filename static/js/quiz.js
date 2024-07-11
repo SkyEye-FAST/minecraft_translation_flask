@@ -38,6 +38,7 @@ $(document).ready(function () {
     function updateBoxes() {
         const input = $('#inputBox').val();
         const currentKey = questionKeys[currentQuestionIndex];
+        const question = questions[currentKey];
 
         if (!question) {
             console.error('Question not found for key: ', currentKey);
