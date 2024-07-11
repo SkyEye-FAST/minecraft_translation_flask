@@ -90,13 +90,15 @@ $(document).ready(function () {
     $("#inputBox").on("input", updateBoxes);
 
     $("#inputBox").on("input", function () {
-        updateBoxes();
-
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const correctAnswer = questions[currentKey].translation;
 
         if (input === correctAnswer) {
+            for (let i = 0; i < correctAnswer.length; i++) {
+                const box = $("#box" + (i + 1));
+                box.css("background-color", "#79b851");
+            }
             if ((currentQuestionIndex + 1) === questionKeys.length) {
                 setTimeout(() => {
                     showSummary();
