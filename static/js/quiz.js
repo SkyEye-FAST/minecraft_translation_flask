@@ -38,6 +38,12 @@ $(document).ready(function () {
     function updateBoxes() {
         const input = $('#inputBox').val();
         const currentKey = questionKeys[currentQuestionIndex];
+
+        if (!question) {
+            console.error('Question not found for key: ', currentKey);
+            return;
+        }
+
         const correctAnswer = questions[currentKey].translation;
 
         for (let i = 0; i < correctAnswer.length; i++) {
