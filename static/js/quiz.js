@@ -1,5 +1,6 @@
 $(document).ready(function () {
     let currentQuestionIndex = 0;
+    console.log("当前问题索引：", currentQuestionIndex);
     const questions = questionsData;
     const questionKeys = Object.keys(questions);
     const delayBetweenQuestions = 800;
@@ -57,6 +58,7 @@ $(document).ready(function () {
         if (input === correctAnswer) {
             setTimeout(() => {
                 currentQuestionIndex++;
+                console.log("当前问题索引：", currentQuestionIndex);
                 if (currentQuestionIndex < questionKeys.length) {
                     loadQuestion();
                 } else {
@@ -64,8 +66,6 @@ $(document).ready(function () {
                 }
             }, delayBetweenQuestions);
         }
-
-        console.log("当前问题索引：", currentQuestionIndex);
     }
 
     function showSummary() {
