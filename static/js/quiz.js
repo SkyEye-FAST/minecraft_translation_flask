@@ -57,7 +57,7 @@ $(document).ready(function () {
         if (input === correctAnswer) {
             setTimeout(() => {
                 currentQuestionIndex++;
-                Sentry.captureMessage(`当前问题索引：${currentQuestionIndex}`);
+                Sentry.captureMessage(`index：${currentQuestionIndex}, key: ${currentKey}`);
                 console.log("当前问题索引：", currentQuestionIndex);
                 if (currentQuestionIndex < questionKeys.length) {
                     loadQuestion();
