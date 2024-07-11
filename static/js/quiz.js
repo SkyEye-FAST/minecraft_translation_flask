@@ -21,6 +21,11 @@ $(document).ready(function () {
     }
 
     function loadQuestion() {
+        if (currentQuestionIndex >= questionKeys.length) {
+            showSummary();
+            return;
+        }
+
         $("#inputBox").val("");
 
         const currentKey = questionKeys[currentQuestionIndex];
@@ -98,11 +103,7 @@ $(document).ready(function () {
             Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
 
             setTimeout(() => {
-                if (currentQuestionIndex < questionKeys.length) {
-                    loadQuestion();
-                } else {
-                    showSummary();
-                }
+                loadQuestion();
             }, delayBetweenQuestions);
         }
     });
