@@ -14,20 +14,17 @@ $(document).ready(function () {
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
         const question = questions[currentKey];
+        const translationLength = question.translation.length;
 
         $("#info").fadeOut(fadeDuration, function () {
             $("#sourceText").text(question.source);
             $("#keyText").text(currentKey);
 
-            const translationLength = question.translation.length;
-            $("#inputBox").attr("maxlength", translationLength);
-
-            createBoxes(translationLength);
-
             $("#info").fadeIn(fadeDuration);
-
-            $("#inputBox").val("")
         });
+
+        $("#inputBox").val("").attr("maxlength", translationLength);
+        createBoxes(translationLength);
     }
 
     // 创建相应长度的 box
