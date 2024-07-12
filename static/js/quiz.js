@@ -59,7 +59,7 @@ $(document).ready(function () {
 
     function updateBoxes() {
         const input = $inputBox.val();
-        let currentKey = questionKeys[currentQuestionIndex];
+        const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
 
         const translationSegments = getSegmentedText(translation);
@@ -118,8 +118,11 @@ $(document).ready(function () {
         updateBoxes();
     });
 
-    function handleInput(input) {
-        let currentKey = questionKeys[currentQuestionIndex];
+    $inputBox.on('input', function () {
+        const input = $(this).val();
+        const currentIndex = currentQuestionIndex;
+
+        const currentKey = questionKeys[currentIndex];
         const { translation } = questionsData[currentKey];
 
         if (!isComposing) {
@@ -132,7 +135,7 @@ $(document).ready(function () {
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
 
-            if (currentQuestionIndex === questionKeys.length - 1) {
+            if (currentIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
                 setTimeout(() => {
@@ -141,11 +144,6 @@ $(document).ready(function () {
                 }, delayBetweenQuestions);
             }
         }
-    }
-
-    $inputBox.on('input', function () {
-        const input = $(this).val();
-        handleInput(input);
     });
 
 
