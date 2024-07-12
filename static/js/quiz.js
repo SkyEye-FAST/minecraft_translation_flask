@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const { source, translation } = questionsData[currentKey];
+        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
 
         console.log("当前题目索引：", currentQuestionIndex);
         console.log("当前键名：", currentKey);
@@ -60,7 +60,7 @@ $(document).ready(function () {
     function updateBoxes() {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const { translation } = questionsData[currentKey];
+        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
 
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
@@ -96,7 +96,9 @@ $(document).ready(function () {
             const $summaryBody = $("#summaryBody").empty();
 
             questionKeys.forEach((key) => {
-                const { source, translation } = questionsData[key];
+                const source = questionsData[key] && questionsData[key].source;
+                const translation = questionsData[key] && questionsData[key].translation;
+
                 $("<tr>").append(
                     $("<td>").text(source),
                     $("<td>").text(translation)
@@ -123,7 +125,7 @@ $(document).ready(function () {
         const currentIndex = currentQuestionIndex;
 
         const currentKey = questionKeys[currentIndex];
-        const { translation } = questionsData[currentKey];
+        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
 
         if (!isComposing) {
             const translationLength = getSegmentedText(translation).length;
@@ -145,7 +147,6 @@ $(document).ready(function () {
             }
         }
     });
-
 
     // Initialize first question
     initializeQuestion();
