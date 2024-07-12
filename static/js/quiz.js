@@ -16,27 +16,32 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
 
-    // Initialize question
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
-        const translationChars = Array.from(translation);
-        const translationLength = translationChars.length;
+        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
+        const translationLength = translationSegments.length;
 
         $info.fadeOut(fadeDuration, function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
-            $inputBox.val("").attr("maxlength", translationLength * 2);
             createBoxes(translationLength);
 
             $info.fadeIn(fadeDuration);
         });
     }
 
+    function getSegmentedText(text) {
+        return [...new Intl.Segmenter().segment(text)].map(segment => segment.segment);
+    }
 
-    // Create boxes based on length
+    function truncateInput(input, maxLength) {
+        const segmentedInput = getSegmentedText(input);
+        return segmentedInput.slice(0, maxLength).join('');
+    }
+
     function createBoxes(length) {
         $boxes.empty();
         for (let i = 0; i < length; i++) {
@@ -47,24 +52,25 @@ $(document).ready(function () {
         }
     }
 
-    // Update box display based on user input
     function updateBoxes() {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
 
-        const inputChars = Array.from(input);
-        const translationChars = Array.from(translation);
+        const translationSegments = getSegmentedText(translation);
+        const translationLength = translationSegments.length;
 
-        if (inputChars.length > translationChars.length) {
-            inputChars.length = translationChars.length;
-            $inputBox.val(inputChars.join(''));
+        let inputSegments = getSegmentedText(input);
+
+        if (inputSegments.length > translationLength) {
+            inputSegments = inputSegments.slice(0, translationLength);
+            $inputBox.val(inputSegments.join(''));
         }
 
         $(".box").each(function (index) {
             const $box = $(this);
-            const userInputChar = inputChars[index] || '';
-            const correctChar = translationChars[index] || '';
+            const userInputChar = inputSegments[index] || '';
+            const correctChar = translationSegments[index] || '';
 
             $box.text(userInputChar);
 
@@ -72,7 +78,7 @@ $(document).ready(function () {
                 $box.css("background-color", "#9ca3af25");
             } else if (userInputChar === correctChar) {
                 $box.css("background-color", "#79b851");
-            } else if (translationChars.includes(userInputChar)) {
+            } else if (translationSegments.includes(userInputChar)) {
                 $box.css("background-color", "#f3c237");
             } else {
                 $box.css("background-color", "#9ca3af25");
@@ -80,7 +86,6 @@ $(document).ready(function () {
         });
     }
 
-    // Show summary after completing all questions
     function showSummary() {
         $info.add($inputBox).fadeOut(fadeDuration, function () {
             const $summaryBody = $("#summaryBody").empty();
@@ -97,13 +102,16 @@ $(document).ready(function () {
         });
     }
 
-    // Handle input change event
     $inputBox.on("input", function () {
-        updateBoxes();
-
         const input = $(this).val();
+
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
+        const translationLength = getSegmentedText(translation).length;
+
+        const truncatedValue = truncateInput(input, translationLength);
+        $inputBox.val(truncatedValue);
+        updateBoxes();
 
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
