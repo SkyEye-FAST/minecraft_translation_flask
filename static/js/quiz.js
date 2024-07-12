@@ -27,6 +27,7 @@ $(document).ready(function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
+            $inputBox.val("")
             createBoxes(translationLength);
 
             $info.fadeIn(fadeDuration);
@@ -102,18 +103,31 @@ $(document).ready(function () {
         });
     }
 
-    $inputBox.on("input", function () {
-        const input = $(this).val();
+    let isComposing = false;
 
+    $inputBox.on('compositionstart', function () {
+        isComposing = true;
+    });
+
+    $inputBox.on('compositionend', function () {
+        isComposing = false;
+        updateBoxes();
+    });
+
+    $inputBox.on('input', function () {
+        const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
-        const translationLength = getSegmentedText(translation).length;
 
-        const truncatedValue = truncateInput(input, translationLength);
-        $inputBox.val(truncatedValue);
-        updateBoxes();
+        if (!isComposing) {
+            const translationLength = getSegmentedText(translation).length;
+            const truncatedValue = truncateInput(input, translationLength);
+            $inputBox.val(truncatedValue);
+            updateBoxes();
+        }
 
         if (input === translation) {
+            updateBoxes();
             $(".box").css("background-color", "#79b851");
 
             if (currentQuestionIndex === questionKeys.length - 1) {
