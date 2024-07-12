@@ -21,17 +21,20 @@ $(document).ready(function () {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
+        const translationChars = Array.from(translation);
+        const translationLength = translationChars.length;
+
         $info.fadeOut(fadeDuration, function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
-            createBoxes(translation.length);
+            $inputBox.val("").attr("maxlength", translationLength * 2);
+            createBoxes(translationLength);
 
-            $info.fadeIn(fadeDuration, function() {
-                $inputBox.val("").attr("maxlength", translation.length);
-            });
+            $info.fadeIn(fadeDuration);
         });
     }
+
 
     // Create boxes based on length
     function createBoxes(length) {
@@ -50,18 +53,26 @@ $(document).ready(function () {
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
 
+        const inputChars = Array.from(input);
+        const translationChars = Array.from(translation);
+
+        if (inputChars.length > translationChars.length) {
+            inputChars.length = translationChars.length;
+            $inputBox.val(inputChars.join(''));
+        }
+
         $(".box").each(function (index) {
             const $box = $(this);
-            const userInput = input[index];
-            const correctChar = translation[index];
+            const userInputChar = inputChars[index] || '';
+            const correctChar = translationChars[index] || '';
 
-            $box.text(userInput || "");
+            $box.text(userInputChar);
 
-            if (!userInput) {
+            if (!userInputChar) {
                 $box.css("background-color", "#9ca3af25");
-            } else if (userInput === correctChar) {
+            } else if (userInputChar === correctChar) {
                 $box.css("background-color", "#79b851");
-            } else if (translation.includes(userInput)) {
+            } else if (translationChars.includes(userInputChar)) {
                 $box.css("background-color", "#f3c237");
             } else {
                 $box.css("background-color", "#9ca3af25");
