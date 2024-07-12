@@ -1,6 +1,6 @@
 $(document).ready(function () {
     let currentQuestionIndex = 0;
-    const questionsData = questions || {}; // Assuming questions is defined elsewhere
+    const questionsData = questions || {};
     const questionKeys = Object.keys(questionsData);
     const delayBetweenQuestions = 800;
     const fadeDuration = 300;
@@ -27,7 +27,7 @@ $(document).ready(function () {
             $sourceText.text(source);
             $keyText.text(currentKey);
 
-            $inputBox.val("")
+            $inputBox.val("");
             createBoxes(translationLength);
 
             $info.fadeIn(fadeDuration);
@@ -127,14 +127,13 @@ $(document).ready(function () {
         }
 
         if (input === translation) {
-            updateBoxes();
             $(".box").css("background-color", "#79b851");
 
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
-                currentQuestionIndex++;
                 setTimeout(() => {
+                    currentQuestionIndex++;
                     initializeQuestion();
                 }, delayBetweenQuestions);
             }
