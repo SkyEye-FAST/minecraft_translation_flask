@@ -20,6 +20,10 @@ $(document).ready(function () {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
+        console.log("当前题目索引：", currentQuestionIndex);
+        console.log("当前键名：", currentKey);
+        Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
+
         const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
         const translationLength = translationSegments.length;
 
