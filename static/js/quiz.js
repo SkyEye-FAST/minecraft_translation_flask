@@ -17,11 +17,6 @@ $(document).ready(function () {
     const $boxes = $("#boxes");
 
     function showQuestion() {
-        if (currentQuestionIndex >= questionKeys.length) {
-            showSummary();
-            return;
-        }
-
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
         const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
@@ -143,9 +138,15 @@ $(document).ready(function () {
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
 
-            setTimeout(function() {
-                nextQuestion();
-            }, delayBetweenQuestions);
+            if (currentQuestionIndex === questionKeys.length - 1) {
+                setTimeout(function () {
+                    showSummary();
+                }, delayBetweenQuestions);
+            } else {
+                setTimeout(function () {
+                    nextQuestion();
+                }, delayBetweenQuestions);
+            }
         }
     });
 
