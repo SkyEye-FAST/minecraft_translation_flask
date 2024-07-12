@@ -151,9 +151,7 @@ $(document).ready(function () {
 
     // Initialize first question
     initializeQuestion();
-});
 
-$(document).ready(function () {
     var currentUrl = window.location.href;
     var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
     var lastSegment = match ? match[1] : "";
