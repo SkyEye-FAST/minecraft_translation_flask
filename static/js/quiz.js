@@ -152,3 +152,28 @@ $(document).ready(function () {
     // Initialize first question
     initializeQuestion();
 });
+
+$(document).ready(function () {
+    var currentUrl = window.location.href;
+    var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
+    var lastSegment = match ? match[1] : "";
+    document.getElementById("last-segment").textContent = lastSegment;
+
+    $("#copy-button").click(function () {
+        var $copyButton = $(this);
+        var $lastSegment = $("#last-segment");
+        var lastSegmentContent = $lastSegment.text();
+
+        navigator.clipboard
+            .writeText(lastSegmentContent)
+            .then(function () {
+                $copyButton.text("check");
+                setTimeout(function () {
+                    $copyButton.text("content_copy");
+                }, 1500);
+            })
+            .catch(function (err) {
+                console.error("Failed to copy: ", err);
+            });
+    });
+});
