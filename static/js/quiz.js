@@ -18,7 +18,8 @@ $(document).ready(function () {
 
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
+        const source = questionsData[key] && questionsData[key].source;
+        const translation = questionsData[key] && questionsData[key].translation;
 
         console.log("当前题目索引：", currentQuestionIndex);
         console.log("当前键名：", currentKey);
