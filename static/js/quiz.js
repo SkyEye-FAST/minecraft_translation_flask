@@ -16,31 +16,37 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
 
-    function initializeQuestion() {
+    function showQuestion() {
         if (currentQuestionIndex >= questionKeys.length) {
             showSummary();
             return;
         }
 
-        currentKey = questionKeys[currentQuestionIndex];
+        const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
+        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
+        const translationLength = translationSegments.length;
 
         console.log("当前题目索引：", currentQuestionIndex);
         console.log("当前键名：", currentKey);
         Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
 
-        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
-        const translationLength = translationSegments.length;
+        $sourceText.text(source);
+        $keyText.text(currentKey);
+        $inputBox.val("");
+        createBoxes(translationLength);
+    }
 
+    function fadeTransition(callback) {
         $info.fadeOut(fadeDuration, function () {
-            $sourceText.text(source);
-            $keyText.text(currentKey);
-
-            $inputBox.val("");
-            createBoxes(translationLength);
-
+            if (callback) callback();
             $info.fadeIn(fadeDuration);
         });
+    }
+
+    function nextQuestion() {
+        currentQuestionIndex++;
+        fadeTransition(showQuestion);
     }
 
     function getSegmentedText(text) {
@@ -66,7 +72,6 @@ $(document).ready(function () {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
-
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
 
@@ -138,16 +143,14 @@ $(document).ready(function () {
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
 
-            currentQuestionIndex++;
-
             setTimeout(function() {
-                initializeQuestion();
+                nextQuestion();
             }, delayBetweenQuestions);
         }
     });
 
     // Initialize first question
-    initializeQuestion();
+    fadeTransition(showQuestion);
 });
 
 $(document).ready(function () {
