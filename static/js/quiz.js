@@ -18,8 +18,7 @@ $(document).ready(function () {
 
     function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const source = questionsData[currentKey] && questionsData[currentKey].source;
-        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
+        const { source, translation } = questionsData[currentKey];
 
         console.log("当前题目索引：", currentQuestionIndex);
         console.log("当前键名：", currentKey);
@@ -61,7 +60,7 @@ $(document).ready(function () {
     function updateBoxes() {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
+        const { translation } = questionsData[currentKey];
 
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
@@ -97,9 +96,7 @@ $(document).ready(function () {
             const $summaryBody = $("#summaryBody").empty();
 
             questionKeys.forEach((key) => {
-                const source = questionsData[key] && questionsData[key].source;
-                const translation = questionsData[key] && questionsData[key].translation;
-
+                const { source, translation } = questionsData[key];
                 $("<tr>").append(
                     $("<td>").text(source),
                     $("<td>").text(translation)
@@ -126,7 +123,7 @@ $(document).ready(function () {
         const currentIndex = currentQuestionIndex;
 
         const currentKey = questionKeys[currentIndex];
-        const translation = questionsData[currentKey] && questionsData[currentKey].translation;
+        const { translation } = questionsData[currentKey];
 
         if (!isComposing) {
             const translationLength = getSegmentedText(translation).length;
@@ -151,4 +148,29 @@ $(document).ready(function () {
 
     // Initialize first question
     initializeQuestion();
+});
+
+$(document).ready(function () {
+    var currentUrl = window.location.href;
+    var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
+    var lastSegment = match ? match[1] : "";
+    document.getElementById("last-segment").textContent = lastSegment;
+
+    $("#copy-button").click(function () {
+        var $copyButton = $(this);
+        var $lastSegment = $("#last-segment");
+        var lastSegmentContent = $lastSegment.text();
+
+        navigator.clipboard
+            .writeText(lastSegmentContent)
+            .then(function () {
+                $copyButton.text("check");
+                setTimeout(function () {
+                    $copyButton.text("content_copy");
+                }, 1500);
+            })
+            .catch(function (err) {
+                console.error("Failed to copy: ", err);
+            });
+    });
 });
