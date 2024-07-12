@@ -120,9 +120,7 @@ $(document).ready(function () {
 
     $inputBox.on('input', function () {
         const input = $(this).val();
-        const currentIndex = currentQuestionIndex;
-
-        const currentKey = questionKeys[currentIndex];
+        const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
 
         if (!isComposing) {
@@ -135,7 +133,7 @@ $(document).ready(function () {
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
 
-            if (currentIndex === questionKeys.length - 1) {
+            if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
                 setTimeout(() => {
