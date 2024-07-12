@@ -131,13 +131,14 @@ $(document).ready(function () {
         }
 
         if (input === translation) {
+            updateBoxes();
             $(".box").css("background-color", "#79b851");
 
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
+                currentQuestionIndex++;
                 setTimeout(() => {
-                    currentQuestionIndex++;
                     initializeQuestion();
                 }, delayBetweenQuestions);
             }
