@@ -17,7 +17,12 @@ $(document).ready(function () {
     const $boxes = $("#boxes");
 
     function initializeQuestion() {
-        const currentKey = questionKeys[currentQuestionIndex];
+        if (currentQuestionIndex >= questionKeys.length) {
+            showSummary();
+            return;
+        }
+
+        currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
         console.log("当前题目索引：", currentQuestionIndex);
@@ -133,13 +138,10 @@ $(document).ready(function () {
         if (input === translation) {
             $(".box").css("background-color", "#79b851");
 
-            setTimeout(function () {
-                if (currentQuestionIndex === questionKeys.length - 1) {
-                    showSummary();
-                } else {
-                    currentQuestionIndex++;
-                    initializeQuestion();
-                }
+            currentQuestionIndex++;
+
+            setTimeout(function() {
+                initializeQuestion();
             }, delayBetweenQuestions);
         }
     });
