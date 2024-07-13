@@ -8,7 +8,7 @@ $(document).ready(function () {
         "button:not(#toggle-button, #mode-switch), select, input:not(#submit, #inputBox)"
     );
     const links = $("a, #query-link, #quiz-link, #table-link");
-    const container = $(".container-1");
+    const container = $(".container-1, .summary");
     const svg = $("#svg");
 
     // 切换亮暗模式
