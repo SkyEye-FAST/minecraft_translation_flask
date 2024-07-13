@@ -2,15 +2,15 @@
 # Translations.
 # Copyright (C) 2024 SkyEye_FAST
 # This file is distributed under the same license as the Minecraft Standard
-# Translations project.
+# Translation Toolkit project.
 # SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-06-07 20:35+0800\n"
-"PO-Revision-Date: 2024-06-07 20:37+0800\n"
+"POT-Creation-Date: 2024-07-14 01:54+0800\n"
+"PO-Revision-Date: 2024-07-14 01:56+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hant_TW\n"
 "Language-Team: zh_Hant_TW <LL@li.org>\n"
@@ -20,59 +20,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app.py:73
+#: app.py:82
 msgid "Content to be queried: "
 msgstr "查詢的內容："
 
-#: app.py:74
+#: app.py:83
 msgid "Enable additional languages"
 msgstr "啟用其他語言"
 
-#: app.py:75
+#: app.py:84
 msgid "QUERY"
 msgstr "查詢"
 
-#: templates/index.html:7 templates/index.html:10
-msgid "A web application for querying standard translations of Minecraft."
-msgstr "用於查詢 Minecraft 標準翻譯的 Web 應用程式。"
+#: app.py:192
+msgid "Enter question group code..."
+msgstr "輸入題組編號..."
 
-#: templates/index.html:8 templates/index.html:12
+#: app.py:222
+msgid "Enter translation here..."
+msgstr "在此輸入譯名..."
+
+#: templates/404.html:6 templates/index.html:8 templates/index.html:12
 msgid "Minecraft Standard Translations"
-msgstr "Minecraft 標準翻譯"
+msgstr "Minecraft 標準譯名"
 
-#: templates/index.html:40
+#: templates/index.html:7 templates/index.html:10
+msgid "A simple webpage for querying Minecraft's standard translations, and more."
+msgstr "用於查詢 Minecraft 標準譯名的簡單網頁，但不止於此。"
+
+#: templates/index.html:47
 msgid "SETTINGS"
 msgstr "設置"
 
-#: templates/index.html:45
+#: templates/index.html:56
 msgid "Query mode: "
 msgstr "查詢方式："
 
-#: templates/index.html:48
+#: templates/index.html:59
 msgid "Query by source string"
 msgstr "按來源字串查詢"
 
-#: templates/index.html:51
+#: templates/index.html:62
 msgid "Query by translated string"
 msgstr "按已翻譯字串查詢"
 
-#: templates/index.html:54
+#: templates/index.html:65
 msgid "Query by translation key"
 msgstr "按本地化鍵名查詢"
 
-#: templates/index.html:59
+#: templates/index.html:70
 msgid "Language to be queried: "
 msgstr "查詢語言："
 
-#: templates/index.html:72
+#: templates/index.html:83
 msgid "Select a translation key: "
 msgstr "選擇本地化鍵名："
 
-#: templates/index.html:92
+#: templates/index.html:105
 msgid "Language names"
 msgstr "語言名稱"
 
-#: templates/index.html:93
+#: templates/index.html:106
 msgid "Translations"
-msgstr "翻譯"
+msgstr "譯名"
+
+#: templates/quiz_portal.html:7 templates/quiz_portal.html:30
+#: templates/quiz_sub.html:7
+msgid "Minecraft Standard Translation Quiz"
+msgstr "Minecraft 譯名認知測驗"
+
+#: templates/quiz_portal.html:32
+msgid "Random questions (refresh to reselect)"
+msgstr "隨機選擇題組（刷新頁面以重新選擇）"
+
+#: templates/quiz_portal.html:36
+msgid "Enter"
+msgstr "進入"
+
+#: templates/quiz_portal.html:40
+msgid "Query Page"
+msgstr "查詢頁面"
+
+#: templates/quiz_portal.html:43
+msgid "Table Page"
+msgstr "表格頁面"
+
+#: templates/quiz_sub.html:44
+msgid "All questions completed!"
+msgstr "已完成所有問題！"
+
+#: templates/quiz_sub.html:48
+msgid "Source"
+msgstr "原文"
+
+#: templates/quiz_sub.html:49
+msgid "Translation"
+msgstr "譯名"
+
+#: templates/quiz_sub.html:58
+msgid "One more group"
+msgstr "再來一組"
+
+#: templates/quiz_sub.html:59
+msgid "Return to Quiz Portal"
+msgstr "返回測驗門戶"
 

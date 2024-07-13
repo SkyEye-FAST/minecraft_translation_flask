@@ -1,6 +1,7 @@
 # Translations template for Minecraft Standard Translations.
 # Copyright (C) 2024 SkyEye_FAST
-# This file is distributed under the same license as the Minecraft Standard Translations project.
+# This file is distributed under the same license as the Minecraft Standard
+# Translation Toolkit project.
 # SkyEye_FAST <skyeyefast@outlook.com>, 2024.
 #
 #, fuzzy
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-06-07 20:35+0800\n"
+"POT-Creation-Date: 2024-07-14 01:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,59 +18,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
 
-#: app.py:73
+#: app.py:82
 msgid "Content to be queried: "
 msgstr ""
 
-#: app.py:74
+#: app.py:83
 msgid "Enable additional languages"
 msgstr ""
 
-#: app.py:75
+#: app.py:84
 msgid "QUERY"
 msgstr ""
 
-#: templates/index.html:7 templates/index.html:10
-msgid "A web application for querying standard translations of Minecraft."
+#: app.py:192
+msgid "Enter question group code..."
 msgstr ""
 
-#: templates/index.html:8 templates/index.html:12
+#: app.py:222
+msgid "Enter translation here..."
+msgstr ""
+
+#: templates/404.html:6 templates/index.html:9 templates/index.html:13
 msgid "Minecraft Standard Translations"
 msgstr ""
 
-#: templates/index.html:40
-msgid "SETTINGS"
-msgstr ""
-
-#: templates/index.html:45
-msgid "Query mode: "
+#: templates/index.html:8 templates/index.html:11
+msgid "A simple webpage for querying Minecraft's standard translations, and more."
 msgstr ""
 
 #: templates/index.html:48
+msgid "SETTINGS"
+msgstr ""
+
+#: templates/index.html:57
+msgid "Query mode: "
+msgstr ""
+
+#: templates/index.html:60
 msgid "Query by source string"
 msgstr ""
 
-#: templates/index.html:51
+#: templates/index.html:63
 msgid "Query by translated string"
 msgstr ""
 
-#: templates/index.html:54
+#: templates/index.html:66
 msgid "Query by translation key"
 msgstr ""
 
-#: templates/index.html:59
+#: templates/index.html:71
 msgid "Language to be queried: "
 msgstr ""
 
-#: templates/index.html:72
+#: templates/index.html:84
 msgid "Select a translation key: "
 msgstr ""
 
-#: templates/index.html:92
+#: templates/index.html:106
 msgid "Language names"
 msgstr ""
 
-#: templates/index.html:93
+#: templates/index.html:107
 msgid "Translations"
+msgstr ""
+
+#: templates/quiz_portal.html:7 templates/quiz_portal.html:30
+#: templates/quiz_sub.html:7
+msgid "Minecraft Standard Translation Quiz"
+msgstr ""
+
+#: templates/quiz_portal.html:32
+msgid "Random questions (refresh to reselect)"
+msgstr ""
+
+#: templates/quiz_portal.html:36
+msgid "Enter"
+msgstr ""
+
+#: templates/quiz_portal.html:40
+msgid "Query Page"
+msgstr ""
+
+#: templates/quiz_portal.html:43
+msgid "Table Page"
+msgstr ""
+
+#: templates/quiz_sub.html:44
+msgid "All questions completed!"
+msgstr ""
+
+#: templates/quiz_sub.html:48
+msgid "Source"
+msgstr ""
+
+#: templates/quiz_sub.html:49
+msgid "Translation"
+msgstr ""
+
+#: templates/quiz_sub.html:58
+msgid "One more group"
+msgstr ""
+
+#: templates/quiz_sub.html:59
+msgid "Return to Quiz Portal"
 msgstr ""
 

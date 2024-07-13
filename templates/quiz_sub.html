@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft译名认知测验</title>
+    <title>{{ _("Minecraft Standard Translation Quiz") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet"
         href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
@@ -39,14 +39,14 @@
             </div>
             <div id="boxes" class="zh-cn"></div>
         </div>
-        <input type="text" id="inputBox" class="zh_cn" placeholder="在此输入译名…" autocomplete="off">
+        <input type="text" id="inputBox" class="zh_cn" placeholder="{{ placeholder }}" autocomplete="off">
         <div class="summary" id="summary">
-            <div class="zh-cn title">已完成所有题目!</div>
+            <div class="zh-cn title">{{ _("All questions completed!") }}</div>
             <table id="summaryTable">
                 <thead>
                     <tr>
-                        <th>原文</th>
-                        <th>译名</th>
+                        <th>{{ _("Source") }}</th>
+                        <th>{{ _("Translation") }}</th>
                     </tr>
                 </thead>
                 <tbody id="summaryBody"></tbody>
@@ -55,8 +55,8 @@
                 <div class="code" id="last-segment"></div>
                 <span class="material-symbols-outlined btn" id="copy-button">content_copy</span>
             </div>
-            <button id="restartButton">再来一组</button>
-            <button onclick="window.location.href='../quiz'">返回测验主页</button>
+            <button id="restartButton">{{ _("One more group") }}</button>
+            <button onclick="window.location.href='../quiz'">{{ _("Return to Quiz Portal") }}</button>
         </div>
     </div>
 </body>

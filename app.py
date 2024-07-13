@@ -185,10 +185,15 @@ def get_questions() -> str:
     return code
 
 
-@flask_app.route("/quiz")
+@flask_app.route("/quiz", methods=["GET", "POST"])
 def quiz_portal() -> str:
     """测验门户页面路由"""
-    return render_template("quiz_portal.html", random_code=get_questions())
+
+    p1 = _l("Enter question group code...")
+
+    return render_template(
+        "quiz_portal.html", placeholder=p1, random_code=get_questions()
+    )
 
 
 @flask_app.route("/quiz/")
@@ -214,8 +219,13 @@ def quiz_sub(code) -> str:
         for key in keys
     }
 
+    p2 = _l("Enter translation here...")
+
     return render_template(
-        "quiz_sub.html", questions=questions, random_code=get_questions()
+        "quiz_sub.html",
+        questions=questions,
+        placeholder=p2,
+        random_code=get_questions(),
     )
 
 
