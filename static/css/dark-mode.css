@@ -1,0 +1,29 @@
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #424242;
+    color: #e0e0e0;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#mode-switch {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#mode-icon {
+    font-size: 48px;
+    color: inherit;
+}
+
+.invert {
+    filter: invert(1);
+}

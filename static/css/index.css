@@ -1,12 +1,12 @@
-@import url('https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif:wght@100..900&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Serif+TC:wght@300;400&display=swap');
+@import url("https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif:wght@100..900&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Serif+TC:wght@300;400&display=swap");
 
 @font-face {
     font-display: swap;
-    font-family: '一点明体';
+    font-family: "一点明体";
     font-style: normal;
     font-weight: normal;
-    src: local('一点明体'),
-        url('../fonts/I.Ming-8.10.subset.woff2') format('woff2');
+    src: local("一点明体"),
+        url("../fonts/I.Ming-8.10.subset.woff2") format("woff2");
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -18,7 +18,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* 链接样式 */
@@ -27,11 +26,6 @@ body {
 .quiz-link {
     position: absolute;
     top: 15px;
-}
-
-body.dark-mode {
-    background-color: #2e2e2e;
-    color: #f9f2e0;
 }
 
 .github-icon {
@@ -56,6 +50,12 @@ body.dark-mode {
     transition: color 0.3s ease;
 }
 
+.mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 75px;
+}
+
 .material-symbols-outlined.md-48 {
     position: absolute;
     font-size: 48px;
@@ -63,14 +63,14 @@ body.dark-mode {
 
 /* 标题样式 */
 .title {
-    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif", "Times New Roman", SimSun, Times, serif;
     font-size: 2.5em;
     font-weight: 600;
     text-align: center;
 }
 
 .subtitle {
-    font-family: 'Fira Code', 'Source Code Pro', Consolas, Monaco, monospace;
+    font-family: "Fira Code", "Source Code Pro", Consolas, Monaco, monospace;
     font-size: 1.25em;
     text-align: center;
 }
@@ -83,7 +83,7 @@ table {
 table td,
 table th {
     text-align: center;
-    padding: .5em 2em;
+    padding: 0.5em 2em;
     border-width: 2px;
     border-style: solid;
     font-size: 1.5em;
@@ -153,7 +153,8 @@ table th {
 }
 
 .table-header {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', "思源宋体", 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
+        "思源宋体", "Times New Roman", SimSun, Times, serif;
     font-size: 2.25em;
     white-space: nowrap;
 }
@@ -169,35 +170,43 @@ table th {
 }
 
 .zh-cn {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', '思源宋体', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
+        "思源宋体", "Times New Roman", SimSun, Times, serif;
 }
 
 .zh-hk {
-    font-family: 'Noto Serif HK', 'Source Han Serif HC', 'Source Han Serif HK', '思源宋體 香港', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif HK", "Source Han Serif HC", "Source Han Serif HK",
+        "思源宋體 香港", "Times New Roman", SimSun, Times, serif;
 }
 
 .zh-tw {
-    font-family: 'Noto Serif TC', 'Source Han Serif TC', 'Source Han Serif TW', '思源宋體', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif TC", "Source Han Serif TC", "Source Han Serif TW",
+        "思源宋體", "Times New Roman", SimSun, Times, serif;
 }
 
 .lzh {
-    font-family: '一点明体', "Noto Serif TC Light", 'Source Han Serif TC Light', 'Source Han Serif TW Light', "思源宋體 Light", 'Times New Roman', SimSun, Times, serif;
+    font-family: "一点明体", "Noto Serif TC Light", "Source Han Serif TC Light",
+        "Source Han Serif TW Light", "思源宋體 Light", "Times New Roman", SimSun,
+        Times, serif;
 }
 
 .ja {
-    font-family: 'Noto Serif JP', 'Source Han Serif', 'Source Han Serif JP', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif JP", "Source Han Serif", "Source Han Serif JP",
+        "Times New Roman", SimSun, Times, serif;
 }
 
 .ko {
-    font-family: 'Noto Serif KR', 'Source Han Serif K', 'Source Han Serif KR', 'Times New Roman', Times, serif;
+    font-family: "Noto Serif KR", "Source Han Serif K", "Source Han Serif KR",
+        "Times New Roman", Times, serif;
 }
 
 .vi {
-    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif", "Times New Roman", SimSun, Times, serif;
 }
 
 .minecraft-title {
-    font-family: 'Noto Serif', 'Source Han Serif', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif", "Source Han Serif", "Times New Roman", SimSun,
+        Times, serif;
     text-align: center;
     font-size: 2.25em;
     font-weight: 900;
@@ -225,7 +234,7 @@ table th {
 
 .form .container input,
 .form .container select {
-    padding: .2em;
+    padding: 0.2em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -252,29 +261,6 @@ table th {
 
 .hidden {
     display: none;
-}
-
-/* light/dark mode */
-
-.mode-toggle {
-    position: absolute;
-    top: 15px;
-    right: 75px;
-}
-
-#mode-switch {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#mode-icon {
-    font-size: 48px;
-    color: inherit;
-}
-
-.invert {
-    filter: invert(1);
 }
 
 /* collapse */
@@ -325,7 +311,7 @@ table th {
     }
 
     .mode-toggle {
-        right: 50px
+        right: 50px;
     }
 
     .title {

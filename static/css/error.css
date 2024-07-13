@@ -1,4 +1,4 @@
-@import url('https://fonts.font.im/css2?&family=Noto+Serif:wght@100..900&display=swap');
+@import url("https://fonts.font.im/css2?&family=Noto+Serif:wght@100..900&display=swap");
 
 body {
     background-color: #f9f2e0;
@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     margin: 0;
     height: 100vh;
-    font-family: 'Noto Serif', 'Times New Roman', SimSun, Times, serif;
+    font-family: "Noto Serif", "Times New Roman", SimSun, Times, serif;
 }
 
 a {
@@ -39,7 +39,7 @@ a {
     line-height: inherit;
     vertical-align: middle;
     font-size: inherit;
-    transform: translateY(-.1em);
+    transform: translateY(-0.1em);
 }
 
 /* 响应式设计 */

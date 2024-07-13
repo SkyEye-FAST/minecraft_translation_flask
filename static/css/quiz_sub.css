@@ -27,18 +27,50 @@ body {
     text-align: center;
     vertical-align: top;
     box-sizing: border-box;
+    color: #000;
     background-color: #9ca3af25;
     font-weight: 700;
     transition: all 0.2s ease;
 }
 
-input[type="text"] {
+.box {
+    color: #000;
+    background-color: #9ca3af25;
+}
+
+.box.correct {
+    color: #000;
+    background-color: #79b851;
+}
+
+.box.exist {
+    color: #000;
+    background-color: #f3c237;
+}
+
+.box.dark {
+    color: #e0e0e0;
+    background-color: #9ca3af25;
+}
+
+.box.correct.dark {
+    color: #e0e0e0;
+    background-color: #538d4e;
+}
+
+.box.exist.dark {
+    color: #e0e0e0;
+    background-color: #b59f3b;
+}
+
+#inputBox {
     margin-top: 20px;
     width: 50%;
     height: 3em;
     font-size: 1.75em;
     text-align: center;
-    border: 2px solid #50535a1a;
+    border: 2px solid;
+    border-color: #50535a1a;
     border-radius: 8px;
     box-sizing: border-box;
     background-color: transparent;
