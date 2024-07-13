@@ -137,7 +137,7 @@ $(document).ready(function () {
         updateBoxes();
     });
 
-    $inputBox.on("input", function () {
+    $inputBox.on("input", async function () {
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
@@ -150,18 +150,28 @@ $(document).ready(function () {
         }
 
         if (input === translation) {
+            await delay(delayBetweenQuestions);
             if (currentQuestionIndex === questionKeys.length - 1) {
-                setTimeout(showSummary, delayBetweenQuestions);
+                showSummary();
             } else {
-                setTimeout(() => {
-                    $info.fadeOut(fadeDuration, function () {
-                        currentQuestionIndex++;
-                        initializeQuestion();
-                    });
-                }, delayBetweenQuestions);
+                await fadeOutInfo(fadeDuration);
+                currentQuestionIndex++;
+                initializeQuestion();
             }
         }
     });
+
+    function delay(duration) {
+        return new Promise(resolve => setTimeout(resolve, duration));
+    }
+
+    function fadeOutInfo(fadeDuration) {
+        return new Promise(resolve => {
+            $info.fadeOut(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
 
     // Initialize first question
     initializeQuestion();
