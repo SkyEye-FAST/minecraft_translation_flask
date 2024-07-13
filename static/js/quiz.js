@@ -28,7 +28,7 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
 
-    function initializeQuestion() {
+    async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
@@ -37,15 +37,15 @@ $(document).ready(function () {
         ].map((segment) => segment.segment);
         const translationLength = translationSegments.length;
 
-        $info.fadeOut(fadeDuration, function () {
-            $sourceText.text(source);
-            $keyText.text(currentKey);
+        await fadeOutInfo(fadeDuration);
 
-            $inputBox.val("");
-            createBoxes(translationLength);
+        $sourceText.text(source);
+        $keyText.text(currentKey);
 
-            $info.fadeIn(fadeDuration);
-        });
+        $inputBox.val("");
+        createBoxes(translationLength);
+
+        await fadeInInfo(fadeDuration);
     }
 
     function getSegmentedText(text) {
@@ -111,19 +111,19 @@ $(document).ready(function () {
         });
     }
 
-    function showSummary() {
-        $info.add($inputBox).fadeOut(fadeDuration, function () {
-            const $summaryBody = $("#summaryBody").empty();
+    async function showSummary() {
+        await fadeOutInfoAndInputBox(fadeDuration);
 
-            questionKeys.forEach((key) => {
-                const { source, translation } = questionsData[key];
-                $("<tr>")
-                    .append($("<td>").text(source), $("<td>").text(translation))
-                    .appendTo($summaryBody);
-            });
+        const $summaryBody = $("#summaryBody").empty();
 
-            $("#summary").fadeIn(fadeDuration);
+        questionKeys.forEach((key) => {
+            const { source, translation } = questionsData[key];
+            $("<tr>")
+                .append($("<td>").text(source), $("<td>").text(translation))
+                .appendTo($summaryBody);
         });
+
+        await fadeInSummary(fadeDuration);
     }
 
     let isComposing = false;
@@ -152,11 +152,11 @@ $(document).ready(function () {
         if (input === translation) {
             await delay(delayBetweenQuestions);
             if (currentQuestionIndex === questionKeys.length - 1) {
-                showSummary();
+                await showSummary();
             } else {
                 await fadeOutInfo(fadeDuration);
                 currentQuestionIndex++;
-                initializeQuestion();
+                await initializeQuestion();
             }
         }
     });
@@ -168,6 +168,30 @@ $(document).ready(function () {
     function fadeOutInfo(fadeDuration) {
         return new Promise(resolve => {
             $info.fadeOut(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
+
+    function fadeInInfo(fadeDuration) {
+        return new Promise(resolve => {
+            $info.fadeIn(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
+
+    function fadeOutInfoAndInputBox(fadeDuration) {
+        return new Promise(resolve => {
+            $info.add($inputBox).fadeOut(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
+
+    function fadeInSummary(fadeDuration) {
+        return new Promise(resolve => {
+            $("#summary").fadeIn(fadeDuration, function () {
                 resolve();
             });
         });
