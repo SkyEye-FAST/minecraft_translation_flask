@@ -17,7 +17,7 @@ body {
     text-align: center;
     background-color: #fff;
     padding: 20px;
-    width: 600px;
+    width: 700px;
     border-radius: 8px;
 }
 
@@ -44,7 +44,9 @@ a {
 
 .input-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -58,6 +60,7 @@ input[type="text"] {
 }
 
 button {
+    min-height: 2.5em;
     background-color: #f0f0f0;
     cursor: pointer;
     font-size: 20px;

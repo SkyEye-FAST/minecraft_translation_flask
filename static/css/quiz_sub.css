@@ -63,7 +63,7 @@ body {
     background-color: #b59f3b;
 }
 
-#inputBox {
+input[type="text"] {
     margin-top: 20px;
     width: 50%;
     height: 3em;
