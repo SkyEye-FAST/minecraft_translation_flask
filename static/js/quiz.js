@@ -16,32 +16,26 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
 
-    function showQuestion() {
+    function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
-        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
-        const translationLength = translationSegments.length;
 
         console.log("当前题目索引：", currentQuestionIndex);
         console.log("当前键名：", currentKey);
         Sentry.captureMessage(`Quiz, ${currentQuestionIndex}`);
 
-        $sourceText.text(source);
-        $keyText.text(currentKey);
-        $inputBox.val("");
-        createBoxes(translationLength);
-    }
+        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
+        const translationLength = translationSegments.length;
 
-    function fadeTransition(callback) {
         $info.fadeOut(fadeDuration, function () {
-            if (callback) callback();
+            $sourceText.text(source);
+            $keyText.text(currentKey);
+
+            $inputBox.val("");
+            createBoxes(translationLength);
+
             $info.fadeIn(fadeDuration);
         });
-    }
-
-    function nextQuestion() {
-        currentQuestionIndex++;
-        fadeTransition(showQuestion);
     }
 
     function getSegmentedText(text) {
@@ -67,6 +61,7 @@ $(document).ready(function () {
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
+
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
 
@@ -139,19 +134,18 @@ $(document).ready(function () {
             $(".box").css("background-color", "#79b851");
 
             if (currentQuestionIndex === questionKeys.length - 1) {
-                setTimeout(function () {
-                    showSummary();
-                }, delayBetweenQuestions);
+                setTimeout(showSummary, delayBetweenQuestions);
             } else {
-                setTimeout(function () {
-                    nextQuestion();
+                currentQuestionIndex++;
+                setTimeout(() => {
+                    initializeQuestion();
                 }, delayBetweenQuestions);
             }
         }
     });
 
     // Initialize first question
-    fadeTransition(showQuestion);
+    initializeQuestion();
 });
 
 $(document).ready(function () {
