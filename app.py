@@ -38,7 +38,10 @@ def get_locale() -> str:
         str: 返回匹配的语言代码，默认返回 "en"。
     """
 
-    return request.accept_languages.best_match(["zh-CN", "zh-TW", "zh", "en"], default="en")
+    locale = request.accept_languages.best_match(
+        ["zh_CN", "zh_TW", "zh", "en"], default="en"
+    )
+    return locale
 
 
 def get_timezone_from_ip() -> Optional[str]:
