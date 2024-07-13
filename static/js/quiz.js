@@ -153,9 +153,11 @@ $(document).ready(function () {
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {
-                currentQuestionIndex++;
                 setTimeout(() => {
-                    initializeQuestion();
+                    $info.fadeOut(fadeDuration, function () {
+                        currentQuestionIndex++;
+                        initializeQuestion();
+                    });
                 }, delayBetweenQuestions);
             }
         }
