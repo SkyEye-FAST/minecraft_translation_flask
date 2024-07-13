@@ -189,6 +189,10 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $('#restartButton').click(function () {
+        window.location.href = `../quiz/${randomCode}`;
+    });
+
     var currentUrl = window.location.href;
     var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
     var lastSegment = match ? match[1] : "";
