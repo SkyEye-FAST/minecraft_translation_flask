@@ -16,6 +16,7 @@ $(document).ready(function () {
     const questionKeys = Object.keys(questionsData);
     const delayBetweenQuestions = 800;
     const fadeDuration = 300;
+    let isLocked = false;
 
     if (questionKeys.length === 0) {
         console.error("No questions available.");
@@ -37,7 +38,7 @@ $(document).ready(function () {
         ].map((segment) => segment.segment);
         const translationLength = translationSegments.length;
 
-        await fadeOutInfo(fadeDuration);
+        await fadeOutElement($info, fadeDuration);
 
         $sourceText.text(source);
         $keyText.text(currentKey);
@@ -45,7 +46,7 @@ $(document).ready(function () {
         $inputBox.val("");
         createBoxes(translationLength);
 
-        await fadeInInfo(fadeDuration);
+        await fadeInElement($info, fadeDuration);
     }
 
     function getSegmentedText(text) {
@@ -112,7 +113,7 @@ $(document).ready(function () {
     }
 
     async function showSummary() {
-        await fadeOutInfoAndInputBox(fadeDuration);
+        await fadeOutElement($info.add($inputBox), fadeDuration);
 
         const $summaryBody = $("#summaryBody").empty();
 
@@ -123,7 +124,7 @@ $(document).ready(function () {
                 .appendTo($summaryBody);
         });
 
-        await fadeInSummary(fadeDuration);
+        await fadeInElement($("#summary"), fadeDuration);
     }
 
     let isComposing = false;
@@ -149,49 +150,35 @@ $(document).ready(function () {
             updateBoxes();
         }
 
-        if (input === translation) {
+        if (input === translation && !isLocked) {
+            isLocked = true;
             await delay(delayBetweenQuestions);
             if (currentQuestionIndex === questionKeys.length - 1) {
                 await showSummary();
             } else {
-                await fadeOutInfo(fadeDuration);
+                await fadeOutElement($info, fadeDuration);
                 currentQuestionIndex++;
                 await initializeQuestion();
             }
+            isLocked = false;
         }
     });
 
     function delay(duration) {
-        return new Promise(resolve => setTimeout(resolve, duration));
+        return new Promise((resolve) => setTimeout(resolve, duration));
     }
 
-    function fadeOutInfo(fadeDuration) {
-        return new Promise(resolve => {
-            $info.fadeOut(fadeDuration, function () {
+    function fadeOutElement($element, fadeDuration) {
+        return new Promise((resolve) => {
+            $element.fadeOut(fadeDuration, function () {
                 resolve();
             });
         });
     }
 
-    function fadeInInfo(fadeDuration) {
-        return new Promise(resolve => {
-            $info.fadeIn(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
-
-    function fadeOutInfoAndInputBox(fadeDuration) {
-        return new Promise(resolve => {
-            $info.add($inputBox).fadeOut(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
-
-    function fadeInSummary(fadeDuration) {
-        return new Promise(resolve => {
-            $("#summary").fadeIn(fadeDuration, function () {
+    function fadeInElement($element, fadeDuration) {
+        return new Promise((resolve) => {
+            $element.fadeIn(fadeDuration, function () {
                 resolve();
             });
         });
