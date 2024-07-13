@@ -1,119 +1,170 @@
 $(document).ready(function () {
     let currentQuestionIndex = 0;
-    console.log("当前问题索引：", currentQuestionIndex);
-    const questions = questionsData;
-    const questionKeys = Object.keys(questions);
+    const questionsData = questions || {};
+    const questionKeys = Object.keys(questionsData);
     const delayBetweenQuestions = 800;
     const fadeDuration = 300;
 
-    function createBoxes(length) {
-        const boxesDiv = $('#boxes').empty();
-        for (let i = 0; i < length; i++) {
-            $('<div>', {
-                class: 'box',
-                id: 'box' + (i + 1)
-            }).appendTo(boxesDiv);
-        }
+    if (questionKeys.length === 0) {
+        console.error("No questions available.");
+        return;
     }
 
-    function loadQuestion() {
-        const inputBox = $('#inputBox').val('');
+    const $info = $("#info");
+    const $sourceText = $("#sourceText");
+    const $keyText = $("#keyText");
+    const $inputBox = $("#inputBox");
+    const $boxes = $("#boxes");
+
+    function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const question = questions[currentKey];
-        const sourceText = question.source;
-        const translationText = question.translation;
+        const { source, translation } = questionsData[currentKey];
 
-        $('#info').fadeOut(fadeDuration, function () {
-            $('#sourceText').text(sourceText);
-            $('#keyText').text(currentKey);
+        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
+        const translationLength = translationSegments.length;
 
-            const questionLength = translationText.length;
-            inputBox.attr('maxlength', questionLength);
-            createBoxes(questionLength);
-            updateBoxes();
+        $info.fadeOut(fadeDuration, function () {
+            $sourceText.text(source);
+            $keyText.text(currentKey);
 
-            $(this).fadeIn(fadeDuration);
+            $inputBox.val("");
+            createBoxes(translationLength);
+
+            $info.fadeIn(fadeDuration);
         });
+    }
+
+    function getSegmentedText(text) {
+        return [...new Intl.Segmenter().segment(text)].map(segment => segment.segment);
+    }
+
+    function truncateInput(input, maxLength) {
+        const segmentedInput = getSegmentedText(input);
+        return segmentedInput.slice(0, maxLength).join('');
+    }
+
+    function createBoxes(length) {
+        $boxes.empty();
+        for (let i = 0; i < length; i++) {
+            $("<div>", {
+                class: "box",
+                id: "box" + (i + 1),
+            }).appendTo($boxes);
+        }
     }
 
     function updateBoxes() {
-        const input = $('#inputBox').val();
+        const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
-        const correctAnswer = questions[currentKey].translation;
+        const { translation } = questionsData[currentKey];
 
-        for (let i = 0; i < correctAnswer.length; i++) {
-            const box = $('#box' + (i + 1));
-            box.text(input[i] || '');
-            if (input[i] === undefined) {
-                box.css('background-color', '#9ca3af25');
-            } else if (input[i] === correctAnswer[i]) {
-                box.css('background-color', '#79b851');
-            } else if (correctAnswer.includes(input[i])) {
-                box.css('background-color', '#f3c237');
+        const translationSegments = getSegmentedText(translation);
+        const translationLength = translationSegments.length;
+
+        let inputSegments = getSegmentedText(input);
+
+        if (inputSegments.length > translationLength) {
+            inputSegments = inputSegments.slice(0, translationLength);
+            $inputBox.val(inputSegments.join(''));
+        }
+
+        $(".box").each(function (index) {
+            const $box = $(this);
+            const userInputChar = inputSegments[index] || '';
+            const correctChar = translationSegments[index] || '';
+
+            $box.text(userInputChar);
+
+            if (!userInputChar) {
+                $box.css("background-color", "#9ca3af25");
+            } else if (userInputChar === correctChar) {
+                $box.css("background-color", "#79b851");
+            } else if (translationSegments.includes(userInputChar)) {
+                $box.css("background-color", "#f3c237");
             } else {
-                box.css('background-color', '#9ca3af25');
+                $box.css("background-color", "#9ca3af25");
             }
-        }
-
-        if (input === correctAnswer) {
-            setTimeout(() => {
-                currentQuestionIndex++;
-                console.log("当前问题索引：", currentQuestionIndex);
-                if (currentQuestionIndex < questionKeys.length) {
-                    loadQuestion();
-                } else {
-                    showSummary();
-                }
-            }, delayBetweenQuestions);
-        }
-    }
-
-    function showSummary() {
-        $('#info, #inputBox').fadeOut(fadeDuration, function () {
-            $(this).hide();
-            const summaryTableBody = $('#summaryBody').empty();
-
-            questionKeys.forEach((key) => {
-                const question = questions[key];
-                const sourceText = question.source;
-                const translationText = question.translation;
-
-                const row = $('<tr>').appendTo(summaryTableBody);
-                $('<td>').text(sourceText).appendTo(row);
-                $('<td>').text(translationText).appendTo(row);
-            });
-
-            $('#summary').fadeIn(fadeDuration);
         });
     }
 
-    $('#restartButton').click(function () {
-        window.location.href = `../quiz/${randomCode}`;
+    function showSummary() {
+        $info.add($inputBox).fadeOut(fadeDuration, function () {
+            const $summaryBody = $("#summaryBody").empty();
+
+            questionKeys.forEach((key) => {
+                const { source, translation } = questionsData[key];
+                $("<tr>").append(
+                    $("<td>").text(source),
+                    $("<td>").text(translation)
+                ).appendTo($summaryBody);
+            });
+
+            $("#summary").fadeIn(fadeDuration);
+        });
+    }
+
+    let isComposing = false;
+
+    $inputBox.on('compositionstart', function () {
+        isComposing = true;
     });
 
-    $('#inputBox').on('input', updateBoxes);
+    $inputBox.on('compositionend', function () {
+        isComposing = false;
+        updateBoxes();
+    });
 
-    loadQuestion();
+    $inputBox.on('input', function () {
+        const input = $(this).val();
+        const currentKey = questionKeys[currentQuestionIndex];
+        const { translation } = questionsData[currentKey];
+
+        if (!isComposing) {
+            const translationLength = getSegmentedText(translation).length;
+            const truncatedValue = truncateInput(input, translationLength);
+            $inputBox.val(truncatedValue);
+            updateBoxes();
+        }
+
+        if (input === translation) {
+            $(".box").css("background-color", "#79b851");
+
+            if (currentQuestionIndex === questionKeys.length - 1) {
+                setTimeout(showSummary, delayBetweenQuestions);
+            } else {
+                currentQuestionIndex++;
+                setTimeout(() => {
+                    initializeQuestion();
+                }, delayBetweenQuestions);
+            }
+        }
+    });
+
+    // Initialize first question
+    initializeQuestion();
 });
 
 $(document).ready(function () {
     var currentUrl = window.location.href;
     var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
-    var lastSegment = match ? match[1] : '';
-    document.getElementById('last-segment').textContent = lastSegment;
+    var lastSegment = match ? match[1] : "";
+    document.getElementById("last-segment").textContent = lastSegment;
 
-    $('#copy-button').click(function () {
+    $("#copy-button").click(function () {
         var $copyButton = $(this);
-        var $lastSegment = $('#last-segment');
+        var $lastSegment = $("#last-segment");
         var lastSegmentContent = $lastSegment.text();
 
-        navigator.clipboard.writeText(lastSegmentContent).then(function () {
-            $copyButton.text('check');
-            setTimeout(function () {
-                $copyButton.text('content_copy');
-            }, 1500);
-        }).catch(function (err) {
-            console.error('Failed to copy: ', err);
-        });
+        navigator.clipboard
+            .writeText(lastSegmentContent)
+            .then(function () {
+                $copyButton.text("check");
+                setTimeout(function () {
+                    $copyButton.text("content_copy");
+                }, 1500);
+            })
+            .catch(function (err) {
+                console.error("Failed to copy: ", err);
+            });
     });
 });

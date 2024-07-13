@@ -10,8 +10,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_sub.css') }}" type="text/css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://js-de.sentry-cdn.com/d2cad507d8a98e90f3325dbcda32791c.min.js" crossorigin="anonymous"></script>
     <script>
-        const questionsData = {{ questions | tojson | safe }};
+        const questions = {{ questions | tojson | safe }};
         const randomCode = "{{ random_code }}";
     </script>
     <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
