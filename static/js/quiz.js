@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    const body = $("body");
+
+    function toggleDarkMode() {
+        body.toggleClass("dark-mode");
+        updateBoxes();
+    }
+
+    body.on("toggle-dark-mode", toggleDarkMode);
+    $("#mode-switch").click(function () {
+        body.trigger("toggle-dark-mode");
+    });
+
     let currentQuestionIndex = 0;
     const questionsData = questions || {};
     const questionKeys = Object.keys(questionsData);
@@ -20,7 +32,9 @@ $(document).ready(function () {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
-        const translationSegments = [...new Intl.Segmenter().segment(translation)].map(segment => segment.segment);
+        const translationSegments = [
+            ...new Intl.Segmenter().segment(translation),
+        ].map((segment) => segment.segment);
         const translationLength = translationSegments.length;
 
         $info.fadeOut(fadeDuration, function () {
@@ -35,12 +49,14 @@ $(document).ready(function () {
     }
 
     function getSegmentedText(text) {
-        return [...new Intl.Segmenter().segment(text)].map(segment => segment.segment);
+        return [...new Intl.Segmenter().segment(text)].map(
+            (segment) => segment.segment
+        );
     }
 
     function truncateInput(input, maxLength) {
         const segmentedInput = getSegmentedText(input);
-        return segmentedInput.slice(0, maxLength).join('');
+        return segmentedInput.slice(0, maxLength).join("");
     }
 
     function createBoxes(length) {
@@ -54,6 +70,8 @@ $(document).ready(function () {
     }
 
     function updateBoxes() {
+        const isDarkMode = localStorage.getItem("mode");
+
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
@@ -65,24 +83,30 @@ $(document).ready(function () {
 
         if (inputSegments.length > translationLength) {
             inputSegments = inputSegments.slice(0, translationLength);
-            $inputBox.val(inputSegments.join(''));
+            $inputBox.val(inputSegments.join(""));
         }
 
         $(".box").each(function (index) {
             const $box = $(this);
-            const userInputChar = inputSegments[index] || '';
-            const correctChar = translationSegments[index] || '';
+            const userInputChar = inputSegments[index] || "";
+            const correctChar = translationSegments[index] || "";
 
             $box.text(userInputChar);
 
+            $box.removeClass("correct exist dark");
+
             if (!userInputChar) {
-                $box.css("background-color", "#9ca3af25");
+                $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
             } else if (userInputChar === correctChar) {
-                $box.css("background-color", "#79b851");
+                $box.addClass(
+                    isDarkMode === "dark" ? "box correct dark" : "box correct"
+                );
             } else if (translationSegments.includes(userInputChar)) {
-                $box.css("background-color", "#f3c237");
+                $box.addClass(
+                    isDarkMode === "dark" ? "box exist dark" : "box exist"
+                );
             } else {
-                $box.css("background-color", "#9ca3af25");
+                $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
             }
         });
     }
@@ -93,10 +117,9 @@ $(document).ready(function () {
 
             questionKeys.forEach((key) => {
                 const { source, translation } = questionsData[key];
-                $("<tr>").append(
-                    $("<td>").text(source),
-                    $("<td>").text(translation)
-                ).appendTo($summaryBody);
+                $("<tr>")
+                    .append($("<td>").text(source), $("<td>").text(translation))
+                    .appendTo($summaryBody);
             });
 
             $("#summary").fadeIn(fadeDuration);
@@ -105,16 +128,16 @@ $(document).ready(function () {
 
     let isComposing = false;
 
-    $inputBox.on('compositionstart', function () {
+    $inputBox.on("compositionstart", function () {
         isComposing = true;
     });
 
-    $inputBox.on('compositionend', function () {
+    $inputBox.on("compositionend", function () {
         isComposing = false;
         updateBoxes();
     });
 
-    $inputBox.on('input', function () {
+    $inputBox.on("input", function () {
         const input = $(this).val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
@@ -127,8 +150,6 @@ $(document).ready(function () {
         }
 
         if (input === translation) {
-            $(".box").css("background-color", "#79b851");
-
             if (currentQuestionIndex === questionKeys.length - 1) {
                 setTimeout(showSummary, delayBetweenQuestions);
             } else {

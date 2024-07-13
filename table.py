@@ -8,9 +8,8 @@ from bs4 import BeautifulSoup
 from app_base import P, language_list
 from app_init import data
 
-HTML_TEMPLATE = """
-<!DOCTYPE html>
-<html>
+HTML_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -79,7 +78,7 @@ def main() -> None:
         f.write(str(soup))
 
     with open(P / "static" / "table.tsv", "w", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f, delimiter='\t')
+        writer = csv.writer(f, delimiter="\t")
         headers = ["key"] + language_list
         writer.writerow(headers)
         for key in data["en_us"]:
