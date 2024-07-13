@@ -34,6 +34,9 @@ jobs:
       - name: Generate translation table
         run: python table.py
 
+      - name: Generate ID mapping
+        run: python id.py
+
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
