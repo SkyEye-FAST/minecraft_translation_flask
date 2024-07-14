@@ -1,4 +1,4 @@
-@import url("https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+SC:wght@900&display=swap");
+@import url("https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif:wght@100..900&family=Noto+Serif+SC:wght@900&family=Noto+Serif+TC:wght@900&display=swap");
 
 body {
     display: flex;
@@ -17,12 +17,12 @@ body {
     text-align: center;
     background-color: #fff;
     padding: 20px;
-    width: 700px;
+    width: 800px;
     border-radius: 8px;
 }
 
 a {
-    font-size: larger;
+    font-size: x-large;
 }
 
 .github-icon {
@@ -54,8 +54,8 @@ a {
 input[type="text"] {
     font-family: "Fira Code", "Source Code Pro", Consolas, Monaco, monospace;
     flex: 1;
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 0.5em 20px;
+    font-size: x-large;
     border-radius: 8px;
 }
 
@@ -63,7 +63,7 @@ button {
     min-height: 2.5em;
     background-color: #f0f0f0;
     cursor: pointer;
-    font-size: 20px;
+    font-size: x-large;
     border: solid 1px;
     border-radius: 8px;
 }
@@ -72,31 +72,49 @@ button {
     width: 100%;
     box-sizing: border-box;
     margin: 20px 0;
-    padding: 9px;
+    padding: 0.4em;
 }
 
 .btn-2 {
     margin-left: 10px;
-    padding: 9px 30px;
+    padding: 0.4em 30px;
 }
 
 .title {
-    font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
-        "思源宋体", "Times New Roman", SimSun, Times, serif;
-    font-size: 2.25em;
     font-weight: 900;
     text-align: center;
 }
 
+.title[lang="en"] {
+    font-size: 2.25em;
+    font-family: "Noto Serif", "Times New Roman", SimSun, Times, serif;
+}
+
+.title[lang="zh_CN"] {
+    font-size: 2.75em;
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN",
+        "思源宋体", "Times New Roman", SimSun, Times, serif;
+}
+
+.title[lang="zh_TW"] {
+    font-size: 2.75em;
+    font-family: "Noto Serif TC", "Source Han Serif TC", "Source Han Serif TW",
+        "思源宋體", "Times New Roman", SimSun, Times, serif;
+}
+
 /* 响应式设计 */
 @media (orientation: portrait) and (max-width: 760px) {
-    .container {
+    a {
+        font-size: larger;
+    }
+
+    .container-1 {
         width: 95%;
         padding: 30px 0;
     }
 
     .title {
-        font-size: 1.5em;
+        font-size: 1.5em !important;
     }
 
     .btn-1,

@@ -195,7 +195,7 @@ def quiz_portal() -> str:
     p1 = _l("Enter question group code...")
 
     return render_template(
-        "quiz_portal.html", placeholder=p1, random_code=get_questions()
+        "quiz_portal.html", placeholder=p1, locale=session["locale"], random_code=get_questions()
     )
 
 

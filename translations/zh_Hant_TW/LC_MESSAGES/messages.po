@@ -87,7 +87,7 @@ msgstr "譯名"
 #: templates/quiz_portal.html:7 templates/quiz_portal.html:30
 #: templates/quiz_sub.html:7
 msgid "Minecraft Standard Translation Quiz"
-msgstr "Minecraft 譯名測驗"
+msgstr "Minecraft 標準譯名認知測驗"
 
 #: templates/quiz_portal.html:32
 msgid "Random questions (refresh to reselect)"
