@@ -22,7 +22,7 @@ msgstr ""
 
 #: app.py:82
 msgid "Content to be queried: "
-msgstr "查询的内容："
+msgstr "查询内容："
 
 #: app.py:83
 msgid "Enable additional languages"
@@ -91,7 +91,7 @@ msgstr "Minecraft译名认知测验"
 
 #: templates/quiz_portal.html:32
 msgid "Random questions (refresh to reselect)"
-msgstr "随机选择题组（刷新页面以重新选择）"
+msgstr "随机题组（刷新以重新选择）"
 
 #: templates/quiz_portal.html:36
 msgid "Enter"

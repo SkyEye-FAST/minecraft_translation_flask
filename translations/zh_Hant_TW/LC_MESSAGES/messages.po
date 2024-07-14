@@ -22,7 +22,7 @@ msgstr ""
 
 #: app.py:82
 msgid "Content to be queried: "
-msgstr "查詢的內容："
+msgstr "查詢內容："
 
 #: app.py:83
 msgid "Enable additional languages"
@@ -50,23 +50,23 @@ msgstr "用於查詢 Minecraft 標準譯名的簡單網頁，但不止於此。"
 
 #: templates/index.html:47
 msgid "SETTINGS"
-msgstr "設置"
+msgstr "設定"
 
 #: templates/index.html:56
 msgid "Query mode: "
-msgstr "查詢方式："
+msgstr "查詢模式："
 
 #: templates/index.html:59
 msgid "Query by source string"
-msgstr "按來源字串查詢"
+msgstr "依原始字串查詢"
 
 #: templates/index.html:62
 msgid "Query by translated string"
-msgstr "按已翻譯字串查詢"
+msgstr "依翻譯後字串查詢"
 
 #: templates/index.html:65
 msgid "Query by translation key"
-msgstr "按本地化鍵名查詢"
+msgstr "依本地化鍵名查詢"
 
 #: templates/index.html:70
 msgid "Language to be queried: "
@@ -87,11 +87,11 @@ msgstr "譯名"
 #: templates/quiz_portal.html:7 templates/quiz_portal.html:30
 #: templates/quiz_sub.html:7
 msgid "Minecraft Standard Translation Quiz"
-msgstr "Minecraft 譯名認知測驗"
+msgstr "Minecraft 譯名測驗"
 
 #: templates/quiz_portal.html:32
 msgid "Random questions (refresh to reselect)"
-msgstr "隨機選擇題組（刷新頁面以重新選擇）"
+msgstr "隨機題組（重新整理以重新選取）"
 
 #: templates/quiz_portal.html:36
 msgid "Enter"
