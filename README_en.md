@@ -33,7 +33,7 @@ A translation quiz game can be found on the [`/quiz` subpage](https://mcst.teaho
 
 It features 10 randomly selected translations from language files, allowing players to test their familiarity with standard translations.
 
-![Sample](sample/sample_quiz_portal.png)
+![Sample](sample/sample_quiz_portal_en.png)
 ![Sample](sample/sample_quiz_sub.png)
 
 ### Translation Table
