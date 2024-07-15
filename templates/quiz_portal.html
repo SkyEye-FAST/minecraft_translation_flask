@@ -77,7 +77,8 @@
 
             $("#enterButton").click(() => {
                 const inputContent = $("#inputText").val();
-                const redirectTo = `quiz/${inputContent}`;
+                const selectedLang = $("#query-lang").val();
+                const redirectTo = `quiz/${inputContent}?l=${selectedLang}`;
                 window.location.href = redirectTo;
             });
         });
