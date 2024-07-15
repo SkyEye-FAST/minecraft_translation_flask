@@ -42,6 +42,8 @@ def get_locale() -> str:
     locale = request.accept_languages.best_match(
         ["zh_CN", "zh_TW", "zh", "en"], default="en"
     )
+    if locale == "zh":
+        return "zh_CN"
     return locale
 
 
