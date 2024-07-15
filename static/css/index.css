@@ -237,6 +237,7 @@ table th {
     padding: 0.2em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-left: 3px;
 }
 
 .form .submit {

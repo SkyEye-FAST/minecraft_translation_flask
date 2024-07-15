@@ -166,7 +166,7 @@ def index() -> str:
     return render_template("index.html", **context)
 
 
-def validate_language_code(lang_code:str) -> bool:
+def validate_language_code(lang_code: str) -> bool:
     """
     判断语言代码是否有效的函数，有效则返回True，否则返回False。
 
@@ -347,7 +347,6 @@ def quiz_portal() -> str:
     Returns:
         str: 渲染后的测验门户页面 HTML。
     """
-
     p1 = _l("Enter question group code...")
 
     return render_template(
@@ -367,7 +366,7 @@ def quiz_redirect():
     return redirect(url_for("quiz_portal"))
 
 
-@flask_app.route("/quiz/<code>")
+@flask_app.route("/quiz/<code>", methods=["GET"])
 def quiz_sub(code: str) -> str:
     """
     测验子页面路由。
@@ -379,6 +378,10 @@ def quiz_sub(code: str) -> str:
         str: 渲染后的测验子页面页面 HTML。
     """
 
+    lang = request.args.get("l", "zh_cn")
+    if not validate_language_code(lang):
+        lang = "zh_cn"
+
     if len(code) != 3 * QUESTION_AMOUNT:
         return render_template("quiz_error.html")
 
@@ -388,7 +391,7 @@ def quiz_sub(code: str) -> str:
 
     keys = [id_map[seg] for seg in code_list]
     questions = {
-        key: {"source": data["en_us"][key], "translation": data["zh_cn"][key]}
+        key: {"source": data["en_us"][key], "translation": data[lang][key]}
         for key in keys
     }
 
@@ -396,6 +399,7 @@ def quiz_sub(code: str) -> str:
 
     return render_template(
         "quiz_sub.html",
+        lang=lang.replace("_", "-"),
         questions=questions,
         placeholder=p2,
         random_code=get_questions(),

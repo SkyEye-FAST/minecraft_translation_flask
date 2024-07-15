@@ -1,4 +1,4 @@
-@import url("https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif:wght@100..900&family=Noto+Serif+SC:wght@400;700;900&display=swap");
+@import url("https://fonts.font.im/css2?family=Noto+Serif:wght@100..900&family=Noto+Serif+KR:wght@400;700&family=Noto+Serif+HK:wght@400;700&family=Noto+Serif+SC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap");
 
 body {
     background-color: #f9f2e0;
@@ -100,7 +100,22 @@ input[type="text"] {
         "思源宋体", "Times New Roman", SimSun, Times, serif;
 }
 
-.zh-cn.title {
+.zh-hk {
+    font-family: "Noto Serif HK", "Source Han Serif HC", "Source Han Serif HK",
+        "思源宋體 香港", "Times New Roman", SimSun, Times, serif;
+}
+
+.zh-tw {
+    font-family: "Noto Serif TC", "Source Han Serif TC", "Source Han Serif TW",
+        "思源宋體", "Times New Roman", SimSun, Times, serif;
+}
+
+.lzh {
+    font-family: "Noto Serif KR", "Source Han Serif K", "Source Han Serif KR",
+        "Times New Roman", Times, serif;
+}
+
+#title {
     font-size: 3em;
     font-weight: 900;
 }
