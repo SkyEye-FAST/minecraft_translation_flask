@@ -25,6 +25,11 @@ a {
     font-size: x-large;
 }
 
+label {
+    font-size: x-large;
+    text-align: right;
+}
+
 .github-icon {
     width: 1.75ex;
     height: inherit;
@@ -51,6 +56,19 @@ a {
     width: 100%;
 }
 
+.select-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+select {
+    margin-left: 5px;
+}
+
+select,
 input[type="text"] {
     font-family: "Fira Code", "Source Code Pro", Consolas, Monaco, monospace;
     flex: 1;
@@ -105,7 +123,7 @@ button {
 /* 响应式设计 */
 @media (orientation: portrait) and (max-width: 760px) {
     a {
-        font-size: larger;
+        font-size: initial;
     }
 
     .container-1 {
@@ -119,17 +137,16 @@ button {
 
     .btn-1,
     .btn-2,
-    input[type="text"] {
+    label,
+    select,
+    .container-1 input[type="text"] {
         font-size: 14px;
         padding: 7px;
     }
 
     .btn-1,
+    .select-container,
     .input-container {
         width: 90%;
-    }
-
-    .links {
-        font-size: smaller;
     }
 }

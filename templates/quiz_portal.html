@@ -28,12 +28,21 @@
     </div>
     <div class="container-1">
         <div class="title" lang="{{ locale }}">{{ _("Minecraft Standard Translation Quiz") }}</div>
-        <button class="btn-1" onclick="window.location.href='quiz/{{ random_code }}'">
+        <button class="btn-1" id="randomQuizButton">
             {{ _("Random questions (refresh to reselect)") }}
         </button>
+        <div class="select-container">
+            <label for="query-lang">{{ _("Language: ") }}</label>
+            <select name="query-lang" id="query-lang">
+                <option value="zh_cn" lang="zh-Hans-CN">简体中文 (中国大陆)</option>
+                <option value="zh_hk" lang="zh-Hant-HK">繁體中文 (香港特別行政區)</option>
+                <option value="zh_tw" lang="zh-Hant-TW">繁體中文 (台灣)</option>
+                <option value="lzh" lang="lzh">文言 (華夏)</option>
+            </select>
+        </div>
         <div class="input-container">
             <input type="text" id="inputText" placeholder="{{ placeholder }}" autocomplete="off">
-            <button class="btn-2" onclick="redirectToInput()">{{ _("Enter") }}</button>
+            <button class="btn-2" id="enterButton">{{ _("Enter") }}</button>
         </div>
         <div class="links">
             <a id="query-link" href="../"><span class="material-symbols-outlined b">manage_search</span>
@@ -51,11 +60,27 @@
     </div>
 
     <script>
-        function redirectToInput() {
-            var inputContent = document.getElementById('inputText').value;
-            var redirectTo = 'quiz/' + inputContent;
-            window.location.href = redirectTo;
-        }
+        $(document).ready(() => {
+            $("#randomQuizButton").click(() => {
+                const randomCode = "{{ random_code }}";
+                const selectedLang = $("#query-lang").val();
+                const redirectTo = `quiz/${randomCode}?l=${selectedLang}`;
+                window.location.href = redirectTo;
+            });
+
+            $("#query-lang").change(() => {
+                const selectedValue = $(this).val();
+                const currentUrl = window.location.href.split("?")[0];
+                const redirectTo = `${currentUrl}?l=${selectedValue}`;
+                window.location.href = redirectTo;
+            });
+
+            $("#enterButton").click(() => {
+                const inputContent = $("#inputText").val();
+                const redirectTo = `quiz/${inputContent}`;
+                window.location.href = redirectTo;
+            });
+        });
     </script>
 </body>
 

@@ -37,11 +37,11 @@
                 <div id="sourceText" class="source"></div>
                 <div id="keyText" class="key"></div>
             </div>
-            <div id="boxes" class="zh-cn"></div>
+            <div id="boxes" class="{{ lang }}"></div>
         </div>
-        <input type="text" id="inputBox" class="zh_cn" placeholder="{{ placeholder }}" autocomplete="off">
+        <input type="text" id="inputBox" class="{{ lang }}" placeholder="{{ placeholder }}" autocomplete="off">
         <div class="summary" id="summary">
-            <div class="zh-cn title">{{ _("All questions completed!") }}</div>
+            <div id="title" class="{{ lang }}">{{ _("All questions completed!") }}</div>
             <table id="summaryTable">
                 <thead>
                     <tr>
