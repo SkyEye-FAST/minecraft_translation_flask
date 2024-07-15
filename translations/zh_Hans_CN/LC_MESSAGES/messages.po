@@ -70,7 +70,7 @@ msgstr "按本地化键名查询"
 
 #: templates/index.html:70
 msgid "Language to be queried: "
-msgstr "查询的语言："
+msgstr "查询语言："
 
 #: templates/index.html:83
 msgid "Select a translation key: "

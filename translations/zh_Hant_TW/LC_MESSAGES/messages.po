@@ -66,7 +66,7 @@ msgstr "依翻譯後字串查詢"
 
 #: templates/index.html:65
 msgid "Query by translation key"
-msgstr "依本地化鍵名查詢"
+msgstr "依在地化鍵名查詢"
 
 #: templates/index.html:70
 msgid "Language to be queried: "
@@ -74,7 +74,7 @@ msgstr "查詢語言："
 
 #: templates/index.html:83
 msgid "Select a translation key: "
-msgstr "選擇本地化鍵名："
+msgstr "選擇在地化鍵名："
 
 #: templates/index.html:105
 msgid "Language names"
