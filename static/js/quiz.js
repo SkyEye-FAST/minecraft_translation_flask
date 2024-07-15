@@ -135,20 +135,24 @@ $(document).ready(function () {
 
     $inputBox.on("compositionend", function () {
         isComposing = false;
-        updateBoxes();
+        check();
     });
 
-    $inputBox.on("input", async function () {
-        const input = $(this).val();
+    $inputBox.on("input", function () {
+        check();
+    });
+
+    async function check () {
+        if (isComposing) return;
+
+        const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
 
-        if (!isComposing) {
-            const translationLength = getSegmentedText(translation).length;
-            const truncatedValue = truncateInput(input, translationLength);
-            $inputBox.val(truncatedValue);
-            updateBoxes();
-        }
+        const translationLength = getSegmentedText(translation).length;
+        const truncatedValue = truncateInput(input, translationLength);
+        $inputBox.val(truncatedValue);
+        updateBoxes();
 
         if (input === translation && !isLocked) {
             isLocked = true;
@@ -162,7 +166,7 @@ $(document).ready(function () {
             }
             isLocked = false;
         }
-    });
+    }
 
     function delay(duration) {
         return new Promise((resolve) => setTimeout(resolve, duration));
