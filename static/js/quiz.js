@@ -189,29 +189,35 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $('#restartButton').click(function () {
-        window.location.href = `../quiz/${randomCode}`;
+    $("#restartButton").click(() => {
+        const currentUrl = window.location.href;
+        const url = new URL(currentUrl);
+        const lValue = url.searchParams.get("l");
+        const newUrl = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""}`;
+        window.location.href = newUrl;
     });
 
-    var currentUrl = window.location.href;
-    var match = currentUrl.match(/\/([^\/?#]+)[\/?#]?$/);
-    var lastSegment = match ? match[1] : "";
+    const currentUrl = new URL(window.location.href);
+    const pathSegments = currentUrl.pathname
+        .split("/")
+        .filter((segment) => segment.trim() !== "");
+    const lastSegment = pathSegments[pathSegments.length - 1];
     document.getElementById("last-segment").textContent = lastSegment;
 
-    $("#copy-button").click(function () {
-        var $copyButton = $(this);
-        var $lastSegment = $("#last-segment");
-        var lastSegmentContent = $lastSegment.text();
+    $("#copy-button").click(() => {
+        const $copyButton = $(this);
+        const $lastSegment = $("#last-segment");
+        const lastSegmentContent = $lastSegment.text();
 
         navigator.clipboard
             .writeText(lastSegmentContent)
-            .then(function () {
+            .then(() => {
                 $copyButton.text("check");
-                setTimeout(function () {
+                setTimeout(() => {
                     $copyButton.text("content_copy");
                 }, 1500);
             })
-            .catch(function (err) {
+            .catch((err) => {
                 console.error("Failed to copy: ", err);
             });
     });
