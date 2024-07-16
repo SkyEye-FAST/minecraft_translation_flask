@@ -40,7 +40,10 @@
             <div id="boxes" class="{{ lang }}"></div>
         </div>
         <input type="text" id="inputBox" class="{{ lang }}" placeholder="{{ placeholder }}" autocomplete="off">
-        <button id="skipButton">Skip</button>
+        <div id="buttons">
+            <button id="hintButton">Hint</button>
+            <button id="skipButton">Skip</button>
+        </div>
         <div class="summary" id="summary">
             <div id="title" class="{{ lang }}">{{ _("All questions completed!") }}</div>
             <table id="summaryTable">

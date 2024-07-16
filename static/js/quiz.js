@@ -25,7 +25,9 @@ $(document).ready(function () {
     const $keyText = $("#keyText");
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
+    const $buttons = $("#buttons")
     const $skipButton = $("#skipButton")
+    const $hintButton = $("#hintButton")
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
