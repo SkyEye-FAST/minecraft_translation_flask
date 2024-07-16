@@ -43,6 +43,16 @@ body {
     background-color: #79b851;
 }
 
+.box.hinted {
+    color: #000;
+    background-color: #e03e22;
+}
+
+.box.hinted.correct {
+    color: #000;
+    background-color: #5a66ff;
+}
+
 .box.exist {
     color: #000;
     background-color: #f3c237;
@@ -61,6 +71,16 @@ body {
 .box.exist.dark {
     color: #e0e0e0;
     background-color: #b59f3b;
+}
+
+.box.hinted.dark {
+    color: #e0e0e0;
+    background-color: #992916;
+}
+
+.box.hinted.correct.dark {
+    color: #e0e0e0;
+    background-color: #333db9;
 }
 
 #buttons button,

@@ -26,8 +26,6 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
     const $buttons = $("#buttons")
-    const $skipButton = $("#skipButton")
-    const $hintButton = $("#hintButton")
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
@@ -72,11 +70,9 @@ $(document).ready(function () {
 
     function updateBoxes() {
         const isDarkMode = localStorage.getItem("mode");
-
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
-
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
 
@@ -91,23 +87,40 @@ $(document).ready(function () {
             const $box = $(this);
             const userInputChar = inputSegments[index] || "";
             const correctChar = translationSegments[index] || "";
+            const hintChar = $box.data("hint");
 
-            $box.text(userInputChar);
+            if (hintChar) {
+                $box.text(hintChar);
+            } else {
+                $box.text(userInputChar);
+            }
 
             $box.removeClass("correct exist dark");
 
-            if (!userInputChar) {
-                $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
-            } else if (userInputChar === correctChar) {
-                $box.addClass(
-                    isDarkMode === "dark" ? "box correct dark" : "box correct"
-                );
-            } else if (translationSegments.includes(userInputChar)) {
-                $box.addClass(
-                    isDarkMode === "dark" ? "box exist dark" : "box exist"
-                );
+            if (hintChar) {
+                if (userInputChar === correctChar) {
+                    $box.addClass(
+                        isDarkMode === "dark" ? "box hinted correct dark" : "box hinted correct"
+                    );
+                } else {
+                    $box.addClass(
+                        isDarkMode === "dark" ? "box hinted dark" : "box hinted"
+                    );
+                }
             } else {
-                $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
+                if (!userInputChar) {
+                    $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
+                } else if (userInputChar === correctChar) {
+                    $box.addClass(
+                        isDarkMode === "dark" ? "box correct dark" : "box correct"
+                    );
+                } else if (translationSegments.includes(userInputChar)) {
+                    $box.addClass(
+                        isDarkMode === "dark" ? "box exist dark" : "box exist"
+                    );
+                } else {
+                    $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
+                }
             }
         });
     }
@@ -136,7 +149,7 @@ $(document).ready(function () {
     const fadeDuration = 300;
 
     async function showSummary() {
-        await fadeOutElement($info.add($inputBox).add($skipButton), fadeDuration);
+        await fadeOutElement($info.add($inputBox).add($buttons), fadeDuration);
 
         const $summaryBody = $("#summaryBody").empty();
 
@@ -193,7 +206,7 @@ $(document).ready(function () {
         check();
     });
 
-    $skipButton.click(async function () {
+    $("#skipButton").click(async function () {
         if (!isLocked) {
             isLocked = true;
 
@@ -203,6 +216,38 @@ $(document).ready(function () {
             } else {
                 await showSummary();
             }
+            isLocked = false;
+        }
+    });
+
+    $("#hintButton").click(function () {
+        const isDarkMode = localStorage.getItem("mode");
+
+        if (!isLocked) {
+            isLocked = true;
+
+            let hintedIndex = -1;
+            $(".box").each(function (index) {
+                const $box = $(this);
+                if (!$box.hasClass("correct") && !$box.hasClass("hinted")) {
+                    hintedIndex = index;
+                    return false;
+                }
+            });
+
+            if (hintedIndex !== -1) {
+                const currentKey = questionKeys[currentQuestionIndex];
+                const { translation } = questionsData[currentKey];
+                const translationSegments = getSegmentedText(translation);
+
+                const $hintedBox = $($(".box").get(hintedIndex));
+                const correctChar = translationSegments[hintedIndex];
+
+                $hintedBox.text(correctChar);
+                $hintedBox.data("hint", correctChar);
+                $hintedBox.addClass(isDarkMode === "dark" ? "hinted dark" : "hinted");
+            }
+
             isLocked = false;
         }
     });
