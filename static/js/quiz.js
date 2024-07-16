@@ -14,9 +14,6 @@ $(document).ready(function () {
     let currentQuestionIndex = 0;
     const questionsData = questions || {};
     const questionKeys = Object.keys(questionsData);
-    const delayBetweenQuestions = 800;
-    const fadeDuration = 300;
-    let isLocked = false;
 
     if (questionKeys.length === 0) {
         console.error("No questions available.");
@@ -28,6 +25,7 @@ $(document).ready(function () {
     const $keyText = $("#keyText");
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
+    const $skipButton = $("#skipButton")
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
@@ -112,8 +110,31 @@ $(document).ready(function () {
         });
     }
 
+    function delay(duration) {
+        return new Promise((resolve) => setTimeout(resolve, duration));
+    }
+
+    function fadeOutElement($element, fadeDuration) {
+        return new Promise((resolve) => {
+            $element.fadeOut(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
+
+    function fadeInElement($element, fadeDuration) {
+        return new Promise((resolve) => {
+            $element.fadeIn(fadeDuration, function () {
+                resolve();
+            });
+        });
+    }
+
+    const delayBetweenQuestions = 800;
+    const fadeDuration = 300;
+
     async function showSummary() {
-        await fadeOutElement($info.add($inputBox), fadeDuration);
+        await fadeOutElement($info.add($inputBox).add($skipButton), fadeDuration);
 
         const $summaryBody = $("#summaryBody").empty();
 
@@ -127,22 +148,9 @@ $(document).ready(function () {
         await fadeInElement($("#summary"), fadeDuration);
     }
 
-    let isComposing = false;
+    let isLocked = false;
 
-    $inputBox.on("compositionstart", function () {
-        isComposing = true;
-    });
-
-    $inputBox.on("compositionend", function () {
-        isComposing = false;
-        check();
-    });
-
-    $inputBox.on("input", function () {
-        check();
-    });
-
-    async function check () {
+    async function check() {
         if (isComposing) return;
 
         const input = $inputBox.val();
@@ -168,50 +176,59 @@ $(document).ready(function () {
         }
     }
 
-    function delay(duration) {
-        return new Promise((resolve) => setTimeout(resolve, duration));
-    }
+    let isComposing = false;
 
-    function fadeOutElement($element, fadeDuration) {
-        return new Promise((resolve) => {
-            $element.fadeOut(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
+    $inputBox.on("compositionstart", function () {
+        isComposing = true;
+    });
 
-    function fadeInElement($element, fadeDuration) {
-        return new Promise((resolve) => {
-            $element.fadeIn(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
+    $inputBox.on("compositionend", function () {
+        isComposing = false;
+        check();
+    });
+
+    $inputBox.on("input", function () {
+        check();
+    });
+
+    $skipButton.click(async function () {
+        if (!isLocked) {
+            isLocked = true;
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questionKeys.length) {
+                await initializeQuestion();
+            } else {
+                await showSummary();
+            }
+            isLocked = false;
+        }
+    });
 
     // Initialize first question
     initializeQuestion();
 });
 
 $(document).ready(function () {
+    const currentUrl = new URL(window.location.href);
+
+    // Restart
     $("#restartButton").click(() => {
-        const currentUrl = window.location.href;
-        const url = new URL(currentUrl);
         const lValue = url.searchParams.get("l");
         const newUrl = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""}`;
         window.location.href = newUrl;
     });
 
-    const currentUrl = new URL(window.location.href);
+    // Copy question group code
     const pathSegments = currentUrl.pathname
         .split("/")
         .filter((segment) => segment.trim() !== "");
     const lastSegment = pathSegments[pathSegments.length - 1];
     document.getElementById("last-segment").textContent = lastSegment;
 
-    $("#copy-button").click(() => {
-        const $copyButton = $(this);
-        const $lastSegment = $("#last-segment");
-        const lastSegmentContent = $lastSegment.text();
+    const $copyButton = $("#copy-button");
+    $copyButton.click(() => {
+        const lastSegmentContent = $("#last-segment").text();
 
         navigator.clipboard
             .writeText(lastSegmentContent)

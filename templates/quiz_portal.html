@@ -61,25 +61,17 @@
 
     <script>
         $(document).ready(() => {
-            $("#randomQuizButton").click(() => {
-                const randomCode = "{{ random_code }}";
-                const selectedLang = $("#query-lang").val();
-                const redirectTo = `quiz/${randomCode}?l=${selectedLang}`;
-                window.location.href = redirectTo;
-            });
+            const randomCode = "{{ random_code }}";
 
-            $("#query-lang").change(() => {
-                const selectedValue = $(this).val();
-                const currentUrl = window.location.href.split("?")[0];
-                const redirectTo = `${currentUrl}?l=${selectedValue}`;
-                window.location.href = redirectTo;
+            $("#randomQuizButton").click(() => {
+                const selectedLang = $("#query-lang").val();
+                window.location.href = `quiz/${randomCode}?l=${selectedLang}`;
             });
 
             $("#enterButton").click(() => {
                 const inputContent = $("#inputText").val();
                 const selectedLang = $("#query-lang").val();
-                const redirectTo = `quiz/${inputContent}?l=${selectedLang}`;
-                window.location.href = redirectTo;
+                window.location.href = `quiz/${inputContent}?l=${selectedLang}`;
             });
         });
     </script>
