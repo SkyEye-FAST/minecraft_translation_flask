@@ -40,22 +40,22 @@ body {
 
 .box.correct {
     color: #000;
-    background-color: #79b851;
+    background-color: #85df4c;
 }
 
 .box.hinted {
     color: #000;
-    background-color: #e03e22;
+    background-color: #ff6d55;
 }
 
 .box.hinted.correct {
     color: #000;
-    background-color: #5a66ff;
+    background-color: #5ab0f3;
 }
 
 .box.exist {
     color: #000;
-    background-color: #f3c237;
+    background-color: #f3d837;
 }
 
 .box.dark {
@@ -65,22 +65,22 @@ body {
 
 .box.correct.dark {
     color: #e0e0e0;
-    background-color: #538d4e;
+    background-color: #2b913e;
 }
 
 .box.exist.dark {
     color: #e0e0e0;
-    background-color: #b59f3b;
+    background-color: #a18b2a;
 }
 
 .box.hinted.dark {
     color: #e0e0e0;
-    background-color: #992916;
+    background-color: #a72d19;
 }
 
 .box.hinted.correct.dark {
     color: #e0e0e0;
-    background-color: #333db9;
+    background-color: #2f38a5;
 }
 
 #buttons button,
