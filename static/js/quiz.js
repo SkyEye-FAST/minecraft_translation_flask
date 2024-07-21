@@ -194,12 +194,14 @@ $(document).ready(function () {
 
         if (input === translation && !isLocked) {
             isLocked = true;
+            $skipButton.attr("disabled", "true");
             await delay(delayBetweenQuestions);
             if (currentQuestionIndex === questionKeys.length - 1) {
                 await showSummary();
             } else {
                 await fadeOutElement($info, fadeDuration);
                 currentQuestionIndex++;
+                $skipButton.removeAttr("disabled");
                 await initializeQuestion();
             }
             isLocked = false;

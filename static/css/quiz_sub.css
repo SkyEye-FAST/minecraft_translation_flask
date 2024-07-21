@@ -116,6 +116,10 @@ input[type="text"] {
     flex: 1;
 }
 
+#buttons button[disabled] {
+    opacity: 0.5 !important;
+}
+
 button {
     background-color: transparent !important;
 }
