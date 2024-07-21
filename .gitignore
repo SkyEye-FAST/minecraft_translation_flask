@@ -1,7 +1,9 @@
-__pycache__/
 .idea
 .vercel
 .env
+
+__pycache__/
 group_code.py
+rating.py
 
 I.Ming*.ttf
