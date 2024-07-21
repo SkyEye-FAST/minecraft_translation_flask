@@ -26,21 +26,23 @@ $(document).ready(function () {
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
     const $buttons = $("#buttons");
+    const $hintButton = $("#hintButton");
+    const $skipButton = $("#skipButton");
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
         const { source, translation } = questionsData[currentKey];
 
-        const translationSegments = [
-            ...new Intl.Segmenter().segment(translation),
-        ].map((segment) => segment.segment);
+        const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
 
         await fadeOutElement($info, fadeDuration);
+        $skipButton.hide();
+        $hintButton.show();
 
         $sourceText.text(source);
         $keyText.text(currentKey);
-
+        hintCount = 0;
         $inputBox.val("");
         createBoxes(translationLength);
 
@@ -210,21 +212,10 @@ $(document).ready(function () {
         check();
     });
 
-    $("#skipButton").click(async function () {
-        if (!isLocked) {
-            isLocked = true;
+    $skipButton.hide();
+    let hintCount = 0;
 
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questionKeys.length) {
-                await initializeQuestion();
-            } else {
-                await showSummary();
-            }
-            isLocked = false;
-        }
-    });
-
-    $("#hintButton").click(function () {
+    $hintButton.click(function () {
         const isDarkMode = localStorage.getItem("mode");
 
         if (!isLocked) {
@@ -252,8 +243,29 @@ $(document).ready(function () {
                 $hintedBox.addClass(
                     isDarkMode === "dark" ? "hinted dark" : "hinted"
                 );
+
+                hintCount++;
+
+                if (hintCount >= $(".box").length - 1) {
+                    $hintButton.hide();
+                    $skipButton.show();
+                }
             }
 
+            isLocked = false;
+        }
+    });
+
+    $skipButton.click(async function () {
+        if (!isLocked) {
+            isLocked = true;
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questionKeys.length) {
+                await initializeQuestion();
+            } else {
+                await showSummary();
+            }
             isLocked = false;
         }
     });
