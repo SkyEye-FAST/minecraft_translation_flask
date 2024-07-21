@@ -335,7 +335,8 @@ def get_questions() -> str:
         str: 题组编号。
     """
 
-    random_keys = sorted(sample(list(id_map.keys()), QUESTION_AMOUNT))
+    keys = list(id_map.keys())
+    random_keys = sorted(sample(keys, QUESTION_AMOUNT), key=lambda x: id_map[x])
     return "".join(random_keys)
 
 

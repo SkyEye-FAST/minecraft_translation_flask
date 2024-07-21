@@ -2,5 +2,6 @@ __pycache__/
 .idea
 .vercel
 .env
+group_code.py
 
 I.Ming*.ttf
