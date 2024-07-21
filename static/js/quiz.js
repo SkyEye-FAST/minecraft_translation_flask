@@ -187,7 +187,7 @@ $(document).ready(function () {
         if (remainingHintableCount <= 1) {
             $hintButton.hide();
             $skipButton.show();
-        } else {
+        } else if ($hintButton.is(":hidden")) {
             $skipButton.hide();
             $hintButton.show();
         }
@@ -259,7 +259,7 @@ $(document).ready(function () {
                 if (remainingHintableCount <= 1) {
                     $hintButton.hide();
                     $skipButton.show();
-                } else {
+                } else if ($hintButton.is(":hidden")) {
                     $skipButton.hide();
                     $hintButton.show();
                 }
