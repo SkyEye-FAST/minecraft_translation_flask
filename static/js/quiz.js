@@ -42,7 +42,6 @@ $(document).ready(function () {
 
         $sourceText.text(source);
         $keyText.text(currentKey);
-        hintCount = 0;
         $inputBox.val("");
         createBoxes(translationLength);
 
@@ -183,6 +182,16 @@ $(document).ready(function () {
         $inputBox.val(truncatedValue);
         updateBoxes();
 
+        const remainingHintableCount =
+            $(".box").not(".correct, .hinted").length;
+        if (remainingHintableCount <= 1) {
+            $hintButton.hide();
+            $skipButton.show();
+        } else {
+            $skipButton.hide();
+            $hintButton.show();
+        }
+
         if (input === translation && !isLocked) {
             isLocked = true;
             await delay(delayBetweenQuestions);
@@ -213,7 +222,6 @@ $(document).ready(function () {
     });
 
     $skipButton.hide();
-    let hintCount = 0;
 
     $hintButton.click(function () {
         const isDarkMode = localStorage.getItem("mode");
@@ -244,11 +252,14 @@ $(document).ready(function () {
                     isDarkMode === "dark" ? "hinted dark" : "hinted"
                 );
 
-                hintCount++;
-
-                if (hintCount >= $(".box").length - 1) {
+                const remainingHintableCount =
+                    $(".box").not(".correct, .hinted").length;
+                if (remainingHintableCount <= 1) {
                     $hintButton.hide();
                     $skipButton.show();
+                } else {
+                    $skipButton.hide();
+                    $hintButton.show();
                 }
             }
 
