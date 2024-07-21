@@ -25,7 +25,7 @@ $(document).ready(function () {
     const $keyText = $("#keyText");
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
-    const $buttons = $("#buttons")
+    const $buttons = $("#buttons");
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
@@ -100,7 +100,9 @@ $(document).ready(function () {
             if (hintChar) {
                 if (userInputChar === correctChar) {
                     $box.addClass(
-                        isDarkMode === "dark" ? "box hinted correct dark" : "box hinted correct"
+                        isDarkMode === "dark"
+                            ? "box hinted correct dark"
+                            : "box hinted correct"
                     );
                 } else {
                     $box.addClass(
@@ -112,7 +114,9 @@ $(document).ready(function () {
                     $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
                 } else if (userInputChar === correctChar) {
                     $box.addClass(
-                        isDarkMode === "dark" ? "box correct dark" : "box correct"
+                        isDarkMode === "dark"
+                            ? "box correct dark"
+                            : "box correct"
                     );
                 } else if (translationSegments.includes(userInputChar)) {
                     $box.addClass(
@@ -245,7 +249,9 @@ $(document).ready(function () {
 
                 $hintedBox.text(correctChar);
                 $hintedBox.data("hint", correctChar);
-                $hintedBox.addClass(isDarkMode === "dark" ? "hinted dark" : "hinted");
+                $hintedBox.addClass(
+                    isDarkMode === "dark" ? "hinted dark" : "hinted"
+                );
             }
 
             isLocked = false;
