@@ -21,7 +21,7 @@
         "block.minecraft.glowstone": "荧石",
         "block.minecraft.poppy": "虞美人"
     },
-    "1.8": {
+    "1.6": {
         "item.minecraft.clock": "时钟",
         "block.minecraft.dead_bush": "枯萎的灌木",
         "block.minecraft.creeper_head": "苦力怕的头",
@@ -70,7 +70,7 @@
         "item.minecraft.clay_ball": "黏土球",
         "item.minecraft.slime_ball": "黏液球"
     },
-    "3": {
+    "2.2": {
         "block.minecraft.azure_bluet": "蓝花美耳草",
         "block.minecraft.cracked_stone_bricks": "裂纹石砖",
         "item.minecraft.milk_bucket": "奶桶",
