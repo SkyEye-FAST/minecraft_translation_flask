@@ -216,10 +216,14 @@ button {
     cursor: pointer;
 }
 
+#level {
+    padding: 0;
+}
+
 /* 表格 */
 
 table {
-    margin: 15px auto 0 auto;
+    margin: 5px auto 0 auto;
     border-collapse: collapse;
     font-size: larger;
 }

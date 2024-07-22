@@ -9,7 +9,7 @@ $(document).ready(function () {
     const $buttons = $("#buttons");
     const $hintButton = $("#hintButton");
     const $skipButton = $("#skipButton");
-    const $summary = $("#summary")
+    const $summary = $("#summary");
 
     function toggleDarkMode() {
         body.toggleClass("dark-mode");
@@ -170,15 +170,27 @@ $(document).ready(function () {
 
     async function showSummary() {
         await fadeOutElement($info.add($inputBox).add($buttons), fadeDuration);
+        let source, translation, rating;
+        let level = 0;
 
         const $summaryBody = $("#summaryBody").empty();
 
         questionKeys.forEach((key) => {
-            const { source, translation } = questionsData[key];
+            if (lang === "zh_cn") {
+                ({ source, translation, rating } = questionsData[key]);
+                level += rating;
+            } else {
+                ({ source, translation } = questionsData[key]);
+            }
             $("<tr>")
                 .append($("<td>").text(source), $("<td>").text(translation))
                 .appendTo($summaryBody);
         });
+        if (lang === "zh_cn") {
+            $("#levelNum").text(level);
+        } else {
+            $("#level").hide();
+        }
 
         await fadeInElement($summary, fadeDuration);
     }
