@@ -1,9 +1,21 @@
 $(document).ready(function () {
     const body = $("body");
+    const $info = $("#info");
+    const $sourceText = $("#sourceText");
+    const $keyText = $("#keyText");
+    const $questionRatingNum = $("#questionRatingNum");
+    const $inputBox = $("#inputBox");
+    const $boxes = $("#boxes");
+    const $buttons = $("#buttons");
+    const $hintButton = $("#hintButton");
+    const $skipButton = $("#skipButton");
+    const $summary = $("#summary")
 
     function toggleDarkMode() {
         body.toggleClass("dark-mode");
-        updateBoxes();
+        if ($summary.is(":hidden")) {
+            updateBoxes();
+        }
     }
 
     body.on("toggle-dark-mode", toggleDarkMode);
@@ -20,18 +32,16 @@ $(document).ready(function () {
         return;
     }
 
-    const $info = $("#info");
-    const $sourceText = $("#sourceText");
-    const $keyText = $("#keyText");
-    const $inputBox = $("#inputBox");
-    const $boxes = $("#boxes");
-    const $buttons = $("#buttons");
-    const $hintButton = $("#hintButton");
-    const $skipButton = $("#skipButton");
+    const currentUrl = new URL(window.location.href);
+    const lang = currentUrl.searchParams.get("l");
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
-        const { source, translation } = questionsData[currentKey];
+        if (lang === "zh_cn") {
+            var { source, translation, rating } = questionsData[currentKey];
+        } else {
+            var { source, translation } = questionsData[currentKey];
+        }
 
         const translationSegments = getSegmentedText(translation);
         const translationLength = translationSegments.length;
@@ -42,6 +52,7 @@ $(document).ready(function () {
 
         $sourceText.text(source);
         $keyText.text(currentKey);
+        $questionRatingNum.text(rating);
         $inputBox.val("");
         createBoxes(translationLength);
 
@@ -165,7 +176,7 @@ $(document).ready(function () {
                 .appendTo($summaryBody);
         });
 
-        await fadeInElement($("#summary"), fadeDuration);
+        await fadeInElement($summary, fadeDuration);
     }
 
     let isLocked = false;
@@ -292,7 +303,7 @@ $(document).ready(function () {
 
     // Restart
     $("#restartButton").click(() => {
-        const lValue = url.searchParams.get("l");
+        const lValue = currentUrl.searchParams.get("l");
         const newUrl = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""}`;
         window.location.href = newUrl;
     });

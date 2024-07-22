@@ -24,7 +24,7 @@ import geoip2.database
 import geoip2.errors
 
 from app_base import P
-from app_init import data, id_map, get_translation
+from app_init import data, id_map, rating, get_translation
 
 # 初始化 Flask 应用
 flask_app = Flask(__name__)
@@ -395,6 +395,9 @@ def quiz_sub(code: str) -> str:
         key: {"source": data["en_us"][key], "translation": data[lang][key]}
         for key in keys
     }
+    if lang == "zh_cn":
+        for k, d in questions.items():
+            d["rating"] = rating[k]
 
     p2 = _l("Enter translation here...")
 

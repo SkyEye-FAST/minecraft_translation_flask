@@ -124,6 +124,14 @@ button {
     background-color: transparent !important;
 }
 
+.material-symbols-outlined.b {
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-0.1em);
+    font-size: inherit;
+}
+
 .info {
     margin-bottom: 20px;
 }

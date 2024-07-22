@@ -36,13 +36,17 @@
             <div class="info">
                 <div id="sourceText" class="source"></div>
                 <div id="keyText" class="key"></div>
+                <div id="questionRating" class="key">
+                    <span class="material-symbols-outlined b">star</span>
+                    <span id="questionRatingNum"></span>
+                </div>
             </div>
             <div id="boxes" class="{{ lang }}"></div>
         </div>
         <input type="text" id="inputBox" class="{{ lang }}" placeholder="{{ placeholder }}" autocomplete="off">
         <div id="buttons">
-            <button id="hintButton">Hint</button>
-            <button id="skipButton">Skip</button>
+            <button id="hintButton">{{ _("Hint") }}</button>
+            <button id="skipButton">{{ _("Skip") }}</button>
         </div>
         <div class="summary" id="summary">
             <div id="title" class="{{ lang }}">{{ _("All questions completed!") }}</div>

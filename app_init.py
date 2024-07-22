@@ -4,7 +4,7 @@
 import json
 from typing import Dict
 
-from app_base import LANG_DIR, LANG_DIR_VALID, ID_MAP_PATH, language_list
+from app_base import LANG_DIR, LANG_DIR_VALID, ID_MAP_PATH, RATING_PATH, language_list
 
 # 是否忽略补充字符串
 IGNORE_SUPPLEMENTS: bool = True
@@ -18,6 +18,10 @@ for lang_name in language_list:
 # 读取ID映射
 with open(ID_MAP_PATH, "r", encoding="utf-8") as f:
     id_map = json.load(f)
+
+# 读取题目评级
+with open(RATING_PATH, "r", encoding="utf-8") as f:
+    rating = json.load(f)
 
 # 读取补充字符串
 if not IGNORE_SUPPLEMENTS:

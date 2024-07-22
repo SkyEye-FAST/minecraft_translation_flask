@@ -11,6 +11,7 @@ LANG_DIR = P / "mc_lang"
 LANG_DIR_FULL = LANG_DIR / "full"
 LANG_DIR_VALID = LANG_DIR / "valid"
 ID_MAP_PATH = P / "static" / "id.json"
+RATING_PATH = P / "static" / "rating.json"
 
 # 语言列表
 language_list = [
