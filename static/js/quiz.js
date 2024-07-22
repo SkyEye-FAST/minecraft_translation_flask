@@ -37,10 +37,12 @@ $(document).ready(function () {
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
+        let source, translation, rating;
+
         if (lang === "zh_cn") {
-            var { source, translation, rating } = questionsData[currentKey];
+            ({ source, translation, rating } = questionsData[currentKey]);
         } else {
-            var { source, translation } = questionsData[currentKey];
+            ({ source, translation } = questionsData[currentKey]);
         }
 
         const translationSegments = getSegmentedText(translation);
@@ -52,7 +54,9 @@ $(document).ready(function () {
 
         $sourceText.text(source);
         $keyText.text(currentKey);
-        $questionRatingNum.text(rating);
+        if (rating !== undefined) {
+            $questionRatingNum.text(rating);
+        }
         $inputBox.val("");
         createBoxes(translationLength);
 
