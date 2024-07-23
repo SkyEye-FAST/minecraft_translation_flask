@@ -178,7 +178,7 @@ $(document).ready(() => {
         });
 
         if (lang === "zh_cn") {
-            $("#levelNum").text(level);
+            $("#levelNum").text(level.toFixed(2));
             $("#score").text(`${score.toFixed(2)} pts`);
         } else {
             $("#level").hide();
