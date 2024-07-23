@@ -222,6 +222,51 @@ button {
     margin-top: 10px;
 }
 
+.transl {
+    color: #000;
+}
+
+.transl.correct {
+    background-color: #85df4c;
+}
+
+.transl.exist {
+    background-color: #f3d837;
+}
+
+.transl.hinted {
+    background-color: #ff6d55;
+}
+
+.transl.hinted.correct {
+    background-color: #5ab0f3;
+}
+
+.transl.dark {
+    color: #fff;
+    background-color: transparent;
+}
+
+.transl.correct.dark {
+    color: #85df4c;
+    background-color: transparent;
+}
+
+.transl.hinted.dark {
+    color: #ff6d55;
+    background-color: transparent;
+}
+
+.transl.hinted.correct.dark {
+    color: #5ab0f3;
+    background-color: transparent;
+}
+
+.transl.exist.dark {
+    color: #f3d837;
+    background-color: transparent;
+}
+
 /* 表格 */
 
 table {
@@ -234,6 +279,10 @@ table td,
 table th {
     border: 2px solid #5b9bd5;
     padding: 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #2e4e6c0f;
 }
 
 table tr:nth-child(even) {

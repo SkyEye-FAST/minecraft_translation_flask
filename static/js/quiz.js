@@ -29,8 +29,27 @@ $(document).ready(() => {
     let isLocked = false;
     let isComposing = false;
 
+    const charStates = {};
+
     const toggleDarkMode = () => {
         body.toggleClass("dark-mode");
+
+        $("#summaryBody span").each(function () {
+            const $span = $(this);
+            const classes = $span.attr("class").split(" ");
+            if (body.hasClass("dark-mode")) {
+                if (!classes.includes("dark")) {
+                    classes.push("dark");
+                }
+            } else {
+                const darkIndex = classes.indexOf("dark");
+                if (darkIndex > -1) {
+                    classes.splice(darkIndex, 1);
+                }
+            }
+            $span.attr("class", classes.join(" "));
+        });
+
         if ($summary.is(":hidden")) {
             updateBoxes();
         }
@@ -59,7 +78,7 @@ $(document).ready(() => {
         new Promise((resolve) => setTimeout(resolve, duration));
 
     const updateBoxes = () => {
-        const isDarkMode = localStorage.getItem("mode");
+        const isDarkMode = localStorage.getItem("mode") === "dark";
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
@@ -82,20 +101,23 @@ $(document).ready(() => {
                     hintChar
                         ? (userInputChar === correctChar
                               ? "box hinted correct"
-                              : "box hinted") +
-                              (isDarkMode === "dark" ? " dark" : "")
+                              : "box hinted") + (isDarkMode ? " dark" : "")
                         : !userInputChar
-                        ? isDarkMode === "dark"
+                        ? isDarkMode
                             ? "box dark"
                             : "box"
                         : userInputChar === correctChar
-                        ? "box correct" + (isDarkMode === "dark" ? " dark" : "")
+                        ? "box correct" + (isDarkMode ? " dark" : "")
                         : translationSegments.includes(userInputChar)
-                        ? "box exist" + (isDarkMode === "dark" ? " dark" : "")
-                        : isDarkMode === "dark"
+                        ? "box exist" + (isDarkMode ? " dark" : "")
+                        : isDarkMode
                         ? "box dark"
                         : ""
                 );
+
+            // Save the final class for each character
+            if (!charStates[currentKey]) charStates[currentKey] = [];
+            charStates[currentKey][index] = $box.attr("class");
         });
     };
 
@@ -124,6 +146,7 @@ $(document).ready(() => {
     const showSummary = async () => {
         await fadeOutElement($info.add($inputBox).add($buttons));
         const $summaryBody = $("#summaryBody").empty();
+        const isDarkMode = localStorage.getItem("mode") === "dark";
         let level = 0;
 
         questionKeys.forEach((key) => {
@@ -133,8 +156,21 @@ $(document).ready(() => {
                     : { ...questionsData[key], rating: undefined };
             if (lang === "zh_cn") level += rating;
 
+            const translationSegments = getSegmentedText(translation);
+            const $translationTd = $("<td>");
+
+            translationSegments.forEach((char, index) => {
+                const span = $("<span>").text(char);
+                if (charStates[key] && charStates[key][index]) {
+                    span.addClass(
+                        charStates[key][index].replace("box", "transl")
+                    );
+                }
+                $translationTd.append(span);
+            });
+
             $("<tr>")
-                .append($("<td>").text(source), $("<td>").text(translation))
+                .append($("<td>").text(source), $translationTd)
                 .appendTo($summaryBody);
         });
 
@@ -202,7 +238,7 @@ $(document).ready(() => {
         if (isLocked) return;
 
         isLocked = true;
-        const isDarkMode = localStorage.getItem("mode");
+        const isDarkMode = localStorage.getItem("mode") === "dark";
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
         const translationSegments = getSegmentedText(translation);
@@ -216,10 +252,16 @@ $(document).ready(() => {
             $hintedBox
                 .text(correctChar)
                 .data("hint", correctChar)
-                .addClass(`hinted${isDarkMode === "dark" ? " dark" : ""}`);
+                .addClass(isDarkMode ? "hinted dark" : "hinted");
 
             questionScore =
                 10 * (1 - $(".box.hinted").length / $(".box").length);
+
+            $(".box").each(function (index) {
+                const $box = $(this);
+                if (!charStates[currentKey]) charStates[currentKey] = [];
+                charStates[currentKey][index] = $box.attr("class");
+            });
 
             const remainingHintableCount =
                 $(".box").not(".correct, .hinted").length;
@@ -237,8 +279,15 @@ $(document).ready(() => {
 
     $skipButton.click(async () => {
         if (isLocked) return;
-
         isLocked = true;
+
+        const currentKey = questionKeys[currentQuestionIndex];
+        $(".box").each(function (index) {
+            const $box = $(this);
+            if (!charStates[currentKey]) charStates[currentKey] = [];
+            charStates[currentKey][index] = $box.attr("class");
+        });
+
         currentQuestionIndex++;
         if (currentQuestionIndex < questionKeys.length) {
             await initializeQuestion();
@@ -254,25 +303,27 @@ $(document).ready(() => {
 
 $(document).ready(() => {
     const currentUrl = new URL(window.location.href);
+    const lastSegment = currentUrl.pathname
+        .split("/")
+        .filter((seg) => seg.trim())
+        .pop();
+    $("#last-segment").text(lastSegment);
 
     $("#restartButton").click(() => {
         const lValue = currentUrl.searchParams.get("l");
-        const newUrl = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""}`;
-        window.location.href = newUrl;
+        window.location.href = `../quiz/${randomCode}${
+            lValue ? `?l=${lValue}` : ""
+        }`;
     });
 
-    const pathSegments = currentUrl.pathname.split("/").filter(Boolean);
-    const lastSegment = pathSegments[pathSegments.length - 1];
-    document.getElementById("last-segment").textContent = lastSegment;
-
-    $("#copy-button").click(() => {
+    const $copyButton = $("#copy-button");
+    $copyButton.click(() => {
         const lastSegmentContent = $("#last-segment").text();
-
         navigator.clipboard
             .writeText(lastSegmentContent)
             .then(() => {
-                $("#copy-button").text("check");
-                setTimeout(() => $("#copy-button").text("content_copy"), 1500);
+                $copyButton.text("check");
+                setTimeout(() => $copyButton.text("content_copy"), 1500);
             })
             .catch((err) => console.error("Failed to copy: ", err));
     });
