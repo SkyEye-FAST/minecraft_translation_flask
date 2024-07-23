@@ -24,7 +24,7 @@ import geoip2.database
 import geoip2.errors
 
 from app_base import P
-from app_init import data, id_map, get_translation
+from app_init import data, id_map, rating, get_translation
 
 # 初始化 Flask 应用
 flask_app = Flask(__name__)
@@ -40,7 +40,7 @@ def get_locale() -> str:
     """
 
     locale = request.accept_languages.best_match(
-        ["zh_CN", "zh_TW", "zh", "en"], default="en"
+        ["zh_CN", "zh_TW", "zh", "en"], default="zh_CN"
     )
     if locale == "zh":
         return "zh_CN"
@@ -336,7 +336,8 @@ def get_questions() -> str:
         str: 题组编号。
     """
 
-    random_keys = sorted(sample(list(id_map.keys()), QUESTION_AMOUNT))
+    keys = list(id_map.keys())
+    random_keys = sorted(sample(keys, QUESTION_AMOUNT), key=lambda x: id_map[x])
     return "".join(random_keys)
 
 
@@ -395,12 +396,16 @@ def quiz_sub(code: str) -> str:
         key: {"source": data["en_us"][key], "translation": data[lang][key]}
         for key in keys
     }
+    if lang == "zh_cn":
+        for k, d in questions.items():
+            d["rating"] = rating[k]
 
     p2 = _l("Enter translation here...")
 
     return render_template(
         "quiz_sub.html",
         lang=lang.replace("_", "-"),
+        locale=session["locale"],
         questions=questions,
         placeholder=p2,
         random_code=get_questions(),
@@ -417,6 +422,18 @@ def favicon() -> str:
     """
 
     return send_from_directory("static", "favicon.ico")
+
+
+@flask_app.route("/apple-touch-icon.png")
+def apple_touch_icon() -> str:
+    """
+    apple-touch-icon.png 重定向路由。
+
+    Returns:
+        str: 静态文件 apple-touch-icon.png 的路径。
+    """
+
+    return send_from_directory("static", "apple-touch-icon.png")
 
 
 @flask_app.route("/table.tsv")

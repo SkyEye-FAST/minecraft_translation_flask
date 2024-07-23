@@ -40,12 +40,22 @@ body {
 
 .box.correct {
     color: #000;
-    background-color: #79b851;
+    background-color: #85df4c;
+}
+
+.box.hinted {
+    color: #000;
+    background-color: #ff6d55;
+}
+
+.box.hinted.correct {
+    color: #000;
+    background-color: #5ab0f3;
 }
 
 .box.exist {
     color: #000;
-    background-color: #f3c237;
+    background-color: #f3d837;
 }
 
 .box.dark {
@@ -55,26 +65,71 @@ body {
 
 .box.correct.dark {
     color: #e0e0e0;
-    background-color: #538d4e;
+    background-color: #2b913e;
 }
 
 .box.exist.dark {
     color: #e0e0e0;
-    background-color: #b59f3b;
+    background-color: #a18b2a;
 }
 
+.box.hinted.dark {
+    color: #e0e0e0;
+    background-color: #a72d19;
+}
+
+.box.hinted.correct.dark {
+    color: #e0e0e0;
+    background-color: #2f38a5;
+}
+
+#buttons button,
 input[type="text"] {
-    margin-top: 20px;
-    width: 50%;
-    height: 3em;
     font-size: 1.75em;
     text-align: center;
     border: 2px solid;
-    border-color: #50535a1a;
     border-radius: 8px;
     box-sizing: border-box;
     background-color: transparent;
     color: #000;
+}
+
+input[type="text"] {
+    margin-top: 20px;
+    height: 3em;
+    width: 50%;
+    border-color: #50535a1a;
+}
+
+#buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 15px;
+}
+
+#buttons button {
+    height: 2.25em;
+    flex: 1;
+}
+
+#buttons button[disabled] {
+    opacity: 0.5 !important;
+}
+
+button {
+    background-color: transparent !important;
+}
+
+.material-symbols-outlined.b {
+    display: inline-block;
+    line-height: inherit;
+    vertical-align: middle;
+    transform: translateY(-0.1em);
+    font-size: inherit;
 }
 
 .info {
@@ -116,7 +171,7 @@ input[type="text"] {
 }
 
 #title {
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: 900;
 }
 
@@ -161,10 +216,61 @@ input[type="text"] {
     cursor: pointer;
 }
 
+#level {
+    padding: 0;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.transl {
+    color: #000;
+}
+
+.transl.correct {
+    background-color: #85df4c;
+}
+
+.transl.exist {
+    background-color: #f3d837;
+}
+
+.transl.hinted {
+    background-color: #ff6d55;
+}
+
+.transl.hinted.correct {
+    background-color: #5ab0f3;
+}
+
+.transl.dark {
+    color: #fff;
+    background-color: transparent;
+}
+
+.transl.correct.dark {
+    color: #85df4c;
+    background-color: transparent;
+}
+
+.transl.hinted.dark {
+    color: #ff6d55;
+    background-color: transparent;
+}
+
+.transl.hinted.correct.dark {
+    color: #5ab0f3;
+    background-color: transparent;
+}
+
+.transl.exist.dark {
+    color: #f3d837;
+    background-color: transparent;
+}
+
 /* 表格 */
 
 table {
-    margin: 15px auto 0 auto;
+    margin: 10px auto 0 auto;
     border-collapse: collapse;
     font-size: larger;
 }
@@ -173,6 +279,10 @@ table td,
 table th {
     border: 2px solid #5b9bd5;
     padding: 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #2e4e6c0f;
 }
 
 table tr:nth-child(even) {
@@ -217,6 +327,15 @@ table tr td:nth-child(2) {
         font-size: 1.25em;
     }
 
+    #buttons button {
+        height: 2.5em;
+        font-size: 1.25em;
+    }
+
+    #buttons {
+        width: 65%;
+    }
+
     #summaryTable {
         display: none;
     }
@@ -256,8 +375,13 @@ table tr td:nth-child(2) {
         margin: 3px;
     }
 
+    #buttons button,
     input[type="text"] {
         font-size: 1.25em;
+    }
+
+    #buttons {
+        margin-top: 1.5em !important;
     }
 
     .summary {
@@ -286,6 +410,7 @@ table tr td:nth-child(2) {
         margin: 3px;
     }
 
+    #buttons button,
     input[type="text"] {
         font-size: 1.75em;
     }
@@ -308,14 +433,24 @@ table tr td:nth-child(2) {
         margin: 3px;
     }
 
+    #buttons button,
     input[type="text"] {
         font-size: 2em;
     }
 }
 
 @media (orientation: portrait) {
+    #buttons {
+        margin-top: 2em;
+        width: 80%;
+        height: 2.5em;
+    }
+
     input[type="text"] {
         width: 80%;
+    }
+
+    #buttons button {
         height: 2.5em;
     }
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-07-15 15:39+0800\n"
+"POT-Creation-Date: 2024-07-24 01:23+0800\n"
 "PO-Revision-Date: 2024-07-14 01:56+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hans_CN\n"
@@ -36,7 +36,7 @@ msgstr "查询"
 msgid "Enter question group code..."
 msgstr "输入题组编号…"
 
-#: app.py:395
+#: app.py:402
 msgid "Enter translation here..."
 msgstr "在此输入译名…"
 
@@ -84,48 +84,61 @@ msgstr "语言名称"
 msgid "Translations"
 msgstr "译名"
 
-#: templates/quiz_portal.html:7 templates/quiz_portal.html:30
-#: templates/quiz_sub.html:7
+#: templates/quiz_portal.html:7 templates/quiz_portal.html:31
+#: templates/quiz_sub.html:7 templates/quiz_sub.html:9
+#: templates/quiz_sub.html:28
 msgid "Minecraft Standard Translation Quiz"
 msgstr "Minecraft译名认知测验"
 
-#: templates/quiz_portal.html:32
+#: templates/quiz_portal.html:33
 msgid "Random questions (refresh to reselect)"
 msgstr "随机题组（刷新以重新选择）"
 
-#: templates/quiz_portal.html:35
+#: templates/quiz_portal.html:36
 msgid "Language: "
 msgstr "语言："
 
-#: templates/quiz_portal.html:45
+#: templates/quiz_portal.html:46
 msgid "Enter"
 msgstr "进入"
 
-#: templates/quiz_portal.html:49
+#: templates/quiz_portal.html:50
 msgid "Query Page"
 msgstr "查询页面"
 
-#: templates/quiz_portal.html:52
+#: templates/quiz_portal.html:53
 msgid "Table Page"
 msgstr "表格页面"
 
-#: templates/quiz_sub.html:44
+#: templates/quiz_sub.html:8 templates/quiz_sub.html:10
+msgid "Test your mastery of standard translations..."
+msgstr "测一测你对标准译名的掌握程度…"
+
+#: templates/quiz_sub.html:54
+msgid "Hint"
+msgstr "提示"
+
+#: templates/quiz_sub.html:55
+msgid "Skip"
+msgstr "跳过"
+
+#: templates/quiz_sub.html:58
 msgid "All questions completed!"
 msgstr "已完成所有题目!"
 
-#: templates/quiz_sub.html:48
+#: templates/quiz_sub.html:67
 msgid "Source"
 msgstr "原文"
 
-#: templates/quiz_sub.html:49
+#: templates/quiz_sub.html:68
 msgid "Translation"
 msgstr "译名"
 
-#: templates/quiz_sub.html:58
+#: templates/quiz_sub.html:78
 msgid "One more group"
 msgstr "再来一组"
 
-#: templates/quiz_sub.html:59
+#: templates/quiz_sub.html:79
 msgid "Return to Quiz Portal"
 msgstr "返回测验门户"
 

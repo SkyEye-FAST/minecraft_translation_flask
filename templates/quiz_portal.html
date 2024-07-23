@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ _("Minecraft Standard Translation Quiz") }}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
     <link rel="stylesheet"
         href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}">
@@ -61,25 +62,17 @@
 
     <script>
         $(document).ready(() => {
-            $("#randomQuizButton").click(() => {
-                const randomCode = "{{ random_code }}";
-                const selectedLang = $("#query-lang").val();
-                const redirectTo = `quiz/${randomCode}?l=${selectedLang}`;
-                window.location.href = redirectTo;
-            });
+            const randomCode = "{{ random_code }}";
 
-            $("#query-lang").change(() => {
-                const selectedValue = $(this).val();
-                const currentUrl = window.location.href.split("?")[0];
-                const redirectTo = `${currentUrl}?l=${selectedValue}`;
-                window.location.href = redirectTo;
+            $("#randomQuizButton").click(() => {
+                const selectedLang = $("#query-lang").val();
+                window.location.href = `quiz/${randomCode}?l=${selectedLang}`;
             });
 
             $("#enterButton").click(() => {
                 const inputContent = $("#inputText").val();
                 const selectedLang = $("#query-lang").val();
-                const redirectTo = `quiz/${inputContent}?l=${selectedLang}`;
-                window.location.href = redirectTo;
+                window.location.href = `quiz/${inputContent}?l=${selectedLang}`;
             });
         });
     </script>
