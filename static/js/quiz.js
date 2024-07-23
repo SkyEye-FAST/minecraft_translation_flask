@@ -4,6 +4,7 @@ $(document).ready(() => {
     const $sourceText = $("#sourceText");
     const $keyText = $("#keyText");
     const $questionRatingNum = $("#questionRatingNum");
+    const $questionRating = $("#questionRating");
     const $inputBox = $("#inputBox");
     const $boxes = $("#boxes");
     const $buttons = $("#buttons");
@@ -99,6 +100,28 @@ $(document).ready(() => {
         });
     };
 
+    const updateRatingStars = (rating) => {
+        $questionRating.empty()
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 > 0;
+
+        for (let i = 0; i < fullStars; i++) {
+            $questionRating.append(
+                $('<span class="material-symbols-outlined b">').text("star")
+            );
+        }
+
+        if (hasHalfStar) {
+            $questionRating.append(
+                $('<span class="material-symbols-outlined b">').text(
+                    "star_half"
+                )
+            );
+        }
+
+        $("#questionRatingNum").text(rating);
+    };
+
     const initializeQuestion = async () => {
         const currentKey = questionKeys[currentQuestionIndex];
         questionScore = 10;
@@ -114,7 +137,10 @@ $(document).ready(() => {
 
         $sourceText.text(source);
         $keyText.text(currentKey);
-        if (rating !== undefined) $questionRatingNum.text(rating);
+        if (rating !== undefined) {
+            $questionRatingNum.text(rating);
+            updateRatingStars(rating);
+        }
         $inputBox.val("");
         createBoxes(translationSegments.length);
 
