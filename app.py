@@ -423,7 +423,7 @@ def favicon() -> str:
 
 
 @flask_app.route("/apple-touch-icon.png")
-def favicon() -> str:
+def apple_touch_icon() -> str:
     """
     apple-touch-icon.png 重定向路由。
 
