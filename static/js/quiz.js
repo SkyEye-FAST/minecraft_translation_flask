@@ -24,6 +24,8 @@ $(document).ready(function () {
     });
 
     let currentQuestionIndex = 0;
+    let score = 0;
+    let questionScore = 10;
     const questionsData = questions || {};
     const questionKeys = Object.keys(questionsData);
 
@@ -37,6 +39,7 @@ $(document).ready(function () {
 
     async function initializeQuestion() {
         const currentKey = questionKeys[currentQuestionIndex];
+        questionScore = 10;
         let source, translation, rating;
 
         if (lang === "zh_cn") {
@@ -188,6 +191,7 @@ $(document).ready(function () {
         });
         if (lang === "zh_cn") {
             $("#levelNum").text(level);
+            $("#score").text(`${score.toFixed(2)} pts`);
         } else {
             $("#level").hide();
         }
@@ -222,6 +226,7 @@ $(document).ready(function () {
         if (input === translation && !isLocked) {
             isLocked = true;
             $skipButton.attr("disabled", "true");
+            score += questionScore;
             await delay(delayBetweenQuestions);
             if (currentQuestionIndex === questionKeys.length - 1) {
                 await showSummary();
@@ -281,8 +286,13 @@ $(document).ready(function () {
                     isDarkMode === "dark" ? "hinted dark" : "hinted"
                 );
 
+                const count = $(".box").length;
+                const hintedCount = count - $(".box").not(".hinted").length;
+                questionScore = 10 * (1 - hintedCount / count);
+
                 const remainingHintableCount =
                     $(".box").not(".correct, .hinted").length;
+
                 if (remainingHintableCount <= 1) {
                     $hintButton.hide();
                     $skipButton.show();
