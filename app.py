@@ -129,11 +129,12 @@ def index() -> str:
         query_str = form.input_string.data
         query_mode = request.form.get("query-mode", "source")
         enable_jkv = form.jkv_check.data
-        selected_option = request.form.get("options", "")
+        selected_option = request.form.get("option", "")
         if query_str:
             if query_mode == "source":
                 results = get_translation(query_str)
             elif query_mode == "transl":
+                query_lang = request.form.get("query-lang", "zh_cn")
                 results = get_translation(query_str, query_lang)
             elif query_mode == "key":
                 results = get_translation(query_str, "key")
