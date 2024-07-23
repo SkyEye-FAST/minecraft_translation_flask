@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
     const body = $("body");
     const $info = $("#info");
     const $sourceText = $("#sourceText");
@@ -11,184 +11,133 @@ $(document).ready(function () {
     const $skipButton = $("#skipButton");
     const $summary = $("#summary");
 
-    function toggleDarkMode() {
-        body.toggleClass("dark-mode");
-        if ($summary.is(":hidden")) {
-            updateBoxes();
-        }
-    }
-
-    body.on("toggle-dark-mode", toggleDarkMode);
-    $("#mode-switch").click(function () {
-        body.trigger("toggle-dark-mode");
-    });
-
     let currentQuestionIndex = 0;
     let score = 0;
     let questionScore = 10;
     const questionsData = questions || {};
     const questionKeys = Object.keys(questionsData);
 
-    if (questionKeys.length === 0) {
+    if (!questionKeys.length) {
         console.error("No questions available.");
         return;
     }
 
     const currentUrl = new URL(window.location.href);
     const lang = currentUrl.searchParams.get("l");
+    const fadeDuration = 300;
+    const delayBetweenQuestions = 800;
+    let isLocked = false;
+    let isComposing = false;
 
-    async function initializeQuestion() {
-        const currentKey = questionKeys[currentQuestionIndex];
-        questionScore = 10;
-        let source, translation, rating;
-
-        if (lang === "zh_cn") {
-            ({ source, translation, rating } = questionsData[currentKey]);
-        } else {
-            ({ source, translation } = questionsData[currentKey]);
+    const toggleDarkMode = () => {
+        body.toggleClass("dark-mode");
+        if ($summary.is(":hidden")) {
+            updateBoxes();
         }
+    };
 
-        const translationSegments = getSegmentedText(translation);
-        const translationLength = translationSegments.length;
+    body.on("toggle-dark-mode", toggleDarkMode);
+    $("#mode-switch").click(() => body.trigger("toggle-dark-mode"));
 
-        await fadeOutElement($info, fadeDuration);
-        $skipButton.hide();
-        $hintButton.show();
+    const getSegmentedText = (text) =>
+        [...new Intl.Segmenter().segment(text)].map((seg) => seg.segment);
+    const truncateInput = (input, maxLength) =>
+        getSegmentedText(input).slice(0, maxLength).join("");
 
-        $sourceText.text(source);
-        $keyText.text(currentKey);
-        if (rating !== undefined) {
-            $questionRatingNum.text(rating);
-        }
-        $inputBox.val("");
-        createBoxes(translationLength);
-
-        await fadeInElement($info, fadeDuration);
-    }
-
-    function getSegmentedText(text) {
-        return [...new Intl.Segmenter().segment(text)].map(
-            (segment) => segment.segment
-        );
-    }
-
-    function truncateInput(input, maxLength) {
-        const segmentedInput = getSegmentedText(input);
-        return segmentedInput.slice(0, maxLength).join("");
-    }
-
-    function createBoxes(length) {
+    const createBoxes = (length) => {
         $boxes.empty();
         for (let i = 0; i < length; i++) {
-            $("<div>", {
-                class: "box",
-                id: "box" + (i + 1),
-            }).appendTo($boxes);
+            $("<div>", { class: "box", id: `box${i + 1}` }).appendTo($boxes);
         }
-    }
+    };
 
-    function updateBoxes() {
+    const fadeOutElement = ($element) =>
+        new Promise((resolve) => $element.fadeOut(fadeDuration, resolve));
+    const fadeInElement = ($element) =>
+        new Promise((resolve) => $element.fadeIn(fadeDuration, resolve));
+    const delay = (duration) =>
+        new Promise((resolve) => setTimeout(resolve, duration));
+
+    const updateBoxes = () => {
         const isDarkMode = localStorage.getItem("mode");
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
         const translationSegments = getSegmentedText(translation);
-        const translationLength = translationSegments.length;
+        let inputSegments = getSegmentedText(input).slice(
+            0,
+            translationSegments.length
+        );
 
-        let inputSegments = getSegmentedText(input);
-
-        if (inputSegments.length > translationLength) {
-            inputSegments = inputSegments.slice(0, translationLength);
-            $inputBox.val(inputSegments.join(""));
-        }
-
-        $(".box").each(function (index) {
-            const $box = $(this);
+        $inputBox.val(inputSegments.join(""));
+        $(".box").each((index, box) => {
+            const $box = $(box);
             const userInputChar = inputSegments[index] || "";
             const correctChar = translationSegments[index] || "";
             const hintChar = $box.data("hint");
 
-            if (hintChar) {
-                $box.text(hintChar);
-            } else {
-                $box.text(userInputChar);
-            }
-
-            $box.removeClass("correct exist dark");
-
-            if (hintChar) {
-                if (userInputChar === correctChar) {
-                    $box.addClass(
-                        isDarkMode === "dark"
-                            ? "box hinted correct dark"
-                            : "box hinted correct"
-                    );
-                } else {
-                    $box.addClass(
-                        isDarkMode === "dark" ? "box hinted dark" : "box hinted"
-                    );
-                }
-            } else {
-                if (!userInputChar) {
-                    $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
-                } else if (userInputChar === correctChar) {
-                    $box.addClass(
-                        isDarkMode === "dark"
-                            ? "box correct dark"
-                            : "box correct"
-                    );
-                } else if (translationSegments.includes(userInputChar)) {
-                    $box.addClass(
-                        isDarkMode === "dark" ? "box exist dark" : "box exist"
-                    );
-                } else {
-                    $box.addClass(isDarkMode === "dark" ? "box dark" : "box");
-                }
-            }
+            $box.text(hintChar || userInputChar)
+                .removeClass("correct exist dark")
+                .addClass(
+                    hintChar
+                        ? (userInputChar === correctChar
+                              ? "box hinted correct"
+                              : "box hinted") +
+                              (isDarkMode === "dark" ? " dark" : "")
+                        : !userInputChar
+                        ? isDarkMode === "dark"
+                            ? "box dark"
+                            : "box"
+                        : userInputChar === correctChar
+                        ? "box correct" + (isDarkMode === "dark" ? " dark" : "")
+                        : translationSegments.includes(userInputChar)
+                        ? "box exist" + (isDarkMode === "dark" ? " dark" : "")
+                        : isDarkMode === "dark"
+                        ? "box dark"
+                        : ""
+                );
         });
-    }
+    };
 
-    function delay(duration) {
-        return new Promise((resolve) => setTimeout(resolve, duration));
-    }
+    const initializeQuestion = async () => {
+        const currentKey = questionKeys[currentQuestionIndex];
+        questionScore = 10;
+        const { source, translation, rating } =
+            lang === "zh_cn"
+                ? questionsData[currentKey]
+                : { ...questionsData[currentKey], rating: undefined };
 
-    function fadeOutElement($element, fadeDuration) {
-        return new Promise((resolve) => {
-            $element.fadeOut(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
+        const translationSegments = getSegmentedText(translation);
+        await fadeOutElement($info);
+        $skipButton.hide();
+        $hintButton.show();
 
-    function fadeInElement($element, fadeDuration) {
-        return new Promise((resolve) => {
-            $element.fadeIn(fadeDuration, function () {
-                resolve();
-            });
-        });
-    }
+        $sourceText.text(source);
+        $keyText.text(currentKey);
+        if (rating !== undefined) $questionRatingNum.text(rating);
+        $inputBox.val("");
+        createBoxes(translationSegments.length);
 
-    const delayBetweenQuestions = 800;
-    const fadeDuration = 300;
+        await fadeInElement($info);
+    };
 
-    async function showSummary() {
-        await fadeOutElement($info.add($inputBox).add($buttons), fadeDuration);
-        let source, translation, rating;
+    const showSummary = async () => {
+        await fadeOutElement($info.add($inputBox).add($buttons));
+        const $summaryBody = $("#summaryBody").empty();
         let level = 0;
 
-        const $summaryBody = $("#summaryBody").empty();
-
         questionKeys.forEach((key) => {
-            if (lang === "zh_cn") {
-                ({ source, translation, rating } = questionsData[key]);
-                level += rating;
-            } else {
-                ({ source, translation } = questionsData[key]);
-            }
+            const { source, translation, rating } =
+                lang === "zh_cn"
+                    ? questionsData[key]
+                    : { ...questionsData[key], rating: undefined };
+            if (lang === "zh_cn") level += rating;
+
             $("<tr>")
                 .append($("<td>").text(source), $("<td>").text(translation))
                 .appendTo($summaryBody);
         });
+
         if (lang === "zh_cn") {
             $("#levelNum").text(level);
             $("#score").text(`${score.toFixed(2)} pts`);
@@ -196,21 +145,18 @@ $(document).ready(function () {
             $("#level").hide();
         }
 
-        await fadeInElement($summary, fadeDuration);
-    }
+        await fadeInElement($summary);
+    };
 
-    let isLocked = false;
-
-    async function check() {
-        if (isComposing) return;
+    const check = async () => {
+        if (isComposing || isLocked) return;
 
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
-
         const translationLength = getSegmentedText(translation).length;
-        const truncatedValue = truncateInput(input, translationLength);
-        $inputBox.val(truncatedValue);
+
+        $inputBox.val(truncateInput(input, translationLength));
         updateBoxes();
 
         const remainingHintableCount =
@@ -228,133 +174,106 @@ $(document).ready(function () {
             $skipButton.attr("disabled", "true");
             score += questionScore;
             await delay(delayBetweenQuestions);
+
             if (currentQuestionIndex === questionKeys.length - 1) {
                 await showSummary();
             } else {
-                await fadeOutElement($info, fadeDuration);
+                await fadeOutElement($info);
                 currentQuestionIndex++;
                 $skipButton.removeAttr("disabled");
                 await initializeQuestion();
             }
             isLocked = false;
         }
-    }
+    };
 
-    let isComposing = false;
-
-    $inputBox.on("compositionstart", function () {
-        isComposing = true;
+    $inputBox.on({
+        compositionstart: () => {
+            isComposing = true;
+        },
+        compositionend: () => {
+            isComposing = false;
+            check();
+        },
+        input: check,
     });
 
-    $inputBox.on("compositionend", function () {
-        isComposing = false;
-        check();
-    });
+    $hintButton.click(() => {
+        if (isLocked) return;
 
-    $inputBox.on("input", function () {
-        check();
-    });
-
-    $skipButton.hide();
-
-    $hintButton.click(function () {
+        isLocked = true;
         const isDarkMode = localStorage.getItem("mode");
+        const currentKey = questionKeys[currentQuestionIndex];
+        const { translation } = questionsData[currentKey];
+        const translationSegments = getSegmentedText(translation);
 
-        if (!isLocked) {
-            isLocked = true;
+        const hintedIndex = $(".box").not(".correct, .hinted").first().index();
 
-            let hintedIndex = -1;
-            $(".box").each(function (index) {
-                const $box = $(this);
-                if (!$box.hasClass("correct") && !$box.hasClass("hinted")) {
-                    hintedIndex = index;
-                    return false;
-                }
-            });
+        if (hintedIndex !== -1) {
+            const correctChar = translationSegments[hintedIndex];
+            const $hintedBox = $(".box").eq(hintedIndex);
 
-            if (hintedIndex !== -1) {
-                const currentKey = questionKeys[currentQuestionIndex];
-                const { translation } = questionsData[currentKey];
-                const translationSegments = getSegmentedText(translation);
+            $hintedBox
+                .text(correctChar)
+                .data("hint", correctChar)
+                .addClass(`hinted${isDarkMode === "dark" ? " dark" : ""}`);
 
-                const $hintedBox = $($(".box").get(hintedIndex));
-                const correctChar = translationSegments[hintedIndex];
+            questionScore =
+                10 * (1 - $(".box.hinted").length / $(".box").length);
 
-                $hintedBox.text(correctChar);
-                $hintedBox.data("hint", correctChar);
-                $hintedBox.addClass(
-                    isDarkMode === "dark" ? "hinted dark" : "hinted"
-                );
-
-                const count = $(".box").length;
-                const hintedCount = count - $(".box").not(".hinted").length;
-                questionScore = 10 * (1 - hintedCount / count);
-
-                const remainingHintableCount =
-                    $(".box").not(".correct, .hinted").length;
-
-                if (remainingHintableCount <= 1) {
-                    $hintButton.hide();
-                    $skipButton.show();
-                } else if ($hintButton.is(":hidden")) {
-                    $skipButton.hide();
-                    $hintButton.show();
-                }
+            const remainingHintableCount =
+                $(".box").not(".correct, .hinted").length;
+            if (remainingHintableCount <= 1) {
+                $hintButton.hide();
+                $skipButton.show();
+            } else if ($hintButton.is(":hidden")) {
+                $skipButton.hide();
+                $hintButton.show();
             }
-
-            isLocked = false;
         }
+
+        isLocked = false;
     });
 
-    $skipButton.click(async function () {
-        if (!isLocked) {
-            isLocked = true;
+    $skipButton.click(async () => {
+        if (isLocked) return;
 
-            currentQuestionIndex++;
-            if (currentQuestionIndex < questionKeys.length) {
-                await initializeQuestion();
-            } else {
-                await showSummary();
-            }
-            isLocked = false;
+        isLocked = true;
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questionKeys.length) {
+            await initializeQuestion();
+        } else {
+            await showSummary();
         }
+        isLocked = false;
     });
 
     // Initialize first question
     initializeQuestion();
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
     const currentUrl = new URL(window.location.href);
 
-    // Restart
     $("#restartButton").click(() => {
         const lValue = currentUrl.searchParams.get("l");
         const newUrl = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""}`;
         window.location.href = newUrl;
     });
 
-    // Copy question group code
-    const pathSegments = currentUrl.pathname
-        .split("/")
-        .filter((segment) => segment.trim() !== "");
+    const pathSegments = currentUrl.pathname.split("/").filter(Boolean);
     const lastSegment = pathSegments[pathSegments.length - 1];
     document.getElementById("last-segment").textContent = lastSegment;
 
-    const $copyButton = $("#copy-button");
-    $copyButton.click(() => {
+    $("#copy-button").click(() => {
         const lastSegmentContent = $("#last-segment").text();
 
         navigator.clipboard
             .writeText(lastSegmentContent)
             .then(() => {
-                $copyButton.text("check");
-                setTimeout(() => {
-                    $copyButton.text("content_copy");
-                }, 1500);
+                $("#copy-button").text("check");
+                setTimeout(() => $("#copy-button").text("content_copy"), 1500);
             })
-            .catch((err) => {
-                console.error("Failed to copy: ", err);
-            });
+            .catch((err) => console.error("Failed to copy: ", err));
     });
 });
