@@ -81,8 +81,8 @@
                     {{ form.input_string(autocomplete="off", id="input_string") }}
 
                     {% if input_value %}
-                    <label for="options">{{ _("Select a translation key: ") }}</label>
-                    <select name="options" id="options">
+                    <label for="option">{{ _("Select a translation key: ") }}</label>
+                    <select name="option" id="option">
                         {% for option in keys %}
                         <option value="{{ option }}" {% if option==key %}selected{% endif %}>{{ option }}</option>
                         {% endfor %}
