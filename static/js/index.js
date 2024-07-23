@@ -1,23 +1,18 @@
-$(document).ready(function () {
+$(document).ready(() => {
     // 折叠 fieldset
-    $(".collapsible").each(function () {
-        const $fieldset = $(this);
-        $fieldset.find(".toggle-button").on("click", function () {
-            $fieldset.toggleClass("collapsed");
-        });
+    $(".collapsible").on("click", ".toggle-button", function () {
+        $(this).closest(".collapsible").toggleClass("collapsed");
     });
 
     // 判断是否需要显示查询语言
-    $("#query-mode").change(function () {
-        const queryLangLabel = $('label[for="query-lang"]');
-        const queryLangSelect = $('select[name="query-lang"]');
+    const queryLangLabel = $('label[for="query-lang"]');
+    const queryLangSelect = $('select[name="query-lang"]');
+    const toggleQueryLangVisibility = (isVisible) => {
+        queryLangLabel.toggleClass("hidden", !isVisible);
+        queryLangSelect.toggleClass("hidden", !isVisible);
+    };
 
-        if ($(this).val() === "transl") {
-            queryLangLabel.removeClass("hidden");
-            queryLangSelect.removeClass("hidden");
-        } else {
-            queryLangLabel.addClass("hidden");
-            queryLangSelect.addClass("hidden");
-        }
+    $("#query-mode").change(function () {
+        toggleQueryLangVisibility($(this).val() === "transl");
     });
 });

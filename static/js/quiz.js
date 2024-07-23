@@ -33,22 +33,7 @@ $(document).ready(() => {
 
     const toggleDarkMode = () => {
         body.toggleClass("dark-mode");
-
-        $("#summaryBody span").each(function () {
-            const $span = $(this);
-            const classes = $span.attr("class").split(" ");
-            if (body.hasClass("dark-mode")) {
-                if (!classes.includes("dark")) {
-                    classes.push("dark");
-                }
-            } else {
-                const darkIndex = classes.indexOf("dark");
-                if (darkIndex > -1) {
-                    classes.splice(darkIndex, 1);
-                }
-            }
-            $span.attr("class", classes.join(" "));
-        });
+        $("#summaryBody span").toggleClass("dark", body.hasClass("dark-mode"));
 
         if ($summary.is(":hidden")) {
             updateBoxes();
@@ -70,15 +55,13 @@ $(document).ready(() => {
         }
     };
 
-    const fadeOutElement = ($element) =>
-        new Promise((resolve) => $element.fadeOut(fadeDuration, resolve));
-    const fadeInElement = ($element) =>
-        new Promise((resolve) => $element.fadeIn(fadeDuration, resolve));
+    const fadeElement = ($element, type) =>
+        new Promise((resolve) => $element[type](fadeDuration, resolve));
     const delay = (duration) =>
         new Promise((resolve) => setTimeout(resolve, duration));
 
     const updateBoxes = () => {
-        const isDarkMode = localStorage.getItem("mode") === "dark";
+        const isDarkMode = body.hasClass("dark-mode");
         const input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
@@ -95,27 +78,22 @@ $(document).ready(() => {
             const correctChar = translationSegments[index] || "";
             const hintChar = $box.data("hint");
 
-            $box.text(hintChar || userInputChar)
-                .removeClass("correct exist dark")
-                .addClass(
-                    hintChar
-                        ? (userInputChar === correctChar
-                              ? "box hinted correct"
-                              : "box hinted") + (isDarkMode ? " dark" : "")
-                        : !userInputChar
-                        ? isDarkMode
-                            ? "box dark"
-                            : "box"
-                        : userInputChar === correctChar
-                        ? "box correct" + (isDarkMode ? " dark" : "")
-                        : translationSegments.includes(userInputChar)
-                        ? "box exist" + (isDarkMode ? " dark" : "")
-                        : isDarkMode
-                        ? "box dark"
-                        : ""
-                );
+            const boxClass = hintChar
+                ? `box hinted${
+                      userInputChar === correctChar ? " correct" : ""
+                  }${isDarkMode ? " dark" : ""}`
+                : `box${
+                      !userInputChar
+                          ? ""
+                          : userInputChar === correctChar
+                          ? " correct"
+                          : translationSegments.includes(userInputChar)
+                          ? " exist"
+                          : ""
+                  }${isDarkMode ? " dark" : ""}`;
 
-            // Save the final class for each character
+            $box.text(hintChar || userInputChar).attr("class", boxClass);
+
             if (!charStates[currentKey]) charStates[currentKey] = [];
             charStates[currentKey][index] = $box.attr("class");
         });
@@ -130,7 +108,7 @@ $(document).ready(() => {
                 : { ...questionsData[currentKey], rating: undefined };
 
         const translationSegments = getSegmentedText(translation);
-        await fadeOutElement($info);
+        await fadeElement($info, "fadeOut");
         $skipButton.hide();
         $hintButton.show();
 
@@ -140,13 +118,12 @@ $(document).ready(() => {
         $inputBox.val("");
         createBoxes(translationSegments.length);
 
-        await fadeInElement($info);
+        await fadeElement($info, "fadeIn");
     };
 
     const showSummary = async () => {
-        await fadeOutElement($info.add($inputBox).add($buttons));
+        await fadeElement($info.add($inputBox).add($buttons), "fadeOut");
         const $summaryBody = $("#summaryBody").empty();
-        const isDarkMode = localStorage.getItem("mode") === "dark";
         let level = 0;
 
         questionKeys.forEach((key) => {
@@ -181,7 +158,7 @@ $(document).ready(() => {
             $("#level").hide();
         }
 
-        await fadeInElement($summary);
+        await fadeElement($summary, "fadeIn");
     };
 
     const check = async () => {
@@ -197,24 +174,19 @@ $(document).ready(() => {
 
         const remainingHintableCount =
             $(".box").not(".correct, .hinted").length;
-        if (remainingHintableCount <= 1) {
-            $hintButton.hide();
-            $skipButton.show();
-        } else if ($hintButton.is(":hidden")) {
-            $skipButton.hide();
-            $hintButton.show();
-        }
+        $hintButton.toggle(remainingHintableCount > 1);
+        $skipButton.toggle(remainingHintableCount <= 1);
 
         if (input === translation && !isLocked) {
             isLocked = true;
-            $skipButton.attr("disabled", "true");
+            $skipButton.attr("disabled", true);
             score += questionScore;
             await delay(delayBetweenQuestions);
 
             if (currentQuestionIndex === questionKeys.length - 1) {
                 await showSummary();
             } else {
-                await fadeOutElement($info);
+                await fadeElement($info, "fadeOut");
                 currentQuestionIndex++;
                 $skipButton.removeAttr("disabled");
                 await initializeQuestion();
@@ -238,7 +210,7 @@ $(document).ready(() => {
         if (isLocked) return;
 
         isLocked = true;
-        const isDarkMode = localStorage.getItem("mode") === "dark";
+        const isDarkMode = body.hasClass("dark-mode");
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
         const translationSegments = getSegmentedText(translation);
@@ -252,7 +224,7 @@ $(document).ready(() => {
             $hintedBox
                 .text(correctChar)
                 .data("hint", correctChar)
-                .addClass(isDarkMode ? "hinted dark" : "hinted");
+                .addClass(`hinted${isDarkMode ? " dark" : ""}`);
 
             questionScore =
                 10 * (1 - $(".box.hinted").length / $(".box").length);
@@ -265,13 +237,8 @@ $(document).ready(() => {
 
             const remainingHintableCount =
                 $(".box").not(".correct, .hinted").length;
-            if (remainingHintableCount <= 1) {
-                $hintButton.hide();
-                $skipButton.show();
-            } else if ($hintButton.is(":hidden")) {
-                $skipButton.hide();
-                $hintButton.show();
-            }
+            $hintButton.toggle(remainingHintableCount > 1);
+            $skipButton.toggle(remainingHintableCount <= 1);
         }
 
         isLocked = false;
