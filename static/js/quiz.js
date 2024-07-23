@@ -119,7 +119,7 @@ $(document).ready(() => {
             );
         }
 
-        $("#questionRatingNum").text(rating);
+        $("#questionRatingNum").text(rating.toFixed(2));
     };
 
     const initializeQuestion = async () => {

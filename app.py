@@ -405,6 +405,7 @@ def quiz_sub(code: str) -> str:
     return render_template(
         "quiz_sub.html",
         lang=lang.replace("_", "-"),
+        locale=session["locale"],
         questions=questions,
         placeholder=p2,
         random_code=get_questions(),
