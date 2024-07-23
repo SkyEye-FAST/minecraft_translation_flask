@@ -16,7 +16,6 @@ $(document).ready(() => {
     let score = 0;
     let questionScore = 10;
     const questionsData = questions || {};
-    const titleToShare = title || "Minecraft Standard Translation Quiz";
     const questionKeys = Object.keys(questionsData);
 
     if (!questionKeys.length) {
@@ -296,6 +295,7 @@ $(document).ready(() => {
 });
 
 $(document).ready(() => {
+    const titleToShare = title || "Minecraft Standard Translation Quiz";
     const currentUrl = new URL(window.location.href);
     const lastSegment = currentUrl.pathname
         .split("/")
