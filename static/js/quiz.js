@@ -296,6 +296,7 @@ $(document).ready(() => {
 
 $(document).ready(() => {
     const titleToShare = title || "Minecraft Standard Translation Quiz";
+    const textToShare = text || "Test your mastery of standard translations...";
     const currentUrl = new URL(window.location.href);
     const lastSegment = currentUrl.pathname
         .split("/")
@@ -326,7 +327,7 @@ $(document).ready(() => {
             navigator
                 .share({
                     title: titleToShare,
-                    text: lastSegment,
+                    text: textToShare,
                     url: window.location.href,
                 })
                 .then(() => console.log("Shared successfully!"))

@@ -25,7 +25,8 @@
     <script>
         const questions = {{ questions | tojson | safe }};
         const randomCode = "{{ random_code }}";
-        const title = "{{ _("Minecraft Standard Translation Quiz") }}"
+        const title = "{{ _('Minecraft Standard Translation Quiz') }}";
+        const text = "{{ _('Test your mastery of standard translations...') }}";
     </script>
     <script src="{{ url_for('static', filename='js/dark-mode.js') }}"></script>
     <script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
