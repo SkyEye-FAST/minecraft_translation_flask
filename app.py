@@ -40,7 +40,7 @@ def get_locale() -> str:
     """
 
     locale = request.accept_languages.best_match(
-        ["zh_CN", "zh_TW", "zh", "en"], default="en"
+        ["zh_CN", "zh_TW", "zh", "en"], default="zh_CN"
     )
     if locale == "zh":
         return "zh_CN"
@@ -420,6 +420,18 @@ def favicon() -> str:
     """
 
     return send_from_directory("static", "favicon.ico")
+
+
+@flask_app.route("/apple-touch-icon.png")
+def favicon() -> str:
+    """
+    apple-touch-icon.png 重定向路由。
+
+    Returns:
+        str: 静态文件 apple-touch-icon.png 的路径。
+    """
+
+    return send_from_directory("static", "apple-touch-icon.png")
 
 
 @flask_app.route("/table.tsv")

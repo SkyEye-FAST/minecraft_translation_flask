@@ -16,6 +16,7 @@ $(document).ready(() => {
     let score = 0;
     let questionScore = 10;
     const questionsData = questions || {};
+    const titleToShare = title || "Minecraft Standard Translation Quiz";
     const questionKeys = Object.keys(questionsData);
 
     if (!questionKeys.length) {
@@ -101,7 +102,7 @@ $(document).ready(() => {
     };
 
     const updateRatingStars = (rating) => {
-        $questionRating.empty()
+        $questionRating.empty();
         const fullStars = Math.floor(rating);
         const hasHalfStar = rating % 1 > 0;
 
@@ -304,9 +305,8 @@ $(document).ready(() => {
 
     $("#restartButton").click(() => {
         const lValue = currentUrl.searchParams.get("l");
-        window.location.href = `../quiz/${randomCode}${
-            lValue ? `?l=${lValue}` : ""
-        }`;
+        window.location.href = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""
+            }`;
     });
 
     const $copyButton = $("#copy-button");
@@ -319,5 +319,18 @@ $(document).ready(() => {
                 setTimeout(() => $copyButton.text("content_copy"), 1500);
             })
             .catch((err) => console.error("Failed to copy: ", err));
+    });
+
+    $("#share-button").click(() => {
+        if (navigator.share) {
+            navigator
+                .share({
+                    title: titleToShare,
+                    text: lastSegment,
+                    url: window.location.href,
+                })
+                .then(() => console.log("Shared successfully!"))
+                .catch((error) => console.log("Failed to share:", error));
+        }
     });
 });
