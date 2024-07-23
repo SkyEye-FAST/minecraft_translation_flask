@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-07-15 15:39+0800\n"
+"POT-Creation-Date: 2024-07-23 18:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Enter question group code..."
 msgstr ""
 
-#: app.py:395
+#: app.py:402
 msgid "Enter translation here..."
 msgstr ""
 
@@ -107,23 +107,31 @@ msgstr ""
 msgid "Table Page"
 msgstr ""
 
-#: templates/quiz_sub.html:44
-msgid "All questions completed!"
-msgstr ""
-
 #: templates/quiz_sub.html:48
-msgid "Source"
+msgid "Hint"
 msgstr ""
 
 #: templates/quiz_sub.html:49
+msgid "Skip"
+msgstr ""
+
+#: templates/quiz_sub.html:52
+msgid "All questions completed!"
+msgstr ""
+
+#: templates/quiz_sub.html:61
+msgid "Source"
+msgstr ""
+
+#: templates/quiz_sub.html:62
 msgid "Translation"
 msgstr ""
 
-#: templates/quiz_sub.html:58
+#: templates/quiz_sub.html:71
 msgid "One more group"
 msgstr ""
 
-#: templates/quiz_sub.html:59
+#: templates/quiz_sub.html:72
 msgid "Return to Quiz Portal"
 msgstr ""
 

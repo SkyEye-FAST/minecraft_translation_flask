@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  Demo\n"
 "Report-Msgid-Bugs-To: skyeyefast@outlook.com\n"
-"POT-Creation-Date: 2024-07-15 15:39+0800\n"
+"POT-Creation-Date: 2024-07-23 18:27+0800\n"
 "PO-Revision-Date: 2024-07-14 01:56+0800\n"
 "Last-Translator: SkyEye_FAST <skyeyefast@outlook.com>\n"
 "Language: zh_Hant_TW\n"
@@ -36,7 +36,7 @@ msgstr "查詢"
 msgid "Enter question group code..."
 msgstr "輸入題組編號..."
 
-#: app.py:395
+#: app.py:402
 msgid "Enter translation here..."
 msgstr "在此輸入譯名..."
 
@@ -109,23 +109,31 @@ msgstr "查詢頁面"
 msgid "Table Page"
 msgstr "表格頁面"
 
-#: templates/quiz_sub.html:44
+#: templates/quiz_sub.html:48
+msgid "Hint"
+msgstr "提示"
+
+#: templates/quiz_sub.html:49
+msgid "Skip"
+msgstr "跳過"
+
+#: templates/quiz_sub.html:52
 msgid "All questions completed!"
 msgstr "已完成所有問題！"
 
-#: templates/quiz_sub.html:48
+#: templates/quiz_sub.html:61
 msgid "Source"
 msgstr "原文"
 
-#: templates/quiz_sub.html:49
+#: templates/quiz_sub.html:62
 msgid "Translation"
 msgstr "譯名"
 
-#: templates/quiz_sub.html:58
+#: templates/quiz_sub.html:71
 msgid "One more group"
 msgstr "再來一組"
 
-#: templates/quiz_sub.html:59
+#: templates/quiz_sub.html:72
 msgid "Return to Quiz Portal"
 msgstr "返回測驗門戶"
 
