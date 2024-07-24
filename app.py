@@ -44,7 +44,7 @@ def get_locale() -> str:
     )
     if locale == "zh":
         return "zh_CN"
-    return locale
+    return "en"
 
 
 def get_timezone_from_ip() -> Optional[str]:
