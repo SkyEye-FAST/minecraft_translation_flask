@@ -322,7 +322,7 @@ def table() -> str:
     tzinfo = get_timezone(session["timezone"])
     date_tz = datetime.now(tz=tzinfo).date()
 
-    return render_template("table.html", date_str=date_tz)
+    return render_template("table.html", date_str=date_tz, data=data)
 
 
 QUESTION_AMOUNT = 10  # 测验题组含题目数量
