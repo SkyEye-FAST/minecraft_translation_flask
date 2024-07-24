@@ -74,7 +74,6 @@ input[type="text"] {
     flex: 1;
     padding: 0.5em 20px;
     font-size: x-large;
-    border-radius: 8px;
 }
 
 button {
@@ -82,8 +81,19 @@ button {
     background-color: #f0f0f0;
     cursor: pointer;
     font-size: x-large;
-    border: solid 1px;
+}
+
+select,
+input,
+button {
+    border: solid 2px;
     border-radius: 8px;
+}
+
+select:hover,
+input:hover,
+button:hover {
+    border-width: 3px;
 }
 
 .btn-1 {

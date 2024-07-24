@@ -124,6 +124,13 @@ button {
     background-color: transparent !important;
 }
 
+select:hover,
+input:hover,
+button:hover {
+    border-width: 3px !important;
+    border-color: inherit;
+}
+
 .material-symbols-outlined.b {
     display: inline-block;
     line-height: inherit;
@@ -193,7 +200,7 @@ button {
     margin: 10px auto 0;
     padding: 8px;
     cursor: pointer;
-    border: solid 1px;
+    border: solid 2px;
     border-radius: 8px;
 }
 
