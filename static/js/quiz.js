@@ -249,6 +249,10 @@ $(document).ready(() => {
             const correctChar = translationSegments[hintedIndex];
             const $hintedBox = $(".box").eq(hintedIndex);
 
+            if ($hintedBox.hasClass("exist")) {
+                $hintedBox.removeClass("exist");
+            }
+
             $hintedBox
                 .text(correctChar)
                 .data("hint", correctChar)
@@ -308,8 +312,9 @@ $(document).ready(() => {
 
     $("#restartButton").click(() => {
         const lValue = currentUrl.searchParams.get("l");
-        window.location.href = `../quiz/${randomCode}${lValue ? `?l=${lValue}` : ""
-            }`;
+        window.location.href = `../quiz/${randomCode}${
+            lValue ? `?l=${lValue}` : ""
+        }`;
     });
 
     const $copyButton = $("#copy-button");
