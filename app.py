@@ -44,6 +44,8 @@ def get_locale() -> str:
     )
     if locale == "zh":
         return "zh_CN"
+    if "zh" not in locale:
+        return "en"
     return locale
 
 
