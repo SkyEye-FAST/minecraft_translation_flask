@@ -190,12 +190,14 @@ $(document).ready(() => {
     const check = async () => {
         if (isComposing || isLocked) return;
 
-        const input = $inputBox.val();
+        let input = $inputBox.val();
         const currentKey = questionKeys[currentQuestionIndex];
         const { translation } = questionsData[currentKey];
         const translationLength = getSegmentedText(translation).length;
 
-        $inputBox.val(truncateInput(input, translationLength));
+        input = truncateInput(input, translationLength);
+
+        $inputBox.val(input);
         updateBoxes();
 
         const remainingHintableCount =
