@@ -9,25 +9,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}" type="text/css">
     <link rel="stylesheet"
         href="https://fonts.font.im/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        const data = {{ data | tojson | safe }};
-        $(document).ready(() => {
-            const $tbody = $("tbody");
-            const languageOrder = ["en_us", "zh_cn", "zh_hk", "zh_tw", "lzh", "ja_jp", "ko_kr", "vi_vn"];
-
-            Object.keys(data["en_us"]).forEach(key => {
-                const $newRow = $("<tr>");
-                $newRow.append($(`<td>${key}</td>`));
-                languageOrder.forEach(lang => {
-                    const value = data[lang][key] || "？";
-                    $newRow.append($(`<td>${value}</td>`));
-                });
-
-                $tbody.append($newRow);
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -57,6 +38,29 @@
         <tbody>
         </tbody>
     </table>
+
+    <script>
+        const data = {{ data | tojson | safe }};
+        const languageOrder = ["en_us", "zh_cn", "zh_hk", "zh_tw", "lzh", "ja_jp", "ko_kr", "vi_vn"];
+        const fragment = document.createDocumentFragment();
+        const tbody = document.querySelector("tbody");
+
+        for (const key of Object.keys(data.en_us)) {
+            const newRow = document.createElement("tr");
+            const keyCell = document.createElement("td");
+            keyCell.textContent = key;
+            newRow.appendChild(keyCell);
+
+            for (const lang of languageOrder) {
+                const cell = document.createElement("td");
+                cell.textContent = data[lang][key] || '？';
+                newRow.appendChild(cell);
+            }
+            fragment.appendChild(newRow);
+        }
+
+        tbody.appendChild(fragment);
+    </script>
 </body>
 
 </html>
