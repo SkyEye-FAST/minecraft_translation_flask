@@ -149,6 +149,7 @@ $(document).ready(() => {
 
     const showSummary = async () => {
         await fadeElement($info.add($inputBox).add($buttons), "fadeOut");
+        const isDarkMode = body.hasClass("dark-mode");
         const $summaryBody = $("#summaryBody").empty();
         let level = 0;
 
@@ -166,7 +167,10 @@ $(document).ready(() => {
                 const span = $("<span>").text(char);
                 if (charStates[key] && charStates[key][index]) {
                     span.addClass(
-                        charStates[key][index].replace("box", "transl")
+                        charStates[key][index].replace(
+                            "box",
+                            `transl${isDarkMode ? " dark" : ""}`
+                        )
                     );
                 }
                 $translationTd.append(span);
