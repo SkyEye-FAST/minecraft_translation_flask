@@ -2,7 +2,8 @@ key	en_us	zh_cn	zh_hk	zh_tw	lzh	ja_jp	ko_kr	vi_vn
 advancements.adventure.adventuring_time.title	Adventuring Time	探索的时光	探險時光	探險時光	跋山涉水	冒険の時間	모험의 시간	Giờ phiêu lưu
 advancements.adventure.arbalistic.title	Arbalistic	劲弩手	重弩手	重弩手	一矢五穿	クロスボウの達人	명사수	Tay nỏ cừ khôi
 advancements.adventure.avoid_vibration.title	Sneak 100	潜行100级	潛行力 100	潛行力 100	匿影捷步	スニーク100	은밀하게 위대하게	Rón rén 100
-advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Kiếm đánh xuôi, cầu thổi ngược
+advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	"Thổi ngược lại
+"
 advancements.adventure.brush_armadillo.title	Isn't It Scute?	这不是鳞甲么？	呢個就係鱗甲？	莫非這是鱗甲？	楚楚可鱗	可鱗でしょう？	이게 인갑인갑다	Tatu có ngoan không nè?
 advancements.adventure.bullseye.title	Bullseye	正中靶心	精準命中	正中紅心	高中紅心	的中	명중	Trúng ngay hồng tâm!
 advancements.adventure.craft_decorated_pot_using_only_sherds.title	Careful Restoration	精修细补	精修細補	精修細補	内修外華	丁寧な修復作業	세심한 복원	Phục chế cẩn thận
@@ -1490,6 +1491,7 @@ item.minecraft.bolt_armor_trim_smithing_template	Smithing Template	锻造模板	
 item.minecraft.bone	Bone	骨头	骨頭	骨頭	骨	骨	뼈다귀	Xương
 item.minecraft.bone_meal	Bone Meal	骨粉	骨粉	骨粉	骨塵	骨粉	뼛가루	Bột xương
 item.minecraft.book	Book	书	書	書	書	本	책	Quyển sách
+item.minecraft.bordure_indented_banner_pattern	Bordure Indented Banner Pattern	？	？	？	？	？	？	？
 item.minecraft.bow	Bow	弓	弓	弓	弓	弓	활	Cung
 item.minecraft.bowl	Bowl	碗	碗	碗	碗	ボウル	그릇	Cái bát
 item.minecraft.bread	Bread	面包	麪包	麵包	饢	パン	빵	Bánh mì
@@ -1585,6 +1587,7 @@ item.minecraft.explorer_pottery_sherd	Explorer Pottery Sherd	探险纹样陶片	
 item.minecraft.eye_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.feather	Feather	羽毛	羽毛	羽毛	羽	羽根	깃털	Lông
 item.minecraft.fermented_spider_eye	Fermented Spider Eye	发酵蛛眼	發酵蜘蛛眼	發酵蜘蛛眼	酵化蛛目	発酵したクモの目	발효된 거미 눈	Mắt nhện được lên men
+item.minecraft.field_masoned_banner_pattern	Field Masoned Banner Pattern	？	？	？	？	？	？	？
 item.minecraft.filled_map	Map	地图	地圖	地圖	輿圖	地図	지도	Bản đồ
 item.minecraft.fire_charge	Fire Charge	火焰弹	火焰彈	火焰彈	焰彈	ファイヤーチャージ	화염구	Cầu lửa
 item.minecraft.firework_rocket	Firework Rocket	烟花火箭	煙花	煙火	焰火	ロケット花火	폭죽 로켓	Pháo hoa
