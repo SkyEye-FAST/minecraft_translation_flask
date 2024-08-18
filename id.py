@@ -2,8 +2,9 @@
 """编码语言文件键名"""
 
 import hashlib
-import json
 from typing import Dict
+
+import ujson
 
 BASE62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
@@ -43,4 +44,4 @@ if __name__ == "__main__":
         print(f"编码: {code} -> 键: {key}")
 
     with open(ID_MAP_PATH, "w", encoding="utf-8") as f:
-        json.dump(code_to_key_map, f, ensure_ascii=False, indent=4)
+        ujson.dump(code_to_key_map, f, ensure_ascii=False, indent=4)
