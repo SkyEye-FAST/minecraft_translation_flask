@@ -2,8 +2,7 @@ key	en_us	zh_cn	zh_hk	zh_tw	lzh	ja_jp	ko_kr	vi_vn
 advancements.adventure.adventuring_time.title	Adventuring Time	探索的时光	探險時光	探險時光	跋山涉水	冒険の時間	모험의 시간	Giờ phiêu lưu
 advancements.adventure.arbalistic.title	Arbalistic	劲弩手	重弩手	重弩手	一矢五穿	クロスボウの達人	명사수	Tay nỏ cừ khôi
 advancements.adventure.avoid_vibration.title	Sneak 100	潜行100级	潛行力 100	潛行力 100	匿影捷步	スニーク100	은밀하게 위대하게	Rón rén 100
-advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	"Thổi ngược lại
-"
+advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Thổi ngược lại
 advancements.adventure.brush_armadillo.title	Isn't It Scute?	这不是鳞甲么？	呢個就係鱗甲？	莫非這是鱗甲？	楚楚可鱗	可鱗でしょう？	이게 인갑인갑다	Tatu có ngoan không nè?
 advancements.adventure.bullseye.title	Bullseye	正中靶心	精準命中	正中紅心	高中紅心	的中	명중	Trúng ngay hồng tâm!
 advancements.adventure.craft_decorated_pot_using_only_sherds.title	Careful Restoration	精修细补	精修細補	精修細補	内修外華	丁寧な修復作業	세심한 복원	Phục chế cẩn thận
@@ -730,7 +729,7 @@ block.minecraft.mangrove_fence	Mangrove Fence	红树木栅栏	紅樹木欄杆	�
 block.minecraft.mangrove_fence_gate	Mangrove Fence Gate	红树木栅栏门	紅樹木閘門	紅樹林木柵欄門	沒潮木扉	マングローブのフェンスゲート	맹그로브나무 울타리 문	Cổng rào gỗ đước
 block.minecraft.mangrove_hanging_sign	Mangrove Hanging Sign	悬挂式红树木告示牌	紅木吊牌	懸掛式紅樹林木告示牌	沒潮木懸牌	マングローブの吊り看板	맹그로브나무 매다는 표지판	Tấm biển treo gỗ đước
 block.minecraft.mangrove_leaves	Mangrove Leaves	红树树叶	紅樹樹葉	紅樹林木樹葉	沒潮木葉	マングローブの葉	맹그로브나무 잎	Lá đước
-block.minecraft.mangrove_log	Mangrove Log	红树原木	紅樹原木	紅樹林木原木	沒潮木樁	マングローブの原木	맹그로브나무 원목	Gỗ đước
+block.minecraft.mangrove_log	Mangrove Log	红树原木	紅樹原木	紅樹林木原木	沒潮木樁	マングローブの原木	맹그로브나무 원목	Thân cây đước
 block.minecraft.mangrove_planks	Mangrove Planks	红树木板	紅樹木板	紅樹林木材	沒潮木材	マングローブの板材	맹그로브나무 판자	Ván gỗ đước
 block.minecraft.mangrove_pressure_plate	Mangrove Pressure Plate	红树木压力板	紅樹木壓力板	紅樹林木壓力板	沒潮木踏板	マングローブの感圧板	맹그로브나무 압력판	Đĩa cảm biến áp lực gỗ đước
 block.minecraft.mangrove_propagule	Mangrove Propagule	红树胎生苗	紅樹胎生苗	紅樹林木胎生苗	沒潮木胚	マングローブの芽	맹그로브나무 주아	Chồi cây đước
@@ -1491,7 +1490,7 @@ item.minecraft.bolt_armor_trim_smithing_template	Smithing Template	锻造模板	
 item.minecraft.bone	Bone	骨头	骨頭	骨頭	骨	骨	뼈다귀	Xương
 item.minecraft.bone_meal	Bone Meal	骨粉	骨粉	骨粉	骨塵	骨粉	뼛가루	Bột xương
 item.minecraft.book	Book	书	書	書	書	本	책	Quyển sách
-item.minecraft.bordure_indented_banner_pattern	Bordure Indented Banner Pattern	？	？	？	？	？	？	？
+item.minecraft.bordure_indented_banner_pattern	Bordure Indented Banner Pattern	波纹边旗帜图案	鋸齒邊橫額圖案	鋸齒框邊旗幟圖案	齒匡旗楷	山形波の縁取りの旗の模様	톱니 테두리 현수막 무늬	Hoa văn cờ hiệu đường răng cưa
 item.minecraft.bow	Bow	弓	弓	弓	弓	弓	활	Cung
 item.minecraft.bowl	Bowl	碗	碗	碗	碗	ボウル	그릇	Cái bát
 item.minecraft.bread	Bread	面包	麪包	麵包	饢	パン	빵	Bánh mì
@@ -1587,7 +1586,7 @@ item.minecraft.explorer_pottery_sherd	Explorer Pottery Sherd	探险纹样陶片	
 item.minecraft.eye_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.feather	Feather	羽毛	羽毛	羽毛	羽	羽根	깃털	Lông
 item.minecraft.fermented_spider_eye	Fermented Spider Eye	发酵蛛眼	發酵蜘蛛眼	發酵蜘蛛眼	酵化蛛目	発酵したクモの目	발효된 거미 눈	Mắt nhện được lên men
-item.minecraft.field_masoned_banner_pattern	Field Masoned Banner Pattern	？	？	？	？	？	？	？
+item.minecraft.field_masoned_banner_pattern	Field Masoned Banner Pattern	砖纹旗帜图案	磚牆花紋橫額圖案	磚牆花紋旗幟圖案	磚紋旗楷	レンガの旗の模様	벽돌 현수막 무늬	Hoa văn cờ hiệu phủ kín gạch
 item.minecraft.filled_map	Map	地图	地圖	地圖	輿圖	地図	지도	Bản đồ
 item.minecraft.fire_charge	Fire Charge	火焰弹	火焰彈	火焰彈	焰彈	ファイヤーチャージ	화염구	Cầu lửa
 item.minecraft.firework_rocket	Firework Rocket	烟花火箭	煙花	煙火	焰火	ロケット花火	폭죽 로켓	Pháo hoa
