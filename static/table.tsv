@@ -2,7 +2,7 @@ key	en_us	zh_cn	zh_hk	zh_tw	lzh	ja_jp	ko_kr	vi_vn
 advancements.adventure.adventuring_time.title	Adventuring Time	探索的时光	探險時光	探險時光	跋山涉水	冒険の時間	모험의 시간	Giờ phiêu lưu
 advancements.adventure.arbalistic.title	Arbalistic	劲弩手	重弩手	重弩手	一矢五穿	クロスボウの達人	명사수	Tay nỏ cừ khôi
 advancements.adventure.avoid_vibration.title	Sneak 100	潜行100级	潛行力 100	潛行力 100	匿影捷步	スニーク100	은밀하게 위대하게	Rón rén 100
-advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Thổi ngược lại
+advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Thổi bật lại
 advancements.adventure.brush_armadillo.title	Isn't It Scute?	这不是鳞甲么？	呢個就係鱗甲？	莫非這是鱗甲？	楚楚可鱗	可鱗でしょう？	이게 인갑인갑다	Tatu có ngoan không nè?
 advancements.adventure.bullseye.title	Bullseye	正中靶心	精準命中	正中紅心	高中紅心	的中	명중	Trúng ngay hồng tâm!
 advancements.adventure.craft_decorated_pot_using_only_sherds.title	Careful Restoration	精修细补	精修細補	精修細補	内修外華	丁寧な修復作業	세심한 복원	Phục chế cẩn thận
@@ -1307,7 +1307,7 @@ enchantment.minecraft.silk_touch	Silk Touch	精准采集	絲綢之觸	絲綢之�
 enchantment.minecraft.smite	Smite	亡灵杀手	不死剋星	不死剋星	剋亡	アンデッド特効	강타	Hại thây ma
 enchantment.minecraft.soul_speed	Soul Speed	灵魂疾行	靈魂疾走	靈魂疾走	靈逸	ソウルスピード	영혼 가속	Tốc độ linh hồn
 enchantment.minecraft.sweeping_edge	Sweeping Edge	横扫之刃	橫掃之刃	橫掃之刃	橫斬之刃	範囲ダメージ増加	휩쓸기	Quét cạnh
-enchantment.minecraft.swift_sneak	Swift Sneak	迅捷潜行	迅捷潛行	迅捷潛行	迅伏	スニーク速度上昇	신속한 잠행	Đi rón rén nhanh
+enchantment.minecraft.swift_sneak	Swift Sneak	迅捷潜行	迅捷潛行	迅捷潛行	迅伏	スニーク速度上昇	신속한 잠행	Rón rén nhanh
 enchantment.minecraft.thorns	Thorns	荆棘	荊棘	尖刺	荊棘	棘の鎧	가시	Gai
 enchantment.minecraft.unbreaking	Unbreaking	耐久	耐久	耐久	耐久	耐久力	내구성	Chậm hỏng
 enchantment.minecraft.vanishing_curse	Curse of Vanishing	消失诅咒	消失詛咒	消失詛咒	滅咒	消滅の呪い	소실 저주	Lời nguyền biến mất
