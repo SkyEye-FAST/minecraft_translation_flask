@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install fonttools brotli
+          pip install fonttools brotli ujson
 
       - name: Get font source
         run: wget https://github.com/ichitenfont/I.Ming/raw/master/8.10/I.Ming-8.10.ttf
