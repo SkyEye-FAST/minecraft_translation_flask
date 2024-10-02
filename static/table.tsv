@@ -410,6 +410,7 @@ block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone B
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
+block.minecraft.creaking_heart	Creaking Heart	？	？	？	？	？	？	？
 block.minecraft.creeper_head	Creeper Head	苦力怕的头	Creeper 頭顱	苦力怕頭顱	伏臨首	クリーパーの頭	크리퍼 머리	Đầu Creeper
 block.minecraft.creeper_wall_head	Creeper Wall Head	墙上的苦力怕的头	牆上的 Creeper 頭顱	牆上的苦力怕頭顱	壁中伏臨首	壁に付けられたクリーパーの頭	크리퍼 벽 머리	Đầu Creeper trên tường
 block.minecraft.crimson_button	Crimson Button	绯红木按钮	猩紅菌木按鈕	緋紅蕈木按鈕	緋蕈木鈕	真紅のボタン	진홍빛 버튼	Nút đỏ thẫm
@@ -824,6 +825,24 @@ block.minecraft.oxidized_cut_copper_slab	Oxidized Cut Copper Slab	氧化的切�
 block.minecraft.oxidized_cut_copper_stairs	Oxidized Cut Copper Stairs	氧化的切制铜楼梯	氧化的切製銅樓梯	氧化的切製銅階梯	風蝕割銅階	酸化した切り込み入りの銅の階段	산화된 깎인 구리 계단	Cầu thang đồng được cắt bị oxi hóa
 block.minecraft.packed_ice	Packed Ice	浮冰	冰磚	冰磚	夯冰	氷塊	꽁꽁 언 얼음	Băng nén
 block.minecraft.packed_mud	Packed Mud	泥坯	泥坯	泥坯	夯泥	固めた泥	단단한 진흙	Bùn nén
+block.minecraft.pale_hanging_moss	Pale Hanging Moss	？	？	？	？	？	？	？
+block.minecraft.pale_moss_block	Pale Moss Block	？	？	？	？	？	？	？
+block.minecraft.pale_moss_carpet	Pale Moss Carpet	？	？	？	？	？	？	？
+block.minecraft.pale_oak_button	Pale Oak Button	？	？	？	？	？	？	？
+block.minecraft.pale_oak_door	Pale Oak Door	？	？	？	？	？	？	？
+block.minecraft.pale_oak_fence	Pale Oak Fence	？	？	？	？	？	？	？
+block.minecraft.pale_oak_fence_gate	Pale Oak Fence Gate	？	？	？	？	？	？	？
+block.minecraft.pale_oak_hanging_sign	Pale Oak Hanging Sign	？	？	？	？	？	？	？
+block.minecraft.pale_oak_leaves	Pale Oak Leaves	？	？	？	？	？	？	？
+block.minecraft.pale_oak_log	Pale Oak Log	？	？	？	？	？	？	？
+block.minecraft.pale_oak_planks	Pale Oak Planks	？	？	？	？	？	？	？
+block.minecraft.pale_oak_pressure_plate	Pale Oak Pressure Plate	？	？	？	？	？	？	？
+block.minecraft.pale_oak_sapling	Pale Oak Sapling	？	？	？	？	？	？	？
+block.minecraft.pale_oak_sign	Pale Oak Sign	？	？	？	？	？	？	？
+block.minecraft.pale_oak_slab	Pale Oak Slab	？	？	？	？	？	？	？
+block.minecraft.pale_oak_stairs	Pale Oak Stairs	？	？	？	？	？	？	？
+block.minecraft.pale_oak_trapdoor	Pale Oak Trapdoor	？	？	？	？	？	？	？
+block.minecraft.pale_oak_wood	Pale Oak Wood	？	？	？	？	？	？	？
 block.minecraft.pearlescent_froglight	Pearlescent Froglight	珠光蛙明灯	珠光蛙明燈	珠紫蛙光體	玢璘鼃光	真珠色のフロッグライト	진줏빛 개구리불	Đèn ếch tím ngọc trai
 block.minecraft.peony	Peony	牡丹	牡丹花	牡丹花	牡丹	ボタン	모란	Mẫu đơn
 block.minecraft.petrified_oak_slab	Petrified Oak Slab	石化橡木台阶	石化橡木半磚	石化橡木半磚	巖化柞版	石化したオークのハーフブロック	규화한 참나무 반 블록	Phiến gỗ sồi bị hóa đá
@@ -906,6 +925,7 @@ block.minecraft.potted_mangrove_propagule	Potted Mangrove Propagule	红树胎生
 block.minecraft.potted_oak_sapling	Potted Oak Sapling	橡树树苗盆栽	橡木樹苗盆栽	橡木樹苗盆栽	柞秧盆景	植えられたオークの苗木	화분에 심은 참나무 묘목	Chậu chồi cây sồi
 block.minecraft.potted_orange_tulip	Potted Orange Tulip	橙色郁金香盆栽	橙色鬱金香盆栽	橙色鬱金香盆栽	橙鬱金香盆景	植えられた橙色のチューリップ	화분에 심은 주황색 튤립	Chậu uất kim hương cam
 block.minecraft.potted_oxeye_daisy	Potted Oxeye Daisy	滨菊盆栽	雛菊盆栽	雛菊盆栽	雛菊盆景	植えられたフランスギク	화분에 심은 데이지	Chậu cúc trắng
+block.minecraft.potted_pale_oak_sapling	Potted Pale Oak Sapling	？	？	？	？	？	？	？
 block.minecraft.potted_pink_tulip	Potted Pink Tulip	粉红色郁金香盆栽	粉紅色鬱金香盆栽	粉紅色鬱金香盆栽	粉鬱金香盆景	植えられた桃色のチューリップ	화분에 심은 분홍색 튤립	Chậu uất kim hương hồng
 block.minecraft.potted_poppy	Potted Poppy	虞美人盆栽	罌粟盆栽	罌粟盆栽	虞美人盆景	植えられたポピー	화분에 심은 양귀비	Chậu anh túc
 block.minecraft.potted_red_mushroom	Potted Red Mushroom	红色蘑菇盆栽	紅色蘑菇盆栽	紅色蘑菇盆栽	紅蕈盆景	植えられた赤色のキノコ	화분에 심은 빨간색 버섯	Chậu nấm đỏ
@@ -1085,6 +1105,8 @@ block.minecraft.stripped_mangrove_log	Stripped Mangrove Log	去皮红树原木	�
 block.minecraft.stripped_mangrove_wood	Stripped Mangrove Wood	去皮红树木	剝皮紅樹木	剝皮紅樹林木塊	既扡沒潮木	樹皮を剥いだマングローブの木	껍질 벗긴 맹그로브나무	Gỗ đước đã cạo vỏ
 block.minecraft.stripped_oak_log	Stripped Oak Log	去皮橡木原木	剝皮橡木原木	剝皮橡木原木	既扡柞樁	樹皮を剥いだオークの原木	껍질 벗긴 참나무 원목	Thân cây sồi đã cạo vỏ
 block.minecraft.stripped_oak_wood	Stripped Oak Wood	去皮橡木	剝皮橡木	剝皮橡木塊	既扡柞木	樹皮を剥いだオークの木	껍질 벗긴 참나무	Gỗ sồi đã cạo vỏ
+block.minecraft.stripped_pale_oak_log	Stripped Pale Oak Log	？	？	？	？	？	？	？
+block.minecraft.stripped_pale_oak_wood	Stripped Pale Oak Wood	？	？	？	？	？	？	？
 block.minecraft.stripped_spruce_log	Stripped Spruce Log	去皮云杉原木	剝皮杉木原木	剝皮杉木原木	既扡樅樁	樹皮を剥いだトウヒの原木	껍질 벗긴 가문비나무 원목	Thân cây vân sam đã cạo vỏ
 block.minecraft.stripped_spruce_wood	Stripped Spruce Wood	去皮云杉木	剝皮杉木	剝皮杉木塊	既扡樅木	樹皮を剥いだトウヒの木	껍질 벗긴 가문비나무	Gỗ vân sam đã cạo vỏ
 block.minecraft.stripped_warped_hyphae	Stripped Warped Hyphae	去皮诡异菌核	剝皮迷離菌絲體	剝皮扭曲菌絲體	既扡譎蕈體	表皮を剥いだ歪んだ菌糸	껍질 벗긴 뒤틀린 균사	Sợi nấm kì dị đã cạo vỏ
@@ -1312,38 +1334,42 @@ enchantment.minecraft.thorns	Thorns	荆棘	荊棘	尖刺	荊棘	棘の鎧	가시
 enchantment.minecraft.unbreaking	Unbreaking	耐久	耐久	耐久	耐久	耐久力	내구성	Chậm hỏng
 enchantment.minecraft.vanishing_curse	Curse of Vanishing	消失诅咒	消失詛咒	消失詛咒	滅咒	消滅の呪い	소실 저주	Lời nguyền biến mất
 enchantment.minecraft.wind_burst	Wind Burst	风爆	風爆	風爆	風迸	ウィンドバースト	돌풍	Phong bộc
-entity.minecraft.acacia_boat	Acacia Boat	？	？	？	？	？	？	？
-entity.minecraft.acacia_chest_boat	Acacia Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.acacia_boat	Acacia Boat	金合欢木船	相思木船	相思木船	㭜舟	アカシアのボート	아카시아나무 보트	Thuyền gỗ xiêm gai
+entity.minecraft.acacia_chest_boat	Acacia Boat with Chest	金合欢木运输船	儲物箱相思木船	儲物箱相思木船	㭜艚	チェスト付きのアカシアのボート	상자가 실린 아카시아나무 보트	Thuyền gỗ xiêm gai có rương
 entity.minecraft.allay	Allay	悦灵	悦靈	悅靈	悅靈	アレイ	알레이	Allay
 entity.minecraft.area_effect_cloud	Area Effect Cloud	区域效果云	藥水效果雲	藥水效果雲	藥雲	エリアエフェクトクラウド	광역 효과 구름	Mây hiệu ứng khu vực
 entity.minecraft.armadillo	Armadillo	犰狳	犰狳	犰狳	犰狳	アルマジロ	아르마딜로	Tatu
 entity.minecraft.armor_stand	Armor Stand	盔甲架	盔甲座	盔甲座	甲桁	防具立て	갑옷 거치대	Giá để giáp
 entity.minecraft.arrow	Arrow	箭	箭	箭矢	矢	矢	화살	Mũi tên
 entity.minecraft.axolotl	Axolotl	美西螈	墨西哥蠑螈	六角恐龍	螈	ウーパールーパー	아홀로틀	Axolotl
-entity.minecraft.bamboo_chest_raft	Bamboo Raft With Chest	？	？	？	？	？	？	？
-entity.minecraft.bamboo_raft	Bamboo Raft	？	？	？	？	？	？	？
+entity.minecraft.bamboo_chest_raft	Bamboo Raft with Chest	运输竹筏	儲物箱竹筏	儲物箱竹筏	竹艚	チェスト付きの竹のイカダ	상자가 실린 대나무 뗏목	Bè gỗ tre có rương
+entity.minecraft.bamboo_raft	Bamboo Raft	竹筏	竹筏	竹筏	竹筏	竹のイカダ	대나무 뗏목	Bè gỗ tre
 entity.minecraft.bat	Bat	蝙蝠	蝙蝠	蝙蝠	蟙䘃	コウモリ	박쥐	Con dơi
 entity.minecraft.bee	Bee	蜜蜂	蜜蜂	蜜蜂	蜂	ミツバチ	꿀벌	Con ong
-entity.minecraft.birch_boat	Birch Boat	？	？	？	？	？	？	？
-entity.minecraft.birch_chest_boat	Birch Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.birch_boat	Birch Boat	白桦木船	樺木船	樺木船	樺舟	シラカバのボート	자작나무 보트	Birch Boat
+entity.minecraft.birch_chest_boat	Birch Boat with Chest	白桦木运输船	儲物箱樺木船	儲物箱樺木船	樺艚	チェスト付きのシラカバのボート	상자가 실린 자작나무 보트	Thuyền gỗ bạch dương có rương
 entity.minecraft.blaze	Blaze	烈焰人	烈焰使者	烈焰使者	炎靈	ブレイズ	블레이즈	Quỷ lửa
 entity.minecraft.block_display	Block Display	方块展示实体	方塊展示實體	方塊展示實體	塊示	ブロック表示エンティティ	블록 표시	Hiển thị khối
+entity.minecraft.boat	Boat	船	船	船	舟	ボート	보트	Thuyền
 entity.minecraft.bogged	Bogged	沼骸	沼骨	沼骸	濘髑	ボグド	보그드	Quái đầm lầy
 entity.minecraft.breeze	Breeze	旋风人	旋風使者	旋風使者	風靈	ブリーズ	브리즈	Quỷ gió
 entity.minecraft.breeze_wind_charge	Wind Charge	风弹	風彈	風彈	風彈	ウィンドチャージ	돌풍구	Cầu gió
 entity.minecraft.camel	Camel	骆驼	駱駝	駱駝	橐駝	ラクダ	낙타	Lạc đà
 entity.minecraft.cat	Cat	猫	貓	貓	貓	ネコ	고양이	Con mèo
 entity.minecraft.cave_spider	Cave Spider	洞穴蜘蛛	洞穴蜘蛛	洞穴蜘蛛	穴蛛	洞窟グモ	동굴 거미	Nhện hang
-entity.minecraft.cherry_boat	Cherry Boat	？	？	？	？	？	？	？
-entity.minecraft.cherry_chest_boat	Cherry Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.cherry_boat	Cherry Boat	樱花木船	櫻花木船	櫻花木船	櫻舟	サクラのボート	벚나무 보트	Cherry Boat
+entity.minecraft.cherry_chest_boat	Cherry Boat with Chest	樱花木运输船	儲物箱櫻花木船	儲物箱櫻花木船	櫻艚	チェスト付きのサクラのボート	상자가 실린 벚나무 보트	Thuyền gỗ anh đào có rương
+entity.minecraft.chest_boat	Boat with Chest	运输船	儲物箱船	儲物箱船	艚	チェスト付きのボート	상자가 실린 보트	Thuyền có rương
 entity.minecraft.chest_minecart	Minecart with Chest	运输矿车	儲物箱礦車	儲物箱礦車	箱礦車	チェスト付きのトロッコ	상자가 실린 광산 수레	Xe mỏ có rương
 entity.minecraft.chicken	Chicken	鸡	雞	雞	雞	ニワトリ	닭	Con gà
 entity.minecraft.cod	Cod	鳕鱼	鱈魚	鱈魚	鱈	タラ	대구	Cá tuyết
 entity.minecraft.command_block_minecart	Minecart with Command Block	命令方块矿车	命令方塊礦車	指令方塊礦車	命令塊礦車	コマンドブロック付きのトロッコ	명령 블록이 실린 광산 수레	Xe mỏ có khối lệnh
 entity.minecraft.cow	Cow	牛	牛	牛	牛	ウシ	소	Con bò
+entity.minecraft.creaking	Creaking	？	？	？	？	？	？	？
+entity.minecraft.creaking_transient	Creaking	？	？	？	？	？	？	？
 entity.minecraft.creeper	Creeper	苦力怕	Creeper	苦力怕	伏臨	クリーパー	크리퍼	Creeper
-entity.minecraft.dark_oak_boat	Dark Oak Boat	？	？	？	？	？	？	？
-entity.minecraft.dark_oak_chest_boat	Dark Oak Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.dark_oak_boat	Dark Oak Boat	深色橡木船	黑橡木船	黑橡木船	黯柞舟	ダークオークのボート	짙은 참나무 보트	Dark Oak Boat
+entity.minecraft.dark_oak_chest_boat	Dark Oak Boat with Chest	深色橡木运输船	儲物箱黑橡木船	儲物箱黑橡木船	黯柞艚	チェスト付きのダークオークのボート	상자가 실린 짙은 참나무 보트	Thuyền gỗ sồi sẫm có rương
 entity.minecraft.dolphin	Dolphin	海豚	海豚	海豚	海豚	イルカ	돌고래	Cá heo
 entity.minecraft.donkey	Donkey	驴	驢	驢子	驢	ロバ	당나귀	Con lừa
 entity.minecraft.dragon_fireball	Dragon Fireball	末影龙火球	終界龍火球	龍炎彈	龍焱彈	ドラゴンの火の玉	드래곤 화염구	Cầu lửa của rồng
@@ -1383,25 +1409,27 @@ entity.minecraft.iron_golem	Iron Golem	铁傀儡	鐵人	鐵魔像	鐵傀儡	ア�
 entity.minecraft.item	Item	物品	物品	物品	物	アイテム	아이템	Vật phẩm
 entity.minecraft.item_display	Item Display	物品展示实体	物品展示實體	物品展示實體	物示	アイテム表示エンティティ	아이템 표시	Hiển thị vật phẩm
 entity.minecraft.item_frame	Item Frame	物品展示框	物品展示框	物品展示框	置具匡	額縁	아이템 액자	Khung vật phẩm
-entity.minecraft.jungle_boat	Jungle Boat	？	？	？	？	？	？	？
-entity.minecraft.jungle_chest_boat	Jungle Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.jungle_boat	Jungle Boat	丛林木船	叢林木船	叢林木船	叢莽舟	ジャングルのボート	정글나무 보트	Jungle Boat
+entity.minecraft.jungle_chest_boat	Jungle Boat with Chest	丛林木运输船	儲物箱叢林木船	儲物箱叢林木船	叢莽艚	チェスト付きのジャングルのボート	상자가 실린 정글나무 보트	Thuyền gỗ rừng có rương
 entity.minecraft.killer_bunny	The Killer Bunny	杀手兔	殺手兔	殺手兔	刺客兔	殺人ウサギ	살인 토끼	Thỏ sát nhân
 entity.minecraft.leash_knot	Leash Knot	拴绳结	牽繩繩結	拴繩	繩	リードの結び目	끈 매듭	Nút xích
 entity.minecraft.lightning_bolt	Lightning Bolt	闪电束	閃電電流	閃電電流	霹靂	雷	벼락	Tia sét
 entity.minecraft.llama	Llama	羊驼	羊駝	駱馬	美洲駝	ラマ	라마	Lạc đà không bướu
 entity.minecraft.llama_spit	Llama Spit	羊驼唾沫	羊駝口水	駱馬唾液	美洲駝涎	ラマの唾	라마 침	Nước bọt lạc đà không bướu
 entity.minecraft.magma_cube	Magma Cube	岩浆怪	岩漿史萊姆	岩漿立方怪	火漿魔	マグマキューブ	마그마 큐브	Khối dung nham
-entity.minecraft.mangrove_boat	Mangrove Boat	？	？	？	？	？	？	？
-entity.minecraft.mangrove_chest_boat	Mangrove Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.mangrove_boat	Mangrove Boat	红树木船	紅樹木船	紅樹林木船	沒潮木舟	マングローブのボート	맹그로브나무 보트	Mangrove Boat
+entity.minecraft.mangrove_chest_boat	Mangrove Boat with Chest	红树木运输船	儲物箱紅樹木船	儲物箱紅樹林木船	沒潮木艚	チェスト付きのマングローブのボート	상자가 실린 맹그로브나무 보트	Thuyền gỗ đước có rương
 entity.minecraft.marker	Marker	标记	標記	標記	標	マーカー	표지	Vật đánh dấu
 entity.minecraft.minecart	Minecart	矿车	礦車	礦車	礦車	トロッコ	광산 수레	Xe mỏ
 entity.minecraft.mooshroom	Mooshroom	哞菇	蘑菇牛	哞菇	牟蕈	ムーシュルーム	무시룸	Mooshroom
 entity.minecraft.mule	Mule	骡	騾	騾子	騾	ラバ	노새	Con la
-entity.minecraft.oak_boat	Oak Boat	？	？	？	？	？	？	？
-entity.minecraft.oak_chest_boat	Oak Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.oak_boat	Oak Boat	橡木船	橡木船	橡木船	柞舟	オークのボート	참나무 보트	Oak Boat
+entity.minecraft.oak_chest_boat	Oak Boat with Chest	橡木运输船	儲物箱橡木船	儲物箱橡木船	柞艚	チェスト付きのオークのボート	상자가 실린 참나무 보트	Thuyền gỗ sồi có rương
 entity.minecraft.ocelot	Ocelot	豹猫	豹貓	山貓	虎貓	ヤマネコ	오실롯	Mèo rừng
 entity.minecraft.ominous_item_spawner	Ominous Item Spawner	不祥之物生成器	不祥物品生成器	不祥物品生成器	厄源	不吉なアイテムスポナー	불길한 아이템 생성기	Lồng triệu hồi vật phẩm báo điềm
 entity.minecraft.painting	Painting	画	畫	繪畫	畫	絵画	그림	Bức họa
+entity.minecraft.pale_oak_boat	Pale Oak Boat	？	？	？	？	？	？	？
+entity.minecraft.pale_oak_chest_boat	Pale Oak Boat with Chest	？	？	？	？	？	？	？
 entity.minecraft.panda	Panda	熊猫	熊貓	貓熊	貓熊	パンダ	판다	Gấu trúc
 entity.minecraft.parrot	Parrot	鹦鹉	鸚鵡	鸚鵡	鸚鵡	オウム	앵무새	Con vẹt
 entity.minecraft.phantom	Phantom	幻翼	夜魅	夜魅	魘靈	ファントム	팬텀	Phantom
@@ -1430,8 +1458,8 @@ entity.minecraft.snowball	Snowball	雪球	雪球	雪球	雪團	雪玉	눈덩이	
 entity.minecraft.spawner_minecart	Minecart with Monster Spawner	刷怪笼矿车	生怪籠礦車	生怪磚礦車	孳衍籠礦車	モンスタースポナー付きのトロッコ	몬스터 생성기가 실린 광산 수레	Xe mỏ có lồng triệu hồi quái vật
 entity.minecraft.spectral_arrow	Spectral Arrow	光灵箭	追跡之箭	追跡之箭	爍靈矢	光の矢	분광 화살	Mũi tên ma quỷ
 entity.minecraft.spider	Spider	蜘蛛	蜘蛛	蜘蛛	蛛	クモ	거미	Nhện
-entity.minecraft.spruce_boat	Spruce Boat	？	？	？	？	？	？	？
-entity.minecraft.spruce_chest_boat	Spruce Boat With Chest	？	？	？	？	？	？	？
+entity.minecraft.spruce_boat	Spruce Boat	云杉木船	杉木船	杉木船	樅舟	トウヒのボート	가문비나무 보트	Spruce Boat
+entity.minecraft.spruce_chest_boat	Spruce Boat with Chest	云杉木运输船	儲物箱杉木船	儲物箱杉木船	樅艚	チェスト付きのトウヒのボート	상자가 실린 가문비나무 보트	Thuyền gỗ vân sam có rương
 entity.minecraft.squid	Squid	鱿鱼	墨魚	魷魚	鰂	イカ	오징어	Con mực
 entity.minecraft.stray	Stray	流浪者	流浪者	流髑	流髑	ストレイ	스트레이	Quái lang thang
 entity.minecraft.strider	Strider	炽足兽	熾足獸	熾足獸	熾足獸	ストライダー	스트라이더	Kẻ sải bước
@@ -1495,7 +1523,7 @@ item.minecraft.beetroot_seeds	Beetroot Seeds	甜菜种子	紅菜頭種子	甜菜
 item.minecraft.beetroot_soup	Beetroot Soup	甜菜汤	紅菜頭湯	甜菜湯	甘藜羹	ビートルートスープ	비트 수프	Súp củ dền
 item.minecraft.birch_boat	Birch Boat	白桦木船	樺木船	樺木船	樺舟	シラカバのボート	자작나무 보트	Thuyền gỗ bạch dương
 item.minecraft.birch_chest_boat	Birch Boat with Chest	白桦木运输船	儲物箱樺木船	儲物箱樺木船	樺艚	チェスト付きのシラカバのボート	상자가 실린 자작나무 보트	Thuyền gỗ bạch dương có rương
-item.minecraft.black_bundle	Black Bundle	黑色收纳袋	黑色收納袋	黑色束口袋	黑皮囊	黒色のバンドル	검은색 꾸러미	Túi bọc đen
+item.minecraft.black_bundle	Black Bundle	黑色收纳袋	黑色收納袋	黑色束口袋	玄皮囊	黒色のバンドル	검은색 꾸러미	Túi bọc đen
 item.minecraft.black_dye	Black Dye	黑色染料	黑色染料	黑色染料	黑染	黒色の染料	검은색 염료	Bột nhuộm đen
 item.minecraft.blade_pottery_sherd	Blade Pottery Sherd	利刃纹样陶片	利刃陶罐碎片	利刃陶器碎片	刃陶片	剣の壺の欠片	칼날 도자기 조각	Mảnh gốm lưỡi kiếm
 item.minecraft.blaze_powder	Blaze Powder	烈焰粉	烈焰粉	烈焰粉	炎靈粉	ブレイズパウダー	블레이즈 가루	Bột quỷ lửa
@@ -1560,6 +1588,7 @@ item.minecraft.cooked_salmon	Cooked Salmon	熟鲑鱼	熟三文魚	烤鮭魚	鮭�
 item.minecraft.cookie	Cookie	曲奇	曲奇	餅乾	餅	クッキー	쿠키	Bánh quy
 item.minecraft.copper_ingot	Copper Ingot	铜锭	銅錠	銅錠	銅錠	銅インゴット	구리 주괴	Phôi đồng
 item.minecraft.cow_spawn_egg	Cow Spawn Egg	牛刷怪蛋	牛 生成蛋	牛 生怪蛋	孳牛之卵	ウシのスポーンエッグ	소 생성 알	Trứng sinh ra Con bò
+item.minecraft.creaking_spawn_egg	Creaking Spawn Egg	？	？	？	？	？	？	？
 item.minecraft.creeper_banner_pattern	Banner Pattern	旗帜图案	橫額圖案	旗幟圖案	旗楷	旗の模様	현수막 무늬	Hoa văn cờ hiệu
 item.minecraft.creeper_spawn_egg	Creeper Spawn Egg	苦力怕刷怪蛋	Creeper 生成蛋	苦力怕 生怪蛋	孳伏臨之卵	クリーパーのスポーンエッグ	크리퍼 생성 알	Trứng sinh ra Creeper
 item.minecraft.crossbow	Crossbow	弩	弩	弩	弩	クロスボウ	쇠뇌	Cây nỏ
@@ -1793,6 +1822,8 @@ item.minecraft.ominous_trial_key	Ominous Trial Key	不祥试炼钥匙	不祥試�
 item.minecraft.orange_bundle	Orange Bundle	橙色收纳袋	橙色收納袋	橙色束口袋	橙皮囊	橙色のバンドル	주황색 꾸러미	Túi bọc cam
 item.minecraft.orange_dye	Orange Dye	橙色染料	橙色染料	橙色染料	橙染	橙色の染料	주황색 염료	Bột nhuộm cam
 item.minecraft.painting	Painting	画	畫	繪畫	畫	絵画	그림	Tranh vẽ
+item.minecraft.pale_oak_boat	Pale Oak Boat	？	？	？	？	？	？	？
+item.minecraft.pale_oak_chest_boat	Pale Oak Boat with Chest	？	？	？	？	？	？	？
 item.minecraft.panda_spawn_egg	Panda Spawn Egg	熊猫刷怪蛋	熊貓 生成蛋	貓熊 生怪蛋	孳貓熊之卵	パンダのスポーンエッグ	판다 생성 알	Trứng sinh ra Gấu trúc
 item.minecraft.paper	Paper	纸	紙	紙	紙	紙	종이	Giấy
 item.minecraft.parrot_spawn_egg	Parrot Spawn Egg	鹦鹉刷怪蛋	鸚鵡 生成蛋	鸚鵡 生怪蛋	孳鸚鵡之卵	オウムのスポーンエッグ	앵무새 생성 알	Trứng sinh ra Con vẹt
@@ -1999,7 +2030,7 @@ item.minecraft.water_bucket	Water Bucket	水桶	水桶	水桶	水桶	水入り�
 item.minecraft.wayfinder_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.wheat	Wheat	小麦	小麥	小麥	麥	小麦	밀	Lúa mì
 item.minecraft.wheat_seeds	Wheat Seeds	小麦种子	小麥種子	小麥種子	麥種	小麦の種	밀 씨앗	Hạt lúa mì
-item.minecraft.white_bundle	White Bundle	白色收纳袋	白色收納袋	白色束口袋	白皮囊	白色のバンドル	하얀색 꾸러미	Túi bọc trắng
+item.minecraft.white_bundle	White Bundle	白色收纳袋	白色收納袋	白色束口袋	素皮囊	白色のバンドル	하얀색 꾸러미	Túi bọc trắng
 item.minecraft.white_dye	White Dye	白色染料	白色染料	白色染料	白染	白色の染料	하얀색 염료	Bột nhuộm trắng
 item.minecraft.wild_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.wind_charge	Wind Charge	风弹	風彈	風彈	風彈	ウィンドチャージ	돌풍구	Cầu gió
