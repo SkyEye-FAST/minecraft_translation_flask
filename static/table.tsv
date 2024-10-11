@@ -160,7 +160,7 @@ biome.minecraft.ocean	Ocean	海洋	海洋	海洋	海	海洋	바다	Đại dươn
 biome.minecraft.old_growth_birch_forest	Old Growth Birch Forest	原始桦木森林	原始樺木森林	原生樺木森林	古樺林	シラカバの原生林	자작나무 원시림	Rừng bạch dương nguyên sinh
 biome.minecraft.old_growth_pine_taiga	Old Growth Pine Taiga	原始松木针叶林	原始松樹針葉林	原生松木針葉林	古松棘林	マツの原生林	소나무 원시 타이가	Rừng Taiga nguyên sinh
 biome.minecraft.old_growth_spruce_taiga	Old Growth Spruce Taiga	原始云杉针叶林	原始雲杉針葉林	原生杉木針葉林	古樅棘林	トウヒの原生林	가문비나무 원시 타이가	Rừng Taiga vân sam nguyên sinh
-biome.minecraft.pale_garden	Pale Garden	？	？	？	？	？	？	？
+biome.minecraft.pale_garden	Pale Garden	苍白之园	蒼白園林	蒼白之園	縞苑	ペールガーデン	창백한 정원	Vườn nhợt nhạt
 biome.minecraft.plains	Plains	平原	平原	平原	原野	平原	평원	Đồng bằng
 biome.minecraft.river	River	河流	河流	河流	川	河川	강	Sông
 biome.minecraft.savanna	Savanna	热带草原	熱帶稀樹草原	莽原	莽原	サバンナ	사바나	Xa-van
@@ -843,8 +843,8 @@ block.minecraft.pale_oak_sign	Pale Oak Sign	苍白橡木告示牌	蒼白橡木�
 block.minecraft.pale_oak_slab	Pale Oak Slab	苍白橡木台阶	蒼白橡木半磚	蒼白橡木半磚	縞柞版	ペールオークのハーフブロック	창백한 참나무 반 블록	Phiến gỗ sồi nhạt
 block.minecraft.pale_oak_stairs	Pale Oak Stairs	苍白橡木楼梯	蒼白橡木樓梯	蒼白橡木階梯	縞柞階	ペールオークの階段	창백한 참나무 계단	Cầu thang gỗ sồi nhạt
 block.minecraft.pale_oak_trapdoor	Pale Oak Trapdoor	苍白橡木活板门	蒼白橡木地板門	蒼白橡木地板門	縞柞窖門	ペールオークのトラップドア	창백한 참나무 다락문	Cửa sập gỗ sồi nhạt
-block.minecraft.pale_oak_wall_hanging_sign	Pale Oak Wall Hanging Sign	？	？	？	？	？	？	？
-block.minecraft.pale_oak_wall_sign	Pale Oak Wall Sign	？	？	？	？	？	？	？
+block.minecraft.pale_oak_wall_hanging_sign	Pale Oak Wall Hanging Sign	墙上的悬挂式苍白橡木告示牌	牆上的蒼白橡木吊牌	牆上的懸掛式蒼白橡木告示牌	壁中縞柞懸牌	壁に付けられたペールオークの吊り看板	창백한 참나무 벽 매다는 표지판	Tấm biển treo gỗ sồi nhạt trên tường
+block.minecraft.pale_oak_wall_sign	Pale Oak Wall Sign	墙上的苍白橡木告示牌	牆上的蒼白橡木指示牌	牆上的蒼白橡木告示牌	壁中縞柞牌	壁に付けられたペールオークの看板	창백한 참나무 벽 표지판	Tấm biển gỗ sồi nhạt trên tường
 block.minecraft.pale_oak_wood	Pale Oak Wood	苍白橡木	蒼白橡木	蒼白橡木塊	縞柞木	ペールオークの木	창백한 참나무	Gỗ sồi nhạt
 block.minecraft.pearlescent_froglight	Pearlescent Froglight	珠光蛙明灯	珠光蛙明燈	珠紫蛙光體	玢璘鼃光	真珠色のフロッグライト	진줏빛 개구리불	Đèn ếch tím ngọc trai
 block.minecraft.peony	Peony	牡丹	牡丹花	牡丹花	牡丹	ボタン	모란	Mẫu đơn
@@ -1368,7 +1368,7 @@ entity.minecraft.chicken	Chicken	鸡	雞	雞	雞	ニワトリ	닭	Con gà
 entity.minecraft.cod	Cod	鳕鱼	鱈魚	鱈魚	鱈	タラ	대구	Cá tuyết
 entity.minecraft.command_block_minecart	Minecart with Command Block	命令方块矿车	命令方塊礦車	指令方塊礦車	命令塊礦車	コマンドブロック付きのトロッコ	명령 블록이 실린 광산 수레	Xe mỏ có khối lệnh
 entity.minecraft.cow	Cow	牛	牛	牛	牛	ウシ	소	Con bò
-entity.minecraft.creaking	Creaking	嘎枝	瘮響者	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking	Creaking	嘎枝	嘎枝	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
 entity.minecraft.creaking_transient	Creaking	嘎枝	瘮響者	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
 entity.minecraft.creeper	Creeper	苦力怕	Creeper	苦力怕	伏臨	クリーパー	크리퍼	Creeper
 entity.minecraft.dark_oak_boat	Dark Oak Boat	深色橡木船	黑橡木船	黑橡木船	黯柞舟	ダークオークのボート	짙은 참나무 보트	Thuyền gỗ sồi sẫm
