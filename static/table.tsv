@@ -160,7 +160,7 @@ biome.minecraft.ocean	Ocean	海洋	海洋	海洋	海	海洋	바다	Đại dươn
 biome.minecraft.old_growth_birch_forest	Old Growth Birch Forest	原始桦木森林	原始樺木森林	原生樺木森林	古樺林	シラカバの原生林	자작나무 원시림	Rừng bạch dương nguyên sinh
 biome.minecraft.old_growth_pine_taiga	Old Growth Pine Taiga	原始松木针叶林	原始松樹針葉林	原生松木針葉林	古松棘林	マツの原生林	소나무 원시 타이가	Rừng Taiga nguyên sinh
 biome.minecraft.old_growth_spruce_taiga	Old Growth Spruce Taiga	原始云杉针叶林	原始雲杉針葉林	原生杉木針葉林	古樅棘林	トウヒの原生林	가문비나무 원시 타이가	Rừng Taiga vân sam nguyên sinh
-biome.minecraft.pale_garden	Pale Garden	苍白之园	蒼白園林	蒼白之園	縞苑	ペールガーデン	창백한 정원	Vườn nhợt nhạt
+biome.minecraft.pale_garden	Pale Garden	苍白之园	蒼白之園	蒼白之園	縞苑	ペールガーデン	창백한 정원	Vườn nhợt nhạt
 biome.minecraft.plains	Plains	平原	平原	平原	原野	平原	평원	Đồng bằng
 biome.minecraft.river	River	河流	河流	河流	川	河川	강	Sông
 biome.minecraft.savanna	Savanna	热带草原	熱帶稀樹草原	莽原	莽原	サバンナ	사바나	Xa-van
@@ -411,7 +411,7 @@ block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone B
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
-block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	瘮響之心	嘎吱窩	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
+block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	瘮響之心	朽噪之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
 block.minecraft.creeper_head	Creeper Head	苦力怕的头	Creeper 頭顱	苦力怕頭顱	伏臨首	クリーパーの頭	크리퍼 머리	Đầu Creeper
 block.minecraft.creeper_wall_head	Creeper Wall Head	墙上的苦力怕的头	牆上的 Creeper 頭顱	牆上的苦力怕頭顱	壁中伏臨首	壁に付けられたクリーパーの頭	크리퍼 벽 머리	Đầu Creeper trên tường
 block.minecraft.crimson_button	Crimson Button	绯红木按钮	猩紅菌木按鈕	緋紅蕈木按鈕	緋蕈木鈕	真紅のボタン	진홍빛 버튼	Nút đỏ thẫm
@@ -729,7 +729,7 @@ block.minecraft.mangrove_button	Mangrove Button	红树木按钮	紅樹木按鈕	
 block.minecraft.mangrove_door	Mangrove Door	红树木门	紅樹木門	紅樹林木門	沒潮木門	マングローブのドア	맹그로브나무 문	Cửa gỗ đước
 block.minecraft.mangrove_fence	Mangrove Fence	红树木栅栏	紅樹木欄杆	紅樹林木柵欄	沒潮木檻	マングローブのフェンス	맹그로브나무 울타리	Hàng rào gỗ đước
 block.minecraft.mangrove_fence_gate	Mangrove Fence Gate	红树木栅栏门	紅樹木閘門	紅樹林木柵欄門	沒潮木扉	マングローブのフェンスゲート	맹그로브나무 울타리 문	Cổng rào gỗ đước
-block.minecraft.mangrove_hanging_sign	Mangrove Hanging Sign	悬挂式红树木告示牌	紅木吊牌	懸掛式紅樹林木告示牌	沒潮木懸牌	マングローブの吊り看板	맹그로브나무 매다는 표지판	Tấm biển treo gỗ đước
+block.minecraft.mangrove_hanging_sign	Mangrove Hanging Sign	悬挂式红树木告示牌	紅樹木吊牌	懸掛式紅樹林木告示牌	沒潮木懸牌	マングローブの吊り看板	맹그로브나무 매다는 표지판	Tấm biển treo gỗ đước
 block.minecraft.mangrove_leaves	Mangrove Leaves	红树树叶	紅樹樹葉	紅樹林木樹葉	沒潮木葉	マングローブの葉	맹그로브나무 잎	Lá đước
 block.minecraft.mangrove_log	Mangrove Log	红树原木	紅樹原木	紅樹林木原木	沒潮木樁	マングローブの原木	맹그로브나무 원목	Thân cây đước
 block.minecraft.mangrove_planks	Mangrove Planks	红树木板	紅樹木板	紅樹林木材	沒潮木材	マングローブの板材	맹그로브나무 판자	Ván gỗ đước
@@ -740,8 +740,8 @@ block.minecraft.mangrove_sign	Mangrove Sign	红树木告示牌	紅樹木指示�
 block.minecraft.mangrove_slab	Mangrove Slab	红树木台阶	紅樹木半磚	紅樹林木半磚	沒潮木版	マングローブのハーフブロック	맹그로브나무 반 블록	Phiến gỗ đước
 block.minecraft.mangrove_stairs	Mangrove Stairs	红树木楼梯	紅樹木樓梯	紅樹林木階梯	沒潮木階	マングローブの階段	맹그로브나무 계단	Cầu thang gỗ đước
 block.minecraft.mangrove_trapdoor	Mangrove Trapdoor	红树木活板门	紅樹木地板門	紅樹林木地板門	沒潮木窖門	マングローブのトラップドア	맹그로브나무 다락문	Cửa sập gỗ đước
-block.minecraft.mangrove_wall_hanging_sign	Mangrove Wall Hanging Sign	墙上的悬挂式红树木告示牌	牆上的紅木吊牌	牆上的懸掛式紅樹林木告示牌	壁中沒潮木懸牌	壁に付けられたマングローブの吊り看板	맹그로브나무 벽 매다는 표지판	Tấm biển treo gỗ đước trên tường
-block.minecraft.mangrove_wall_sign	Mangrove Wall Sign	墙上的红树木告示牌	牆上的紅木指示牌	牆上的紅樹林木告示牌	壁中沒潮木牌	壁に付けられたマングローブの看板	맹그로브나무 벽 표지판	Tấm biển gỗ đước treo tường
+block.minecraft.mangrove_wall_hanging_sign	Mangrove Wall Hanging Sign	墙上的悬挂式红树木告示牌	牆上的紅樹木吊牌	牆上的懸掛式紅樹林木告示牌	壁中沒潮木懸牌	壁に付けられたマングローブの吊り看板	맹그로브나무 벽 매다는 표지판	Tấm biển treo gỗ đước trên tường
+block.minecraft.mangrove_wall_sign	Mangrove Wall Sign	墙上的红树木告示牌	牆上的紅樹木指示牌	牆上的紅樹林木告示牌	壁中沒潮木牌	壁に付けられたマングローブの看板	맹그로브나무 벽 표지판	Tấm biển gỗ đước treo tường
 block.minecraft.mangrove_wood	Mangrove Wood	红树木	紅樹木	紅樹林木塊	沒潮木	マングローブの木	맹그로브나무	Gỗ đước
 block.minecraft.medium_amethyst_bud	Medium Amethyst Bud	中型紫晶芽	中型紫晶芽	中型紫水晶芽	中紫水玉苗	中くらいのアメジストの芽	중간 자수정 봉오리	Nụ thạch anh tím trung bình
 block.minecraft.melon	Melon	西瓜	西瓜	西瓜	寒瓜	スイカ	수박	Dưa hấu
@@ -826,7 +826,7 @@ block.minecraft.oxidized_cut_copper_slab	Oxidized Cut Copper Slab	氧化的切�
 block.minecraft.oxidized_cut_copper_stairs	Oxidized Cut Copper Stairs	氧化的切制铜楼梯	氧化的切製銅樓梯	氧化的切製銅階梯	風蝕割銅階	酸化した切り込み入りの銅の階段	산화된 깎인 구리 계단	Cầu thang đồng được cắt bị oxi hóa
 block.minecraft.packed_ice	Packed Ice	浮冰	冰磚	冰磚	夯冰	氷塊	꽁꽁 언 얼음	Băng nén
 block.minecraft.packed_mud	Packed Mud	泥坯	泥坯	泥坯	夯泥	固めた泥	단단한 진흙	Bùn nén
-block.minecraft.pale_hanging_moss	Pale Hanging Moss	苍白垂藤	蒼白垂苔	蒼白垂蘚	縞懸蘚	色あせた垂れ苔	창백한 매달린 이끼	Rêu treo nhạt
+block.minecraft.pale_hanging_moss	Pale Hanging Moss	苍白垂须	蒼白垂鬚	蒼白垂蘚	縞懸蘚	色あせた垂れ苔	창백한 매달린 이끼	Rêu treo nhạt
 block.minecraft.pale_moss_block	Pale Moss Block	苍白苔藓块	蒼白青苔方塊	蒼白苔蘚方塊	縞蘚塊	色あせた苔ブロック	창백한 이끼 블록	Khối rêu nhạt
 block.minecraft.pale_moss_carpet	Pale Moss Carpet	苍白覆地苔藓	蒼白青苔	蒼白覆地苔蘚	縞地蘚	色あせた苔のカーペット	창백한 이끼 바닥	Thảm rêu nhạt
 block.minecraft.pale_oak_button	Pale Oak Button	苍白橡木按钮	蒼白橡木按鈕	蒼白橡木按鈕	縞柞鈕	ペールオークのボタン	창백한 참나무 버튼	Nút gỗ sồi nhạt
@@ -1368,8 +1368,8 @@ entity.minecraft.chicken	Chicken	鸡	雞	雞	雞	ニワトリ	닭	Con gà
 entity.minecraft.cod	Cod	鳕鱼	鱈魚	鱈魚	鱈	タラ	대구	Cá tuyết
 entity.minecraft.command_block_minecart	Minecart with Command Block	命令方块矿车	命令方塊礦車	指令方塊礦車	命令塊礦車	コマンドブロック付きのトロッコ	명령 블록이 실린 광산 수레	Xe mỏ có khối lệnh
 entity.minecraft.cow	Cow	牛	牛	牛	牛	ウシ	소	Con bò
-entity.minecraft.creaking	Creaking	嘎枝	嘎枝	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
-entity.minecraft.creaking_transient	Creaking	嘎枝	瘮響者	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking	Creaking	嘎枝	瘮響者	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking_transient	Creaking	嘎枝	詭響樹人	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
 entity.minecraft.creeper	Creeper	苦力怕	Creeper	苦力怕	伏臨	クリーパー	크리퍼	Creeper
 entity.minecraft.dark_oak_boat	Dark Oak Boat	深色橡木船	黑橡木船	黑橡木船	黯柞舟	ダークオークのボート	짙은 참나무 보트	Thuyền gỗ sồi sẫm
 entity.minecraft.dark_oak_chest_boat	Dark Oak Boat with Chest	深色橡木运输船	儲物箱黑橡木船	儲物箱黑橡木船	黯柞艚	チェスト付きのダークオークのボート	상자가 실린 짙은 참나무 보트	Thuyền gỗ sồi sẫm có rương
