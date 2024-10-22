@@ -411,7 +411,7 @@ block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone B
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
-block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	瘮響之心	朽噪之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
+block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	異響之心	朽噪之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
 block.minecraft.creeper_head	Creeper Head	苦力怕的头	Creeper 頭顱	苦力怕頭顱	伏臨首	クリーパーの頭	크리퍼 머리	Đầu Creeper
 block.minecraft.creeper_wall_head	Creeper Wall Head	墙上的苦力怕的头	牆上的 Creeper 頭顱	牆上的苦力怕頭顱	壁中伏臨首	壁に付けられたクリーパーの頭	크리퍼 벽 머리	Đầu Creeper trên tường
 block.minecraft.crimson_button	Crimson Button	绯红木按钮	猩紅菌木按鈕	緋紅蕈木按鈕	緋蕈木鈕	真紅のボタン	진홍빛 버튼	Nút đỏ thẫm
@@ -1368,8 +1368,8 @@ entity.minecraft.chicken	Chicken	鸡	雞	雞	雞	ニワトリ	닭	Con gà
 entity.minecraft.cod	Cod	鳕鱼	鱈魚	鱈魚	鱈	タラ	대구	Cá tuyết
 entity.minecraft.command_block_minecart	Minecart with Command Block	命令方块矿车	命令方塊礦車	指令方塊礦車	命令塊礦車	コマンドブロック付きのトロッコ	명령 블록이 실린 광산 수레	Xe mỏ có khối lệnh
 entity.minecraft.cow	Cow	牛	牛	牛	牛	ウシ	소	Con bò
-entity.minecraft.creaking	Creaking	嘎枝	瘮響者	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
-entity.minecraft.creaking_transient	Creaking	嘎枝	詭響樹人	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking_transient	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
 entity.minecraft.creeper	Creeper	苦力怕	Creeper	苦力怕	伏臨	クリーパー	크리퍼	Creeper
 entity.minecraft.dark_oak_boat	Dark Oak Boat	深色橡木船	黑橡木船	黑橡木船	黯柞舟	ダークオークのボート	짙은 참나무 보트	Thuyền gỗ sồi sẫm
 entity.minecraft.dark_oak_chest_boat	Dark Oak Boat with Chest	深色橡木运输船	儲物箱黑橡木船	儲物箱黑橡木船	黯柞艚	チェスト付きのダークオークのボート	상자가 실린 짙은 참나무 보트	Thuyền gỗ sồi sẫm có rương
@@ -1591,7 +1591,7 @@ item.minecraft.cooked_salmon	Cooked Salmon	熟鲑鱼	熟三文魚	烤鮭魚	鮭�
 item.minecraft.cookie	Cookie	曲奇	曲奇	餅乾	餅	クッキー	쿠키	Bánh quy
 item.minecraft.copper_ingot	Copper Ingot	铜锭	銅錠	銅錠	銅錠	銅インゴット	구리 주괴	Phôi đồng
 item.minecraft.cow_spawn_egg	Cow Spawn Egg	牛刷怪蛋	牛 生成蛋	牛 生怪蛋	孳牛之卵	ウシのスポーンエッグ	소 생성 알	Trứng sinh ra Con bò
-item.minecraft.creaking_spawn_egg	Creaking Spawn Egg	嘎枝刷怪蛋	瘮響者 生成蛋	嘎枝 生怪蛋	孳䦪鬼之卵	クリーキングのスポーンエッグ	크리킹 생성 알	Trứng sinh ra Quái cọt kẹt
+item.minecraft.creaking_spawn_egg	Creaking Spawn Egg	嘎枝刷怪蛋	異響樹妖 生成蛋	嘎枝 生怪蛋	孳䦪鬼之卵	クリーキングのスポーンエッグ	크리킹 생성 알	Trứng sinh ra Quái cọt kẹt
 item.minecraft.creeper_banner_pattern	Banner Pattern	旗帜图案	橫額圖案	旗幟圖案	旗楷	旗の模様	현수막 무늬	Hoa văn cờ hiệu
 item.minecraft.creeper_spawn_egg	Creeper Spawn Egg	苦力怕刷怪蛋	Creeper 生成蛋	苦力怕 生怪蛋	孳伏臨之卵	クリーパーのスポーンエッグ	크리퍼 생성 알	Trứng sinh ra Creeper
 item.minecraft.crossbow	Crossbow	弩	弩	弩	弩	クロスボウ	쇠뇌	Cây nỏ
