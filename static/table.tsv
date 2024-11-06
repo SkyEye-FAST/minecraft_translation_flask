@@ -373,7 +373,7 @@ block.minecraft.chiseled_nether_bricks	Chiseled Nether Bricks	雕纹下界砖块
 block.minecraft.chiseled_polished_blackstone	Chiseled Polished Blackstone	雕纹磨制黑石	浮雕拋光黑石	浮雕拋光黑石	雕鎣墨石	模様入りの磨かれたブラックストーン	조각된 윤나는 흑암	Đá đen được đánh bóng được đục
 block.minecraft.chiseled_quartz_block	Chiseled Quartz Block	雕纹石英块	浮雕石英磚	浮雕石英方塊	雕石英塊	模様入りのクォーツブロック	조각된 석영 블록	Khối thạch anh được đục
 block.minecraft.chiseled_red_sandstone	Chiseled Red Sandstone	雕纹红砂岩	浮雕紅砂岩	浮雕紅砂岩	雕紅砂	模様入りの赤い砂岩	조각된 붉은 사암	Cát kết đỏ được đục
-block.minecraft.chiseled_resin_bricks	Chiseled Resin Bricks	？	？	？	？	？	？	？
+block.minecraft.chiseled_resin_bricks	Chiseled Resin Bricks	雕纹树脂砖块	浮雕樹脂磚	浮雕樹脂磚	雕柞香磚	模様入りの樹脂レンガ	조각된 수지 벽돌	Gạch nhựa cây được đục
 block.minecraft.chiseled_sandstone	Chiseled Sandstone	雕纹砂岩	浮雕砂岩	浮雕砂岩	雕砂	模様入りの砂岩	조각된 사암	Cát kết được đục
 block.minecraft.chiseled_stone_bricks	Chiseled Stone Bricks	雕纹石砖	浮雕石磚	浮雕石磚	雕磚	模様入りの石レンガ	조각된 석재 벽돌	Gạch đá được đục
 block.minecraft.chiseled_tuff	Chiseled Tuff	雕纹凝灰岩	浮雕凝灰岩	浮雕凝灰岩	雕積塊石	模様入りの凝灰岩	조각된 응회암	Đá túp được đục
@@ -381,7 +381,7 @@ block.minecraft.chiseled_tuff_bricks	Chiseled Tuff Bricks	雕纹凝灰岩砖	浮
 block.minecraft.chorus_flower	Chorus Flower	紫颂花	歌萊花	歌萊花	頌緲花	コーラスフラワー	후렴화	Hoa Chorus
 block.minecraft.chorus_plant	Chorus Plant	紫颂植株	歌萊枝	歌萊枝	頌緲枝	コーラスプラント	후렴초	Cây Chorus
 block.minecraft.clay	Clay	黏土	黏土	黏土	埴塊	粘土	점토	Đất sét
-block.minecraft.closed_eyeblossom	Closed Eyeblossom	？	？	？	？	？	？	？
+block.minecraft.closed_eyeblossom	Closed Eyeblossom	闭合的眼眸花	閉合的眼眸花	閉合的擬目花	瞑瞳榮	閉じたヒトミソウ	눈 감은 깜빡임꽃	Hoa mắt nhắm
 block.minecraft.coal_block	Block of Coal	煤炭块	煤炭磚	煤炭方塊	石炭塊	石炭ブロック	석탄 블록	Khối than
 block.minecraft.coal_ore	Coal Ore	煤矿石	煤礦	煤礦	石炭礦	石炭鉱石	석탄 광석	Quặng than
 block.minecraft.coarse_dirt	Coarse Dirt	砂土	粗泥	粗泥	澱土	粗い土	거친 흙	Đất thô
@@ -413,7 +413,7 @@ block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone B
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
-block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	異響之心	嘎枝核心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
+block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	異響之心	朽噪之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
 block.minecraft.creeper_head	Creeper Head	苦力怕的头	Creeper 頭顱	苦力怕頭顱	伏臨首	クリーパーの頭	크리퍼 머리	Đầu Creeper
 block.minecraft.creeper_wall_head	Creeper Wall Head	墙上的苦力怕的头	牆上的 Creeper 頭顱	牆上的苦力怕頭顱	壁中伏臨首	壁に付けられたクリーパーの頭	크리퍼 벽 머리	Đầu Creeper trên tường
 block.minecraft.crimson_button	Crimson Button	绯红木按钮	猩紅菌木按鈕	緋紅蕈木按鈕	緋蕈木鈕	真紅のボタン	진홍빛 버튼	Nút đỏ thẫm
@@ -802,7 +802,7 @@ block.minecraft.observer	Observer	侦测器	偵測器	偵測器	探械	オブザ
 block.minecraft.obsidian	Obsidian	黑曜石	黑曜石	黑曜石	黑曜石	黒曜石	흑요석	Hắc diện thạch
 block.minecraft.ochre_froglight	Ochre Froglight	赭黄蛙明灯	赭黃蛙明燈	赭黃蛙光體	赭鼃光	黄土色のフロッグライト	황톳빛 개구리불	Đèn ếch nâu hoàng thổ
 block.minecraft.ominous_banner	Ominous Banner	不祥旗帜	不祥橫額	不祥旗幟	厄軍旗麾	不吉な旗	불길한 현수막	Cờ báo hiệu điềm xấu
-block.minecraft.open_eyeblossom	Open Eyeblossom	？	？	？	？	？	？	？
+block.minecraft.open_eyeblossom	Open Eyeblossom	张开的眼眸花	張開的眼眸花	綻放的擬目花	盱瞳榮	開いたヒトミソウ	눈 뜬 깜빡임꽃	Hoa mắt mở
 block.minecraft.orange_banner	Orange Banner	橙色旗帜	橙色橫額	橙色旗幟	橙旗	橙色の旗	주황색 현수막	Cờ hiệu cam
 block.minecraft.orange_bed	Orange Bed	橙色床	橙色牀	橙色床	橙床	橙色のベッド	주황색 침대	Giường cam
 block.minecraft.orange_candle	Orange Candle	橙色蜡烛	橙色蠟燭	橙色蠟燭	橙燭	橙色のろうそく	주황색 초	Nến cam
@@ -917,7 +917,7 @@ block.minecraft.potted_blue_orchid	Potted Blue Orchid	兰花盆栽	蘭花盆栽	
 block.minecraft.potted_brown_mushroom	Potted Brown Mushroom	棕色蘑菇盆栽	啡色蘑菇盆栽	棕色蘑菇盆栽	褐蕈盆景	植えられた茶色のキノコ	화분에 심은 갈색 버섯	Chậu nấm nâu
 block.minecraft.potted_cactus	Potted Cactus	仙人掌盆栽	仙人掌盆栽	仙人掌盆栽	仙人掌盆景	植えられたサボテン	화분에 심은 선인장	Chậu cây xương rồng
 block.minecraft.potted_cherry_sapling	Potted Cherry Sapling	樱花树苗盆栽	櫻花樹苗盆栽	櫻花木樹苗盆栽	櫻秧盆景	植えられたサクラの苗木	화분에 심은 벚나무 묘목	Chậu chồi cây anh đào
-block.minecraft.potted_closed_eyeblossom	Potted Closed Eyeblossom	？	？	？	？	？	？	？
+block.minecraft.potted_closed_eyeblossom	Potted Closed Eyeblossom	闭合的眼眸花盆栽	閉合的眼眸花盆栽	閉合的擬目花盆栽	瞑瞳榮盆景	閉じたヒトミソウ入りの植木鉢	화분에 심은 감은 깜빡임꽃	Chậu hoa mắt nhắm
 block.minecraft.potted_cornflower	Potted Cornflower	矢车菊盆栽	矢車菊盆栽	矢車菊盆栽	矢車菊盆景	植えられたヤグルマギク	화분에 심은 수레국화	Chậu thanh cúc
 block.minecraft.potted_crimson_fungus	Potted Crimson Fungus	绯红菌盆栽	猩紅菌菇盆栽	緋紅蕈菇盆栽	緋蕈盆景	植えられた真紅のキノコ	화분에 심은 진홍빛 균	Chậu nấm đỏ thẫm
 block.minecraft.potted_crimson_roots	Potted Crimson Roots	绯红菌索盆栽	猩紅菌根盆栽	緋紅蕈根盆栽	緋蕈索盆景	植えられた真紅の根	화분에 심은 진홍빛 뿌리	Chậu rễ đỏ thẫm
@@ -930,7 +930,7 @@ block.minecraft.potted_jungle_sapling	Potted Jungle Sapling	丛林树苗盆栽	�
 block.minecraft.potted_lily_of_the_valley	Potted Lily of the Valley	铃兰盆栽	鈴蘭盆栽	鈴蘭盆栽	鈴蘭盆景	植えられたスズラン	화분에 심은 은방울꽃	Chậu linh lan
 block.minecraft.potted_mangrove_propagule	Potted Mangrove Propagule	红树胎生苗盆栽	紅樹胎生苗盆栽	紅樹林木胎生苗盆栽	沒潮木胚盆景	植えられたマングローブの芽	화분에 심은 맹그로브나무 주아	Chậu chồi mầm cây ngập mặn
 block.minecraft.potted_oak_sapling	Potted Oak Sapling	橡树树苗盆栽	橡木樹苗盆栽	橡木樹苗盆栽	柞秧盆景	植えられたオークの苗木	화분에 심은 참나무 묘목	Chậu chồi cây sồi
-block.minecraft.potted_open_eyeblossom	Potted Open Eyeblossom	？	？	？	？	？	？	？
+block.minecraft.potted_open_eyeblossom	Potted Open Eyeblossom	张开的眼眸花盆栽	張開的眼眸花盆栽	綻放的擬目花盆栽	盱瞳榮盆景	開いたヒトミソウ入りの植木鉢	화분에 심은 뜬 깜빡임꽃	Chậu hoa mắt mở
 block.minecraft.potted_orange_tulip	Potted Orange Tulip	橙色郁金香盆栽	橙色鬱金香盆栽	橙色鬱金香盆栽	橙鬱金香盆景	植えられた橙色のチューリップ	화분에 심은 주황색 튤립	Chậu uất kim hương cam
 block.minecraft.potted_oxeye_daisy	Potted Oxeye Daisy	滨菊盆栽	雛菊盆栽	雛菊盆栽	雛菊盆景	植えられたフランスギク	화분에 심은 데이지	Chậu cúc trắng
 block.minecraft.potted_pale_oak_sapling	Potted Pale Oak Sapling	苍白橡树树苗盆栽	蒼白橡木樹苗盆栽	蒼白橡木樹苗盆栽	縞柞秧盆景	植えられたペールオークの苗木	화분에 심은 창백한 참나무 묘목	Chậu chồi cây sồi nhạt
@@ -1016,12 +1016,12 @@ block.minecraft.redstone_wire	Redstone Wire	红石线	紅石線	紅石線	紅石
 block.minecraft.reinforced_deepslate	Reinforced Deepslate	强化深板岩	強化深板岩	強化深板岩	固板巖	強化された深層岩	보강된 심층암	Đá bảng sâu được gia cố
 block.minecraft.repeater	Redstone Repeater	红石中继器	紅石中繼器	紅石中繼器	續赭儀	レッドストーンリピーター	레드스톤 중계기	Bộ lặp Redstone
 block.minecraft.repeating_command_block	Repeating Command Block	循环型命令方块	重複型命令方塊	重複型指令方塊	循環命令塊	リピートコマンドブロック	반복형 명령 블록	Khối lệnh lặp lại
-block.minecraft.resin_block	Block of Resin	？	？	？	？	？	？	？
-block.minecraft.resin_brick_slab	Resin Brick Slab	？	？	？	？	？	？	？
-block.minecraft.resin_brick_stairs	Resin Brick Stairs	？	？	？	？	？	？	？
-block.minecraft.resin_brick_wall	Resin Brick Wall	？	？	？	？	？	？	？
-block.minecraft.resin_bricks	Resin Bricks	？	？	？	？	？	？	？
-block.minecraft.resin_clump	Resin Clump	？	？	？	？	？	？	？
+block.minecraft.resin_block	Block of Resin	树脂块	樹脂塊	樹脂方塊	柞香塊	樹脂ブロック	수지 블록	Khối nhựa cây
+block.minecraft.resin_brick_slab	Resin Brick Slab	树脂砖台阶	樹脂磚半磚	樹脂磚半磚	柞香磚版	樹脂レンガのハーフブロック	수지 벽돌 반 블록	Phiến gạch nhựa cây
+block.minecraft.resin_brick_stairs	Resin Brick Stairs	树脂砖楼梯	樹脂磚樓梯	樹脂磚階梯	柞香磚階	樹脂レンガの階段	수지 벽돌 계단	Cầu thang gạch nhựa cây
+block.minecraft.resin_brick_wall	Resin Brick Wall	树脂砖墙	樹脂磚牆	樹脂磚牆	柞香磚垣	樹脂レンガの塀	수지 벽돌 담장	Tường gạch nhựa cây
+block.minecraft.resin_bricks	Resin Bricks	树脂砖块	樹脂磚	樹脂磚	柞香磚塊	樹脂レンガ	수지 벽돌	Gạch nhựa cây
+block.minecraft.resin_clump	Resin Clump	树脂团	樹脂團	樹脂團	柞香	樹脂の塊	수지 덩어리	Cục nhựa cây
 block.minecraft.respawn_anchor	Respawn Anchor	重生锚	重生錨	重生錨	復生錨	リスポーンアンカー	리스폰 정박기	Neo hồi sinh
 block.minecraft.rooted_dirt	Rooted Dirt	缠根泥土	纏根泥土	扎根土	盤根土	根付いた土	뿌리내린 흙	Đất đã bén rễ
 block.minecraft.rose_bush	Rose Bush	玫瑰丛	玫瑰叢	玫瑰叢	玫瑰簇	バラの低木	장미 덤불	Bụi hoa hồng
@@ -1911,8 +1911,8 @@ item.minecraft.recovery_compass	Recovery Compass	追溯指针	追溯指南針	�
 item.minecraft.red_bundle	Red Bundle	红色收纳袋	紅色收納袋	紅色束口袋	紅皮囊	赤色のバンドル	빨간색 꾸러미	Túi bọc đỏ
 item.minecraft.red_dye	Red Dye	红色染料	紅色染料	紅色染料	紅染	赤色の染料	빨간색 염료	Bột nhuộm đỏ
 item.minecraft.redstone	Redstone Dust	红石粉	紅石粉	紅石粉	紅石末	レッドストーンダスト	레드스톤 가루	Bột Redstone
-item.minecraft.resin_brick	Resin Brick	？	？	？	？	？	？	？
-item.minecraft.resin_clump	Resin Clump	？	？	？	？	？	？	？
+item.minecraft.resin_brick	Resin Brick	树脂砖	樹脂磚頭	樹脂磚頭	柞香磚	樹脂レンガ	수지 벽돌	Viên gạch nhựa cây
+item.minecraft.resin_clump	Resin Clump	树脂团	樹脂團	樹脂團	柞香	樹脂の塊	수지 덩어리	Cục nhựa cây
 item.minecraft.rib_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.rotten_flesh	Rotten Flesh	腐肉	腐肉	腐肉	胔	腐った肉	썩은 살점	Thịt thối rữa
 item.minecraft.saddle	Saddle	鞍	鞍	鞍	鞍韉	鞍	안장	Yên cưỡi
