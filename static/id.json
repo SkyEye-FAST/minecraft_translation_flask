@@ -1137,6 +1137,8 @@
     "jrw": "block.minecraft.tall_seagrass",
     "p7X": "block.minecraft.target",
     "UXk": "block.minecraft.terracotta",
+    "wn1": "block.minecraft.test_block",
+    "vWX": "block.minecraft.test_instance_block",
     "7F0": "block.minecraft.tinted_glass",
     "bPx": "block.minecraft.tnt",
     "4S9": "block.minecraft.torch",

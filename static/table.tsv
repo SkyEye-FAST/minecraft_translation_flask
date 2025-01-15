@@ -107,7 +107,7 @@ advancements.nether.uneasy_alliance.title	Uneasy Alliance	脆弱的同盟	有內
 advancements.nether.use_lodestone.title	Country Lode, Take Me Home	天涯共此石	針尖指，遊子思	天涯共此石	天涯共此石	この道をずっとゆけば	집으로 이끌려가네	Ơi! Nam châm quê, nam châm quê
 advancements.story.cure_zombie_villager.title	Zombie Doctor	僵尸科医生	喪屍醫生	殭屍醫生	杏林春滿	ゾンビドクター	좀비 의사	Bác sĩ Thây ma
 advancements.story.deflect_arrow.title	Not Today, Thank You	不吃这套，谢谢	唔好意思，今日唔得	抱歉，今天不行	此時不候	今日はやめておきます	저희는 그런 것 받지 않습니다	Dễ gì mà bắn hạ được ta
-advancements.story.enchant_item.title	Enchanter	附魔师	附魔師	附魔師	淬靈祖師	エンチャントの使い手	마법 부여자	Bàn phù phép
+advancements.story.enchant_item.title	Enchanter	附魔师	附魔師	附魔師	淬靈祖師	エンチャントの使い手	마법 부여자	Nhà phù phép
 advancements.story.enter_the_end.title	The End?	结束了？	結束咗？	結束了？	終焉？	おしまい？	이걸로 끝이야?	Kết thúc rồi ư?
 advancements.story.enter_the_nether.title	We Need to Go Deeper	勇往直下	向下開拓	我們必須更深入一點	業火填膺	さらなる深みへ	더 깊은 곳으로	Chúng ta cần tiến sâu hơn
 advancements.story.follow_ender_eye.title	Eye Spy	隔墙有眼	隔牆有眼	隔牆有眼	望眼欲穿	アイ・スパイ	스무고개	Mắt gián điệp
@@ -205,7 +205,7 @@ block.minecraft.acacia_wall_sign	Acacia Wall Sign	墙上的金合欢木告示牌
 block.minecraft.acacia_wood	Acacia Wood	金合欢木	相思木	相思木塊	㭜木	アカシアの木	아카시아나무	Gỗ xiêm gai
 block.minecraft.activator_rail	Activator Rail	激活铁轨	觸發路軌	觸發鐵軌	激軌	アクティベーターレール	활성화 레일	Đường ray kích hoạt
 block.minecraft.air	Air	空气	空氣	空氣	氣	空気	공기	Không khí
-block.minecraft.allium	Allium	绒球葱	絨球葱	紫紅球花	碩葱	アリウム	알리움	Hành tím
+block.minecraft.allium	Allium	绒球葱	絨球葱	紫紅球花	碩蔥	アリウム	알리움	Hành tím
 block.minecraft.amethyst_block	Block of Amethyst	紫水晶块	紫水晶磚	紫水晶方塊	紫水玉塊	アメジストブロック	자수정 블록	Khối thạch anh tím
 block.minecraft.amethyst_cluster	Amethyst Cluster	紫水晶簇	紫水晶簇	紫水晶晶簇	紫水玉簇	アメジストの塊	자수정 군집	Cụm thạch anh tím
 block.minecraft.ancient_debris	Ancient Debris	远古残骸	遠古殘骸	遠古遺骸	上古之骸	古代の残骸	고대 잔해	Mảnh vỡ cổ đại
@@ -664,7 +664,7 @@ block.minecraft.large_amethyst_bud	Large Amethyst Bud	大型紫晶芽	大型紫�
 block.minecraft.large_fern	Large Fern	大型蕨	大型蕨	大型蕨類	大蕨	大きなシダ	큰 고사리	Dương xỉ lớn
 block.minecraft.lava	Lava	熔岩	熔岩	熔岩	熔巖	溶岩	용암	Dung nham
 block.minecraft.lava_cauldron	Lava Cauldron	装有熔岩的炼药锅	裝熔岩的鍋	裝熔岩的鍋釜	熔巖居之釜	溶岩入りの大釜	용암 가마솥	Vạc dung nham
-block.minecraft.leaf_litter	Leaf Litter	？	？	？	？	？	？	？
+block.minecraft.leaf_litter	Leaf Litter	枯叶	枯葉	枯葉堆	枯葉	落ち葉	낙엽 더미	Lá khô
 block.minecraft.lectern	Lectern	讲台	講台	講台	書檯	書見台	독서대	Bục để sách
 block.minecraft.lever	Lever	拉杆	拉桿	控制桿	閘刀	レバー	레버	Cần gạt
 block.minecraft.light	Light	光源方块	光	光源	光	ライトブロック	빛	Ánh sáng
@@ -1137,6 +1137,8 @@ block.minecraft.tall_grass	Tall Grass	高草丛	長草叢	芒草	高艸	背の�
 block.minecraft.tall_seagrass	Tall Seagrass	高海草	長海草	高海草	高海艸	背の高い海草	키 큰 해초	Cỏ biển cao
 block.minecraft.target	Target	标靶	標靶	標靶	靶	的	과녁	Bia bắn
 block.minecraft.terracotta	Terracotta	陶瓦	陶瓦	陶土	陶	テラコッタ	테라코타	Đất nung
+block.minecraft.test_block	Test Block	？	？	？	？	？	？	？
+block.minecraft.test_instance_block	Test Instance Block	？	？	？	？	？	？	？
 block.minecraft.tinted_glass	Tinted Glass	遮光玻璃	遮光玻璃	遮光玻璃	蔽明琉璃	遮光ガラス	차광 유리	Thủy tinh mờ
 block.minecraft.tnt	TNT	TNT	TNT	TNT	灹藥	TNT	TNT	TNT
 block.minecraft.torch	Torch	火把	火炬	火把	炬	松明	횃불	Đuốc
@@ -1250,7 +1252,7 @@ block.minecraft.white_stained_glass_pane	White Stained Glass Pane	白色染色�
 block.minecraft.white_terracotta	White Terracotta	白色陶瓦	白色陶瓦	白色陶土	白陶	白色のテラコッタ	하얀색 테라코타	Đất nung trắng
 block.minecraft.white_tulip	White Tulip	白色郁金香	白色鬱金香	白色鬱金香	白鬱金香	白色のチューリップ	하얀색 튤립	Uất kim hương trắng
 block.minecraft.white_wool	White Wool	白色羊毛	白色羊毛	白色羊毛	白羊毛	白色の羊毛	하얀색 양털	Len trắng
-block.minecraft.wildflowers	Wildflowers	？	？	？	？	？	？	？
+block.minecraft.wildflowers	Wildflowers	野花簇	野花簇	野花簇	野芳叢	野花	들꽃	Hoa dại
 block.minecraft.wither_rose	Wither Rose	凋灵玫瑰	凋零玫瑰	凋零玫瑰	凋靈玫瑰	ウィザーローズ	위더 장미	Hoa hồng Wither
 block.minecraft.wither_skeleton_skull	Wither Skeleton Skull	凋灵骷髅头颅	凋零骷髏骨頭	凋零骷髏頭顱	凋靈髑首	ウィザースケルトンの頭蓋骨	위더 스켈레톤 해골	Đầu lâu bộ xương Wither
 block.minecraft.wither_skeleton_wall_skull	Wither Skeleton Wall Skull	墙上的凋灵骷髅头颅	牆上的凋零骷髏骨頭	牆上的凋零骷髏頭顱	壁中凋靈髑首	壁に付けられたウィザースケルトンの頭蓋骨	위더 스켈레톤 벽 해골	Đầu lâu bộ xương Wither trên tường
