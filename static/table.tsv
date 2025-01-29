@@ -2,7 +2,7 @@ key	en_us	zh_cn	zh_hk	zh_tw	lzh	ja_jp	ko_kr	vi_vn
 advancements.adventure.adventuring_time.title	Adventuring Time	探索的时光	探險時光	探險時光	跋山涉水	冒険の時間	모험의 시간	Giờ phiêu lưu
 advancements.adventure.arbalistic.title	Arbalistic	劲弩手	重弩手	重弩手	一矢五穿	クロスボウの達人	명사수	Tay nỏ cừ khôi
 advancements.adventure.avoid_vibration.title	Sneak 100	潜行100级	潛行力 100	潛行力 100	匿影捷步	スニーク100	은밀하게 위대하게	Rón rén 100
-advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Kiếm đánh xuôi, cầu bật lại
+advancements.adventure.blowback.title	Blowback	逆风翻盘	針「風」相對	逆風翻盤	逆風而舉	逆風	역풍	Kiếm đánh xuôi, cầu thổi ngược
 advancements.adventure.brush_armadillo.title	Isn't It Scute?	这不是鳞甲么？	呢個就係鱗甲？	莫非這是鱗甲？	楚楚可鱗	可鱗でしょう？	이게 인갑인갑다	Tatu có ngoan không nè?
 advancements.adventure.bullseye.title	Bullseye	正中靶心	精準命中	正中紅心	高中紅心	的中	명중	Trúng ngay hồng tâm!
 advancements.adventure.craft_decorated_pot_using_only_sherds.title	Careful Restoration	精修细补	精修細補	精修細補	內修外華	丁寧な修復作業	세심한 복원	Phục chế cẩn thận
@@ -331,6 +331,7 @@ block.minecraft.bubble_coral_block	Bubble Coral Block	气泡珊瑚块	氣泡珊�
 block.minecraft.bubble_coral_fan	Bubble Coral Fan	气泡珊瑚扇	扇狀氣泡珊瑚	扇狀氣泡珊瑚	扇狀泡珊瑚	ミズタマウチワサンゴ	부채형 거품 산호	San hô bong bóng hình quạt
 block.minecraft.bubble_coral_wall_fan	Bubble Coral Wall Fan	墙上的气泡珊瑚扇	牆上的扇狀氣泡珊瑚	牆上的扇狀氣泡珊瑚	壁中扇狀泡珊瑚	壁付きのミズタマウチワサンゴ	부채형 거품 산호 벽	Cành san hô bong bóng hình quạt
 block.minecraft.budding_amethyst	Budding Amethyst	紫水晶母岩	紫水晶母岩	紫水晶芽床	蘊芽紫水玉	芽生えたアメジスト	싹 틔우는 자수정	Nụ thạch anh tím
+block.minecraft.bush	Bush	？	？	？	？	？	？	？
 block.minecraft.cactus	Cactus	仙人掌	仙人掌	仙人掌	仙人掌	サボテン	선인장	Cây xương rồng
 block.minecraft.cake	Cake	蛋糕	蛋糕	蛋糕	洋糕	ケーキ	케이크	Bánh ngọt
 block.minecraft.calcite	Calcite	方解石	方解石	方解石	滑方石	方解石	방해석	Can-xít
@@ -474,9 +475,9 @@ block.minecraft.dark_oak_trapdoor	Dark Oak Trapdoor	深色橡木活板门	黑橡
 block.minecraft.dark_oak_wall_hanging_sign	Dark Oak Wall Hanging Sign	墙上的悬挂式深色橡木告示牌	牆上的黑橡木吊牌	牆上的懸掛式黑橡木告示牌	壁中黯柞懸牌	壁に付けられたダークオークの吊り看板	짙은 참나무 벽 매다는 표지판	Tấm biển treo gỗ sồi sẫm trên tường
 block.minecraft.dark_oak_wall_sign	Dark Oak Wall Sign	墙上的深色橡木告示牌	牆上的黑橡木指示牌	牆上的黑橡木告示牌	壁中黯柞牌	壁に付けられたダークオークの看板	짙은 참나무 벽 표지판	Tấm biển gỗ sồi sẫm trên tường
 block.minecraft.dark_oak_wood	Dark Oak Wood	深色橡木	黑橡木	黑橡木塊	黯柞木	ダークオークの木	짙은 참나무	Gỗ sồi sẫm
-block.minecraft.dark_prismarine	Dark Prismarine	暗海晶石	暗海磷石	暗海磷石	黯磷	ダークプリズマリン	짙은 프리즈머린	Lăng trụ biển sẫm màu
-block.minecraft.dark_prismarine_slab	Dark Prismarine Slab	暗海晶石台阶	暗海磷石半磚	暗海磷石半磚	黯磷版	ダークプリズマリンのハーフブロック	짙은 프리즈머린 반 블록	Phiến lăng trụ biển sẫm màu
-block.minecraft.dark_prismarine_stairs	Dark Prismarine Stairs	暗海晶石楼梯	暗海磷石樓梯	暗海磷石階梯	黯磷階	ダークプリズマリンの階段	짙은 프리즈머린 계단	Cầu thang lăng trụ biển sẫm màu
+block.minecraft.dark_prismarine	Dark Prismarine	暗海晶石	暗海磷石	暗海磷石	黯磷	ダークプリズマリン	짙은 프리즈머린	Prismarin sẫm màu
+block.minecraft.dark_prismarine_slab	Dark Prismarine Slab	暗海晶石台阶	暗海磷石半磚	暗海磷石半磚	黯磷版	ダークプリズマリンのハーフブロック	짙은 프리즈머린 반 블록	Phiến Prismarin sẫm màu
+block.minecraft.dark_prismarine_stairs	Dark Prismarine Stairs	暗海晶石楼梯	暗海磷石樓梯	暗海磷石階梯	黯磷階	ダークプリズマリンの階段	짙은 프리즈머린 계단	Cầu thang Prismarin sẫm màu
 block.minecraft.daylight_detector	Daylight Detector	阳光探测器	日光感測器	日光感測器	測暉儀	日照センサー	햇빛 감지기	Máy dò ánh sáng
 block.minecraft.dead_brain_coral	Dead Brain Coral	失活的脑纹珊瑚	死亡腦珊瑚	死亡的腦珊瑚	枯腦珊瑚	死んだノウサンゴ	죽은 뇌 산호	San hô não chết
 block.minecraft.dead_brain_coral_block	Dead Brain Coral Block	失活的脑纹珊瑚块	死亡腦珊瑚方塊	死亡的腦珊瑚方塊	枯腦珊瑚塊	死んだノウサンゴブロック	죽은 뇌 산호 블록	Khối san hô não chết
@@ -536,7 +537,7 @@ block.minecraft.dropper	Dropper	投掷器	投擲器	投擲器	擲械	ドロッ�
 block.minecraft.emerald_block	Block of Emerald	绿宝石块	綠寶石磚	綠寶石方塊	祖母綠塊	エメラルドブロック	에메랄드 블록	Khối ngọc lục bảo
 block.minecraft.emerald_ore	Emerald Ore	绿宝石矿石	綠寶石礦	綠寶石礦	祖母綠礦	エメラルド鉱石	에메랄드 광석	Quặng ngọc lục bảo
 block.minecraft.enchanting_table	Enchanting Table	附魔台	附魔台	附魔台	淬靈案	エンチャントテーブル	마법 부여대	Bàn phù phép
-block.minecraft.end_gateway	End Gateway	末地折跃门	終界折躍門	終界折躍門	終界門關	エンドゲートウェイ	엔드 관문	Cổng vào The End
+block.minecraft.end_gateway	End Gateway	末地折跃门	終界折躍門	終界折躍門	終界門關	エンドゲートウェイ	엔드 관문	Cổng vào đảo End
 block.minecraft.end_portal	End Portal	末地传送门	終界傳送門	終界傳送門	終界結界門	エンドポータル	엔드 차원문	Cổng End
 block.minecraft.end_portal_frame	End Portal Frame	末地传送门框架	終界傳送門框	終界傳送門框架	終界結界門匡	エンドポータルフレーム	엔드 차원문 틀	Khung cổng End
 block.minecraft.end_rod	End Rod	末地烛	終界燭	終界燭	終界燭	エンドロッド	엔드 막대기	Thanh gậy End
@@ -562,6 +563,7 @@ block.minecraft.fire_coral	Fire Coral	火珊瑚	火珊瑚	火珊瑚	火珊瑚	�
 block.minecraft.fire_coral_block	Fire Coral Block	火珊瑚块	火珊瑚方塊	火珊瑚方塊	火珊瑚塊	ミレポラサンゴブロック	불 산호 블록	Khối san hô lửa
 block.minecraft.fire_coral_fan	Fire Coral Fan	火珊瑚扇	扇狀火珊瑚	扇狀火珊瑚	扇狀火珊瑚	ミレポラウチワサンゴ	부채형 불 산호	San hô lửa hình quạt
 block.minecraft.fire_coral_wall_fan	Fire Coral Wall Fan	墙上的火珊瑚扇	牆上的扇狀火珊瑚	牆上的扇狀火珊瑚	壁中扇狀火珊瑚	壁付きのミレポラウチワサンゴ	부채형 불 산호 벽	Cành san hô lửa hình quạt
+block.minecraft.firefly_bush	Firefly Bush	？	？	？	？	？	？	？
 block.minecraft.fletching_table	Fletching Table	制箭台	製箭台	製箭台	製箭案	矢細工台	화살 작업대	Bàn làm cung tên
 block.minecraft.flower_pot	Flower Pot	花盆	花盆	花盆	盆	植木鉢	화분	Chậu hoa
 block.minecraft.flowering_azalea	Flowering Azalea	盛开的杜鹃花丛	開花的杜鵑叢	開花的杜鵑叢	芳杜鵑	開花したツツジ	꽃 핀 진달래	Đỗ quyên đang trổ bông
@@ -948,13 +950,13 @@ block.minecraft.potted_wither_rose	Potted Wither Rose	凋灵玫瑰盆栽	凋零�
 block.minecraft.powder_snow	Powder Snow	细雪	幼雪	粉雪	齏雪	粉雪	가루눈	Bột tuyết
 block.minecraft.powder_snow_cauldron	Powder Snow Cauldron	装有细雪的炼药锅	裝幼雪的鍋	裝粉雪的鍋釜	齏雪居之釜	粉雪入りの大釜	가루눈 가마솥	Vạc bột tuyết
 block.minecraft.powered_rail	Powered Rail	动力铁轨	動力路軌	動力鐵軌	速軌	パワードレール	동력 레일	Đường ray tăng tốc
-block.minecraft.prismarine	Prismarine	海晶石	海磷石	海磷石	海磷	プリズマリン	프리즈머린	Lăng trụ biển
-block.minecraft.prismarine_brick_slab	Prismarine Brick Slab	海晶石砖台阶	海磷石磚半磚	海磷石磚半磚	海磷磚版	プリズマリンレンガのハーフブロック	프리즈머린 벽돌 반 블록	Phiến gạch lăng trụ biển
-block.minecraft.prismarine_brick_stairs	Prismarine Brick Stairs	海晶石砖楼梯	海磷石磚樓梯	海磷石磚階梯	海磷磚階	プリズマリンレンガの階段	프리즈머린 벽돌 계단	Cầu thang gạch lăng trụ biển
-block.minecraft.prismarine_bricks	Prismarine Bricks	海晶石砖	海磷石磚	海磷石磚	海磷磚	プリズマリンレンガ	프리즈머린 벽돌	Gạch lăng trụ biển
-block.minecraft.prismarine_slab	Prismarine Slab	海晶石台阶	海磷石半磚	海磷石半磚	海磷版	プリズマリンのハーフブロック	프리즈머린 반 블록	Phiến lăng trụ biển
-block.minecraft.prismarine_stairs	Prismarine Stairs	海晶石楼梯	海磷石樓梯	海磷石階梯	海磷階	プリズマリンの階段	프리즈머린 계단	Cầu thang lăng trụ biển
-block.minecraft.prismarine_wall	Prismarine Wall	海晶石墙	海磷石牆	海磷石牆	海磷垣	プリズマリンの塀	프리즈머린 담장	Tường lăng trụ biển
+block.minecraft.prismarine	Prismarine	海晶石	海磷石	海磷石	海磷	プリズマリン	프리즈머린	Prismarin
+block.minecraft.prismarine_brick_slab	Prismarine Brick Slab	海晶石砖台阶	海磷石磚半磚	海磷石磚半磚	海磷磚版	プリズマリンレンガのハーフブロック	프리즈머린 벽돌 반 블록	Phiến gạch Prismarin
+block.minecraft.prismarine_brick_stairs	Prismarine Brick Stairs	海晶石砖楼梯	海磷石磚樓梯	海磷石磚階梯	海磷磚階	プリズマリンレンガの階段	프리즈머린 벽돌 계단	Cầu thang gạch Prismarin
+block.minecraft.prismarine_bricks	Prismarine Bricks	海晶石砖	海磷石磚	海磷石磚	海磷磚	プリズマリンレンガ	프리즈머린 벽돌	Gạch Prismarin
+block.minecraft.prismarine_slab	Prismarine Slab	海晶石台阶	海磷石半磚	海磷石半磚	海磷版	プリズマリンのハーフブロック	프리즈머린 반 블록	Phiến Prismarin
+block.minecraft.prismarine_stairs	Prismarine Stairs	海晶石楼梯	海磷石樓梯	海磷石階梯	海磷階	プリズマリンの階段	프리즈머린 계단	Cầu thang Prismarin
+block.minecraft.prismarine_wall	Prismarine Wall	海晶石墙	海磷石牆	海磷石牆	海磷垣	プリズマリンの塀	프리즈머린 담장	Tường Prismarin
 block.minecraft.pumpkin	Pumpkin	南瓜	南瓜	南瓜	南瓜	カボチャ	호박	Bí ngô
 block.minecraft.pumpkin_stem	Pumpkin Stem	南瓜茎	南瓜椗	南瓜梗	南瓜莖	カボチャの茎	호박 줄기	Cuống bí ngô
 block.minecraft.purple_banner	Purple Banner	紫色旗帜	紫色橫額	紫色旗幟	紫旗	紫色の旗	보라색 현수막	Cờ hiệu tím
@@ -1137,14 +1139,14 @@ block.minecraft.tall_grass	Tall Grass	高草丛	長草叢	芒草	高艸	背の�
 block.minecraft.tall_seagrass	Tall Seagrass	高海草	長海草	高海草	高海艸	背の高い海草	키 큰 해초	Cỏ biển cao
 block.minecraft.target	Target	标靶	標靶	標靶	靶	的	과녁	Bia bắn
 block.minecraft.terracotta	Terracotta	陶瓦	陶瓦	陶土	陶	テラコッタ	테라코타	Đất nung
-block.minecraft.test_block	Test Block	测试方块	測試方塊	測試方塊	測塊	テストブロック	테스트 블록	Khối kiểm tra
-block.minecraft.test_instance_block	Test Instance Block	测试实例方块	測試實例方塊	測試實例方塊	測譬	テストインスタンスブロック	테스트 인스턴스 블록	Khối trường hợp kiểm tra
+block.minecraft.test_block	Test Block	测试方块	測試方塊	測試方塊	試塊	テストブロック	테스트 블록	Khối kiểm tra
+block.minecraft.test_instance_block	Test Instance Block	测试实例方块	測試實例方塊	測試實例方塊	試實塊	テストインスタンスブロック	테스트 인스턴스 블록	Khối trường hợp kiểm tra
 block.minecraft.tinted_glass	Tinted Glass	遮光玻璃	遮光玻璃	遮光玻璃	蔽明琉璃	遮光ガラス	차광 유리	Thủy tinh mờ
 block.minecraft.tnt	TNT	TNT	TNT	TNT	灹藥	TNT	TNT	TNT
 block.minecraft.torch	Torch	火把	火炬	火把	炬	松明	횃불	Đuốc
 block.minecraft.torchflower	Torchflower	火把花	火炬花	火把花	炬蓮	トーチフラワー	횃불꽃	Hoa đuốc
 block.minecraft.torchflower_crop	Torchflower Crop	火把花植株	火炬花植株	火把花植株	炬蓮株	トーチフラワー	횃불꽃 작물	Cây hoa đuốc
-block.minecraft.trapped_chest	Trapped Chest	陷阱箱	陷阱箱	陷阱儲物箱	機關箱	トラップチェスト	덫 상자	Rương bị kẹt
+block.minecraft.trapped_chest	Trapped Chest	陷阱箱	陷阱箱	陷阱儲物箱	機關箱	トラップチェスト	덫 상자	Rương gài bẫy
 block.minecraft.trial_spawner	Trial Spawner	试炼刷怪笼	試煉生怪籠	試煉生怪磚	煉孳衍籠	試練のスポナー	시련 생성기	Lồng triệu hồi thử thách
 block.minecraft.tripwire	Tripwire	绊线	撠線	絆線	絆線	トリップワイヤー	철사 덫	Dây bẫy
 block.minecraft.tripwire_hook	Tripwire Hook	绊线钩	撠線鈎	絆線鉤	絆綫鉤	トリップワイヤーフック	철사 덫 갈고리	Móc dây bẫy
@@ -1309,7 +1311,7 @@ effect.minecraft.water_breathing	Water Breathing	水下呼吸	水中呼吸	水�
 effect.minecraft.weakness	Weakness	虚弱	虛弱	虛弱	虛	弱体化	나약함	Yếu đuối
 effect.minecraft.weaving	Weaving	盘丝	織網	結網	綴絲	巣張り	방적	Thêu dệt
 effect.minecraft.wind_charged	Wind Charged	蓄风	蓄風	蘊風	厲風	蓄風	돌풍	Nạp gió
-effect.minecraft.wither	Wither	凋零	凋零	凋零	凋零	衰弱	시듦	Wither
+effect.minecraft.wither	Wither	凋零	凋零	凋零	凋零	衰弱	시듦	Khô héo
 enchantment.minecraft.aqua_affinity	Aqua Affinity	水下速掘	水中挖掘	親水性	習流	水中採掘	친수성	Đào nhanh dưới nước
 enchantment.minecraft.bane_of_arthropods	Bane of Arthropods	节肢杀手	節肢剋星	節肢剋星	剋蟲	虫特効	살충	Hại loài chân đốt
 enchantment.minecraft.binding_curse	Curse of Binding	绑定诅咒	綁定詛咒	綁定詛咒	固咒	束縛の呪い	귀속 저주	Lời nguyền ràng buộc
@@ -1398,7 +1400,7 @@ entity.minecraft.end_crystal	End Crystal	末地水晶	終界水晶	終界水晶	
 entity.minecraft.ender_dragon	Ender Dragon	末影龙	終界龍	終界龍	終眇龍	エンダードラゴン	엔더 드래곤	Rồng Ender
 entity.minecraft.ender_pearl	Thrown Ender Pearl	掷出的末影珍珠	拋出的終界珍珠	拋出的終界珍珠	既擲終眇玥	投げられたエンダーパール	던져진 엔더 진주	Ngọc Ender được ném ra
 entity.minecraft.enderman	Enderman	末影人	終界使者	終界使者	終眇使	エンダーマン	엔더맨	Người Ender
-entity.minecraft.endermite	Endermite	末影螨	終界蟎	終界蟎	終眇蟎	エンダーマイト	엔더마이트	Rận Ender
+entity.minecraft.endermite	Endermite	末影螨	終界蟎	終界蟎	終眇蟎	エンダーマイト	엔더마이트	Endermite
 entity.minecraft.evoker	Evoker	唤魔者	喚魔者	喚魔者	御魔使	エヴォーカー	소환사	Kẻ chiêu hồn
 entity.minecraft.evoker_fangs	Evoker Fangs	唤魔者尖牙	喚魔者尖牙	喚魔者尖牙	魔齒	エヴォーカーの牙	소환사 송곳니	Răng nanh Kẻ chiêu hồn
 entity.minecraft.experience_bottle	Thrown Bottle o' Enchanting	掷出的附魔之瓶	拋出的附魔之瓶	拋出的經驗瓶	既擲淬靈瓶	投げられたエンチャントの瓶	던져진 경험치 병	Chai kinh nghiệm đã ném
@@ -1432,7 +1434,7 @@ entity.minecraft.jungle_chest_boat	Jungle Boat with Chest	丛林木运输船	儲
 entity.minecraft.killer_bunny	The Killer Bunny	杀手兔	殺手兔	殺手兔	刺客兔	殺人ウサギ	살인 토끼	Thỏ sát nhân
 entity.minecraft.leash_knot	Leash Knot	拴绳结	牽繩繩結	拴繩	繯	リードの結び目	끈 매듭	Nút xích
 entity.minecraft.lightning_bolt	Lightning Bolt	闪电束	閃電電流	閃電電流	霹靂	雷	벼락	Tia sét
-entity.minecraft.lingering_potion	Lingering Potion	？	？	？	？	？	？	？
+entity.minecraft.lingering_potion	Lingering Potion	滞留药水	滯留藥水	滯留藥水	滯劑	残留ポーション	잔류형 물약	Thuốc kéo dài
 entity.minecraft.llama	Llama	羊驼	羊駝	駱馬	美洲駝	ラマ	라마	Lạc đà không bướu
 entity.minecraft.llama_spit	Llama Spit	羊驼唾沫	羊駝口水	駱馬唾液	美洲駝涎	ラマの唾	라마 침	Nước bọt lạc đà không bướu
 entity.minecraft.magma_cube	Magma Cube	岩浆怪	岩漿史萊姆	岩漿立方怪	火漿魔	マグマキューブ	마그마 큐브	Khối dung nham
@@ -1477,7 +1479,7 @@ entity.minecraft.snowball	Snowball	雪球	雪球	雪球	雪團	雪玉	눈덩이	
 entity.minecraft.spawner_minecart	Minecart with Monster Spawner	刷怪笼矿车	生怪籠礦車	生怪磚礦車	孳衍籠礦車	モンスタースポナー付きのトロッコ	몬스터 생성기가 실린 광산 수레	Xe mỏ có lồng triệu hồi quái vật
 entity.minecraft.spectral_arrow	Spectral Arrow	光灵箭	追跡之箭	追跡之箭	爍靈矢	光の矢	분광 화살	Mũi tên ma quỷ
 entity.minecraft.spider	Spider	蜘蛛	蜘蛛	蜘蛛	蛛	クモ	거미	Nhện
-entity.minecraft.splash_potion	Splash Potion	？	？	？	？	？	？	？
+entity.minecraft.splash_potion	Splash Potion	喷溅药水	飛濺藥水	飛濺藥水	噴劑	スプラッシュポーション	투척용 물약	Thuốc có thể ném được
 entity.minecraft.spruce_boat	Spruce Boat	云杉木船	杉木船	杉木船	樅舟	トウヒのボート	가문비나무 보트	Thuyền gỗ vân sam
 entity.minecraft.spruce_chest_boat	Spruce Boat with Chest	云杉木运输船	儲物箱杉木船	儲物箱杉木船	樅艚	チェスト付きのトウヒのボート	상자가 실린 가문비나무 보트	Thuyền gỗ vân sam có rương
 entity.minecraft.squid	Squid	鱿鱼	墨魚	魷魚	鰂	イカ	오징어	Con mực
@@ -1648,7 +1650,7 @@ item.minecraft.ender_dragon_spawn_egg	Ender Dragon Spawn Egg	末影龙刷怪蛋	
 item.minecraft.ender_eye	Eye of Ender	末影之眼	終界之眼	終界之眼	終眇眼	エンダーアイ	엔더의 눈	Mắt của Ender
 item.minecraft.ender_pearl	Ender Pearl	末影珍珠	終界珍珠	終界珍珠	終眇玥	エンダーパール	엔더 진주	Ngọc Ender
 item.minecraft.enderman_spawn_egg	Enderman Spawn Egg	末影人刷怪蛋	終界使者 生成蛋	終界使者 生怪蛋	孳終眇使之卵	エンダーマンのスポーンエッグ	엔더맨 생성 알	Trứng sinh ra Người Ender
-item.minecraft.endermite_spawn_egg	Endermite Spawn Egg	末影螨刷怪蛋	終界蟎 生成蛋	終界蟎 生怪蛋	孳終眇蟎之卵	エンダーマイトのスポーンエッグ	엔더마이트 생성 알	Trứng sinh ra Rận Ender
+item.minecraft.endermite_spawn_egg	Endermite Spawn Egg	末影螨刷怪蛋	終界蟎 生成蛋	終界蟎 生怪蛋	孳終眇蟎之卵	エンダーマイトのスポーンエッグ	엔더마이트 생성 알	Trứng sinh ra Endermite
 item.minecraft.evoker_spawn_egg	Evoker Spawn Egg	唤魔者刷怪蛋	喚魔者 生成蛋	喚魔者 生怪蛋	孳御魔使之卵	エヴォーカーのスポーンエッグ	소환사 생성 알	Trứng sinh ra Kẻ chiêu hồn
 item.minecraft.experience_bottle	Bottle o' Enchanting	附魔之瓶	附魔之瓶	經驗瓶	淬靈瓶	エンチャントの瓶	경험치 병	Chai kinh nghiệm
 item.minecraft.explorer_pottery_sherd	Explorer Pottery Sherd	探险纹样陶片	探險陶罐碎片	探險陶器碎片	探陶片	探検家の壺の欠片	탐험가 도자기 조각	Mảnh gốm khám phá
@@ -1892,8 +1894,8 @@ item.minecraft.potion.effect.weakness	Potion of Weakness	虚弱药水	虛弱藥�
 item.minecraft.potion.effect.weaving	Potion of Weaving	盘丝药水	織網藥水	結網藥水	綴絲劑	巣張りのポーション	방적의 물약	Thuốc thêu dệt
 item.minecraft.potion.effect.wind_charged	Potion of Wind Charging	蓄风药水	蓄風藥水	蘊風藥水	厲風劑	蓄風のポーション	돌풍의 물약	Thuốc nạp gió
 item.minecraft.powder_snow_bucket	Powder Snow Bucket	细雪桶	幼雪桶	粉雪桶	齏雪桶	粉雪入りバケツ	가루눈 양동이	Xô bột tuyết
-item.minecraft.prismarine_crystals	Prismarine Crystals	海晶砂粒	海磷晶體	海磷晶體	海磷晶	プリズマリンクリスタル	프리즈머린 수정	Tinh thể lăng trụ biển
-item.minecraft.prismarine_shard	Prismarine Shard	海晶碎片	海磷碎片	海磷碎片	海磷殘片	プリズマリンの欠片	프리즈머린 조각	Mảnh lăng trụ biển
+item.minecraft.prismarine_crystals	Prismarine Crystals	海晶砂粒	海磷晶體	海磷晶體	海磷晶	プリズマリンクリスタル	프리즈머린 수정	Tinh thể Prismarin
+item.minecraft.prismarine_shard	Prismarine Shard	海晶碎片	海磷碎片	海磷碎片	海磷殘片	プリズマリンの欠片	프리즈머린 조각	Mảnh Prismarin
 item.minecraft.prize_pottery_sherd	Prize Pottery Sherd	珍宝纹样陶片	珍寶陶罐碎片	珍寶陶器碎片	寳陶片	宝物の壺の欠片	보물 도자기 조각	Mảnh gốm phần thưởng
 item.minecraft.pufferfish	Pufferfish	河豚	雞泡魚	河豚	河豚	フグ	복어	Cá nóc
 item.minecraft.pufferfish_bucket	Bucket of Pufferfish	河豚桶	雞泡魚桶	河豚桶	河豚桶	フグ入りバケツ	복어가 담긴 양동이	Xô cá nóc
