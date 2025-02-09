@@ -78,14 +78,6 @@ Place `en_us.json`, `zh_cn.json`, `zh_hk.json`, `zh_tw.json`, `lzh.json`, `ja_jp
 
 [`supplements.json`](lang/supplements.json) contains updates from Crowdin for missing in-game language files. This feature is disabled by default.
 
-### Fonts
-
-This project uses Source Han Serif and an automatically constructed subset of [I.Ming](https://github.com/ichitenfont/I.Ming).
-
-The repository automatically checks for updates to I.Ming subsets every Thursday 🕐 01:00 (UTC+8, UTC Wednesday 🕔 17:00) based on Classical Chinese content.
-
-This process uses the script [`extract_font.py`](extract_font.py) and requires [`fonttools`](https://github.com/fonttools/fonttools).
-
 ### Date and Timezone
 
 Date and timezone on the webpage are based on user's IP, sourced from GeoIP2 GeoLite2 database.
@@ -135,7 +127,5 @@ Pull requests are welcome.
 ## Acknowledgments
 
 Original files for [Favicon](static/favicon.ico) and [apple-touch-icon.png](static/apple-touch-icon.png) are from [Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico), licensed under CC BY-NC-SA 3.0.
-
-Classical Chinese font [I.Ming](https://github.com/ichitenfont/I.Ming) is licensed under [IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md).
 
 [`GeoLite2-City.mmdb`](GeoLite2-City.mmdb) is from [P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb), copyright MaxMind, Inc.

@@ -31,10 +31,14 @@
     "block.minecraft.oxidized_cut_copper_stairs": "氧化的切制铜楼梯",
     "block.minecraft.pink_concrete_powder": "粉红色混凝土粉末",
     "block.minecraft.pink_stained_glass_pane": "粉红色染色玻璃板",
+    "block.minecraft.potted_closed_eyeblossom": "闭合的眼眸花盆栽",
     "block.minecraft.potted_dark_oak_sapling": "深色橡树树苗盆栽",
+    "block.minecraft.potted_open_eyeblossom": "张开的眼眸花盆栽",
+    "block.minecraft.potted_pale_oak_sapling": "苍白橡树树苗盆栽",
     "block.minecraft.potted_pink_tulip": "粉红色郁金香盆栽",
     "block.minecraft.powder_snow_cauldron": "装有细雪的炼药锅",
     "block.minecraft.stripped_dark_oak_log": "去皮深色橡木原木",
+    "block.minecraft.stripped_pale_oak_log": "去皮苍白橡木原木",
     "block.minecraft.waxed_cut_copper_slab": "涂蜡的切制铜台阶",
     "block.minecraft.waxed_cut_copper_stairs": "涂蜡的切制铜楼梯",
     "block.minecraft.waxed_exposed_copper_grate": "涂蜡的斑驳铜格栅",
@@ -104,6 +108,8 @@
     "block.minecraft.light_gray_candle_cake": "插上淡灰色蜡烛的蛋糕",
     "block.minecraft.lime_candle_cake": "插上黄绿色蜡烛的蛋糕",
     "block.minecraft.magenta_candle_cake": "插上品红色蜡烛的蛋糕",
+    "block.minecraft.pale_oak_hanging_sign": "悬挂式苍白橡木告示牌",
+    "block.minecraft.pale_oak_wall_sign": "墙上的苍白橡木告示牌",
     "block.minecraft.pink_candle_cake": "插上粉红色蜡烛的蛋糕",
     "block.minecraft.waxed_exposed_cut_copper_slab": "涂蜡的斑驳切制铜台阶",
     "block.minecraft.waxed_exposed_cut_copper_stairs": "涂蜡的斑驳切制铜楼梯",
@@ -123,5 +129,6 @@
     "block.minecraft.warped_wall_hanging_sign": "墙上的悬挂式诡异木告示牌",
     "advancements.adventure.minecraft_trials_edition.title": "Minecraft：试炼版",
     "block.minecraft.acacia_wall_hanging_sign": "墙上的悬挂式金合欢木告示牌",
-    "block.minecraft.dark_oak_wall_hanging_sign": "墙上的悬挂式深色橡木告示牌"
+    "block.minecraft.dark_oak_wall_hanging_sign": "墙上的悬挂式深色橡木告示牌",
+    "block.minecraft.pale_oak_wall_hanging_sign": "墙上的悬挂式苍白橡木告示牌"
 }

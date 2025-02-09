@@ -78,14 +78,6 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 [`supplements.json`](lang/supplements.json)中存有游戏内语言文件缺失，而Crowdin上已更新的内容。目前项目默认配置为关闭读取此项。
 
-### 字体
-
-本项目使用思源宋体和[一点明体](https://github.com/ichitenfont/I.Ming)的自动构建子集。
-
-本仓库会在每周四🕐01:00（UTC+8，即UTC每周三🕔17:00）自动检查一点明体的子集文件是否需要根据文言的内容而更新。
-
-使用脚本为[`extract_font.py`](extract_font.py)，需要库[`fonttools`](https://github.com/fonttools/fonttools)。
-
 ### 日期与时区
 
 网页上显示的日期和时区根据用户的IP决定，相关数据从GeoIP2 GeoLite2数据库获取。
@@ -135,7 +127,5 @@ python -c 'import secrets; print(secrets.token_hex())'
 ## 感谢
 
 [Favicon](static/favicon.ico)和[apple-touch-icon.png](static/apple-touch-icon.png)的原始文件来自[Minecraft Wiki](https://minecraft.wiki/w/File:Favicon.ico)，以CC BY-NC-SA 3.0协议授权。
-
-文言使用[一点明体](https://github.com/ichitenfont/I.Ming)，以[IPA Open Font License v1.0](https://github.com/ichitenfont/I.Ming/blob/master/LICENSE.md)授权。
 
 [`GeoLite2-City.mmdb`](GeoLite2-City.mmdb)来自[P3TERX/GeoLite.mmdb](https://github.com/P3TERX/GeoLite.mmdb)。版权归MaxMind, Inc.所有。

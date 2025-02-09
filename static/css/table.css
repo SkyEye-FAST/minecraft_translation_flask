@@ -1,14 +1,5 @@
 @import url("https://fonts.font.im/css2?family=Fira+Code&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif:wght@100..900&family=Noto+Serif+HK&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Serif+TC:wght@300;400&display=swap");
-
-@font-face {
-    font-display: swap;
-    font-family: "一点明体";
-    font-style: normal;
-    font-weight: normal;
-    src: local("一点明体"),
-        url("../fonts/I.Ming-8.10.subset.woff2") format("woff2");
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+@import url('https://static.zeoseven.com/zsft/73/main/result.css');
 
 body {
     background-color: #f9f2e0;
@@ -84,7 +75,7 @@ table tr td:nth-child(5) {
 }
 
 table tr td:nth-child(6) {
-    font-family: "一点明体", "Noto Serif TC Light", "Source Han Serif TC Light",
+    font-family: "I.Ming", "Noto Serif TC Light", "Source Han Serif TC Light",
         "Source Han Serif TW Light", "思源宋體 Light", "Times New Roman", SimSun,
         Times, serif;
 }

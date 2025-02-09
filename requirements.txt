@@ -2,7 +2,6 @@ Babel>=2.16.0
 Flask>=3.0.3
 flask_babel>=4.0.0
 flask_wtf>=1.2.1
-fonttools>=4.53.1
 geoip2>=4.8.0
 python-dotenv>=1.0.1
 Requests>=2.32.3
