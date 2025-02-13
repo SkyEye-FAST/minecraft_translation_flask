@@ -38,7 +38,7 @@ advancements.adventure.trim_with_all_exclusive_armor_patterns.title	Smithing wit
 advancements.adventure.trim_with_any_armor_pattern.title	Crafting a New Look	旧貌锻新颜	搞搞新花臣	鍛然一新	妝點一新	おニューの衣装	유행의 선도자	Biến tấu vẻ ngoài
 advancements.adventure.two_birds_one_arrow.title	Two Birds, One Arrow	一箭双雕	一箭雙雕	一箭雙鵰	一箭雙鵰	一石二鳥	일전쌍조	Một mũi tên trúng hai đích
 advancements.adventure.under_lock_and_key.title	Under Lock and Key	珍藏密敛	鎖藏珍寶	妥善保管	金繩玉鎖	錠と鍵に隠されしもの	열쇠로 잠금 해제	Báu vật trong hòm khoá
-advancements.adventure.use_lodestone.title	Country Lode, Take Me Home	？	？	？	？	？	？	？
+advancements.adventure.use_lodestone.title	Country Lode, Take Me Home	天涯共此石	針尖指，遊子思	天涯共此石	天涯共此石	この道をずっとゆけば	집으로 이끌려가네	Ơi! Nam châm quê, nam châm quê
 advancements.adventure.very_very_frightening.title	Very Very Frightening	魔女审判	天打雷劈	非常驚世駭俗	一震之威	とてもとても恐ろしい	동에 번쩍 서에 번쩍	Rất rất kinh khủng
 advancements.adventure.voluntary_exile.title	Voluntary Exile	自我放逐	自我放逐	自我放逐	禍不單行	自主的な亡命	자진 유배	Tình nguyện bị lưu đày
 advancements.adventure.walk_on_powder_snow_with_leather_boots.title	Light as a Rabbit	轻功雪上飘	輕功雪上飄	輕功雪上飄	履雪無痕	ウサギのように軽く	토끼처럼 가볍게	Nhẹ tựa lông hồng
@@ -332,9 +332,9 @@ block.minecraft.bubble_coral_block	Bubble Coral Block	气泡珊瑚块	氣泡珊�
 block.minecraft.bubble_coral_fan	Bubble Coral Fan	气泡珊瑚扇	扇狀氣泡珊瑚	扇狀氣泡珊瑚	扇狀泡珊瑚	ミズタマウチワサンゴ	부채형 거품 산호	San hô bong bóng hình quạt
 block.minecraft.bubble_coral_wall_fan	Bubble Coral Wall Fan	墙上的气泡珊瑚扇	牆上的扇狀氣泡珊瑚	牆上的扇狀氣泡珊瑚	壁中扇狀泡珊瑚	壁付きのミズタマウチワサンゴ	부채형 거품 산호 벽	Cành san hô bong bóng hình quạt
 block.minecraft.budding_amethyst	Budding Amethyst	紫水晶母岩	紫水晶母岩	紫水晶芽床	蘊芽紫水玉	芽生えたアメジスト	싹 틔우는 자수정	Nụ thạch anh tím
-block.minecraft.bush	Bush	灌木丛	灌木	灌木叢	叢	茂み	덤불	Bụi cây
-block.minecraft.cactus	Cactus	仙人掌	仙人掌	仙人掌	仙人掌	サボテン	선인장	Cây xương rồng
-block.minecraft.cactus_flower	Cactus Flower	？	？	？	？	？	？	？
+block.minecraft.bush	Bush	灌木丛	灌木	灌木叢	叢薄	茂み	덤불	Bụi cây
+block.minecraft.cactus	Cactus	仙人掌	仙人掌	仙人掌	仙人掌	サボテン	선인장	Xương rồng
+block.minecraft.cactus_flower	Cactus Flower	仙人掌花	仙人掌花	仙人掌花	仙人掌花	サボテンの花	선인장 꽃	Hoa xương rồng
 block.minecraft.cake	Cake	蛋糕	蛋糕	蛋糕	洋糕	ケーキ	케이크	Bánh ngọt
 block.minecraft.calcite	Calcite	方解石	方解石	方解石	滑方石	方解石	방해석	Can-xít
 block.minecraft.calibrated_sculk_sensor	Calibrated Sculk Sensor	校频幽匿感测体	校準沉靈傳感器	校準伏聆振測器	幽匿校探子	調律されたスカルクセンサー	조율한 스컬크 감지체	Cảm biến Sculk được hiệu chỉnh
@@ -565,7 +565,7 @@ block.minecraft.fire_coral	Fire Coral	火珊瑚	火珊瑚	火珊瑚	火珊瑚	�
 block.minecraft.fire_coral_block	Fire Coral Block	火珊瑚块	火珊瑚方塊	火珊瑚方塊	火珊瑚塊	ミレポラサンゴブロック	불 산호 블록	Khối san hô lửa
 block.minecraft.fire_coral_fan	Fire Coral Fan	火珊瑚扇	扇狀火珊瑚	扇狀火珊瑚	扇狀火珊瑚	ミレポラウチワサンゴ	부채형 불 산호	San hô lửa hình quạt
 block.minecraft.fire_coral_wall_fan	Fire Coral Wall Fan	墙上的火珊瑚扇	牆上的扇狀火珊瑚	牆上的扇狀火珊瑚	壁中扇狀火珊瑚	壁付きのミレポラウチワサンゴ	부채형 불 산호 벽	Cành san hô lửa hình quạt
-block.minecraft.firefly_bush	Firefly Bush	萤火虫灌木丛	螢火蟲灌木	螢火蟲灌木叢	螢叢	ホタルの茂み	반딧불이 덤불	Bụi đom đóm
+block.minecraft.firefly_bush	Firefly Bush	萤火虫灌木丛	螢火蟲灌木	螢火蟲灌木叢	螢叢薄	ホタルの茂み	반딧불이 덤불	Bụi đom đóm
 block.minecraft.fletching_table	Fletching Table	制箭台	製箭台	製箭台	製箭案	矢細工台	화살 작업대	Bàn làm cung tên
 block.minecraft.flower_pot	Flower Pot	花盆	花盆	花盆	盆	植木鉢	화분	Chậu hoa
 block.minecraft.flowering_azalea	Flowering Azalea	盛开的杜鹃花丛	開花的杜鵑叢	開花的杜鵑叢	芳杜鵑	開花したツツジ	꽃 핀 진달래	Đỗ quyên đang trổ bông
@@ -920,7 +920,7 @@ block.minecraft.potted_bamboo	Potted Bamboo	竹子盆栽	竹盆栽	竹子盆栽	
 block.minecraft.potted_birch_sapling	Potted Birch Sapling	白桦树苗盆栽	樺木樹苗盆栽	樺木樹苗盆栽	樺秧盆景	シラカバの苗木入り植木鉢	화분에 심은 자작나무 묘목	Chậu chồi cây bạch dương
 block.minecraft.potted_blue_orchid	Potted Blue Orchid	兰花盆栽	蘭花盆栽	藍色蝴蝶蘭盆栽	蘭盆景	ヒスイラン入り植木鉢	화분에 심은 파란색 난초	Chậu phong lan xanh
 block.minecraft.potted_brown_mushroom	Potted Brown Mushroom	棕色蘑菇盆栽	啡色蘑菇盆栽	棕色蘑菇盆栽	褐蕈盆景	茶色のキノコ入り植木鉢	화분에 심은 갈색 버섯	Chậu nấm nâu
-block.minecraft.potted_cactus	Potted Cactus	仙人掌盆栽	仙人掌盆栽	仙人掌盆栽	仙人掌盆景	サボテン入り植木鉢	화분에 심은 선인장	Chậu cây xương rồng
+block.minecraft.potted_cactus	Potted Cactus	仙人掌盆栽	仙人掌盆栽	仙人掌盆栽	仙人掌盆景	サボテン入り植木鉢	화분에 심은 선인장	Chậu xương rồng
 block.minecraft.potted_cherry_sapling	Potted Cherry Sapling	樱花树苗盆栽	櫻花樹苗盆栽	櫻花木樹苗盆栽	櫻秧盆景	サクラの苗木入り植木鉢	화분에 심은 벚나무 묘목	Chậu chồi cây anh đào
 block.minecraft.potted_closed_eyeblossom	Potted Closed Eyeblossom	闭合的眼眸花盆栽	閉合的眼眸花盆栽	閉合的擬目花盆栽	瞑瞳榮盆景	閉じたヒトミソウ入り植木鉢	화분에 심은 감은 눈망울꽃	Chậu hoa mắt nhắm
 block.minecraft.potted_cornflower	Potted Cornflower	矢车菊盆栽	矢車菊盆栽	矢車菊盆栽	矢車菊盆景	ヤグルマギク入り植木鉢	화분에 심은 수레국화	Chậu thanh cúc
@@ -1044,7 +1044,7 @@ block.minecraft.sculk_vein	Sculk Vein	幽匿脉络	沉靈脈絡	伏聆脈絡	幽
 block.minecraft.sea_lantern	Sea Lantern	海晶灯	海燈籠	海燈籠	海磷燈	シーランタン	바다 랜턴	Đèn biển
 block.minecraft.sea_pickle	Sea Pickle	海泡菜	海鞘	海鞘	海鞘	シーピクルス	불우렁쉥이	Dưa muối biển
 block.minecraft.seagrass	Seagrass	海草	海草	海草	海艸	海草	해초	Cỏ biển
-block.minecraft.short_dry_grass	Short Dry Grass	？	？	？	？	？	？	？
+block.minecraft.short_dry_grass	Short Dry Grass	矮枯草丛	矮枯草	矮乾草	淺乾艸	背の低い枯れ草	키 작은 마른 잔디	Cỏ khô thấp
 block.minecraft.short_grass	Short Grass	矮草丛	矮草叢	矮草	淺艸	背の低い草	키 작은 잔디	Cỏ thấp
 block.minecraft.shroomlight	Shroomlight	菌光体	菌光體	蕈光體	螢蕈體	シュルームライト	버섯불	Đèn nấm
 block.minecraft.shulker_box	Shulker Box	潜影盒	界伏盒	界伏盒	贆櫝	シュルカーボックス	셜커 상자	Hộp Shulker
@@ -1133,12 +1133,12 @@ block.minecraft.stripped_warped_hyphae	Stripped Warped Hyphae	去皮诡异菌核
 block.minecraft.stripped_warped_stem	Stripped Warped Stem	去皮诡异菌柄	剝皮迷離菌椗	剝皮扭曲蕈柄	既扡譎蕈柄	表皮を剥いだ歪んだ幹	껍질 벗긴 뒤틀린 자루	Cuống kì dị đã cạo vỏ
 block.minecraft.structure_block	Structure Block	结构方块	結構方塊	結構方塊	結構塊	ストラクチャーブロック	구조물 블록	Khối cấu trúc
 block.minecraft.structure_void	Structure Void	结构空位	結構空位	結構空位	築闕	ストラクチャーヴォイド	구조물 공허 공간	Cấu trúc trống
-block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	果蔗	サトウキビ	사탕수수	Cây mía
+block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	藷蔗	サトウキビ	사탕수수	Cây mía
 block.minecraft.sunflower	Sunflower	向日葵	向日葵	向日葵	葵藿	ヒマワリ	해바라기	Hướng dương
 block.minecraft.suspicious_gravel	Suspicious Gravel	可疑的沙砾	可疑的砂礫	可疑的礫石	謎礫	怪しげな砂利	수상한 자갈	Sỏi đáng ngờ
 block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙子	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
 block.minecraft.sweet_berry_bush	Sweet Berry Bush	甜浆果丛	甜莓灌木叢	甜莓灌木叢	甜莓叢	スイートベリーの低木	달콤한 열매 덤불	Bụi cây mọng ngọt
-block.minecraft.tall_dry_grass	Tall Dry Grass	？	？	？	？	？	？	？
+block.minecraft.tall_dry_grass	Tall Dry Grass	高枯草丛	高枯草	高乾草	高枯艸	背の高い枯れ草	키 큰 마른 잔디	Cỏ khô cao
 block.minecraft.tall_grass	Tall Grass	高草丛	長草叢	芒草	高艸	背の高い草	키 큰 잔디	Cỏ cao
 block.minecraft.tall_seagrass	Tall Seagrass	高海草	長海草	高海草	高海艸	背の高い海草	키 큰 해초	Cỏ biển cao
 block.minecraft.target	Target	标靶	標靶	標靶	靶	的	과녁	Bia bắn
@@ -1436,7 +1436,7 @@ entity.minecraft.item_frame	Item Frame	物品展示框	物品展示框	物品展
 entity.minecraft.jungle_boat	Jungle Boat	丛林木船	叢林木船	叢林木船	叢莽舟	ジャングルのボート	정글나무 보트	Thuyền gỗ rừng
 entity.minecraft.jungle_chest_boat	Jungle Boat with Chest	丛林木运输船	儲物箱叢林木船	儲物箱叢林木船	叢莽艚	チェスト付きのジャングルのボート	상자가 실린 정글나무 보트	Thuyền gỗ rừng có rương
 entity.minecraft.killer_bunny	The Killer Bunny	杀手兔	殺手兔	殺手兔	刺客兔	殺人ウサギ	살인 토끼	Thỏ sát nhân
-entity.minecraft.leash_knot	Leash Knot	拴绳结	牽繩繩結	拴繩	繯	リードの結び目	끈 매듭	Nút xích
+entity.minecraft.leash_knot	Leash Knot	拴绳结	牽繩繩結	拴繩	繯	リードの結び目	끈 매듭	Nút buộc
 entity.minecraft.lightning_bolt	Lightning Bolt	闪电束	閃電電流	閃電電流	霹靂	雷	벼락	Tia sét
 entity.minecraft.lingering_potion	Lingering Potion	滞留药水	滯留藥水	滯留藥水	滯劑	残留ポーション	잔류형 물약	Thuốc kéo dài
 entity.minecraft.llama	Llama	羊驼	羊駝	駱馬	美洲駝	ラマ	라마	Lạc đà không bướu
@@ -1557,7 +1557,7 @@ item.minecraft.blaze_rod	Blaze Rod	烈焰棒	烈焰棒	烈焰桿	炎靈桿	ブ�
 item.minecraft.blaze_spawn_egg	Blaze Spawn Egg	烈焰人刷怪蛋	烈焰使者 生成蛋	烈焰使者 生怪蛋	孳炎靈之卵	ブレイズのスポーンエッグ	블레이즈 생성 알	Trứng sinh ra Quỷ lửa
 item.minecraft.blue_bundle	Blue Bundle	蓝色收纳袋	藍色收納袋	藍色束口袋	靛皮囊	青色のバンドル	파란색 꾸러미	Túi bọc xanh nước biển
 item.minecraft.blue_dye	Blue Dye	蓝色染料	藍色染料	藍色染料	靛染	青色の染料	파란색 염료	Bột nhuộm xanh nước biển
-item.minecraft.blue_egg	Blue Egg	？	？	？	？	？	？	？
+item.minecraft.blue_egg	Blue Egg	蓝色鸡蛋	藍色雞蛋	藍色雞蛋	青雞卵	青色の卵	파란색 달걀	Trứng xanh nước biển
 item.minecraft.bogged_spawn_egg	Bogged Spawn Egg	沼骸刷怪蛋	沼骨 生成蛋	沼骸 生怪蛋	孳濘髑之卵	ボグドのスポーンエッグ	보그드 생성 알	Trứng sinh ra Quái đầm lầy
 item.minecraft.bolt_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.bone	Bone	骨头	骨頭	骨頭	骨	骨	뼈다귀	Xương
@@ -1574,7 +1574,7 @@ item.minecraft.brewing_stand	Brewing Stand	酿造台	釀造台	釀造台	煉藥�
 item.minecraft.brick	Brick	红砖	紅磚頭	紅磚頭	磚	レンガ	벽돌	Viên gạch
 item.minecraft.brown_bundle	Brown Bundle	棕色收纳袋	啡色收納袋	棕色束口袋	褐皮囊	茶色のバンドル	갈색 꾸러미	Túi bọc nâu
 item.minecraft.brown_dye	Brown Dye	棕色染料	啡色染料	棕色染料	褐染	茶色の染料	갈색 염료	Bột nhuộm nâu
-item.minecraft.brown_egg	Brown Egg	？	？	？	？	？	？	？
+item.minecraft.brown_egg	Brown Egg	棕色鸡蛋	啡色雞蛋	棕色雞蛋	褐雞卵	茶色の卵	갈색 달걀	Trứng nâu
 item.minecraft.brush	Brush	刷子	毛刷	刷子	刷	ブラシ	솔	Chổi quét
 item.minecraft.bucket	Bucket	铁桶	鐵桶	鐵桶	桶	バケツ	양동이	Xô
 item.minecraft.bundle	Bundle	收纳袋	收納袋	束口袋	皮囊	バンドル	꾸러미	Túi bọc
