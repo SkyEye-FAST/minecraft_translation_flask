@@ -113,7 +113,7 @@ advancements.story.enter_the_end.title	The End?	结束了？	結束咗？	結束
 advancements.story.enter_the_nether.title	We Need to Go Deeper	勇往直下	向下開拓	我們必須更深入一點	業火填膺	さらなる深みへ	더 깊은 곳으로	Chúng ta cần tiến sâu hơn
 advancements.story.follow_ender_eye.title	Eye Spy	隔墙有眼	隔牆有眼	隔牆有眼	望眼欲穿	アイ・スパイ	스무고개	Mắt gián điệp
 advancements.story.form_obsidian.title	Ice Bucket Challenge	冰桶挑战	冰桶挑戰	冰桶挑戰	冰火凝萃	アイス・バケツ・チャレンジ	아이스 버킷 챌린지	Thử thách nước đá
-advancements.story.iron_tools.title	Isn't It Iron Pick	这不是铁镐么	呢把就係鐵鎬？	莫非這是鐵鎬	此非鐵鎬邪？	鉄のツルハシで決まり	이젠 철 좀 들어라	Cuốc sắt, phải không?
+advancements.story.iron_tools.title	Isn't It Iron Pick	这不是铁镐么	呢把就係鐵鎬？	莫非這是鐵鎬	此非鐵鎬邪？	鉄のツルハシで決まり	이젠 철 좀 들어라	Cuốc chim sắt đây rồi
 advancements.story.lava_bucket.title	Hot Stuff	热腾腾的	新鮮滾熱辣	火熱的東西	炙手可熱	ホットスタッフ	화끈한 화제	Món đồ nóng bỏng
 advancements.story.mine_diamond.title	Diamonds!	钻石！	鑽石！	鑽石！	金剛石！	ダイヤモンド！	다이아몬드다!	Kim cương!
 advancements.story.mine_stone.title	Stone Age	石器时代	石器時代	石器時代	巖藝之代	石器時代	석기 시대	Thời kì đồ đá
@@ -332,7 +332,7 @@ block.minecraft.bubble_coral_block	Bubble Coral Block	气泡珊瑚块	氣泡珊�
 block.minecraft.bubble_coral_fan	Bubble Coral Fan	气泡珊瑚扇	扇狀氣泡珊瑚	扇狀氣泡珊瑚	扇狀泡珊瑚	ミズタマウチワサンゴ	부채형 거품 산호	San hô bong bóng hình quạt
 block.minecraft.bubble_coral_wall_fan	Bubble Coral Wall Fan	墙上的气泡珊瑚扇	牆上的扇狀氣泡珊瑚	牆上的扇狀氣泡珊瑚	壁中扇狀泡珊瑚	壁付きのミズタマウチワサンゴ	부채형 거품 산호 벽	Cành san hô bong bóng hình quạt
 block.minecraft.budding_amethyst	Budding Amethyst	紫水晶母岩	紫水晶母岩	紫水晶芽床	蘊芽紫水玉	芽生えたアメジスト	싹 틔우는 자수정	Nụ thạch anh tím
-block.minecraft.bush	Bush	灌木丛	灌木叢	灌木叢	叢薄	茂み	덤불	Bụi cây
+block.minecraft.bush	Bush	灌木丛	灌木叢	灌木叢	叢	茂み	덤불	Bụi cây
 block.minecraft.cactus	Cactus	仙人掌	仙人掌	仙人掌	仙人掌	サボテン	선인장	Xương rồng
 block.minecraft.cactus_flower	Cactus Flower	仙人掌花	仙人掌花	仙人掌花	仙人掌花	サボテンの花	선인장 꽃	Hoa xương rồng
 block.minecraft.cake	Cake	蛋糕	蛋糕	蛋糕	洋糕	ケーキ	케이크	Bánh ngọt
@@ -416,7 +416,7 @@ block.minecraft.cracked_polished_blackstone_bricks	Cracked Polished Blackstone B
 block.minecraft.cracked_stone_bricks	Cracked Stone Bricks	裂纹石砖	裂紋石磚	裂紋石磚	裂磚	ひび割れた石レンガ	금 간 석재 벽돌	Gạch đá nứt
 block.minecraft.crafter	Crafter	合成器	合成器	合成器	製械	自動作業台	제작기	Máy chế tạo
 block.minecraft.crafting_table	Crafting Table	工作台	工作台	工作台	製物案	作業台	제작대	Bàn chế tạo
-block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	異響之心	嘎枝之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái kẽo kẹt
+block.minecraft.creaking_heart	Creaking Heart	嘎枝之心	異響之心	嘎枝之心	䦪心	クリーキングの心臓	크리킹 심장	Trái tim của quái cọt kẹt
 block.minecraft.creeper_head	Creeper Head	苦力怕的头	Creeper 頭顱	苦力怕頭顱	伏臨首	クリーパーの頭	크리퍼 머리	Đầu Creeper
 block.minecraft.creeper_wall_head	Creeper Wall Head	墙上的苦力怕的头	牆上的 Creeper 頭顱	牆上的苦力怕頭顱	壁中伏臨首	壁に付けられたクリーパーの頭	크리퍼 벽 머리	Đầu Creeper trên tường
 block.minecraft.crimson_button	Crimson Button	绯红木按钮	猩紅菌木按鈕	緋紅蕈木按鈕	緋蕈木鈕	真紅のボタン	진홍빛 버튼	Nút đỏ thẫm
@@ -565,7 +565,7 @@ block.minecraft.fire_coral	Fire Coral	火珊瑚	火珊瑚	火珊瑚	火珊瑚	�
 block.minecraft.fire_coral_block	Fire Coral Block	火珊瑚块	火珊瑚方塊	火珊瑚方塊	火珊瑚塊	ミレポラサンゴブロック	불 산호 블록	Khối san hô lửa
 block.minecraft.fire_coral_fan	Fire Coral Fan	火珊瑚扇	扇狀火珊瑚	扇狀火珊瑚	扇狀火珊瑚	ミレポラウチワサンゴ	부채형 불 산호	San hô lửa hình quạt
 block.minecraft.fire_coral_wall_fan	Fire Coral Wall Fan	墙上的火珊瑚扇	牆上的扇狀火珊瑚	牆上的扇狀火珊瑚	壁中扇狀火珊瑚	壁付きのミレポラウチワサンゴ	부채형 불 산호 벽	Cành san hô lửa hình quạt
-block.minecraft.firefly_bush	Firefly Bush	萤火虫灌木丛	螢火蟲灌木叢	螢火蟲灌木叢	螢叢薄	ホタルの茂み	반딧불이 덤불	Bụi đom đóm
+block.minecraft.firefly_bush	Firefly Bush	萤火虫灌木丛	螢火蟲灌木叢	螢火蟲灌木叢	螢叢	ホタルの茂み	반딧불이 덤불	Bụi đom đóm
 block.minecraft.fletching_table	Fletching Table	制箭台	製箭台	製箭台	製箭案	矢細工台	화살 작업대	Bàn làm cung tên
 block.minecraft.flower_pot	Flower Pot	花盆	花盆	花盆	盆	植木鉢	화분	Chậu hoa
 block.minecraft.flowering_azalea	Flowering Azalea	盛开的杜鹃花丛	開花的杜鵑叢	開花的杜鵑叢	芳杜鵑	開花したツツジ	꽃 핀 진달래	Đỗ quyên đang trổ bông
@@ -1133,7 +1133,7 @@ block.minecraft.stripped_warped_hyphae	Stripped Warped Hyphae	去皮诡异菌核
 block.minecraft.stripped_warped_stem	Stripped Warped Stem	去皮诡异菌柄	剝皮迷離菌椗	剝皮扭曲蕈柄	既扡譎蕈柄	表皮を剥いだ歪んだ幹	껍질 벗긴 뒤틀린 자루	Cuống kì dị đã cạo vỏ
 block.minecraft.structure_block	Structure Block	结构方块	結構方塊	結構方塊	結構塊	ストラクチャーブロック	구조물 블록	Khối cấu trúc
 block.minecraft.structure_void	Structure Void	结构空位	結構空位	結構空位	築闕	ストラクチャーヴォイド	구조물 공허 공간	Cấu trúc trống
-block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	果蔗	サトウキビ	사탕수수	Cây mía
+block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	甘蔗	サトウキビ	사탕수수	Cây mía
 block.minecraft.sunflower	Sunflower	向日葵	向日葵	向日葵	葵藿	ヒマワリ	해바라기	Hướng dương
 block.minecraft.suspicious_gravel	Suspicious Gravel	可疑的沙砾	可疑的砂礫	可疑的礫石	謎礫	怪しげな砂利	수상한 자갈	Sỏi đáng ngờ
 block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙子	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
@@ -1389,8 +1389,8 @@ entity.minecraft.chicken	Chicken	鸡	雞	雞	雞	ニワトリ	닭	Con gà
 entity.minecraft.cod	Cod	鳕鱼	鱈魚	鱈魚	鱈	タラ	대구	Cá tuyết
 entity.minecraft.command_block_minecart	Minecart with Command Block	命令方块矿车	命令方塊礦車	指令方塊礦車	命令塊礦車	コマンドブロック付きのトロッコ	명령 블록이 실린 광산 수레	Xe mỏ có khối lệnh
 entity.minecraft.cow	Cow	牛	牛	牛	牛	ウシ	소	Con bò
-entity.minecraft.creaking	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái kẽo kẹt
-entity.minecraft.creaking_transient	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái kẽo kẹt
+entity.minecraft.creaking	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
+entity.minecraft.creaking_transient	Creaking	嘎枝	異響樹妖	嘎枝	䦪鬼	クリーキング	크리킹	Quái cọt kẹt
 entity.minecraft.creeper	Creeper	苦力怕	Creeper	苦力怕	伏臨	クリーパー	크리퍼	Creeper
 entity.minecraft.dark_oak_boat	Dark Oak Boat	深色橡木船	黑橡木船	黑橡木船	黯柞舟	ダークオークのボート	짙은 참나무 보트	Thuyền gỗ sồi sẫm
 entity.minecraft.dark_oak_chest_boat	Dark Oak Boat with Chest	深色橡木运输船	儲物箱黑橡木船	儲物箱黑橡木船	黯柞艚	チェスト付きのダークオークのボート	상자가 실린 짙은 참나무 보트	Thuyền gỗ sồi sẫm có rương
@@ -1481,7 +1481,7 @@ entity.minecraft.sniffer	Sniffer	嗅探兽	嗅探獸	嗅探獸	嗅獸	スニッ�
 entity.minecraft.snow_golem	Snow Golem	雪傀儡	雪人	雪人	雪傀儡	スノウゴーレム	눈 골렘	Người tuyết
 entity.minecraft.snowball	Snowball	雪球	雪球	雪球	雪團	雪玉	눈덩이	Bóng tuyết
 entity.minecraft.spawner_minecart	Minecart with Monster Spawner	刷怪笼矿车	生怪籠礦車	生怪磚礦車	孳衍籠礦車	モンスタースポナー付きのトロッコ	몬스터 생성기가 실린 광산 수레	Xe mỏ có lồng triệu hồi quái vật
-entity.minecraft.spectral_arrow	Spectral Arrow	光灵箭	追跡之箭	追跡之箭	爍靈矢	光の矢	분광 화살	Mũi tên phát sáng
+entity.minecraft.spectral_arrow	Spectral Arrow	光灵箭	追跡之箭	追跡之箭	爍靈矢	光の矢	분광 화살	Mũi tên ma quỷ
 entity.minecraft.spider	Spider	蜘蛛	蜘蛛	蜘蛛	蛛	クモ	거미	Nhện
 entity.minecraft.splash_potion	Splash Potion	喷溅药水	飛濺藥水	飛濺藥水	噴劑	スプラッシュポーション	투척용 물약	Thuốc có thể ném được
 entity.minecraft.spruce_boat	Spruce Boat	云杉木船	杉木船	杉木船	樅舟	トウヒのボート	가문비나무 보트	Thuyền gỗ vân sam
@@ -1616,7 +1616,7 @@ item.minecraft.cooked_salmon	Cooked Salmon	熟鲑鱼	熟三文魚	烤鮭魚	鮭�
 item.minecraft.cookie	Cookie	曲奇	曲奇	餅乾	餠	クッキー	쿠키	Bánh quy
 item.minecraft.copper_ingot	Copper Ingot	铜锭	銅錠	銅錠	銅錠	銅インゴット	구리 주괴	Phôi đồng
 item.minecraft.cow_spawn_egg	Cow Spawn Egg	牛刷怪蛋	牛 生成蛋	牛 生怪蛋	孳牛之卵	ウシのスポーンエッグ	소 생성 알	Trứng sinh ra Con bò
-item.minecraft.creaking_spawn_egg	Creaking Spawn Egg	嘎枝刷怪蛋	異響樹妖 生成蛋	嘎枝 生怪蛋	孳䦪鬼之卵	クリーキングのスポーンエッグ	크리킹 생성 알	Trứng sinh ra Quái kẽo kẹt
+item.minecraft.creaking_spawn_egg	Creaking Spawn Egg	嘎枝刷怪蛋	異響樹妖 生成蛋	嘎枝 生怪蛋	孳䦪鬼之卵	クリーキングのスポーンエッグ	크리킹 생성 알	Trứng sinh ra Quái cọt kẹt
 item.minecraft.creeper_banner_pattern	Banner Pattern	旗帜图案	橫額圖案	旗幟圖案	旗楷	旗の模様	현수막 무늬	Hoa văn cờ hiệu
 item.minecraft.creeper_spawn_egg	Creeper Spawn Egg	苦力怕刷怪蛋	Creeper 生成蛋	苦力怕 生怪蛋	孳伏臨之卵	クリーパーのスポーンエッグ	크리퍼 생성 알	Trứng sinh ra Creeper
 item.minecraft.crossbow	Crossbow	弩	弩	弩	弩	クロスボウ	쇠뇌	Cây nỏ
