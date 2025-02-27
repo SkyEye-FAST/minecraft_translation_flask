@@ -1044,7 +1044,7 @@ block.minecraft.sculk_vein	Sculk Vein	幽匿脉络	沉靈脈絡	伏聆脈絡	幽
 block.minecraft.sea_lantern	Sea Lantern	海晶灯	海燈籠	海燈籠	海磷燈	シーランタン	바다 랜턴	Đèn biển
 block.minecraft.sea_pickle	Sea Pickle	海泡菜	海鞘	海鞘	海鞘	シーピクルス	불우렁쉥이	Dưa muối biển
 block.minecraft.seagrass	Seagrass	海草	海草	海草	海艸	海草	해초	Cỏ biển
-block.minecraft.short_dry_grass	Short Dry Grass	矮枯草丛	矮枯草	矮乾草	淺乾艸	背の低い枯れ草	키 작은 마른 잔디	Cỏ khô thấp
+block.minecraft.short_dry_grass	Short Dry Grass	矮枯草丛	矮枯草	矮枯草	淺乾艸	背の低い枯れ草	키 작은 마른 잔디	Cỏ khô thấp
 block.minecraft.short_grass	Short Grass	矮草丛	矮草叢	矮草	淺艸	背の低い草	키 작은 잔디	Cỏ thấp
 block.minecraft.shroomlight	Shroomlight	菌光体	菌光體	蕈光體	螢蕈體	シュルームライト	버섯불	Đèn nấm
 block.minecraft.shulker_box	Shulker Box	潜影盒	界伏盒	界伏盒	贆櫝	シュルカーボックス	셜커 상자	Hộp Shulker
@@ -1133,12 +1133,12 @@ block.minecraft.stripped_warped_hyphae	Stripped Warped Hyphae	去皮诡异菌核
 block.minecraft.stripped_warped_stem	Stripped Warped Stem	去皮诡异菌柄	剝皮迷離菌椗	剝皮扭曲蕈柄	既扡譎蕈柄	表皮を剥いだ歪んだ幹	껍질 벗긴 뒤틀린 자루	Cuống kì dị đã cạo vỏ
 block.minecraft.structure_block	Structure Block	结构方块	結構方塊	結構方塊	結構塊	ストラクチャーブロック	구조물 블록	Khối cấu trúc
 block.minecraft.structure_void	Structure Void	结构空位	結構空位	結構空位	築闕	ストラクチャーヴォイド	구조물 공허 공간	Cấu trúc trống
-block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	甘蔗	サトウキビ	사탕수수	Cây mía
+block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	果蔗	サトウキビ	사탕수수	Cây mía
 block.minecraft.sunflower	Sunflower	向日葵	向日葵	向日葵	葵藿	ヒマワリ	해바라기	Hướng dương
 block.minecraft.suspicious_gravel	Suspicious Gravel	可疑的沙砾	可疑的砂礫	可疑的礫石	謎礫	怪しげな砂利	수상한 자갈	Sỏi đáng ngờ
 block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙子	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
 block.minecraft.sweet_berry_bush	Sweet Berry Bush	甜浆果丛	甜莓灌木叢	甜莓灌木叢	甜莓叢	スイートベリーの低木	달콤한 열매 덤불	Bụi cây mọng ngọt
-block.minecraft.tall_dry_grass	Tall Dry Grass	高枯草丛	高枯草	高乾草	高枯艸	背の高い枯れ草	키 큰 마른 잔디	Cỏ khô cao
+block.minecraft.tall_dry_grass	Tall Dry Grass	高枯草丛	高枯草	高枯草	高枯艸	背の高い枯れ草	키 큰 마른 잔디	Cỏ khô cao
 block.minecraft.tall_grass	Tall Grass	高草丛	長草叢	芒草	高艸	背の高い草	키 큰 잔디	Cỏ cao
 block.minecraft.tall_seagrass	Tall Seagrass	高海草	長海草	高海草	高海艸	背の高い海草	키 큰 해초	Cỏ biển cao
 block.minecraft.target	Target	标靶	標靶	標靶	靶	的	과녁	Bia bắn
