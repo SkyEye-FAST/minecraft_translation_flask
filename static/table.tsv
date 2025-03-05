@@ -15,7 +15,7 @@ advancements.adventure.kill_all_mobs.title	Monsters Hunted	资深怪物猎人	�
 advancements.adventure.kill_mob_near_sculk_catalyst.title	It Spreads	它蔓延了	佢蔓延咗	它蔓延了	蠶食鯨吞	「それ」は侵食する	퍼져간다	Nó lan ra
 advancements.adventure.lighten_up.title	Lighten Up	铜光焕发	「銅」光煥發	銅光煥發	銅光煥發	明るくなーれ	불 좀 켜 줄래?	Sáng lên nào
 advancements.adventure.lightning_rod_with_villager_no_fire.title	Surge Protector	电涌保护器	突波保護裝置	突波保護器	驅雷掣電	危機一髪	번개 멈춰!	Thiết bị chống sốc điện
-advancements.adventure.minecraft_trials_edition.title	Minecraft: Trial(s) Edition	Minecraft：试炼版	Minecraft：試煉版	Minecraft: 試煉版	礦藝：煉武版	Minecraft: トライアル版	인생은 시련의 연속	Minecraft: Phiên bản (nhiều) thử thách
+advancements.adventure.minecraft_trials_edition.title	Minecraft: Trial(s) Edition	Minecraft：试炼版	Minecraft：試煉版	Minecraft: 試煉版	礦藝：煉武版	Minecraft: トライアル版	인생은 시련의 연속	Minecraft: Bản thử thách
 advancements.adventure.ol_betsy.title	Ol' Betsy	扣下悬刀	扣下扳機	扣下扳機	一觸即發	おてんば	부러진 화살	Nỏ liên châu
 advancements.adventure.overoverkill.title	Over-Overkill	天赐良击	揼到七彩	天賜良擊	痛貫天靈	超・やり過ぎ	하늘에서 철퇴가 내린다면	Thảm sát
 advancements.adventure.play_jukebox_in_meadows.title	Sound of Music	音乐之声	仙樂飄飄處處聞	真善美	此曲衹應天上有	サウンド・オブ・ミュージック	사운드 오브 뮤직	Giai điệu hạnh phúc
@@ -65,7 +65,7 @@ advancements.husbandry.fishy_business.title	Fishy Business	腥味十足的生意
 advancements.husbandry.froglights.title	With Our Powers Combined!	相映生辉！	相映生輝！	同心協力！	珠聯璧合！	僕たちの力を合わせて！	우리의 힘을 합친다면!	Hợp nhất sức mạnh!
 advancements.husbandry.kill_axolotl_target.title	The Healing Power of Friendship!	友谊的治愈力！	友誼的治療波動！	療癒力滿點的友情！	厚誼癒疾！	友情の癒しパワー！	우정의 치유력!	Sức mạnh của tình bạn!
 advancements.husbandry.leash_all_frog_variants.title	When the Squad Hops into Town	呱呱队出动	呱呱隊出動	蛙軍壓境	眾鼃躍集	みんなで町に跳び込もう	개구리 삼총사 출동!	Biệt đội ếch ộp
-advancements.husbandry.make_a_sign_glow.title	Glow and Behold!	眼前一亮！	螢光奪目！	光輝奪目！	熒熒爍目！	この輝きに驚くことなかれ！	밝은 말 고운 말	Sáng ơi là sáng!
+advancements.husbandry.make_a_sign_glow.title	Glow and Behold!	眼前一亮！	熒光奪目！	光輝奪目！	熒熒爍目！	この輝きに驚くことなかれ！	밝은 말 고운 말	Sáng ơi là sáng!
 advancements.husbandry.netherite_hoe.title	Serious Dedication	终极奉献	敬業樂業	敬業樂業	躬耕不輟	真面目な献身	도를 넘은 전념	Sự cống hiến nghiêm túc
 advancements.husbandry.obtain_sniffer_egg.title	Smells Interesting	怪味蛋	逸聞趣事	逸聞趣事	饒有興味	興味深い匂い	흥미로운 냄새	Có mùi thú vị đây
 advancements.husbandry.plant_any_sniffer_seed.title	Planting the Past	播种往事	播種往事	種種往事	繩其祖畝	遥か古の植物	과거를 심다	Gieo trồng quá khứ
@@ -664,7 +664,7 @@ block.minecraft.ladder	Ladder	梯子	梯	梯子	梯	はしご	사다리	Thang
 block.minecraft.lantern	Lantern	灯笼	燈籠	燈籠	燈籠	ランタン	랜턴	Đèn lồng
 block.minecraft.lapis_block	Block of Lapis Lazuli	青金石块	青金石磚	青金石方塊	群青塊	ラピスラズリブロック	청금석 블록	Khối ngọc lưu ly
 block.minecraft.lapis_ore	Lapis Lazuli Ore	青金石矿石	青金石礦	青金石礦	群青礦	ラピスラズリ鉱石	청금석 광석	Quặng ngọc lưu ly
-block.minecraft.large_amethyst_bud	Large Amethyst Bud	大型紫晶芽	大型紫晶芽	大型紫水晶芽	大紫水玉苗	大きなアメジストの芽	큰 자수정 봉오리	Nụ thạch anh tím lớn
+block.minecraft.large_amethyst_bud	Large Amethyst Bud	大型紫晶芽	大型紫水晶芽	大型紫水晶芽	大紫水玉苗	大きなアメジストの芽	큰 자수정 봉오리	Nụ thạch anh tím lớn
 block.minecraft.large_fern	Large Fern	大型蕨	大型蕨	大型蕨類	大蕨	大きなシダ	큰 고사리	Dương xỉ lớn
 block.minecraft.lava	Lava	熔岩	熔岩	熔岩	熔巖	溶岩	용암	Dung nham
 block.minecraft.lava_cauldron	Lava Cauldron	装有熔岩的炼药锅	裝熔岩的鍋	裝熔岩的鍋釜	熔巖居之釜	溶岩入りの大釜	용암 가마솥	Vạc dung nham
@@ -750,7 +750,7 @@ block.minecraft.mangrove_trapdoor	Mangrove Trapdoor	红树木活板门	紅樹木
 block.minecraft.mangrove_wall_hanging_sign	Mangrove Wall Hanging Sign	墙上的悬挂式红树木告示牌	牆上的紅樹木吊牌	牆上的懸掛式紅樹林木告示牌	壁中沒潮木懸牌	壁に付けられたマングローブの吊り看板	맹그로브나무 벽 매다는 표지판	Tấm biển treo gỗ đước trên tường
 block.minecraft.mangrove_wall_sign	Mangrove Wall Sign	墙上的红树木告示牌	牆上的紅樹木指示牌	牆上的紅樹林木告示牌	壁中沒潮木牌	壁に付けられたマングローブの看板	맹그로브나무 벽 표지판	Tấm biển gỗ đước treo tường
 block.minecraft.mangrove_wood	Mangrove Wood	红树木	紅樹木	紅樹林木塊	沒潮木	マングローブの木	맹그로브나무	Gỗ đước
-block.minecraft.medium_amethyst_bud	Medium Amethyst Bud	中型紫晶芽	中型紫晶芽	中型紫水晶芽	中紫水玉苗	中くらいのアメジストの芽	중간 자수정 봉오리	Nụ thạch anh tím trung bình
+block.minecraft.medium_amethyst_bud	Medium Amethyst Bud	中型紫晶芽	中型紫水晶芽	中型紫水晶芽	中紫水玉苗	中くらいのアメジストの芽	중간 자수정 봉오리	Nụ thạch anh tím trung bình
 block.minecraft.melon	Melon	西瓜	西瓜	西瓜	寒瓜	スイカ	수박	Dưa hấu
 block.minecraft.melon_stem	Melon Stem	西瓜茎	西瓜椗	西瓜梗	寒瓜莖	スイカの茎	수박 줄기	Cuống dưa hấu
 block.minecraft.moss_block	Moss Block	苔藓块	青苔方塊	苔蘚方塊	蘚塊	苔ブロック	이끼 블록	Khối rêu
@@ -1044,14 +1044,14 @@ block.minecraft.sculk_vein	Sculk Vein	幽匿脉络	沉靈脈絡	伏聆脈絡	幽
 block.minecraft.sea_lantern	Sea Lantern	海晶灯	海燈籠	海燈籠	海磷燈	シーランタン	바다 랜턴	Đèn biển
 block.minecraft.sea_pickle	Sea Pickle	海泡菜	海鞘	海鞘	海鞘	シーピクルス	불우렁쉥이	Dưa muối biển
 block.minecraft.seagrass	Seagrass	海草	海草	海草	海艸	海草	해초	Cỏ biển
-block.minecraft.short_dry_grass	Short Dry Grass	矮枯草丛	矮枯草	矮枯草	淺乾艸	背の低い枯れ草	키 작은 마른 잔디	Cỏ khô thấp
+block.minecraft.short_dry_grass	Short Dry Grass	矮枯草丛	矮枯草	矮枯草	淺枯艸	背の低い枯れ草	키 작은 마른 잔디	Cỏ khô thấp
 block.minecraft.short_grass	Short Grass	矮草丛	矮草叢	矮草	淺艸	背の低い草	키 작은 잔디	Cỏ thấp
 block.minecraft.shroomlight	Shroomlight	菌光体	菌光體	蕈光體	螢蕈體	シュルームライト	버섯불	Đèn nấm
 block.minecraft.shulker_box	Shulker Box	潜影盒	界伏盒	界伏盒	贆櫝	シュルカーボックス	셜커 상자	Hộp Shulker
 block.minecraft.skeleton_skull	Skeleton Skull	骷髅头颅	骷髏骨頭	骷髏頭顱	髑首	スケルトンの頭蓋骨	스켈레톤 해골	Đầu lâu bộ xương
 block.minecraft.skeleton_wall_skull	Skeleton Wall Skull	墙上的骷髅头颅	牆上的骷髏骨頭	牆上的骷髏頭顱	壁中髑首	壁に付けられたスケルトンの頭蓋骨	스켈레톤 벽 해골	Đầu lâu bộ xương trên tường
 block.minecraft.slime_block	Slime Block	黏液块	史萊姆方塊	史萊姆方塊	黏膠塊	スライムブロック	슬라임 블록	Khối chất nhờn
-block.minecraft.small_amethyst_bud	Small Amethyst Bud	小型紫晶芽	小型紫晶芽	小型紫水晶芽	小紫水玉苗	小さなアメジストの芽	작은 자수정 봉오리	Nụ thạch anh tím nhỏ
+block.minecraft.small_amethyst_bud	Small Amethyst Bud	小型紫晶芽	小型紫水晶芽	小型紫水晶芽	小紫水玉苗	小さなアメジストの芽	작은 자수정 봉오리	Nụ thạch anh tím nhỏ
 block.minecraft.small_dripleaf	Small Dripleaf	小型垂滴叶	細懸葉草	小懸葉草	幼垂滴葉	小さなドリップリーフ	작은 흘림잎	Lá nhỏ giọt nhỏ
 block.minecraft.smithing_table	Smithing Table	锻造台	鍛造台	鍛造台	鍛案	鍛冶台	대장장이 작업대	Bàn rèn
 block.minecraft.smoker	Smoker	烟熏炉	煙燻爐	煙燻爐	燻爐	燻製器	훈연기	Lò hun khói
@@ -1133,7 +1133,7 @@ block.minecraft.stripped_warped_hyphae	Stripped Warped Hyphae	去皮诡异菌核
 block.minecraft.stripped_warped_stem	Stripped Warped Stem	去皮诡异菌柄	剝皮迷離菌椗	剝皮扭曲蕈柄	既扡譎蕈柄	表皮を剥いだ歪んだ幹	껍질 벗긴 뒤틀린 자루	Cuống kì dị đã cạo vỏ
 block.minecraft.structure_block	Structure Block	结构方块	結構方塊	結構方塊	結構塊	ストラクチャーブロック	구조물 블록	Khối cấu trúc
 block.minecraft.structure_void	Structure Void	结构空位	結構空位	結構空位	築闕	ストラクチャーヴォイド	구조물 공허 공간	Cấu trúc trống
-block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	果蔗	サトウキビ	사탕수수	Cây mía
+block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	蔗	サトウキビ	사탕수수	Cây mía
 block.minecraft.sunflower	Sunflower	向日葵	向日葵	向日葵	葵藿	ヒマワリ	해바라기	Hướng dương
 block.minecraft.suspicious_gravel	Suspicious Gravel	可疑的沙砾	可疑的砂礫	可疑的礫石	謎礫	怪しげな砂利	수상한 자갈	Sỏi đáng ngờ
 block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙子	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
@@ -1764,7 +1764,7 @@ item.minecraft.lingering_potion.effect.empty	Lingering Uncraftable Potion	不可
 item.minecraft.lingering_potion.effect.fire_resistance	Lingering Potion of Fire Resistance	滞留型抗火药水	滯留型抗火藥水	滯留 抗火藥水	抗火滯劑	耐火の残留ポーション	잔류형 화염 저항의 물약	Thuốc kháng lửa kéo dài
 item.minecraft.lingering_potion.effect.harming	Lingering Potion of Harming	滞留型伤害药水	滯留型傷害藥水	滯留 傷害藥水	瞬傷滯劑	負傷の残留ポーション	잔류형 고통의 물약	Thuốc sát thương kéo dài
 item.minecraft.lingering_potion.effect.healing	Lingering Potion of Healing	滞留型治疗药水	滯留型治療藥水	滯留 治療藥水	瞬療滯劑	治癒の残留ポーション	잔류형 치유의 물약	Thuốc hồi máu kéo dài
-item.minecraft.lingering_potion.effect.infested	Lingering Potion of Infestation	滞留型虫蚀药水	滯留型寄生藥水	滯留 蛀蝕藥水	蟫蝕滯劑	虫食いの残留ポーション	잔류형 벌레 먹음의 물약	Thuốc nhiễm khuẩn kéo dài
+item.minecraft.lingering_potion.effect.infested	Lingering Potion of Infestation	滞留型虫蚀药水	滯留型蛀蝕藥水	滯留 蛀蝕藥水	蟫蝕滯劑	虫食いの残留ポーション	잔류형 벌레 먹음의 물약	Thuốc nhiễm khuẩn kéo dài
 item.minecraft.lingering_potion.effect.invisibility	Lingering Potion of Invisibility	滞留型隐身药水	滯留型隱形藥水	滯留 隱形藥水	隱滯劑	透明化の残留ポーション	잔류형 투명화 물약	Thuốc tàng hình kéo dài
 item.minecraft.lingering_potion.effect.leaping	Lingering Potion of Leaping	滞留型跳跃药水	滯留型跳躍藥水	滯留 跳躍藥水	捷滯劑	跳躍の残留ポーション	잔류형 도약의 물약	Thuốc nhảy cao kéo dài
 item.minecraft.lingering_potion.effect.levitation	Lingering Potion of Levitation	滞留型飘浮药水	滯留型飄浮藥水	滯留 懸浮藥水	浮滯劑	浮遊の残留ポーション	잔류형 공중 부양의 물약	Thuốc bay lên kéo dài
@@ -1969,7 +1969,7 @@ item.minecraft.splash_potion.effect.empty	Splash Uncraftable Potion	不可合成
 item.minecraft.splash_potion.effect.fire_resistance	Splash Potion of Fire Resistance	喷溅型抗火药水	飛濺型抗火藥水	飛濺 抗火藥水	抗火之噴劑	耐火のスプラッシュポーション	투척용 화염 저항의 물약	Thuốc kháng lửa có thể ném được
 item.minecraft.splash_potion.effect.harming	Splash Potion of Harming	喷溅型伤害药水	飛濺型傷害藥水	飛濺 傷害藥水	瞬傷噴劑	負傷のスプラッシュポーション	투척용 고통의 물약	Thuốc sát thương có thể ném được
 item.minecraft.splash_potion.effect.healing	Splash Potion of Healing	喷溅型治疗药水	飛濺型治療藥水	飛濺 治療藥水	瞬療噴劑	治癒のスプラッシュポーション	투척용 치유의 물약	Thuốc hồi máu có thể ném được
-item.minecraft.splash_potion.effect.infested	Splash Potion of Infestation	喷溅型虫蚀药水	飛濺型寄生藥水	飛濺 蛀蝕藥水	蟫蝕噴劑	虫食いのスプラッシュポーション	투척용 벌레 먹음의 물약	Thuốc nhiễm khuẩn có thể ném được
+item.minecraft.splash_potion.effect.infested	Splash Potion of Infestation	喷溅型虫蚀药水	飛濺型蛀蝕藥水	飛濺 蛀蝕藥水	蟫蝕噴劑	虫食いのスプラッシュポーション	투척용 벌레 먹음의 물약	Thuốc nhiễm khuẩn có thể ném được
 item.minecraft.splash_potion.effect.invisibility	Splash Potion of Invisibility	喷溅型隐身药水	飛濺型隱形藥水	飛濺 隱形藥水	隱噴劑	透明化のスプラッシュポーション	투척용 투명화 물약	Thuốc tàng hình có thể ném được
 item.minecraft.splash_potion.effect.leaping	Splash Potion of Leaping	喷溅型跳跃药水	飛濺型跳躍藥水	飛濺 跳躍藥水	捷噴劑	跳躍のスプラッシュポーション	투척용 도약의 물약	Thuốc nhảy cao có thể ném được
 item.minecraft.splash_potion.effect.levitation	Splash Potion of Levitation	喷溅型飘浮药水	飛濺型飄浮藥水	飛濺 懸浮藥水	浮噴劑	浮遊のスプラッシュポーション	투척용 공중 부양의 물약	Thuốc bay lên có thể ném được
