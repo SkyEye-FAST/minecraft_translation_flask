@@ -43,7 +43,7 @@ advancements.adventure.very_very_frightening.title	Very Very Frightening	魔女�
 advancements.adventure.voluntary_exile.title	Voluntary Exile	自我放逐	自我放逐	自我放逐	禍不單行	自主的な亡命	자진 유배	Tình nguyện bị lưu đày
 advancements.adventure.walk_on_powder_snow_with_leather_boots.title	Light as a Rabbit	轻功雪上飘	輕功雪上飄	輕功雪上飄	履雪無痕	ウサギのように軽く	토끼처럼 가볍게	Nhẹ tựa lông hồng
 advancements.adventure.who_needs_rockets.title	Who Needs Rockets?	还要啥火箭啊？	使乜要火箭？	誰還需要火箭？	扶搖直上	ロケットいらず	누가 로켓이 필요하대?	Ai cần tên lửa?
-advancements.adventure.whos_the_pillager_now.title	Who's the Pillager Now?	现在谁才是掠夺者？	乜嘢叫風水輪流轉？	現在誰才是掠奪者？	風水輪流轉	どっちが略奪者？	이제 누가 약탈자지?	Giờ ai mới là Kẻ cướp đây?
+advancements.adventure.whos_the_pillager_now.title	Who's the Pillager Now?	现在谁才是掠夺者？	乜嘢叫風水輪流轉？	現在誰才是掠奪者？	風水輪流轉	どっちが略奪者？	이제 누가 약탈자지?	Giờ ai mới là kẻ cướp đây?
 advancements.end.dragon_breath.title	You Need a Mint	你需要来点薄荷糖	你需要飲碗涼茶	你需要降火氣	君須涼茶	口臭に気をつけよう	양치질이 필요해 보이는걸	Bạn cần một cây bạc hà
 advancements.end.dragon_egg.title	The Next Generation	下一世代	下一世代	銀河飛龍	生生不息	ザ・ネクストジェネレーション	그다음 세대	Thế hệ mới
 advancements.end.elytra.title	Sky's the Limit	天空即为极限	天下無難事	天下無難事	不畏浮雲遮望眼	空はどこまでも高く	불가능은 없다	Giới hạn của bầu trời
@@ -82,7 +82,7 @@ advancements.husbandry.tame_an_animal.title	Best Friends Forever	永恒的伙伴
 advancements.husbandry.wax_off.title	Wax Off	脱蜡	除蠟	除蠟	除蠟	錆止め落とし	밀랍을 벗기자	Cạo sáp ra
 advancements.husbandry.wax_on.title	Wax On	涂蜡	打蠟	上蠟	塗蠟	錆止め	밀랍을 칠하자	Bôi sáp vào
 advancements.husbandry.whole_pack.title	The Whole Pack	群狼聚首	羣狼聚首	琳狼滿目	群狼有首	ワンチーム	외롭지 못한 늑대	Gia đình nhà sói
-advancements.nether.all_effects.title	How Did We Get Here?	为什么会变成这样呢？	點解會變成咁樣？	我們是如何走到這地步的？	神魂顛倒	どうやってここまで？	어쩌다 이 지경까지	Ta tới đây bằng cách nào vậy?
+advancements.nether.all_effects.title	How Did We Get Here?	为什么会变成这样呢？	點解會變成咁樣？	我們是如何走到這地步的？	神魂顛倒	どうやってここまで？	어쩌다 이 지경까지	Ta đến đây bằng cách nào vậy?
 advancements.nether.all_potions.title	A Furious Cocktail	狂乱的鸡尾酒	杯酒有啲勁	猛烈的雞尾酒	百味雜陳	猛烈なカクテル	뿅가는 폭탄주	Ly Cocktail nguy hiểm
 advancements.nether.brew_potion.title	Local Brewery	本地酿造厂	自家釀造廠	道地的釀造坊	靈丹妙藥	町のお薬屋さん	물약 양조장	Pha chế thuốc tại nhà
 advancements.nether.charge_respawn_anchor.title	"Not Quite ""Nine"" Lives"	锚没有九条命	唔似「九」條命	非言「九」命	休言九命	人に九生なし	목숨 충전	"Ai sống dai hơn ""Mèo chín mạng""?!"
@@ -539,7 +539,7 @@ block.minecraft.dropper	Dropper	投掷器	投擲器	投擲器	擲械	ドロッ�
 block.minecraft.emerald_block	Block of Emerald	绿宝石块	綠寶石磚	綠寶石方塊	祖母綠塊	エメラルドブロック	에메랄드 블록	Khối ngọc lục bảo
 block.minecraft.emerald_ore	Emerald Ore	绿宝石矿石	綠寶石礦	綠寶石礦	祖母綠礦	エメラルド鉱石	에메랄드 광석	Quặng ngọc lục bảo
 block.minecraft.enchanting_table	Enchanting Table	附魔台	附魔台	附魔台	淬靈案	エンチャントテーブル	마법 부여대	Bàn phù phép
-block.minecraft.end_gateway	End Gateway	末地折跃门	終界折躍門	終界折躍門	終界門關	エンドゲートウェイ	엔드 관문	Cổng vào đảo End
+block.minecraft.end_gateway	End Gateway	末地折跃门	終界折躍門	終界折躍門	終界門關	エンドゲートウェイ	엔드 관문	Cổng nối End
 block.minecraft.end_portal	End Portal	末地传送门	終界傳送門	終界傳送門	終界結界門	エンドポータル	엔드 차원문	Cổng End
 block.minecraft.end_portal_frame	End Portal Frame	末地传送门框架	終界傳送門框	終界傳送門框架	終界結界門匡	エンドポータルフレーム	엔드 차원문 틀	Khung cổng End
 block.minecraft.end_rod	End Rod	末地烛	終界燭	終界燭	終界燭	エンドロッド	엔드 막대기	Thanh gậy End
@@ -1136,7 +1136,7 @@ block.minecraft.structure_void	Structure Void	结构空位	結構空位	結構�
 block.minecraft.sugar_cane	Sugar Cane	甘蔗	蔗	甘蔗	蔗	サトウキビ	사탕수수	Cây mía
 block.minecraft.sunflower	Sunflower	向日葵	向日葵	向日葵	葵藿	ヒマワリ	해바라기	Hướng dương
 block.minecraft.suspicious_gravel	Suspicious Gravel	可疑的沙砾	可疑的砂礫	可疑的礫石	謎礫	怪しげな砂利	수상한 자갈	Sỏi đáng ngờ
-block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙子	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
+block.minecraft.suspicious_sand	Suspicious Sand	可疑的沙子	可疑的沙	可疑的沙	謎沙	怪しげな砂	수상한 모래	Cát đáng ngờ
 block.minecraft.sweet_berry_bush	Sweet Berry Bush	甜浆果丛	甜莓灌木叢	甜莓灌木叢	甜莓叢	スイートベリーの低木	달콤한 열매 덤불	Bụi cây mọng ngọt
 block.minecraft.tall_dry_grass	Tall Dry Grass	高枯草丛	高枯草	高枯草	高枯艸	背の高い枯れ草	키 큰 마른 잔디	Cỏ khô cao
 block.minecraft.tall_grass	Tall Grass	高草丛	長草叢	芒草	高艸	背の高い草	키 큰 잔디	Cỏ cao
@@ -1471,7 +1471,7 @@ entity.minecraft.ravager	Ravager	劫掠兽	劫毀獸	劫毀獸	劫獸	ラヴェ�
 entity.minecraft.salmon	Salmon	鲑鱼	三文魚	鮭魚	鮭	サケ	연어	Cá hồi
 entity.minecraft.sheep	Sheep	绵羊	綿羊	綿羊	綿羊	ヒツジ	양	Con cừu
 entity.minecraft.shulker	Shulker	潜影贝	界伏蚌	界伏蚌	匿贆	シュルカー	셜커	Shulker
-entity.minecraft.shulker_bullet	Shulker Bullet	潜影弹	界伏蚌飛彈	界伏彈	匿贆彈	シュルカーの弾	셜커 탄환	Đạn Shulker
+entity.minecraft.shulker_bullet	Shulker Bullet	潜影弹	界伏蚌飛彈	界伏彈	匿贆彈	シュルカーの弾	셜커 탄환	Đạn shulker
 entity.minecraft.silverfish	Silverfish	蠹虫	蠹魚	蠹魚	蟫	シルバーフィッシュ	좀벌레	Con nhậy bạc
 entity.minecraft.skeleton	Skeleton	骷髅	骷髏骨	骷髏	骷髏	スケルトン	스켈레톤	Bộ xương
 entity.minecraft.skeleton_horse	Skeleton Horse	骷髅马	骷髏骨馬	骷髏馬	骷髏馬	スケルトンホース	스켈레톤 말	Ngựa xương
@@ -1491,7 +1491,7 @@ entity.minecraft.stray	Stray	流浪者	流浪者	流髑	流髑	ストレイ	스�
 entity.minecraft.strider	Strider	炽足兽	熾足獸	熾足獸	熾足獸	ストライダー	스트라이더	Kẻ sải bước
 entity.minecraft.tadpole	Tadpole	蝌蚪	蝌蚪	蝌蚪	蝌蚪	オタマジャクシ	올챙이	Nòng nọc
 entity.minecraft.text_display	Text Display	文本展示实体	文字展示實體	文字展示實體	文示	テキスト表示エンティティ	문자 표시	Hiển thị văn bản
-entity.minecraft.tnt	Primed TNT	被激活的TNT	點着的 TNT	點燃的 TNT	既燃灹藥	着火されたTNT	점화된 TNT	TNT đã châm ngòi
+entity.minecraft.tnt	Primed TNT	被激活的TNT	點燃的 TNT	點燃的 TNT	既燃灹藥	着火されたTNT	점화된 TNT	TNT đã châm ngòi
 entity.minecraft.tnt_minecart	Minecart with TNT	TNT矿车	TNT 礦車	TNT 礦車	灹藥礦車	TNT付きのトロッコ	TNT가 실린 광산 수레	Xe mỏ có TNT
 entity.minecraft.trader_llama	Trader Llama	行商羊驼	商隊羊駝	商駝	商駝	商人のラマ	상인 라마	Lạc đà không bướu của thương nhân
 entity.minecraft.trident	Trident	三叉戟	三叉戟	三叉戟	三叉戟	トライデント	삼지창	Đinh ba
@@ -1938,7 +1938,7 @@ item.minecraft.scute	Scute	鳞甲	鱗甲	鱗甲	鱗	カメのウロコ	인갑	V�
 item.minecraft.sentry_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.shaper_armor_trim_smithing_template	Smithing Template	锻造模板	鍛造模板	鍛造模板	鍛模	鍛冶型	대장장이 형판	Mẫu rèn
 item.minecraft.sheaf_pottery_sherd	Sheaf Pottery Sherd	麦捆纹样陶片	麥捆陶罐碎片	麥捆陶器碎片	秉陶片	麦束の壺の欠片	다발 도자기 조각	Mảnh gốm bó hoa
-item.minecraft.shears	Shears	剪刀	鉸剪	剪刀	鉸	ハサミ	가위	Kéo tỉa
+item.minecraft.shears	Shears	剪刀	剪刀	剪刀	鉸	ハサミ	가위	Kéo tỉa
 item.minecraft.sheep_spawn_egg	Sheep Spawn Egg	绵羊刷怪蛋	綿羊 生成蛋	綿羊 生怪蛋	孳綿羊之卵	ヒツジのスポーンエッグ	양 생성 알	Trứng sinh ra Con cừu
 item.minecraft.shelter_pottery_sherd	Shelter Pottery Sherd	树荫纹样陶片	樹蔭陶罐碎片	樹蔭陶器碎片	蔭陶片	木陰の壺の欠片	피신처 도자기 조각	Mảnh gốm chỗ ẩn náu
 item.minecraft.shield	Shield	盾牌	盾牌	盾牌	盾	盾	방패	Khiên
