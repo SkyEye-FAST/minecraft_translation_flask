@@ -1243,7 +1243,7 @@ block.minecraft.weathered_cut_copper_stairs	Weathered Cut Copper Stairs	锈蚀�
 block.minecraft.weeping_vines	Weeping Vines	垂泪藤	哭泣藤	垂泣藤	垂泣藤	しだれツタ	늘어진 덩굴	Dây leo đẫm máu
 block.minecraft.weeping_vines_plant	Weeping Vines Plant	垂泪藤植株	哭泣藤植株	垂泣藤植株	垂泣藤之株	しだれツタのつる	늘어진 덩굴 식물	Cây dây leo đẫm máu
 block.minecraft.wet_sponge	Wet Sponge	湿海绵	濕海綿	濕海綿	㵖海綿	濡れたスポンジ	젖은 스펀지	Miếng bọt biển ướt
-block.minecraft.wheat	Wheat Crops	小麦植株	小麥	小麥	麥禾	小麦	밀 작물	Cây lúa mì
+block.minecraft.wheat	Wheat Crops	小麦植株	小麥	小麥植株	麥禾	小麦	밀 작물	Cây lúa mì
 block.minecraft.white_banner	White Banner	白色旗帜	白色橫額	白色旗幟	白旗	白色の旗	하얀색 현수막	Cờ hiệu trắng
 block.minecraft.white_bed	White Bed	白色床	白色牀	白色床	白床	白色のベッド	하얀색 침대	Giường trắng
 block.minecraft.white_candle	White Candle	白色蜡烛	白色蠟燭	白色蠟燭	白燭	白色のろうそく	하얀색 초	Nến trắng
@@ -1518,7 +1518,7 @@ filled_map.explorer_jungle	Jungle Explorer Map	丛林探险家地图	叢林探�
 filled_map.explorer_swamp	Swamp Explorer Map	沼泽探险家地图	沼澤探險家地圖	沼澤探險家地圖	探澤圖	沼地探検家の地図	늪 탐험가 지도	Bản đồ khám phá đầm lầy
 filled_map.mansion	Woodland Explorer Map	林地探险家地图	林地探險家地圖	林地探險家地圖	探林圖	森林探検家の地図	삼림 탐험가 지도	Bản đồ khám phá rừng sâu
 filled_map.monument	Ocean Explorer Map	海洋探险家地图	海洋探險家地圖	海洋探險家地圖	探海圖	海洋探検家の地図	바다 탐험가 지도	Bản đồ khám phá đại dương
-filled_map.trial_chambers	Trial Explorer Map	试炼探险家地图	試煉探險家地圖	試煉探險家地圖	探煉圖	試練の間の地図	시련 탐험 지도	Bản đồ phòng thử thách
+filled_map.trial_chambers	Trial Explorer Map	试炼探险家地图	試煉探險家地圖	試煉探險家地圖	探煉圖	試練の間の地図	시련 탐험 지도	Bản đồ khám phá thử thách
 filled_map.village_desert	Desert Village Map	沙漠村庄地图	沙漠村莊地圖	沙漠村莊地圖	大漠鄉圖	砂漠の村の地図	사막 마을 지도	Bản đồ làng sa mạc
 filled_map.village_plains	Plains Village Map	平原村庄地图	平原村莊地圖	平原村莊地圖	原野鄉圖	平原の村の地図	평원 마을 지도	Bản đồ làng đồng bằng
 filled_map.village_savanna	Savanna Village Map	热带草原村庄地图	熱帶稀樹草原村莊地圖	莽原村莊地圖	莽原鄉圖	サバンナの村の地図	사바나 마을 지도	Bản đồ làng xa-van
