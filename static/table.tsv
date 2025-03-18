@@ -668,7 +668,7 @@ block.minecraft.large_amethyst_bud	Large Amethyst Bud	大型紫晶芽	大型紫�
 block.minecraft.large_fern	Large Fern	大型蕨	大型蕨	大型蕨類	大蕨	大きなシダ	큰 고사리	Dương xỉ lớn
 block.minecraft.lava	Lava	熔岩	熔岩	熔岩	熔巖	溶岩	용암	Dung nham
 block.minecraft.lava_cauldron	Lava Cauldron	装有熔岩的炼药锅	裝熔岩的鍋	裝熔岩的鍋釜	熔巖居之釜	溶岩入りの大釜	용암 가마솥	Vạc dung nham
-block.minecraft.leaf_litter	Leaf Litter	枯叶	枯葉	枯葉	枯葉	落ち葉	낙엽 더미	Lá khô
+block.minecraft.leaf_litter	Leaf Litter	枯叶	枯葉	枯葉	枯葉	落ち葉	낙엽	Lá khô
 block.minecraft.lectern	Lectern	讲台	講台	講台	書檯	書見台	독서대	Bục để sách
 block.minecraft.lever	Lever	拉杆	拉桿	控制桿	閘刀	レバー	레버	Cần gạt
 block.minecraft.light	Light	光源方块	光	光源	光	ライトブロック	빛	Ánh sáng
@@ -1317,12 +1317,12 @@ effect.minecraft.weaving	Weaving	盘丝	織網	結網	綴絲	巣張り	방적	Th
 effect.minecraft.wind_charged	Wind Charged	蓄风	蓄風	蘊風	厲風	蓄風	돌풍	Nạp gió
 effect.minecraft.wither	Wither	凋零	凋零	凋零	凋零	衰弱	시듦	Khô héo
 enchantment.minecraft.aqua_affinity	Aqua Affinity	水下速掘	水中挖掘	親水性	習流	水中採掘	친수성	Đào nhanh dưới nước
-enchantment.minecraft.bane_of_arthropods	Bane of Arthropods	节肢杀手	節肢剋星	節肢剋星	剋蟲	虫特効	살충	Hại loài chân đốt
+enchantment.minecraft.bane_of_arthropods	Bane of Arthropods	节肢杀手	節肢剋星	節肢剋星	剋蟲	虫特効	살충	Diệt chân đốt
 enchantment.minecraft.binding_curse	Curse of Binding	绑定诅咒	綁定詛咒	綁定詛咒	固咒	束縛の呪い	귀속 저주	Lời nguyền ràng buộc
 enchantment.minecraft.blast_protection	Blast Protection	爆炸保护	爆炸保護	爆炸保護	禦爆	爆発耐性	폭발로부터 보호	Bảo vệ khỏi vụ nổ
-enchantment.minecraft.breach	Breach	破甲	破甲	破甲	穿甲	防具貫通	격파	Xuyên giáp
+enchantment.minecraft.breach	Breach	破甲	破甲	破甲	穿甲	防具貫通	격파	Phá giáp
 enchantment.minecraft.channeling	Channeling	引雷	喚雷	喚雷	通雷術	召雷	집전	Chớp điện
-enchantment.minecraft.density	Density	致密	緻密	緻密	密質	重撃	육중	Gia trọng
+enchantment.minecraft.density	Density	致密	緻密	緻密	密質	重撃	육중	Tỉ trọng
 enchantment.minecraft.depth_strider	Depth Strider	深海探索者	深海漫遊	深海漫遊	潮湧行者	水中歩行	물갈퀴	Sải bước dưới nước
 enchantment.minecraft.efficiency	Efficiency	效率	效率	效率	速	効率強化	효율	Hiệu suất
 enchantment.minecraft.feather_falling	Feather Falling	摔落缓冲	輕盈	輕盈	羽落	落下耐性	가벼운 착지	Bảo vệ khỏi sát thương rơi
@@ -1335,10 +1335,10 @@ enchantment.minecraft.impaling	Impaling	穿刺	穿刺	魚叉	穿刺	水生特効
 enchantment.minecraft.infinity	Infinity	无限	無限	無限	無盡	無限	무한	Vô hạn
 enchantment.minecraft.knockback	Knockback	击退	擊退	擊退	叩退	ノックバック	밀치기	Đánh bật lùi
 enchantment.minecraft.looting	Looting	抢夺	掠奪	掠奪	奪	ドロップ増加	약탈	Nhặt
-enchantment.minecraft.loyalty	Loyalty	忠诚	忠誠	忠誠	忠	忠誠	충성	Lòng trung thành
-enchantment.minecraft.luck_of_the_sea	Luck of the Sea	海之眷顾	海之祝福	海洋的祝福	海神之助	宝釣り	바다의 행운	Sự may mắn của biển cả
+enchantment.minecraft.loyalty	Loyalty	忠诚	忠誠	忠誠	忠	忠誠	충성	Trung thành
+enchantment.minecraft.luck_of_the_sea	Luck of the Sea	海之眷顾	海之祝福	海洋的祝福	海神之助	宝釣り	바다의 행운	May mắn của biển cả
 enchantment.minecraft.lure	Lure	饵钓	魚餌	魚餌	餌	入れ食い	미끼	Nhử
-enchantment.minecraft.mending	Mending	经验修补	經驗修補	修補	修繕	修繕	수선	Sửa chữa
+enchantment.minecraft.mending	Mending	经验修补	經驗修補	修補	修繕	修繕	수선	Tu sửa
 enchantment.minecraft.multishot	Multishot	多重射击	多重射擊	分裂箭矢	千影矢	拡散	다중 발사	Mưa tên
 enchantment.minecraft.piercing	Piercing	穿透	貫穿	貫穿	貫穿	貫通	관통	Xuyên thủng
 enchantment.minecraft.power	Power	力量	強力	強力	強弓	射撃ダメージ増加	힘	Sức mạnh
@@ -1350,7 +1350,7 @@ enchantment.minecraft.respiration	Respiration	水下呼吸	水中呼吸	水中�
 enchantment.minecraft.riptide	Riptide	激流	激流	波濤	㵗㶔	激流	급류	Sóng dữ
 enchantment.minecraft.sharpness	Sharpness	锋利	鋒利	鋒利	銳	ダメージ増加	날카로움	Sắc bén
 enchantment.minecraft.silk_touch	Silk Touch	精准采集	絲綢之觸	絲綢之觸	完璧	シルクタッチ	섬세한 손길	Độ mềm mại
-enchantment.minecraft.smite	Smite	亡灵杀手	不死剋星	不死剋星	剋亡	アンデッド特効	강타	Hại thây ma
+enchantment.minecraft.smite	Smite	亡灵杀手	不死剋星	不死剋星	剋亡	アンデッド特効	강타	Diệt xác sống
 enchantment.minecraft.soul_speed	Soul Speed	灵魂疾行	靈魂疾走	靈魂疾走	靈逸	ソウルスピード	영혼 가속	Tốc độ linh hồn
 enchantment.minecraft.sweeping_edge	Sweeping Edge	横扫之刃	橫掃之刃	橫掃之刃	橫斬之刃	範囲ダメージ増加	휩쓸기	Quét cạnh
 enchantment.minecraft.swift_sneak	Swift Sneak	迅捷潜行	迅捷潛行	迅捷潛行	迅伏	スニーク速度上昇	신속한 잠행	Rón rén nhanh
