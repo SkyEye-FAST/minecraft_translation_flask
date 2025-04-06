@@ -1,17 +1,14 @@
 # Minecraft Standard Translation Toolkit
 
-[![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
+[![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml)
 
 - **[English](README_en.md) | [中文](README.md)**
 
 ----
 
+<big>**This project has been deprecated, please use [SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss)** instead.**</big>
+
 A simple web page for querying Minecraft standard translations, using [Flask](https://github.com/pallets/flask) as the backend framework and [jQuery](https://jquery.com/) for the frontend.
-
-You can view a demo of the webpage at the following URLs:
-
-1. [mcst.teahouse.team](https://mcst.teahouse.team/)
-2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/) (Backup site, updates may be slower)
 
 ## Purpose
 

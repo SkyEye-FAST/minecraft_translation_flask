@@ -1,17 +1,14 @@
 # Minecraft标准译名工具合集
 
-[![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml) [![Generate font subset (I.Ming)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/extract_font.yml)
+[![Pylint](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/pylint.yml) [![Update language files](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml/badge.svg)](https://github.com/SkyEye-FAST/minecraft_translation_flask/actions/workflows/update.yml)
 
 - **[English](README_en.md) | [中文](README.md)**
 
 ----
 
+<big>**此项目已经弃用，请使用[SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss)**代替。</big>
+
 可查询Minecraft标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)，前端使用了[jQuery](https://jquery.com/)库。
-
-目前网页的演示可在以下网址查看：
-
-1. [mcst.teahouse.team](https://mcst.teahouse.team/)
-2. [skyeyefast.pythonanywhere.com](https://skyeyefast.pythonanywhere.com/)（备用站，更新可能较慢）
 
 ## 用途
 
