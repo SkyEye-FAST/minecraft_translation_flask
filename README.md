@@ -5,8 +5,8 @@
 - **[English](README_en.md) | [中文](README.md)**
 
 ----
-
-<big>**此项目已经弃用，请使用[SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss)**代替。</big>
+> [!WARNING]
+> **此项目已经弃用，请使用[SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss)代替。**
 
 可查询Minecraft标准译名的简易网页，后端框架使用[Flask](https://github.com/pallets/flask)，前端使用了[jQuery](https://jquery.com/)库。
 
