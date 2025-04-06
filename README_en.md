@@ -6,7 +6,8 @@
 
 ----
 
-<big>**This project has been deprecated, please use [SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss)** instead.**</big>
+> [!WARNING]
+> **This project has been deprecated, please use [SkyEye-FAST/minecraft_verdigloss](https://github.com/SkyEye-FAST/verdigloss) instead.**
 
 A simple web page for querying Minecraft standard translations, using [Flask](https://github.com/pallets/flask) as the backend framework and [jQuery](https://jquery.com/) for the frontend.
 
